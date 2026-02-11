@@ -1,0 +1,15 @@
+/* Change la couleur du nom du site dans la barre de navigation */
+.md-header__title .md-ellipsis {
+    color: #ff5722;
+    font-weight: bold;
+}
+
+/* Change la couleur de l'icône de recherche et des icônes sociales au survol */
+.md-social__link:hover {
+    color: #ff5722;
+}
+
+/* Bordure orange sous le menu actif */
+.md-tabs__link--active {
+    color: #ff5722 !important;
+}
