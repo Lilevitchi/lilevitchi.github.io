@@ -25,14 +25,22 @@
 
 /* --- 2. ONGLETS DE NAVIGATION (L'EFFET NEXUS) --- */
 .md-tabs {
-    background-color: #000000 !important; /* Uniforme avec le header */
+    background-color: #000000 !important;
 }
 
 .md-tabs__link {
     transition: all 0.3s ease;
     opacity: 0.6;
-    padding-bottom: 8px !important;
+    padding: 0 20px !important; /* Ajout de padding pour l'encadré */
+    line-height: 3.2rem !important; /* Centre le texte verticalement */
     border-bottom: 3px solid transparent !important;
+}
+
+/* Effet au survol : Encadré gris très léger, texte blanc, PAS de ligne orange */
+.md-tabs__link:hover {
+    opacity: 1 !important;
+    background-color: rgba(255, 255, 255, 0.07) !important;
+    color: #ffffff !important;
 }
 
 /* L'onglet actif : Fond orange très léger + Trait orange vif en bas */
