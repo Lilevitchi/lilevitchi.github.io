@@ -114,3 +114,26 @@
     font-style: italic; /* L'astuce elle-même sera en italique pour se différencier */
     opacity: 0.9;
 }
+
+/* --- 8. NAVIGATION GAUCHE (MENU ACTIF EN ORANGE) --- */
+
+/* Couleur du lien actif dans le menu de gauche */
+.md-nav__link--active {
+    color: #ff5722 !important;
+    font-weight: bold;
+}
+
+/* Couleur au survol des liens du menu */
+.md-nav__link:hover {
+    color: #ff5722 !important;
+}
+
+/* Petite barre verticale ou indicateur à côté du lien actif */
+.md-nav__item--active > .md-nav__link {
+    color: #ff5722 !important;
+}
+
+/* Pour le mode sombre : s'assurer que les icônes de flèches de navigation deviennent orange aussi */
+.md-nav__item .md-nav__toggle:checked ~ .md-nav__link {
+    color: #ff5722 !important;
+}
