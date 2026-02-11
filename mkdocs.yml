@@ -1,10 +1,10 @@
-site_name: Lilevitchi | Guides de Modding
+site_name: <span style="color:#ff5722;">Lilevitchi</span> | Modding
 site_url: https://lilevitchi.github.io/
 
 theme:
   name: material
   logo: assets/logo.png
-  favicon: assets/logo.png
+  favicon: assets/logo.png # C'est l'icône qui apparaîtra dans l'onglet
   language: fr
   palette:
     - media: "(prefers-color-scheme: dark)"
@@ -20,7 +20,10 @@ theme:
     - navigation.sections
     - navigation.top
     - content.code.copy
-    - search.suggest
+
+# Personnalisation poussée pour les couleurs de l'interface
+extra_css:
+  - stylesheets/extra.css
 
 markdown_extensions:
   - admonition
