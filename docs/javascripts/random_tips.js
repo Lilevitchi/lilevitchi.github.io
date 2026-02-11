@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 text: "Évitez de désinstaller des mods scriptés en pleine partie. Votre sauvegarde pourrait ne pas apprécier sur le long terme."
             },
             {
-                title: "Mod Organizer 2",
+                title: "Les profils Vortex",
                 text: "Utilisez les profils sur Vortex pour tester des configurations différentes sans risquer de casser votre installation principale."
             },
         ];
