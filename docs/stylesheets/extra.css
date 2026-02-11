@@ -34,7 +34,7 @@
     color: #ffffff !important;
 
     padding-top: 10px !important;    /* Pousse le texte vers le bas */
-    padding-bottom: 13px !important;
+    padding-bottom: 5px !important;
     
     border-bottom: 3px solid transparent !important;
     display: inline-block;
