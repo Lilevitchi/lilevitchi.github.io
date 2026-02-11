@@ -28,6 +28,9 @@ theme:
     - content.code.copy
     - stylesheets/extra.css
 
+extra_javascript:
+  - javascripts/random_tips.js
+  
 # Cette partie force le site à utiliser toute la largeur disponible
 extra_css:
   - stylesheets/extra.css
