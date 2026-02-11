@@ -32,12 +32,19 @@
     transition: all 0.3s ease;
     opacity: 0.6;
     color: #ffffff !important;
-    padding-bottom: 8px !important;
+    
+    padding: 0 15px !important; /* Ajout d'espace pour l'encadré */
+    margin: 0 5px;               /* Espacement entre les onglets */
+    line-height: 3.2rem !important; /* Centrage vertical parfait sans padding-bottom */
+    
     border-bottom: 3px solid transparent !important;
     display: inline-block;
     border-radius: 4px 4px 0 0;
     text-decoration: none !important;
 }
+
+
+
 
 /* L'effet d'encadré qui suit la souris */
 .md-tabs__link:hover {
