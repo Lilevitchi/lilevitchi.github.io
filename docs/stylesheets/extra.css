@@ -1,75 +1,61 @@
-/* --- CONFIGURATION LARGEUR ÉCRAN --- */
-
-/* Force la largeur maximale du contenu à 95% de ton navigateur */
+/* --- 1. MISE EN PAGE & LARGEUR --- */
 .md-grid {
     max-width: 95% !important;
 }
 
-.md-content {
-    max-width: 100% !important;
+.md-main__inner {
+    margin-top: 1.5rem !important; /* Ajuste l'espace sous la barre de navigation */
 }
 
-/* --- CONFIGURATION COULEURS ORANGE NEXUS --- */
-
-/* Change la couleur du nom du site "Lilevitchi" dans la barre de navigation */
-.md-header__title .md-ellipsis {
-    color: #ff5722 !important;
-    font-weight: bold;
+/* --- 2. BARRE DE NAVIGATION & LOGO --- */
+.md-header__inner {
+    height: 5.5rem !important; /* Barre plus haute pour accueillir le grand logo */
+    display: flex;
+    align-items: center;
 }
 
-/* Change la couleur de l'icône de recherche et des icônes sociales au survol */
-.md-social__link:hover {
-    color: #ff5722 !important;
-}
-
-/* Bordure orange sous l'onglet du menu actif */
-.md-tabs__link--active {
-    color: #ff5722 !important;
-}
-
-/* Optionnel : Change la couleur de la barre de recherche quand on clique dessus */
-.md-search__input:focus {
-    background-color: rgba(255, 87, 34, 0.1);
-}
-
-/* On nettoie au cas où des résidus de texte s'afficheraient encore */
-.md-logo img {
-    display: block;
-}
-
-.orange-icon {
-    color: #ff5722;
-    fill: #ff5722;
-}
-
-/* --- AGRANDISSEMENT DU LOGO (FORCE) --- */
-
-/* On cible le lien qui contient le logo pour lui donner de l'espace */
 .md-header__button.md-logo {
-    padding: 0.2rem !important; /* Réduit la marge interne pour laisser le logo respirer */
+    padding: 0 !important;
+    margin: 0.5rem !important;
 }
 
-/* On force la taille de l'image */
 .md-logo img {
-    height: 60px !important;  /* Ajuste ici selon tes envies (60px, 80px...) */
+    height: 70px !important; /* Taille généreuse du logo */
     width: auto !important;
     display: block;
 }
 
-/* Aligne le titre verticalement avec le nouveau logo */
 .md-header__title {
-    display: flex;
-    align-items: center;
-    margin-left: 1rem !important;
+    margin-left: 1.5rem !important;
+    font-size: 1.2rem;
 }
 
-/* On agrandit la barre de navigation pour qu'elle ne coupe pas le logo */
-.md-header__inner {
-    height: 5rem !important; /* Augmente la hauteur de la barre de menu */
+.md-header__title .md-ellipsis {
+    color: #ff5722 !important; /* Nom du site en Orange */
+    font-weight: bold;
 }
 
-/* Ajustement pour que le contenu du site ne remonte pas trop sous la barre plus haute */
-.md-main__inner {
-    margin-top: 1rem !important;
+/* --- 3. ÉLÉMENTS INTERACTIFS ORANGE --- */
+.orange-icon {
+    color: #ff5722 !important;
+    fill: #ff5722 !important;
 }
 
+.md-social__link:hover {
+    color: #ff5722 !important;
+}
+
+.md-tabs__link--active {
+    color: #ff5722 !important;
+}
+
+.md-search__input:focus {
+    background-color: rgba(255, 87, 34, 0.1);
+}
+
+/* --- 4. CONTENU & LIENS (SÉCURISÉ) --- */
+/* On ne force pas le blanc partout, on laisse le thème gérer, 
+   mais on ajoute l'orange au survol pour le style */
+.md-typeset a:hover {
+    color: #ff5722 !important;
+}
