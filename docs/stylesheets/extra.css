@@ -1,98 +1,222 @@
-/* --- 1. HEADER & BANNIÈRE (VERSION FINE) --- */
-.md-header {
-    background-color: #000000 !important; /* Noir pur pour le contraste */
-}
-
-.md-header__inner {
-    height: 3.2rem !important; /* Hauteur très fine et pro */
-}
+ /* --- 1. MISE EN PAGE & LARGEUR --- */
 
 .md-grid {
+
     max-width: 95% !important;
+
 }
+
+
+.md-main__inner {
+
+    margin-top: 1.5rem !important;
+
+}
+
+
+/* --- 2. BARRE DE NAVIGATION & LOGO --- */
+
+.md-header__inner {
+
+    height: 5.5rem !important; 
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.md-header__button.md-logo {
+
+    padding: 0 !important;
+
+    margin: 0.5rem !important;
+
+}
+
 
 .md-logo img {
-    height: 40px !important; 
+
+    height: 70px !important; 
+
     width: auto !important;
+
+    display: block;
+
 }
 
-/* Titre dans le Header (Celui à côté du logo) */
+
+/* Titre du Header (Dynamique selon la page) */
+
 .md-header__title .md-ellipsis {
+
     color: #ff5722 !important; 
+
     font-weight: bold;
-    font-size: 1.1rem;
+
+    font-size: 1.2rem;
+
 }
 
-/* --- 2. ONGLETS DE NAVIGATION (EFFET TRAIT ORANGE + FOND) --- */
-.md-tabs {
-    background-color: #0a0a0a !important; /* Barre d'onglets légèrement distincte */
+
+/* --- 3. UNIFORMISATION DU TEXTE (TAILLE & LIENS) --- */
+
+
+/* Force TOUS les paragraphes à la taille normale (évite le gros texte sous les titres) */
+
+.md-typeset p, 
+
+.md-typeset h2 + p, 
+
+.md-typeset h3 + p {
+
+    font-size: 0.95rem !important;
+
+    line-height: 1.6;
+
 }
 
-.md-tabs__link {
-    transition: all 0.3s ease;
-    border-bottom: 3px solid transparent !important;
-    padding-bottom: 12px !important; /* Aligne le trait sur la ligne de séparation */
+
+.md-typeset a {
+
+    color: var(--md-typeset-color) !important; 
+
+    text-decoration: none;
+
+    font-weight: normal !important;
+
+    transition: color 0.3s ease;
+
 }
 
-.md-tabs__link--active {
+
+.md-typeset a:hover {
+
     color: #ff5722 !important;
-    background-color: rgba(255, 87, 34, 0.1) !important; /* Fond orange très léger */
-    border-bottom: 3px solid #ff5722 !important; /* LE TRAIT ORANGE */
+
 }
 
-/* --- 3. UNIFORMISATION DU TEXTE (PLUS PETIT ET DISCRET) --- */
-.md-typeset {
-    font-size: 0.85rem !important; /* Texte plus fin et technique */
-}
 
-/* On ne masque plus le H1, on le rend juste plus élégant */
-.md-typeset h1 {
-    color: var(--md-typeset-color);
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-}
+/* --- 4. NAVIGATION GAUCHE (ÉPURÉE) --- */
 
-.md-typeset p, .md-typeset li {
-    line-height: 1.5;
-}
 
-/* --- 4. NAVIGATION GAUCHE (NETTOYAGE) --- */
+/* Titres de sections (ex: Guide Fallout 4) : Gris neutre */
+
 .md-nav__item--nested > .md-nav__link {
-    color: rgba(255, 255, 255, 0.4) !important; /* Titre de section très discret */
+
+    color: rgba(255, 255, 255, 0.7) !important;
+
+    font-weight: bold;
+
     text-transform: uppercase;
-    font-size: 0.65rem;
-    letter-spacing: 0.1rem;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 0.05rem;
+
+    margin-top: 0.5rem;
+
 }
+
+
+/* Seul le chapitre actif devient Orange */
 
 .md-nav__link--active {
+
     color: #ff5722 !important;
+
     font-weight: bold !important;
+
 }
 
-/* --- 5. L'ENCADRÉ LILE-BOT --- */
+
+/* Survol des liens du menu */
+
+.md-nav__link:hover {
+
+    color: #ff5722 !important;
+
+}
+
+
+/* --- 5. L'ENCADRÉ LILE-BOT (LOOK NEXUS) --- */
+
 .bot-advice {
+
     display: flex;
+
     align-items: center;
+
     background-color: rgba(255, 87, 34, 0.08) !important;
+
     border-left: 4px solid #ff5722 !important;
-    padding: 15px;
-    border-radius: 4px;
+
+    padding: 20px;
+
+    border-radius: 8px;
+
     margin: 20px 0;
+
+    color: var(--md-typeset-color);
+
 }
 
-#lile-bot-title { color: #ff5722; font-weight: bold; }
-#lile-bot-tip { font-style: italic; opacity: 0.8; }
 
-/* --- 6. BOUTON KO-FI & ÉLÉMENTS ORANGE --- */
+.bot-advice img {
+
+    margin-right: 20px;
+
+    height: auto;
+
+    flex-shrink: 0;
+
+}
+
+
+#lile-bot-title { color: #ff5722; font-size: 1.1rem; }
+
+#lile-bot-tip { font-style: italic; opacity: 0.9; }
+
+
+/* --- 6. BOUTON KO-FI --- */
+
 .kofi-button {
+
     background-color: #ff5722;
+
     color: white !important;
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 0.75rem;
+
+    padding: 8px 20px;
+
+    border-radius: 6px;
+
     display: inline-flex;
+
     align-items: center;
-    gap: 8px;
+
+    gap: 10px;
+
+    transition: 0.3s;
+
 }
+
+
+.kofi-button:hover {
+
+    background-color: #ffffff !important;
+
+    color: #ff5722 !important;
+
+    box-shadow: 0 0 15px rgba(255, 87, 34, 0.5);
+
+}
+
+
+/* --- 7. ÉLÉMENTS ORANGE DIVERS --- */
 
 .orange-icon { color: #ff5722 !important; fill: #ff5722 !important; }
+
+.md-tabs__link--active { color: #ff5722 !important; }
+
+.md-search__input:focus { background-color: rgba(255, 87, 34, 0.1); } 
