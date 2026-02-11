@@ -34,6 +34,9 @@
     color: #ffffff !important;
     padding-bottom: 8px !important;
     border-bottom: 3px solid transparent !important;
+    display: inline-block;
+    border-radius: 4px 4px 0 0;
+    text-decoration: none !important;
 }
 
 /* L'effet d'encadré qui suit la souris */
