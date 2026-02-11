@@ -114,8 +114,9 @@ Ici, pas de blabla inutile : uniquement des guides précis, testés et approuvé
 ## ☕ Soutenir le Travail
 Si mes guides vous font gagner du temps et du plaisir de jeu, n'hésitez pas à soutenir le projet. Chaque don permet d'améliorer la qualité des contenus et de maintenir les serveurs.
 
-<a href="https://ko-fi.com/VOTRE_LIEN" target="_blank" class="kofi-button">
-    ☕ Offrir un café sur Ko-fi
+<a href="https://ko-fi.com/lilevitchi" target="_blank" class="kofi-button">
+    <img src="assets/kofi.png" width="25" style="margin: 0; border: none;">
+    Soutenir sur Ko-fi
 </a>
 
 ---
