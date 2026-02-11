@@ -116,8 +116,8 @@ Ici, pas de blabla inutile : uniquement des guides précis, testés et approuvé
 <div class="bot-advice">
     <img src="assets/lile-bot.png" width="80">
     <div>
-        <strong>Prêt pour l'aventure ?</strong><br>
-        N'oubliez pas : en modding, la patience est votre meilleure amie. Lisez bien chaque étape et le résultat sera incroyable !
+        <strong id="lile-bot-title">Chargement...</strong><br>
+        <span id="lile-bot-tip">Lile-Bot réfléchit à une astuce...</span>
     </div>
 </div>
 
