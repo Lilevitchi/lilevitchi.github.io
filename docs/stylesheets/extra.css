@@ -31,16 +31,16 @@
     font-size: 1.2rem;
 }
 
-/* --- 3. FORÇAGE DES LIENS (FINI LE BLEU) --- */
+/* --- 3. STYLE DES LIENS (INTELLIGENT & ADAPTATIF) --- */
 
-/* Cible tous les liens dans le corps du texte */
+/* On laisse le thème choisir la couleur (noir en clair / blanc en sombre) */
+/* On ne fait que retirer le soulignement et préparer la transition */
 .md-typeset a {
-    color: #ffffff !important; /* Texte blanc par défaut */
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-/* Passage à l'orange au survol */
+/* On force l'orange uniquement au survol */
 .md-typeset a:hover {
     color: #ff5722 !important;
 }
@@ -66,5 +66,5 @@
 /* Espace autour des séparateurs de liens utiles */
 .md-typeset h2 + p {
     font-size: 1.1rem;
-    word-spacing: 10px; /* Ajoute de l'espace entre les liens */
+    word-spacing: 10px; 
 }
