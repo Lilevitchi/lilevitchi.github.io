@@ -1,14 +1,6 @@
-/* --- 1. MISE EN PAGE & HEADER --- */
+/* --- 1. HEADER & BANNIÈRE (HAUTEUR RÉDUITE) --- */
 :root {
-    --md-header-height: 3.5rem; /* Réduction de la hauteur de la bannière */
-}
-
-.md-grid {
-    max-width: 95% !important;
-}
-
-.md-main__inner {
-    margin-top: 1rem !important;
+    --md-header-height: 3.8rem; /* On réduit la hauteur pour gagner de la place */
 }
 
 .md-header {
@@ -21,40 +13,62 @@
     align-items: center;
 }
 
+.md-grid {
+    max-width: 95% !important;
+}
+
+.md-main__inner {
+    margin-top: 1rem !important;
+}
+
 .md-logo img {
-    height: 50px !important; /* Logo légèrement réduit pour fitter la bannière */
+    height: 50px !important; /* Taille ajustée pour la nouvelle hauteur */
     width: auto !important;
 }
 
-/* Masquer le titre textuel redondant dans le contenu pour utiliser le header */
+.md-header__title .md-ellipsis {
+    color: #ff5722 !important; 
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* --- 2. ONGLETS DE NAVIGATION (EFFET NEXUS) --- */
+.md-tabs__link {
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+    padding-bottom: 8px !important;
+}
+
+.md-tabs__link--active {
+    color: #ff5722 !important;
+    background-color: rgba(255, 87, 34, 0.1) !important; /* Fond type astuce */
+    border-bottom: 3px solid #ff5722 !important; /* Trait orange à la base */
+    border-radius: 4px 4px 0 0;
+}
+
+/* --- 3. UNIFORMISATION DU TEXTE (PLUS PETIT & PROPRE) --- */
+.md-typeset {
+    font-size: 0.85rem !important; /* On force une taille plus petite et technique */
+}
+
+/* On masque le titre principal de la page pour éviter les doublons avec le header */
 .md-content h1 {
     display: none;
 }
 
-/* --- 2. TABS DE NAVIGATION (EFFET ENCADRÉ + TRAIT ORANGE) --- */
-.md-tabs__link {
-    opacity: 0.7;
-    transition: all 0.3s;
-    border-bottom: 3px solid transparent; /* Prépare le trait orange */
-    padding-bottom: 10px !important;
-}
-
-.md-tabs__link--active {
-    opacity: 1 !important;
-    color: #ff5722 !important;
-    background-color: rgba(255, 87, 34, 0.1) !important; /* Fond type astuce */
-    border-bottom: 3px solid #ff5722 !important; /* Le fameux trait orange */
-    border-radius: 4px 4px 0 0;
-}
-
-/* --- 3. UNIFORMISATION DU TEXTE (PLUS PETIT) --- */
-.md-typeset {
-    font-size: 90% !important; /* Réduction globale pour un look plus technique */
-}
-
 .md-typeset p, .md-typeset li {
     line-height: 1.6;
-    margin-bottom: 0.8em;
+}
+
+.md-typeset a {
+    color: var(--md-typeset-color) !important; 
+    text-decoration: none;
+    font-weight: normal !important;
+    transition: color 0.3s ease;
+}
+
+.md-typeset a:hover {
+    color: #ff5722 !important;
 }
 
 /* --- 4. NAVIGATION GAUCHE (ÉPURÉE) --- */
@@ -69,6 +83,10 @@
 .md-nav__link--active {
     color: #ff5722 !important;
     font-weight: bold !important;
+}
+
+.md-nav__link:hover {
+    color: #ff5722 !important;
 }
 
 /* --- 5. L'ENCADRÉ LILE-BOT --- */
@@ -87,20 +105,10 @@
     flex-shrink: 0;
 }
 
-#lile-bot-title { color: #ff5722; font-weight: bold; }
+#lile-bot-title { color: #ff5722; font-weight: bold; font-size: 1rem; }
 #lile-bot-tip { font-style: italic; opacity: 0.85; }
 
-/* --- 6. LIENS & BOUTONS --- */
-.md-typeset a {
-    color: var(--md-typeset-color) !important;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.md-typeset a:hover {
-    color: #ff5722 !important;
-}
-
+/* --- 6. BOUTON KO-FI & ÉLÉMENTS ORANGE --- */
 .kofi-button {
     background-color: #ff5722;
     color: white !important;
@@ -109,5 +117,15 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    font-size: 0.85rem;
+    transition: 0.3s;
+    font-size: 0.8rem;
 }
+
+.kofi-button:hover {
+    background-color: #ffffff !important;
+    color: #ff5722 !important;
+    box-shadow: 0 0 10px rgba(255, 87, 34, 0.4);
+}
+
+.orange-icon { color: #ff5722 !important; fill: #ff5722 !important; }
+.md-search__input:focus { background-color: rgba(255, 87, 34, 0.1); }
