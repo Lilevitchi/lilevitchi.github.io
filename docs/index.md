@@ -111,26 +111,27 @@ Ici, pas de blabla inutile : uniquement des guides précis, testés et approuvé
 
 ---
 
+## 💡 Le Conseil de Lile-Bot
+
+<div class="bot-advice">
+    <img src="assets/lile-bot.png" width="80">
+    <div>
+        <strong>Prêt pour l'aventure ?</strong><br>
+        N'oubliez pas : en modding, la patience est votre meilleure amie. Lisez bien chaque étape et le résultat sera incroyable !
+    </div>
+</div>
+
+---
+
 ## ☕ Soutenir le Travail
 Si mes guides vous font gagner du temps et du plaisir de jeu, n'hésitez pas à soutenir le projet. Chaque don permet d'améliorer la qualité des contenus et de maintenir les serveurs.
 
-<a href="https://ko-fi.com/lilevitchi"target="_blank" class="kofi-button">
+<a href="https://ko-fi.com/lilevitchi" target="_blank" class="kofi-button">
     :simple-kofi: Soutenir sur Ko-fi
 </a>
 
 ---
 
-## 💡 Le Conseil de Lile-Bot
-!!! tip ""
-    <div style="display: flex; align-items: center; gap: 20px;">
-        <img src="assets/lile-bot.png" width="80">
-        <div>
-            <strong>Prêt pour l'aventure ?</strong><br>
-            N'oubliez pas : en modding, la patience est votre meilleure amie. Lisez bien chaque étape et le résultat sera incroyable !
-        </div>
-    </div>
-
----
 ## 🔗 Liens Utiles
 
 [:fontawesome-brands-youtube:{ .orange-icon } YouTube](https://www.youtube.com/@Lilevitchi){ target="_blank" } | [:fontawesome-brands-twitch:{ .orange-icon } Twitch](https://twitch.tv/lilevitchi){ target="_blank" } | [:fontawesome-brands-discord:{ .orange-icon } Discord](https://discord.gg/aFJxsPC){ target="_blank" }
