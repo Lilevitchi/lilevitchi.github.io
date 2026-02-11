@@ -103,3 +103,14 @@
     color: #ff5722 !important;
     box-shadow: 0 0 15px rgba(255, 87, 34, 0.5);
 }
+
+/* --- 7. PETITS AJUSTEMENTS POUR LE SCRIPT --- */
+#lile-bot-title {
+    color: #ff5722; /* Le titre de l'astuce sera toujours orange */
+    font-size: 1.1rem;
+}
+
+#lile-bot-tip {
+    font-style: italic; /* L'astuce elle-même sera en italique pour se différencier */
+    opacity: 0.9;
+}
