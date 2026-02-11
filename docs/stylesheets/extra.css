@@ -12,7 +12,7 @@
 }
 
 .md-logo img {
-    height: 40px !important;
+    height: 64px !important;
     width: auto !important;
 }
 
@@ -23,20 +23,32 @@
     font-size: 1.1rem;
 }
 
-/* --- 2. ONGLETS DE NAVIGATION (L'EFFET NEXUS) --- */
+/* --- 2. ONGLETS DE NAVIGATION (L'EFFET NEXUS + ENCADRÉ HOVER) --- */
 .md-tabs {
-    background-color: #000000 !important; /* Uniforme avec le header */
+    background-color: #000000 !important;
 }
 
 .md-tabs__link {
     transition: all 0.3s ease;
     opacity: 0.6;
     color: #ffffff !important;
-    padding-bottom: 8px !important;
+    padding: 0 15px !important; /* Ajout d'espace pour l'encadré */
+    margin: 0 5px;               /* Espacement entre les onglets */
+    line-height: 3.2rem !important; /* Centrage vertical parfait sans padding-bottom */
     border-bottom: 3px solid transparent !important;
+    display: inline-block;
+    border-radius: 4px 4px 0 0;
+    text-decoration: none !important;
 }
 
-/* L'onglet actif : Fond orange très léger + Trait orange vif en bas */
+/* L'effet d'encadré qui suit la souris */
+.md-tabs__link:hover {
+    opacity: 1 !important;
+    background-color: rgba(255, 255, 255, 0.08) !important; /* L'encadré gris subtil */
+    color: #ffffff !important;
+}
+
+/* L'onglet actif reste avec sa ligne orange */
 .md-tabs__item--active .md-tabs__link {
     color: #ff5722 !important;
     opacity: 1 !important;
