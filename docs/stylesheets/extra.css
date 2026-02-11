@@ -31,3 +31,8 @@
 .md-search__input:focus {
     background-color: rgba(255, 87, 34, 0.1);
 }
+
+/* On nettoie au cas où des résidus de texte s'afficheraient encore */
+.md-logo img {
+    display: block;
+}
