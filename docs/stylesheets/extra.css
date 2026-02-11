@@ -31,16 +31,16 @@
     font-size: 1.2rem;
 }
 
-/* --- 3. STYLE DES LIENS (INTELLIGENT & ADAPTATIF) --- */
+/* --- 3. STYLE DES LIENS (FINI LE BLEU) --- */
 
-/* On laisse le thème choisir la couleur (noir en clair / blanc en sombre) */
-/* On ne fait que retirer le soulignement et préparer la transition */
 .md-typeset a {
+    /* Utilise la couleur du texte actuel (blanc en sombre, noir en clair) */
+    color: var(--md-typeset-color) !important; 
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-/* On force l'orange uniquement au survol */
+/* Passage à l'orange au survol */
 .md-typeset a:hover {
     color: #ff5722 !important;
 }
