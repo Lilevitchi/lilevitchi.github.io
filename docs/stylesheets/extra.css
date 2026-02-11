@@ -33,8 +33,7 @@
     opacity: 0.6;
     color: #ffffff !important;
     
-line-height: 3.2rem !important; /* Centrage vertical pour logo 64px */
-padding: 0 15px !important;    /* Espacement pour l'encadré */
+
     
     border-bottom: 3px solid transparent !important;
     display: inline-block;
