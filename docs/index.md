@@ -1,120 +1,135 @@
-# 🛠️ Bienvenue sur le portail de Lilevitchi
+# 🚀 Bienvenue dans le Nexus de Lilevitchi
 
-Bienvenue sur mon portail de modding. Sélectionnez un univers pour accéder aux guides.
+**Plongez au cœur de l'excellence du modding.** Que vous soyez ici pour stabiliser votre jeu, transformer son visuel ou vivre une aventure totalement nouvelle sur les terres désolées, vous êtes au bon endroit. 
+
+Ici, pas de blabla inutile : uniquement des guides précis, testés et approuvés pour garantir une expérience de jeu ultime. Choisissez votre univers et commencez la transformation.
 
 ---
 
 <style>
-    /* Effet de flou et bordures Nexus Orange */
+    /* Tuiles Carrées et Effets */
+    .game-grid {
+        display: grid; 
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+        gap: 25px; 
+        margin: 40px 0;
+    }
+
     .game-card {
         position: relative;
-        border-radius: 10px;
+        aspect-ratio: 1 / 1; /* Force le format carré */
+        border-radius: 12px;
         overflow: hidden;
-        border: 2px solid #ff5722; /* Bordure orange constante style Nexus */
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 3px solid #ff5722;
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
         background: #1a1a1a;
-        cursor: url('assets/curseur.png'), pointer; /* Ton curseur robot */
+        cursor: url('assets/curseur.png') 32 32, pointer !important;
     }
 
     .game-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 0 20px rgba(255, 87, 34, 0.6);
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(255, 87, 34, 0.7);
     }
 
     .game-card-bg {
         width: 100%;
-        height: 180px;
+        height: 100%;
         background-size: cover;
         background-position: center;
-        filter: blur(4px); /* Flou par défaut */
-        transition: filter 0.4s ease;
+        filter: blur(6px);
+        transition: filter 0.5s ease;
     }
 
     .game-card:hover .game-card-bg {
-        filter: blur(0px); /* Devient net au survol */
+        filter: blur(0px);
     }
 
     .game-card-overlay {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.4);
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0, 0, 0, 0.5);
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: background 0.3s ease;
-    }
-
-    .game-card:hover .game-card-overlay {
-        background: rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 10px;
     }
 
     .game-card h2 {
         color: #fff;
         text-transform: uppercase;
-        font-weight: 800;
-        letter-spacing: 2px;
-        text-shadow: 2px 2px 10px rgba(0,0,0,0.9);
+        font-size: 1.5em !important;
+        font-weight: 900;
+        letter-spacing: 1px;
+        text-shadow: 2px 2px 15px #000;
         border: none !important;
-        margin: 0 !important;
+    }
+
+    /* Bouton Ko-fi Style Nexus */
+    .kofi-button {
+        background-color: #ff5722;
+        color: white !important;
+        padding: 15px 30px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: 0.3s;
+        border: 2px solid transparent;
+    }
+    .kofi-button:hover {
+        background-color: #1a1a1a;
+        border-color: #ff5722;
+        box-shadow: 0 0 15px #ff5722;
     }
 </style>
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 30px 0;">
-
-    <a href="fallout4/intro/" class="game-card" style="text-decoration: none;">
+<div class="game-grid">
+    <a href="fallout4/intro/" class="game-card">
         <div class="game-card-bg" style="background-image: url('assets/fo4.jpg');"></div>
-        <div class="game-card-overlay">
-            <h2>Fallout 4</h2>
-        </div>
+        <div class="game-card-overlay"><h2>Fallout 4</h2></div>
     </a>
-
-    <a href="fallout-london/" class="game-card" style="text-decoration: none;">
+    <a href="fallout-london/" class="game-card">
         <div class="game-card-bg" style="background-image: url('assets/london.jpg');"></div>
-        <div class="game-card-overlay">
-            <h2>Fallout London</h2>
-        </div>
+        <div class="game-card-overlay"><h2>Fallout London</h2></div>
     </a>
-
-    <a href="fnv/" class="game-card" style="text-decoration: none;">
+    <a href="fnv/" class="game-card">
         <div class="game-card-bg" style="background-image: url('assets/fnv.jpg');"></div>
-        <div class="game-card-overlay">
-            <h2>New Vegas</h2>
-        </div>
+        <div class="game-card-overlay"><h2>New Vegas</h2></div>
     </a>
-
-    <a href="ttw/" class="game-card" style="text-decoration: none;">
+    <a href="ttw/" class="game-card">
         <div class="game-card-bg" style="background-image: url('assets/ttw.jpg');"></div>
-        <div class="game-card-overlay">
-            <h2>TTW</h2>
-        </div>
+        <div class="game-card-overlay"><h2>TTW</h2></div>
     </a>
-
-    <a href="cyberpunk/" class="game-card" style="text-decoration: none;">
+    <a href="cyberpunk/" class="game-card">
         <div class="game-card-bg" style="background-image: url('assets/cyberpunk.jpg');"></div>
-        <div class="game-card-overlay">
-            <h2>Cyberpunk 2077</h2>
-        </div>
+        <div class="game-card-overlay"><h2>Cyberpunk 2077</h2></div>
     </a>
-
 </div>
 
 ---
 
-## 💡 Le Conseil de Lile-Bot
+## ☕ Soutenir le Travail
+Si mes guides vous font gagner du temps et du plaisir de jeu, n'hésitez pas à soutenir le projet. Chaque don permet d'améliorer la qualité des contenus et de maintenir les serveurs.
 
+<a href="https://ko-fi.com/VOTRE_LIEN" target="_blank" class="kofi-button">
+    ☕ Offrir un café sur Ko-fi
+</a>
+
+---
+
+## 💡 Le Conseil de Lile-Bot
 !!! tip ""
     <div style="display: flex; align-items: center; gap: 20px;">
-        <img src="assets/lile-bot.png" width="80" style="border-radius: 10px;">
+        <img src="assets/lile-bot.png" width="80">
         <div>
-            <strong>Salut l'ami moddeur !</strong><br>
-            Je suis là pour te donner les meilleurs tuyaux. Clique sur une tuile pour commencer ton aventure, et n'oublie pas de vérifier mes vidéos YouTube pour les étapes les plus délicates !
+            <strong>Prêt pour l'aventure ?</strong><br>
+            N'oubliez pas : en modding, la patience est votre meilleure amie. Lisez bien chaque étape et le résultat sera incroyable !
         </div>
     </div>
 
 ---
-
 ## 🔗 Liens Utiles
 * [📺 YouTube](https://www.youtube.com/@Lilevitchi) | [🎮 Twitch](https://twitch.tv/lilevitchi) | [💬 Discord](https://discord.gg/aFJxsPC)
