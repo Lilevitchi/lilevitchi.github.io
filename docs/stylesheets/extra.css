@@ -36,3 +36,21 @@
 .md-logo img {
     display: block;
 }
+
+/* --- AGRANDISSEMENT DU LOGO --- */
+
+/* Ajuste la hauteur du logo (par défaut c'est environ 24px) */
+.md-logo img {
+    height: 48px !important; /* Tu peux augmenter à 64px si tu veux encore plus grand */
+    width: auto;
+}
+
+/* Aligne le titre verticalement avec le nouveau logo plus grand */
+.md-header__title {
+    margin-left: 1.5rem !important; /* Espace entre le logo et le texte */
+}
+
+/* Ajuste la barre de navigation pour qu'elle ne soit pas trop serrée */
+.md-header__inner {
+    height: 4rem; /* Augmente légèrement la hauteur de la barre de menu */
+}
