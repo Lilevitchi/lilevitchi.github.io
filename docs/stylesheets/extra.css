@@ -1,4 +1,4 @@
-/* --- 1. CONFIGURATION DU HEADER (STABLE) --- */
+/* --- 1. CONFIGURATION GÉNÉRALE & HEADER --- */
 :root {
     --md-header-height: 3.5rem;
 }
@@ -20,30 +20,27 @@
     width: auto !important;
 }
 
-/* --- 2. NAVIGATION DU HAUT (EFFET NEXUS SANS CASSE) --- */
+/* Fix du titre du Header en Orange */
+.md-header__title .md-ellipsis {
+    color: #ff5722 !important; 
+    font-weight: bold;
+}
+
+/* --- 2. ONGLETS DE NAVIGATION (EFFET NEXUS) --- */
 .md-tabs {
-    background-color: #050505 !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.md-tabs__list {
-    display: flex;
-    align-items: center;
-}
-
-.md-tabs__item {
-    height: 100%;
+    background-color: #000000 !important; /* On garde le noir uniforme */
 }
 
 .md-tabs__link {
-    position: relative; /* Pour caler le trait orange sans bouger le texte */
+    position: relative;
     padding: 0 20px !important;
-    line-height: 3rem !important; /* Aligne le texte au centre verticalement */
+    line-height: 3.2rem !important;
     opacity: 0.6;
     transition: all 0.2s;
+    border-bottom: none !important; /* On retire la bordure par défaut */
 }
 
-/* L'onglet actif : Fond teinté + Barre orange absolue */
+/* L'onglet actif avec fond teinté et trait orange absolu */
 .md-tabs__item--active .md-tabs__link {
     opacity: 1 !important;
     color: #ff5722 !important;
@@ -60,21 +57,32 @@
     background-color: #ff5722;
 }
 
-/* --- 3. TEXTE GLOBAL (UNIFORME & PROPRE) --- */
+/* --- 3. UNIFORMISATION DU TEXTE (PLUS PETIT) --- */
 .md-typeset {
-    font-size: 0.9rem !important;
+    font-size: 0.85rem !important; /* Fix définitif de la taille */
 }
 
-.md-typeset p {
+.md-typeset p, .md-typeset li {
     line-height: 1.6;
-    margin-bottom: 1em;
+    margin-bottom: 0.8em;
 }
 
-/* --- 4. NAVIGATION GAUCHE (ÉPURÉE) --- */
+/* --- 4. STYLE DES LIENS (HORS BOUTONS) --- */
+.md-typeset a {
+    color: var(--md-typeset-color) !important;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.md-typeset a:hover {
+    color: #ff5722 !important;
+}
+
+/* --- 5. NAVIGATION GAUCHE (MENU ACTIF) --- */
 .md-nav__item--nested > .md-nav__link {
-    color: rgba(255, 255, 255, 0.5) !important;
+    color: rgba(255, 255, 255, 0.4) !important;
     text-transform: uppercase;
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     letter-spacing: 0.05rem;
 }
 
@@ -83,13 +91,13 @@
     font-weight: bold !important;
 }
 
-/* --- 5. L'ENCADRÉ LILE-BOT --- */
+/* --- 6. L'ENCADRÉ LILE-BOT --- */
 .bot-advice {
     display: flex;
     align-items: center;
     background-color: rgba(255, 87, 34, 0.08) !important;
     border-left: 4px solid #ff5722 !important;
-    padding: 20px;
+    padding: 15px;
     border-radius: 4px;
     margin: 20px 0;
 }
@@ -97,7 +105,7 @@
 #lile-bot-title { color: #ff5722; font-weight: bold; }
 #lile-bot-tip { font-style: italic; opacity: 0.85; }
 
-/* --- 6. BOUTON KO-FI --- */
+/* --- 7. BOUTON KO-FI --- */
 .kofi-button {
     background-color: #ff5722;
     color: white !important;
@@ -106,7 +114,16 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
 }
 
+/* --- 8. ÉLÉMENTS ORANGE DIVERS --- */
 .orange-icon { color: #ff5722 !important; fill: #ff5722 !important; }
+.md-search__input:focus { background-color: rgba(255, 87, 34, 0.1); }
+
+/* --- 9. ADAPTATION MOBILE --- */
+@media screen and (max-width: 76.25em) {
+    .md-tabs {
+        display: none;
+    }
+}
