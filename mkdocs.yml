@@ -3,36 +3,36 @@ site_url: https://lilevitchi.github.io/
 
 theme:
   name: material
+  logo: assets/logo.png # Ton logo apparaîtra dans la barre de menu
+  favicon: assets/logo.png
   language: fr
   palette:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: deep orange
+      primary: black # On teste noir pour faire ressortir ton logo
       accent: deep orange
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: deep orange
+      primary: black
       accent: deep orange
   features:
     - navigation.tabs
     - navigation.sections
     - navigation.top
     - content.code.copy
-    - search.suggest
-    - search.highlight
 
 markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
-  - attr_list # Très important pour les styles personnalisés
+  - attr_list
 
 nav:
   - Accueil: index.md
-  - Guide Fallout 4:
+  - Fallout 4:
       - Introduction: fallout4/intro.md
-      - Installation propre: fallout4/setup.md
-      - Le Downgrade: fallout4/downgrade.md
-      - Utilitaires de base: fallout4/utilities.md
-  - Guide Cyberpunk 2077:
-      - Bientôt disponible: cyberpunk/index.md
+      - Installation: fallout4/setup.md
+  - Fallout London: fallout-london/index.md
+  - Fallout New Vegas: fnv/index.md
+  - Tale of Two Wastelands: ttw/index.md
+  - Cyberpunk 2077: cyberpunk/index.md
