@@ -1,206 +1,124 @@
  /* --- 1. HEADER & BANNIÈRE (NOIR PUR & TITRE ORANGE) --- */
-
 .md-header {
-
     background-color: #000000 !important;
-
 }
-
 
 .md-header__inner {
-
     height: 3.2rem !important;
-
 }
-
 
 .md-grid {
-
     max-width: 95% !important;
-
 }
-
 
 .md-logo img {
-
     height: 40px !important;
-
     width: auto !important;
-
 }
-
 
 /* Fix définitif : Le titre Lilevitchi | Modding en Orange */
-
 .md-header__title .md-ellipsis {
-
     color: #ff5722 !important; 
-
     font-weight: bold;
-
     font-size: 1.1rem;
-
 }
-
 
 /* --- 2. ONGLETS DE NAVIGATION (L'EFFET NEXUS) --- */
-
 .md-tabs {
-
     background-color: #000000 !important; /* Uniforme avec le header */
-
 }
-
 
 .md-tabs__link {
-
     transition: all 0.3s ease;
-
     opacity: 0.6;
-
+    color: #ffffff !important; /* Force le blanc par défaut */
+    padding: 0 20px !important;
+    line-height: 3.2rem !important;
     padding-bottom: 8px !important;
-
     border-bottom: 3px solid transparent !important;
-
+    text-decoration: none !important;
 }
 
+/* Effet au survol */
+.md-tabs__link:hover {
+    opacity: 1 !important;
+    background-color: rgba(255, 255, 255, 0.07) !important;
+    color: #ff5722 !important; /* Devient orange au survol */
+}
 
 /* L'onglet actif : Fond orange très léger + Trait orange vif en bas */
-
 .md-tabs__item--active .md-tabs__link {
-
     color: #ff5722 !important;
-
     opacity: 1 !important;
-
     background-color: rgba(255, 87, 34, 0.1) !important;
-
     border-bottom: 3px solid #ff5722 !important;
-
 }
-
 
 /* --- 3. UNIFORMISATION DU TEXTE (TAILLE PARFAITE 0.85) --- */
-
 .md-typeset {
-
     font-size: 0.85rem !important;
-
 }
-
 
 .md-typeset h1 {
-
     color: var(--md-typeset-color);
-
     font-size: 1.8rem;
-
     margin-bottom: 1rem;
-
 }
-
 
 .md-typeset p, .md-typeset li {
-
     line-height: 1.5;
-
 }
-
 
 /* --- 4. STYLE DES LIENS (FINI LE BLEU) --- */
-
 .md-typeset a {
-
     color: inherit !important; /* Prend la couleur du texte (blanc/gris selon le mode) */
-
     text-decoration: none;
-
     transition: color 0.3s ease;
-
 }
-
 
 .md-typeset a:hover {
-
     color: #ff5722 !important; /* Devient orange au survol */
-
 }
-
 
 /* On force aussi les icônes à côté des liens (YouTube, etc.) à suivre */
-
 .md-typeset a .twemoji {
-
     transition: fill 0.3s ease;
-
 }
-
 
 .md-typeset a:hover .twemoji {
-
     fill: #ff5722 !important;
-
 }
-
 
 /* --- 5. L'ENCADRÉ LILE-BOT --- */
-
 .bot-advice {
-
     display: flex;
-
     align-items: center;
-
     background-color: rgba(255, 87, 34, 0.08) !important;
-
     border-left: 4px solid #ff5722 !important;
-
     padding: 15px;
-
     border-radius: 4px;
-
     margin: 20px 0;
-
 }
-
 
 .bot-advice img {
-
     margin-right: 20px !important; /* Espace entre le bot et le texte */
-
     flex-shrink: 0;
-
 }
-
 
 #lile-bot-title { color: #ff5722; font-weight: bold; }
-
 #lile-bot-tip { font-style: italic; opacity: 0.8; }
 
-
 /* --- 6. BOUTON KO-FI & ÉLÉMENTS ORANGE --- */
-
 .kofi-button {
-
     background-color: #ff5722;
-
     color: white !important;
-
     padding: 6px 12px;
-
     border-radius: 4px;
-
     font-size: 0.75rem;
-
     display: inline-flex;
-
     align-items: center;
-
     gap: 8px;
-
 }
 
-
 .orange-icon { color: #ff5722 !important; fill: #ff5722 !important; }
-
 .md-search__input:focus { background-color: rgba(255, 87, 34, 0.1); } 
