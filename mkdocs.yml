@@ -4,24 +4,31 @@ site_url: https://lilevitchi.github.io/
 theme:
   name: material
   logo: assets/logo.png
-  favicon: assets/logo.png # C'est l'icône qui apparaîtra dans l'onglet
+  favicon: assets/logo.png
   language: fr
   palette:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
       accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Passer au mode clair
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: black
       accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Passer au mode sombre
   features:
     - navigation.tabs
     - navigation.sections
     - navigation.top
     - content.code.copy
+    - stylesheets/extra.css
 
-# Personnalisation poussée pour les couleurs de l'interface
+# Cette partie force le site à utiliser toute la largeur disponible
 extra_css:
   - stylesheets/extra.css
 
