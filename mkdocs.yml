@@ -1,9 +1,10 @@
 site_name: Lilevitchi | Guides de Modding
+site_url: https://lilevitchi.github.io/
+
 theme:
   name: material
   language: fr
   palette:
-    # Mode sombre automatique basé sur le système du visiteur
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: deep orange
@@ -19,14 +20,23 @@ theme:
         icon: material/brightness-7
         name: Passer au mode sombre
   features:
-    - navigation.tabs # Menu horizontal en haut
-    - navigation.sections # Sections claires à gauche
-    - navigation.top # Bouton "retour en haut"
-    - content.code.copy # Permet de copier tes commandes de downgrade en 1 clic
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
     - search.suggest
     - search.highlight
 
 markdown_extensions:
-  - admonition # Pour les encadrés "Attention", "Note", etc.
+  - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - attr_list # Requis pour styliser les images et boutons
+
+nav:
+  - Accueil: index.md
+  - Guide Fallout 4:
+      - Introduction: fallout4/intro.md
+      - Installation propre: fallout4/setup.md
+      - Le Downgrade: fallout4/downgrade.md
+      - Utilitaires de base: fallout4/utilities.md
