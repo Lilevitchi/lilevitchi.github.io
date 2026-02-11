@@ -4,7 +4,7 @@
 }
 
 .md-header__inner {
-    height: 3.2rem !important;
+    height: 4rem !important;
 }
 
 .md-grid {
@@ -14,13 +14,15 @@
 .md-logo img {
     height: 64px !important;
     width: auto !important;
+    transform: translateY(-2px); /* Petit ajustement de précision */
 }
 
 /* Fix définitif : Le titre Lilevitchi | Modding en Orange */
 .md-header__title .md-ellipsis {
     color: #ff5722 !important; 
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    line-height: 4rem !important; /* Aligne le titre sur la nouvelle hauteur */
 }
 
 /* --- 2. ONGLETS DE NAVIGATION (L'EFFET NEXUS + ENCADRÉ HOVER) --- */
@@ -32,12 +34,11 @@
     transition: all 0.3s ease;
     opacity: 0.6;
     color: #ffffff !important;
-    padding: 0 15px !important; /* Ajout d'espace pour l'encadré */
-    margin: 0 5px;               /* Espacement entre les onglets */
-    line-height: 3.2rem !important; /* Centrage vertical parfait sans padding-bottom */
-    border-bottom: 3px solid transparent !important;
+    padding: 0 20px !important;
+    line-height: 4rem !important; /* Aligne le texte au centre des 64px */
+    height: 4rem !important;      /* Force la hauteur pour la ligne orange */
+    border-bottom: 4px solid transparent !important; /* Ligne un peu plus épaisse */
     display: inline-block;
-    border-radius: 4px 4px 0 0;
     text-decoration: none !important;
 }
 
@@ -53,7 +54,7 @@
     color: #ff5722 !important;
     opacity: 1 !important;
     background-color: rgba(255, 87, 34, 0.1) !important;
-    border-bottom: 3px solid #ff5722 !important;
+    border-bottom: 4px solid #ff5722 !important;
 }
 
 /* --- 3. UNIFORMISATION DU TEXTE (TAILLE PARFAITE 0.85) --- */
