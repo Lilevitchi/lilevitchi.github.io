@@ -31,7 +31,7 @@
     font-size: 1.2rem;
 }
 
-/* --- 3. STYLE DES LIENS (FINI LE BLEU) --- */
+/* --- 3. STYLE DES LIENS (FINI LE BLEU & SANS GRAS) --- */
 .md-typeset a {
     color: var(--md-typeset-color) !important; 
     text-decoration: none;
@@ -43,7 +43,13 @@
     color: #ff5722 !important;
 }
 
-/* --- 4. ÉLÉMENTS ORANGE & LIENS UTILES --- */
+/* Ajustement spécifique pour les liens YouTube/Twitch sur l'index */
+.md-typeset h2 + p {
+    font-size: 1rem !important;
+    word-spacing: 5px; 
+}
+
+/* --- 4. ÉLÉMENTS ORANGE --- */
 .orange-icon {
     color: #ff5722 !important;
     fill: #ff5722 !important;
@@ -57,24 +63,43 @@
     color: #ff5722 !important;
 }
 
-/* On remet les liens YouTube/Discord à la taille normale du texte */
-.md-typeset h2 + p {
-    font-size: 1rem !important; /* Taille identique au reste du texte */
-    word-spacing: 5px; 
+.md-search__input:focus {
+    background-color: rgba(255, 87, 34, 0.1);
 }
 
-/* --- 5. MASCOTTES (LILE-BOT) --- */
+/* --- 5. L'ENCADRÉ LILE-BOT (LOOK NEXUS) --- */
 .bot-advice {
     display: flex;
     align-items: center;
-    background-color: rgba(255, 87, 34, 0.05);
-    border-left: 4px solid #ff5722;
-    padding: 15px;
-    border-radius: 4px;
+    background-color: rgba(255, 87, 34, 0.08) !important; /* Fond léger orange */
+    border-left: 4px solid #ff5722 !important; /* Barre orange à gauche */
+    padding: 20px;
+    border-radius: 8px;
     margin: 20px 0;
+    color: var(--md-typeset-color);
 }
 
 .bot-advice img {
     margin-right: 20px;
-    height: auto; /* Garde les proportions */
+    height: auto;
+    flex-shrink: 0;
+}
+
+/* --- 6. BOUTON KO-FI --- */
+.kofi-button {
+    background-color: #ff5722;
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+    font-weight: normal !important;
+}
+
+.kofi-button:hover {
+    background-color: #ffffff !important;
+    color: #ff5722 !important;
+    box-shadow: 0 0 15px rgba(255, 87, 34, 0.5);
 }
