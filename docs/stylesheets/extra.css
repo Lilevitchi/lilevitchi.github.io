@@ -1,4 +1,4 @@
-/* --- 1. HEADER & BANNIÈRE (STABLE) --- */
+/* --- 1. HEADER & BANNIÈRE (NOIR PUR & TITRE ORANGE) --- */
 .md-header {
     background-color: #000000 !important;
 }
@@ -22,7 +22,7 @@
     font-size: 1.1rem;
 }
 
-/* --- 2. ONGLETS DE NAVIGATION (EFFET SURVOL DYNAMIQUE) --- */
+/* --- 2. ONGLETS DE NAVIGATION (EFFET HOVER DYNAMIQUE) --- */
 .md-tabs {
     background-color: #000000 !important;
 }
@@ -30,19 +30,21 @@
 .md-tabs__link {
     transition: all 0.3s ease;
     opacity: 0.6;
-    padding: 0 20px !important; /* On donne de l'air aux clics */
+    padding: 0 20px !important;
     line-height: 3.2rem !important;
     border-bottom: 3px solid transparent !important;
+    display: inline-block;
 }
 
-/* Effet au passage de la souris (Hover) : Encadré léger seulement */
+/* Effet au survol : Encadré léger qui suit la souris */
 .md-tabs__link:hover {
     opacity: 1 !important;
-    background-color: rgba(255, 255, 255, 0.05) !important; /* Léger voile gris/blanc pour le curseur */
-    color: #ff5722 !important;
+    background-color: rgba(255, 255, 255, 0.08) !important; /* Encadré gris clair subtil */
+    color: #ffffff !important;
+    border-radius: 4px 4px 0 0;
 }
 
-/* L'onglet de la page en cours (Actif) : Fond orange + Trait orange */
+/* Onglet de la page active : Fond orange léger + Ligne orange fixe */
 .md-tabs__item--active .md-tabs__link {
     color: #ff5722 !important;
     opacity: 1 !important;
@@ -50,7 +52,7 @@
     border-bottom: 3px solid #ff5722 !important;
 }
 
-/* --- 3. TEXTE & LIENS (PROPRE) --- */
+/* --- 3. UNIFORMISATION DU TEXTE (TAILLE 0.85) --- */
 .md-typeset {
     font-size: 0.85rem !important;
 }
@@ -65,6 +67,7 @@
     line-height: 1.5;
 }
 
+/* --- 4. STYLE DES LIENS (ANTI-BLEU) --- */
 .md-typeset a {
     color: inherit !important;
     text-decoration: none;
@@ -75,7 +78,26 @@
     color: #ff5722 !important;
 }
 
-/* --- 4. NAVIGATION GAUCHE --- */
+/* --- 5. L'ENCADRÉ LILE-BOT (CORRECTIF ESPACE) --- */
+.bot-advice {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 87, 34, 0.08) !important;
+    border-left: 4px solid #ff5722 !important;
+    padding: 15px 20px;
+    border-radius: 4px;
+    margin: 20px 0;
+}
+
+.bot-advice img {
+    margin-right: 25px !important; /* Espace entre le bot et le texte */
+    flex-shrink: 0;
+}
+
+#lile-bot-title { color: #ff5722; font-weight: bold; }
+#lile-bot-tip { font-style: italic; opacity: 0.8; }
+
+/* --- 6. NAVIGATION GAUCHE & BOUTON --- */
 .md-nav__item--nested > .md-nav__link {
     color: rgba(255, 255, 255, 0.4) !important;
     text-transform: uppercase;
@@ -88,26 +110,6 @@
     font-weight: bold !important;
 }
 
-/* --- 5. L'ENCADRÉ LILE-BOT (CORRECTIF ESPACE) --- */
-.bot-advice {
-    display: flex;
-    align-items: center;
-    background-color: rgba(255, 87, 34, 0.08) !important;
-    border-left: 4px solid #ff5722 !important;
-    padding: 15px 20px; /* Plus d'espace intérieur */
-    border-radius: 4px;
-    margin: 20px 0;
-}
-
-.bot-advice img {
-    margin-right: 25px !important; /* L'ESPACE QUE TU VOULAIS */
-    flex-shrink: 0;
-}
-
-#lile-bot-title { color: #ff5722; font-weight: bold; }
-#lile-bot-tip { font-style: italic; opacity: 0.8; }
-
-/* --- 6. BOUTON KO-FI & DIVERS --- */
 .kofi-button {
     background-color: #ff5722;
     color: white !important;
@@ -120,4 +122,3 @@
 }
 
 .orange-icon { color: #ff5722 !important; fill: #ff5722 !important; }
-.md-search__input:focus { background-color: rgba(255, 87, 34, 0.1); }
