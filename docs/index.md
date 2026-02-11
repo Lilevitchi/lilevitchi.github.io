@@ -133,4 +133,5 @@ Si mes guides vous font gagner du temps et du plaisir de jeu, n'hésitez pas à 
 
 ---
 ## 🔗 Liens Utiles
-* [:fontawesome-brands-youtube:{ .orange-icon } YouTube](https://www.youtube.com/@Lilevitchi) | [:fontawesome-brands-twitch:{ .orange-icon } Twitch](https://twitch.tv/lilevitchi) | [:fontawesome-brands-discord:{ .orange-icon } Discord](https://discord.gg/aFJxsPC)
+
+[:fontawesome-brands-youtube:{ .orange-icon } **YouTube**](https://www.youtube.com/@Lilevitchi){ target="_blank" } | [:fontawesome-brands-twitch:{ .orange-icon } **Twitch**](https://twitch.tv/lilevitchi){ target="_blank" } | [:fontawesome-brands-discord:{ .orange-icon } **Discord**](https://discord.gg/aFJxsPC){ target="_blank" }
