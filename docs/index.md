@@ -87,7 +87,7 @@ Ici, pas de blabla inutile : uniquement des guides précis, testés et approuvé
 </style>
 
 <div class="game-grid">
-    <a href="fallout4/intro/" class="game-card">
+    <a href="fallout4/index/" class="game-card">
         <div class="game-card-bg" style="background-image: url('assets/fo4.jpg');"></div>
         <div class="game-card-overlay"><h2>Fallout 4</h2></div>
     </a>
