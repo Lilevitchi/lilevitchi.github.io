@@ -31,6 +31,7 @@
 .md-tabs__link {
     transition: all 0.3s ease;
     opacity: 0.6;
+    color: #ffffff !important;
     padding-bottom: 8px !important;
     border-bottom: 3px solid transparent !important;
 }
@@ -60,6 +61,17 @@
 
 /* --- 4. STYLE DES LIENS (FINI LE BLEU) --- */
 
+/* Force les liens (YouTube, etc.) à être blancs/gris par défaut au lieu de bleu */
+.md-typeset a {
+    color: inherit !important; 
+    text-decoration: none;
+}
+
+/* Deviennent orange uniquement au survol */
+.md-typeset a:hover {
+    color: #ff5722 !important;
+}
+
 /* Titres de sections (ex: Guide Fallout 4) : Gris neutre */
 .md-nav__item--nested > .md-nav__link {
     color: rgba(255, 255, 255, 0.7) !important;
@@ -79,10 +91,6 @@
 /* Survol des liens du menu */
 .md-nav__link:hover {
     color: #ff5722 !important;
-}
-
-.md-typeset a:hover {
-    color: #ff5722 !important; /* Devient orange au survol */
 }
 
 /* On force aussi les icônes à côté des liens (YouTube, etc.) à suivre */
