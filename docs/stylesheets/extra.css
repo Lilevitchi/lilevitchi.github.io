@@ -4,12 +4,12 @@
 }
 
 .md-main__inner {
-    margin-top: 1.5rem !important; /* Ajuste l'espace sous la barre de navigation */
+    margin-top: 1.5rem !important;
 }
 
 /* --- 2. BARRE DE NAVIGATION & LOGO --- */
 .md-header__inner {
-    height: 5.5rem !important; /* Barre plus haute pour accueillir le grand logo */
+    height: 5.5rem !important; 
     display: flex;
     align-items: center;
 }
@@ -20,22 +20,32 @@
 }
 
 .md-logo img {
-    height: 70px !important; /* Taille généreuse du logo */
+    height: 70px !important; 
     width: auto !important;
     display: block;
 }
 
-.md-header__title {
-    margin-left: 1.5rem !important;
+.md-header__title .md-ellipsis {
+    color: #ff5722 !important; 
+    font-weight: bold;
     font-size: 1.2rem;
 }
 
-.md-header__title .md-ellipsis {
-    color: #ff5722 !important; /* Nom du site en Orange */
-    font-weight: bold;
+/* --- 3. FORÇAGE DES LIENS (FINI LE BLEU) --- */
+
+/* Cible tous les liens dans le corps du texte */
+.md-typeset a {
+    color: #ffffff !important; /* Texte blanc par défaut */
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-/* --- 3. ÉLÉMENTS INTERACTIFS ORANGE --- */
+/* Passage à l'orange au survol */
+.md-typeset a:hover {
+    color: #ff5722 !important;
+}
+
+/* --- 4. ÉLÉMENTS ORANGE --- */
 .orange-icon {
     color: #ff5722 !important;
     fill: #ff5722 !important;
@@ -51,11 +61,4 @@
 
 .md-search__input:focus {
     background-color: rgba(255, 87, 34, 0.1);
-}
-
-/* --- 4. CONTENU & LIENS (SÉCURISÉ) --- */
-/* On ne force pas le blanc partout, on laisse le thème gérer, 
-   mais on ajoute l'orange au survol pour le style */
-.md-typeset a:hover {
-    color: #ff5722 !important;
 }
