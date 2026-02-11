@@ -1,24 +1,32 @@
-site_name: Le Guide de Lilevitchi
+site_name: Lilevitchi | Guides de Modding
 theme:
   name: material
+  language: fr
   palette:
-    - scheme: slate  # Mode sombre par défaut comme les sites de modding
+    # Mode sombre automatique basé sur le système du visiteur
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
       primary: deep orange
-      accent: amber
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Passer au mode clair
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep orange
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Passer au mode sombre
   features:
-    - navigation.tabs
-    - navigation.sections
-    - content.code.copy
-    - toc.follow
+    - navigation.tabs # Menu horizontal en haut
+    - navigation.sections # Sections claires à gauche
+    - navigation.top # Bouton "retour en haut"
+    - content.code.copy # Permet de copier tes commandes de downgrade en 1 clic
+    - search.suggest
+    - search.highlight
 
-nav:
-  - Accueil: index.md
-  - Guide Fallout 4:
-    - Introduction: fallout4/intro.md
-    - Downgrade: fallout4/downgrade.md
-    - Collection Afterlife: fallout4/afterlife.md
-  - Guide Cyberpunk:
-    - Les Prérequis: cyberpunk/base.md
-    - Graphismes Ultra: cyberpunk/graphics.md
-  - Fallout London: london/install.md
-  - FAQ: faq.md
+markdown_extensions:
+  - admonition # Pour les encadrés "Attention", "Note", etc.
+  - pymdownx.details
+  - pymdownx.superfences
