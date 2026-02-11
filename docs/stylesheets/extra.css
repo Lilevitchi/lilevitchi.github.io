@@ -32,11 +32,10 @@
 }
 
 /* --- 3. STYLE DES LIENS (FINI LE BLEU) --- */
-
 .md-typeset a {
     color: var(--md-typeset-color) !important; 
     text-decoration: none;
-    font-weight: normal !important; /* Force le texte à ne PAS être en gras */
+    font-weight: normal !important;
     transition: color 0.3s ease;
 }
 
@@ -44,13 +43,7 @@
     color: #ff5722 !important;
 }
 
-/* Espace autour des séparateurs de liens utiles */
-.md-typeset h2 + p {
-    font-size: 1rem; /* Taille standard du texte */
-    word-spacing: 10px; 
-}
-
-/* --- 4. ÉLÉMENTS ORANGE --- */
+/* --- 4. ÉLÉMENTS ORANGE & LIENS UTILES --- */
 .orange-icon {
     color: #ff5722 !important;
     fill: #ff5722 !important;
@@ -64,12 +57,24 @@
     color: #ff5722 !important;
 }
 
-.md-search__input:focus {
-    background-color: rgba(255, 87, 34, 0.1);
+/* On remet les liens YouTube/Discord à la taille normale du texte */
+.md-typeset h2 + p {
+    font-size: 1rem !important; /* Taille identique au reste du texte */
+    word-spacing: 5px; 
 }
 
-/* Espace autour des séparateurs de liens utiles */
-.md-typeset h2 + p {
-    font-size: 1.1rem;
-    word-spacing: 10px; 
+/* --- 5. MASCOTTES (LILE-BOT) --- */
+.bot-advice {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 87, 34, 0.05);
+    border-left: 4px solid #ff5722;
+    padding: 15px;
+    border-radius: 4px;
+    margin: 20px 0;
+}
+
+.bot-advice img {
+    margin-right: 20px;
+    height: auto; /* Garde les proportions */
 }
