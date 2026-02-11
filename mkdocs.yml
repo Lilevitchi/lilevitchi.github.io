@@ -18,12 +18,14 @@ theme:
     - navigation.sections
     - navigation.top
     - content.code.copy
+    - search.suggest
+    - search.highlight
 
 markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
-  - attr_list
+  - attr_list # Très important pour les styles personnalisés
 
 nav:
   - Accueil: index.md
