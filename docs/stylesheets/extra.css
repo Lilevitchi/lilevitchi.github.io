@@ -36,6 +36,13 @@
     border-bottom: 3px solid transparent !important;
 }
 
+/* L'effet d'encadré qui suit la souris */
+.md-tabs__link:hover {
+    opacity: 1 !important;
+    background-color: rgba(255, 255, 255, 0.08) !important; /* L'encadré gris subtil */
+    color: #ffffff !important;
+}
+
 /* L'onglet actif : Fond orange très léger + Trait orange vif en bas */
 .md-tabs__item--active .md-tabs__link {
     color: #ff5722 !important;
