@@ -34,15 +34,20 @@
 /* --- 3. STYLE DES LIENS (FINI LE BLEU) --- */
 
 .md-typeset a {
-    /* Utilise la couleur du texte actuel (blanc en sombre, noir en clair) */
     color: var(--md-typeset-color) !important; 
     text-decoration: none;
+    font-weight: normal !important; /* Force le texte à ne PAS être en gras */
     transition: color 0.3s ease;
 }
 
-/* Passage à l'orange au survol */
 .md-typeset a:hover {
     color: #ff5722 !important;
+}
+
+/* Espace autour des séparateurs de liens utiles */
+.md-typeset h2 + p {
+    font-size: 1rem; /* Taille standard du texte */
+    word-spacing: 10px; 
 }
 
 /* --- 4. ÉLÉMENTS ORANGE --- */
