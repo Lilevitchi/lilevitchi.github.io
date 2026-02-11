@@ -37,20 +37,33 @@
     display: block;
 }
 
-/* --- AGRANDISSEMENT DU LOGO --- */
+/* --- AGRANDISSEMENT DU LOGO (FORCE) --- */
 
-/* Ajuste la hauteur du logo (par défaut c'est environ 24px) */
+/* On cible le lien qui contient le logo pour lui donner de l'espace */
+.md-header__button.md-logo {
+    padding: 0.2rem !important; /* Réduit la marge interne pour laisser le logo respirer */
+}
+
+/* On force la taille de l'image */
 .md-logo img {
-    height: 48px !important; /* Tu peux augmenter à 64px si tu veux encore plus grand */
-    width: auto;
+    height: 60px !important;  /* Ajuste ici selon tes envies (60px, 80px...) */
+    width: auto !important;
+    display: block;
 }
 
-/* Aligne le titre verticalement avec le nouveau logo plus grand */
+/* Aligne le titre verticalement avec le nouveau logo */
 .md-header__title {
-    margin-left: 1.5rem !important; /* Espace entre le logo et le texte */
+    display: flex;
+    align-items: center;
+    margin-left: 1rem !important;
 }
 
-/* Ajuste la barre de navigation pour qu'elle ne soit pas trop serrée */
+/* On agrandit la barre de navigation pour qu'elle ne coupe pas le logo */
 .md-header__inner {
-    height: 4rem; /* Augmente légèrement la hauteur de la barre de menu */
+    height: 5rem !important; /* Augmente la hauteur de la barre de menu */
+}
+
+/* Ajustement pour que le contenu du site ne remonte pas trop sous la barre plus haute */
+.md-main__inner {
+    margin-top: 1rem !important;
 }
