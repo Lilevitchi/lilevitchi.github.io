@@ -37,6 +37,11 @@
     display: block;
 }
 
+.orange-icon {
+    color: #ff5722;
+    fill: #ff5722;
+}
+
 /* --- AGRANDISSEMENT DU LOGO (FORCE) --- */
 
 /* On cible le lien qui contient le logo pour lui donner de l'espace */
