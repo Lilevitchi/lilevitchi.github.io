@@ -1,66 +1,81 @@
-/* --- 1. HEADER & BANNIÈRE (LOOK GAMING AFFINÉ) --- */
+/* --- 1. CONFIGURATION DU HEADER (STABLE) --- */
+:root {
+    --md-header-height: 3.5rem;
+}
+
 .md-header {
     background-color: #000000 !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Ligne de démarcation fine */
 }
 
 .md-header__inner {
-    height: 3.5rem !important;
+    height: var(--md-header-height) !important;
+}
+
+.md-grid {
+    max-width: 95% !important;
 }
 
 .md-logo img {
-    height: 45px !important;
+    height: 40px !important;
     width: auto !important;
 }
 
-.md-header__title .md-ellipsis {
-    color: #ff5722 !important;
-    font-weight: bold;
-}
-
-/* --- 2. ONGLETS DE NAVIGATION (L'EFFET DEMANDÉ) --- */
-
-/* Conteneur des onglets */
+/* --- 2. NAVIGATION DU HAUT (EFFET NEXUS SANS CASSE) --- */
 .md-tabs {
     background-color: #050505 !important;
-    height: 2.8rem !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Style de base des onglets */
-.md-tabs__link {
-    transition: all 0.3s ease;
-    border-bottom: 3px solid transparent !important; /* Prépare le trait invisible */
-    padding: 0 15px !important;
-    height: 2.8rem !important;
-    display: inline-flex !important;
+.md-tabs__list {
+    display: flex;
     align-items: center;
-    opacity: 0.6;
 }
 
-/* L'ONGLET ACTIF (Encadré + Trait Orange en bas) */
+.md-tabs__item {
+    height: 100%;
+}
+
+.md-tabs__link {
+    position: relative; /* Pour caler le trait orange sans bouger le texte */
+    padding: 0 20px !important;
+    line-height: 3rem !important; /* Aligne le texte au centre verticalement */
+    opacity: 0.6;
+    transition: all 0.2s;
+}
+
+/* L'onglet actif : Fond teinté + Barre orange absolue */
 .md-tabs__item--active .md-tabs__link {
     opacity: 1 !important;
     color: #ff5722 !important;
-    background-color: rgba(255, 87, 34, 0.15) !important; /* Encadré orange léger */
-    border-bottom: 3px solid #ff5722 !important; /* Trait orange à la démarcation */
+    background-color: rgba(255, 87, 34, 0.1) !important;
 }
 
-/* --- 3. TEXTE ET TYPOGRAPHIE (UNIFORME) --- */
+.md-tabs__item--active .md-tabs__link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ff5722;
+}
+
+/* --- 3. TEXTE GLOBAL (UNIFORME & PROPRE) --- */
 .md-typeset {
-    font-size: 0.85rem !important;
+    font-size: 0.9rem !important;
 }
 
-.md-typeset p, .md-typeset li {
+.md-typeset p {
     line-height: 1.6;
+    margin-bottom: 1em;
 }
 
 /* --- 4. NAVIGATION GAUCHE (ÉPURÉE) --- */
 .md-nav__item--nested > .md-nav__link {
-    color: rgba(255, 255, 255, 0.4) !important;
+    color: rgba(255, 255, 255, 0.5) !important;
     text-transform: uppercase;
-    font-size: 0.65rem;
-    letter-spacing: 0.1rem;
-    margin-top: 0.5rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.05rem;
 }
 
 .md-nav__link--active {
@@ -68,36 +83,30 @@
     font-weight: bold !important;
 }
 
-/* --- 5. L'ENCADRÉ LILE-BOT (LOOK MODERNE) --- */
+/* --- 5. L'ENCADRÉ LILE-BOT --- */
 .bot-advice {
     display: flex;
     align-items: center;
     background-color: rgba(255, 87, 34, 0.08) !important;
     border-left: 4px solid #ff5722 !important;
-    padding: 15px;
+    padding: 20px;
     border-radius: 4px;
     margin: 20px 0;
 }
 
 #lile-bot-title { color: #ff5722; font-weight: bold; }
-#lile-bot-tip { font-style: italic; opacity: 0.8; }
+#lile-bot-tip { font-style: italic; opacity: 0.85; }
 
-/* --- 6. BOUTON KO-FI & ICONS --- */
+/* --- 6. BOUTON KO-FI --- */
 .kofi-button {
     background-color: #ff5722;
     color: white !important;
     padding: 8px 16px;
     border-radius: 4px;
-    font-size: 0.8rem;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    transition: 0.3s;
-}
-
-.kofi-button:hover {
-    background-color: #ffffff !important;
-    color: #ff5722 !important;
+    gap: 10px;
+    font-size: 0.85rem;
 }
 
 .orange-icon { color: #ff5722 !important; fill: #ff5722 !important; }
