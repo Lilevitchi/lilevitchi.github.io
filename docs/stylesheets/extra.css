@@ -72,3 +72,32 @@
 .md-main__inner {
     margin-top: 1rem !important;
 }
+
+/* --- STYLE DES LIENS (BLANC -> ORANGE) --- */
+
+/* Tous les liens dans le contenu du site */
+.md-content a {
+    color: #ffffff !important; /* Force le texte en blanc */
+    text-decoration: none; /* Enlève le soulignement par défaut */
+    transition: color 0.3s ease; /* Animation fluide pour le changement de couleur */
+}
+
+/* Effet au survol (Hover) */
+.md-content a:hover {
+    color: #ff5722 !important; /* Devient orange au survol */
+}
+
+/* Cas particulier : Les icônes à côté des liens */
+.md-content a .orange-icon {
+    transition: fill 0.3s ease, color 0.3s ease;
+}
+
+.md-content a:hover .orange-icon {
+    color: #ff5722 !important;
+    fill: #ff5722 !important;
+}
+
+/* Pour les listes de liens (YouTube, Twitch, Discord) */
+.md-content li a {
+    font-weight: 500;
+}
