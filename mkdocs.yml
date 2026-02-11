@@ -3,13 +3,13 @@ site_url: https://lilevitchi.github.io/
 
 theme:
   name: material
-  logo: assets/logo.png # Ton logo apparaîtra dans la barre de menu
+  logo: assets/logo.png
   favicon: assets/logo.png
   language: fr
   palette:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: black # On teste noir pour faire ressortir ton logo
+      primary: black
       accent: deep orange
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -20,6 +20,7 @@ theme:
     - navigation.sections
     - navigation.top
     - content.code.copy
+    - search.suggest
 
 markdown_extensions:
   - admonition
@@ -29,7 +30,7 @@ markdown_extensions:
 
 nav:
   - Accueil: index.md
-  - Fallout 4:
+  - Guide Fallout 4:
       - Introduction: fallout4/intro.md
       - Installation: fallout4/setup.md
   - Fallout London: fallout-london/index.md
