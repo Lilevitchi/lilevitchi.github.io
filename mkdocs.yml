@@ -1,0 +1,24 @@
+site_name: Le Guide de Lilevitchi
+theme:
+  name: material
+  palette:
+    - scheme: slate  # Mode sombre par défaut comme les sites de modding
+      primary: deep orange
+      accent: amber
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - content.code.copy
+    - toc.follow
+
+nav:
+  - Accueil: index.md
+  - Guide Fallout 4:
+    - Introduction: fallout4/intro.md
+    - Downgrade: fallout4/downgrade.md
+    - Collection Afterlife: fallout4/afterlife.md
+  - Guide Cyberpunk:
+    - Les Prérequis: cyberpunk/base.md
+    - Graphismes Ultra: cyberpunk/graphics.md
+  - Fallout London: london/install.md
+  - FAQ: faq.md
