@@ -32,7 +32,10 @@
     transition: all 0.3s ease;
     opacity: 0.6;
     color: #ffffff !important;
-    padding-bottom: 8px !important;
+    
+line-height: 3.2rem !important; /* Centrage vertical pour logo 64px */
+padding: 0 15px !important;    /* Espacement pour l'encadré */
+    
     border-bottom: 3px solid transparent !important;
     display: inline-block;
     border-radius: 4px 4px 0 0;
@@ -43,7 +46,7 @@
 .md-tabs__link:hover {
     opacity: 1 !important;
     background-color: rgba(255, 255, 255, 0.08) !important; /* L'encadré gris subtil */
-    color: #ffffff !important;
+    color: #ff5722 !important;
 }
 
 /* L'onglet actif : Fond orange très léger + Trait orange vif en bas */
