@@ -9,29 +9,21 @@ theme:
       scheme: slate
       primary: deep orange
       accent: deep orange
-      toggle:
-        icon: material/brightness-4
-        name: Passer au mode clair
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: deep orange
       accent: deep orange
-      toggle:
-        icon: material/brightness-7
-        name: Passer au mode sombre
   features:
     - navigation.tabs
     - navigation.sections
     - navigation.top
     - content.code.copy
-    - search.suggest
-    - search.highlight
 
 markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
-  - attr_list # Requis pour styliser les images et boutons
+  - attr_list
 
 nav:
   - Accueil: index.md
@@ -40,3 +32,5 @@ nav:
       - Installation propre: fallout4/setup.md
       - Le Downgrade: fallout4/downgrade.md
       - Utilitaires de base: fallout4/utilities.md
+  - Guide Cyberpunk 2077:
+      - Bientôt disponible: cyberpunk/index.md
