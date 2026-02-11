@@ -1,14 +1,10 @@
-/* --- 1. CONFIGURATION GÉNÉRALE & HEADER --- */
-:root {
-    --md-header-height: 3.5rem;
-}
-
+/* --- 1. HEADER & BANNIÈRE (NOIR PUR & TITRE ORANGE) --- */
 .md-header {
     background-color: #000000 !important;
 }
 
 .md-header__inner {
-    height: var(--md-header-height) !important;
+    height: 3.2rem !important;
 }
 
 .md-grid {
@@ -20,70 +16,54 @@
     width: auto !important;
 }
 
-/* Fix du titre du Header en Orange */
+/* Fix définitif : Le titre Lilevitchi | Modding en Orange */
 .md-header__title .md-ellipsis {
     color: #ff5722 !important; 
     font-weight: bold;
+    font-size: 1.1rem;
 }
 
-/* --- 2. ONGLETS DE NAVIGATION (EFFET NEXUS) --- */
+/* --- 2. ONGLETS DE NAVIGATION (L'EFFET NEXUS) --- */
 .md-tabs {
-    background-color: #000000 !important; /* On garde le noir uniforme */
+    background-color: #000000 !important; /* Uniforme avec le header */
 }
 
 .md-tabs__link {
-    position: relative;
-    padding: 0 20px !important;
-    line-height: 3.2rem !important;
+    transition: all 0.3s ease;
     opacity: 0.6;
-    transition: all 0.2s;
-    border-bottom: none !important; /* On retire la bordure par défaut */
+    padding-bottom: 8px !important;
+    border-bottom: 3px solid transparent !important;
 }
 
-/* L'onglet actif avec fond teinté et trait orange absolu */
+/* L'onglet actif : Fond orange très léger + Trait orange vif en bas */
 .md-tabs__item--active .md-tabs__link {
-    opacity: 1 !important;
     color: #ff5722 !important;
+    opacity: 1 !important;
     background-color: rgba(255, 87, 34, 0.1) !important;
+    border-bottom: 3px solid #ff5722 !important;
 }
 
-.md-tabs__item--active .md-tabs__link::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: #ff5722;
-}
-
-/* --- 3. UNIFORMISATION DU TEXTE (PLUS PETIT) --- */
+/* --- 3. UNIFORMISATION DU TEXTE (TAILLE PARFAITE 0.85) --- */
 .md-typeset {
-    font-size: 0.85rem !important; /* Fix définitif de la taille */
+    font-size: 0.85rem !important;
+}
+
+.md-typeset h1 {
+    color: var(--md-typeset-color);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
 }
 
 .md-typeset p, .md-typeset li {
-    line-height: 1.6;
-    margin-bottom: 0.8em;
+    line-height: 1.5;
 }
 
-/* --- 4. STYLE DES LIENS (HORS BOUTONS) --- */
-.md-typeset a {
-    color: var(--md-typeset-color) !important;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.md-typeset a:hover {
-    color: #ff5722 !important;
-}
-
-/* --- 5. NAVIGATION GAUCHE (MENU ACTIF) --- */
+/* --- 4. NAVIGATION GAUCHE (ÉPURÉE) --- */
 .md-nav__item--nested > .md-nav__link {
     color: rgba(255, 255, 255, 0.4) !important;
     text-transform: uppercase;
     font-size: 0.65rem;
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.1rem;
 }
 
 .md-nav__link--active {
@@ -91,7 +71,7 @@
     font-weight: bold !important;
 }
 
-/* --- 6. L'ENCADRÉ LILE-BOT --- */
+/* --- 5. L'ENCADRÉ LILE-BOT --- */
 .bot-advice {
     display: flex;
     align-items: center;
@@ -103,27 +83,19 @@
 }
 
 #lile-bot-title { color: #ff5722; font-weight: bold; }
-#lile-bot-tip { font-style: italic; opacity: 0.85; }
+#lile-bot-tip { font-style: italic; opacity: 0.8; }
 
-/* --- 7. BOUTON KO-FI --- */
+/* --- 6. BOUTON KO-FI & ÉLÉMENTS ORANGE --- */
 .kofi-button {
     background-color: #ff5722;
     color: white !important;
-    padding: 8px 16px;
+    padding: 6px 12px;
     border-radius: 4px;
+    font-size: 0.75rem;
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    font-size: 0.8rem;
+    gap: 8px;
 }
 
-/* --- 8. ÉLÉMENTS ORANGE DIVERS --- */
 .orange-icon { color: #ff5722 !important; fill: #ff5722 !important; }
 .md-search__input:focus { background-color: rgba(255, 87, 34, 0.1); }
-
-/* --- 9. ADAPTATION MOBILE --- */
-@media screen and (max-width: 76.25em) {
-    .md-tabs {
-        display: none;
-    }
-}
