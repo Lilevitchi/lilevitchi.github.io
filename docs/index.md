@@ -1,4 +1,4 @@
-# 🚀 Bienvenue dans le Nexus de Lilevitchi
+# :material-tools:{ .orange-icon } Bienvenue dans le Nexus de Lilevitchi
 
 **Plongez au cœur de l'excellence du modding.** Que vous soyez ici pour stabiliser votre jeu, transformer son visuel ou vivre une aventure totalement nouvelle sur les terres désolées, vous êtes au bon endroit. 
 
@@ -132,4 +132,4 @@ Si mes guides vous font gagner du temps et du plaisir de jeu, n'hésitez pas à 
 
 ---
 ## 🔗 Liens Utiles
-* [📺 YouTube](https://www.youtube.com/@Lilevitchi) | [🎮 Twitch](https://twitch.tv/lilevitchi) | [💬 Discord](https://discord.gg/aFJxsPC)
+* [:fontawesome-brands-youtube:{ .orange-icon } YouTube](https://www.youtube.com/@Lilevitchi) | [:fontawesome-brands-twitch:{ .orange-icon } Twitch](https://twitch.tv/lilevitchi) | [:fontawesome-brands-discord:{ .orange-icon } Discord](https://discord.gg/aFJxsPC)
