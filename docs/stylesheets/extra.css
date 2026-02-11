@@ -1,59 +1,57 @@
-/* --- 1. HEADER & BANNIÈRE (NOIR PUR & TITRE ORANGE) --- */
+/* --- 1. HEADER & BANNIÈRE (FIXE & CENTRÉ) --- */
 .md-header {
     background-color: #000000 !important;
 }
 
 .md-header__inner {
     height: 3.2rem !important;
-}
-
-.md-grid {
-    max-width: 95% !important;
+    display: flex;
+    align-items: center; /* Centre tout verticalement dans le header */
 }
 
 .md-logo img {
     height: 40px !important;
     width: auto !important;
+    margin: 0 !important; /* Supprime les marges parasites */
 }
 
-/* Fix définitif : Le titre Lilevitchi | Modding en Orange */
 .md-header__title .md-ellipsis {
     color: #ff5722 !important; 
     font-weight: bold;
     font-size: 1.1rem;
+    line-height: 3.2rem !important;
 }
 
-/* --- 2. ONGLETS DE NAVIGATION (L'EFFET NEXUS) --- */
+/* --- 2. ONGLETS DE NAVIGATION (LIGNE ORANGE FIXÉE) --- */
 .md-tabs {
-    background-color: #000000 !important; /* Uniforme avec le header */
+    background-color: #000000 !important;
 }
 
 .md-tabs__link {
     transition: all 0.3s ease;
     opacity: 0.6;
     color: #ffffff !important;
-    padding: 0 15px !important; /* Ajout d'espace pour l'encadré */
-    margin: 0 5px;               /* Espacement entre les onglets */
-    line-height: 3.2rem !important; /* Centrage vertical parfait sans padding-bottom */
-    border-bottom: 3px solid transparent !important;
-    display: inline-block;
-    border-radius: 4px 4px 0 0;
+    padding: 0 15px !important;
+    height: 3.2rem !important;      /* Force la hauteur égale au header */
+    line-height: 3.2rem !important; /* Centre le texte parfaitement */
     text-decoration: none !important;
+    display: inline-block;
+    border-bottom: 3px solid transparent !important;
+    box-sizing: border-box; /* Important : la bordure compte dans la hauteur */
 }
 
-/* L'effet d'encadré qui suit la souris */
+/* Effet au survol (Encadré) */
 .md-tabs__link:hover {
     opacity: 1 !important;
-    background-color: rgba(255, 255, 255, 0.08) !important; /* L'encadré gris subtil */
-    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
 }
 
-/* L'onglet actif : Fond orange très léger + Trait orange vif en bas */
+/* L'onglet actif : Fond + Ligne Orange */
 .md-tabs__item--active .md-tabs__link {
     color: #ff5722 !important;
     opacity: 1 !important;
     background-color: rgba(255, 87, 34, 0.1) !important;
-    border-bottom: 3px solid #ff5722 !important;
+    border-bottom: 3px solid #ff5722 !important; /* La ligne est ici */
 }
 
 /* --- 3. UNIFORMISATION DU TEXTE (TAILLE PARFAITE 0.85) --- */
