@@ -61,7 +61,7 @@
     .md-nav__item .md-nav__link--active { background-color: transparent !important; }
     .md-nav__item--nested > .md-nav__link:focus { background-color: rgba(255, 87, 34, 0.1) !important; }
     .md-tabs { display: none !important; }
-   .md-nav--primary { z-index: 1000 !important; background-color: #000000 !important; visibility: visible !important; }
+    .md-nav--primary { z-index: 1000 !important; background-color: #000000 !important; visibility: visible !important; }
 }
 
 /* --- 7. GRILLE DES JEUX (HUB) --- */
@@ -81,8 +81,6 @@
     overflow: visible !important;
     padding-left: 25px !important;
     padding-right: 0 !important;
-    justify-items: center; /* Centre les éléments dans leur propre cellule */
-    justify-content: center; /* Centre toute la grille dans la page */
 }
 
 .game-card {
