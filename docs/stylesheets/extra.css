@@ -97,32 +97,16 @@
     font-weight: 400 !important;
 }
 
-/* On force TOUS les liens du menu à être alignés à gauche sans exception */
 .md-nav__link {
     padding-left: 0.8rem !important;
-    display: flex !important;
-    align-items: center;
-}
-
-/* Spécifique aux dossiers (Fallout 4) : on dégage l'icône de la trajectoire du texte */
-.md-nav__item--nested > .md-nav__link {
-    position: relative; /* Base pour le placement de la flèche */
-}
-
-.md-nav__item--nested > .md-nav__link .md-ellipsis {
     margin-left: 0 !important;
-}
-
-/* La flèche est envoyée au bout à droite en "flottant" */
-.md-nav__item--nested > .md-nav__link .md-nav__icon {
-    position: absolute;
-    right: 10px;
-    margin: 0 !important;
+    display: block !important;
 }
 
 .md-nav__link--active {
     color: #ff5722 !important;
     font-weight: bold !important;
+    background-color: transparent !important;
 }
 
 /* --- 5. L'ENCADRÉ LILE-BOT & ÉLÉMENTS UI --- */
