@@ -199,4 +199,40 @@
 /* ============================================================
    ============================================================ */
 
+/* --- 10. HUB IMMERSIF (FIX TOTAL) --- */
 
+body:has(.hub-wrapper) {
+    overflow: hidden !important;
+}
+body:has(.hub-wrapper) .md-footer {
+    display: none !important;
+}
+
+body:has(.hub-wrapper) .md-main__inner {
+    max-width: none !important;
+    margin: 0 !important;
+}
+body:has(.hub-wrapper) .md-content {
+    max-width: none !important;
+}
+
+.hub-wrapper {
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - 6.4rem); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.hub-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px) brightness(0.35);
+    z-index: 1;
+}
