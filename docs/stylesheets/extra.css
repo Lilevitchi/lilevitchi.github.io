@@ -17,7 +17,7 @@
 
 /* --- 3. TEXTE, LIENS & TITRES --- */
 .md-main__inner, .md-content { margin-top: 0 !important; margin-left: 0 !important; }
-.md-content__inner { max-width: 1400px !important; margin: 0 auto !important; padding-top: 1.5rem !important; padding-left: 25px !important; padding-right: 0 !important; }
+.md-content__inner { max-width: 1400px !important; margin: 0 auto !important; padding-top: 1.5rem !important; padding-left: 25px !important; padding-right: 0 !important; padding-bottom: 4rem !important; }
 
 .md-typeset { font-size: 0.85rem !important; }
 .md-typeset h1, .md-typeset h2, .md-typeset h3 { color: var(--md-default-fg-color) !important; opacity: 1 !important; font-weight: 700; }
