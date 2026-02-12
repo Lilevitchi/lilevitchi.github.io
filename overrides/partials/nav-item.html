@@ -1,10 +1,7 @@
-{% macro render(nav_item, parent, level) %}
-  {% set class = "md-nav__item" %}
-  {% if nav_item.active %}
-    {% set class = class ~ " md-nav__item--active" %}
-  {% endif %}
-
-  <li class="{{ class }}">
+{# On définit la macro #}
+{% macro render(item, parent, level) %}
+  {% set nav_item = item %}
+  <li class="md-nav__item {{ 'md-nav__item--active' if nav_item.active }}">
     {% if nav_item.children %}
       <input class="md-nav__toggle md-toggle" data-md-toggle="{{ nav_item.path }}" type="checkbox" id="{{ nav_item.path }}" {{ 'checked' if nav_item.active }}>
       
@@ -34,5 +31,9 @@
   </li>
 {% endmacro %}
 
-{# Cette ligne est la clé : elle teste 'item' PUIS 'nav_item' pour éviter l'erreur Undefined #}
-{{ render(item | default(nav_item), parent, level) }}
+{# L'APPEL CRUCIAL #}
+{% if item %}
+  {{ render(item, parent, level) }}
+{% elif nav_item %}
+  {{ render(nav_item, parent, level) }}
+{% endif %}
