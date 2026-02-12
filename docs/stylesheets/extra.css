@@ -171,7 +171,7 @@
 
 /* 2. Retour du Curseur Personnalisé (Uniquement sur PC) */
 @media screen and (min-width: 60em) {
-    .game-card, .hub-button * {
+    .game-card, .hub-button, .hub-button * {
         cursor: url('../assets/curseur.png') 32 32, pointer !important;
     }
 }
