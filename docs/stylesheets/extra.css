@@ -212,19 +212,13 @@
 
  /* --- 10. HUB IMMERSIF (FIX BANNIÈRE & BOUTONS) --- */
 
-body:has(.hub-wrapper) .md-content__inner,
-body:has(.hub-wrapper) .md-main__inner {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-}
-
 @media screen and (min-width: 60em) {
     .hub-wrapper {
         position: fixed;
-        top: 6.4rem;
+        top: 6rem;
         left: 0;
         width: 100vw;
-        height: calc(100vh - 6.4rem);
+        height: calc(100vh - 6rem);
         z-index: 10;
         display: flex;
         flex-direction: column;
