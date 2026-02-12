@@ -122,6 +122,11 @@
     }
 }
 
+.md-main__inner { margin-top: 0 !important; }
+.md-content { margin-top: 0 !important; }
+
+.md-typeset h1:first-child { margin-top: 0 !important; padding-top: 0 !important; }
+
 /* ============================================================
    ============================================================ */
 
