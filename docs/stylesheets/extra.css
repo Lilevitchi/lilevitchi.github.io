@@ -1,3 +1,7 @@
+/* ============================================================
+   Lilevitchi | Modding - Custom CSS
+   ============================================================ */
+
 /* --- 1. HEADER & BANNIÈRE (NOIR PUR & TITRE ORANGE) --- */
 .md-header {
     background-color: #000000 !important;
@@ -16,40 +20,37 @@
     width: auto !important;
 }
 
-/* Fix définitif : Le titre Lilevitchi | Modding en Orange */
+/* Titre principal dans la barre du haut */
 .md-header__title .md-ellipsis {
     color: #ff5722 !important; 
     font-weight: bold;
     font-size: 1.4rem;
+    text-transform: none !important;
 }
 
-/* --- 2. ONGLETS DE NAVIGATION (L'EFFET NEXUS) --- */
+/* --- 2. ONGLETS DE NAVIGATION (VERSION PC) --- */
 .md-tabs {
-    background-color: #000000 !important; /* Uniforme avec le header */
+    background-color: #000000 !important;
 }
 
 .md-tabs__link {
     transition: all 0.3s ease;
     opacity: 0.6;
     color: #ffffff !important;
-
     padding-top: 7px !important;
     padding-bottom: 6px !important;
-    
     border-bottom: 3px solid transparent !important;
     display: inline-block;
     border-radius: 4px 4px 0 0;
-    text-decoration: none !important;
+    text-transform: none !important;
 }
 
-/* L'effet d'encadré qui suit la souris */
 .md-tabs__link:hover {
     opacity: 1 !important;
-    background-color: rgba(255, 255, 255, 0.08) !important; /* L'encadré gris subtil */
+    background-color: rgba(255, 255, 255, 0.08) !important;
     color: #ff5722 !important;
 }
 
-/* L'onglet actif : Fond orange très léger + Trait orange vif en bas */
 .md-tabs__item--active .md-tabs__link {
     color: #ff5722 !important;
     opacity: 1 !important;
@@ -57,56 +58,26 @@
     border-bottom: 3px solid #ff5722 !important;
 }
 
-/* --- 3. UNIFORMISATION DU TEXTE --- */
+/* --- 3. UNIFORMISATION DU TEXTE ET LIENS --- */
 .md-typeset {
     font-size: 0.85rem !important;
 }
 
 .md-typeset h1 {
-    color: var(--md-typeset-color);
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
 
-.md-typeset p, .md-typeset li {
-    line-height: 1.5;
-}
-
-/* --- 4. STYLE DES LIENS (FINI LE BLEU) --- */
-
-/* Force les liens (YouTube, etc.) à être blancs/gris par défaut au lieu de bleu */
+/* Liens dans le contenu (YouTube, etc.) */
 .md-typeset a {
     color: inherit !important; 
     text-decoration: none;
 }
 
-/* Deviennent orange uniquement au survol */
 .md-typeset a:hover {
     color: #ff5722 !important;
 }
 
-/* Titres de sections (ex: Guide Fallout 4) : Gris neutre */
-.md-nav__item--nested > .md-nav__link {
-    color: rgba(255, 255, 255, 0.7) !important;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    letter-spacing: 0.05rem;
-    margin-top: 0.5rem;
-}
-
-/* Seul le chapitre actif devient Orange */
-.md-nav__link--active {
-    color: #ff5722 !important;
-    font-weight: bold !important;
-}
-
-/* Survol des liens du menu */
-.md-nav__link:hover {
-    color: #ff5722 !important;
-}
-
-/* On force aussi les icônes à côté des liens (YouTube, etc.) à suivre */
 .md-typeset a .twemoji {
     transition: fill 0.3s ease;
 }
@@ -115,7 +86,28 @@
     fill: #ff5722 !important;
 }
 
-/* --- 5. L'ENCADRÉ LILE-BOT --- */
+/* --- 4. STYLE DU MENU LATÉRAL (TOUT SITE) --- */
+
+/* Titres de dossiers (ex: Fallout 4) et Liens (ex: Accueil) */
+.md-nav__link, .md-nav__title, .md-ellipsis {
+    text-transform: none !important; /* Force les minuscules partout */
+    font-weight: 400 !important;
+}
+
+/* Alignement spécifique pour les dossiers */
+.md-nav__item--nested > .md-nav__link {
+    padding-left: 0.8rem !important; /* Aligne avec Accueil */
+    color: var(--md-default-fg-color) !important;
+    font-size: 0.8rem !important;
+}
+
+/* État actif (Chapitre en cours) */
+.md-nav__link--active {
+    color: #ff5722 !important;
+    font-weight: bold !important;
+}
+
+/* --- 5. L'ENCADRÉ LILE-BOT & ÉLÉMENTS UI --- */
 .bot-advice {
     display: flex;
     align-items: center;
@@ -134,7 +126,6 @@
 #lile-bot-title { color: #ff5722; font-weight: bold; }
 #lile-bot-tip { font-style: italic; opacity: 0.8; }
 
-/* --- 6. BOUTON KO-FI & ÉLÉMENTS ORANGE --- */
 .kofi-button {
     background-color: #ff5722;
     color: white !important;
@@ -146,19 +137,14 @@
     gap: 8px;
 }
 
-.orange-icon { color: #ff5722 !important; fill: #ff5722 !important; }
-.md-search__input:focus { background-color: rgba(255, 87, 34, 0.1); }
-
-/* --- 7. ADAPTATION MOBILE & CURSEUR --- */
-
-/* 1. Header & Menu latéral : On gère le bandeau supérieur du menu */
+/* --- 6. ADAPTATION MOBILE --- */
 @media screen and (max-width: 45em) {
-    /* Cache le titre dans la barre du haut */
+    /* Cache titre header haut */
     .md-header__title {
         display: none !important;
     }
 
-    /* Cache UNIQUEMENT le titre principal (Lilevitchi | Modding) */
+    /* Cache texte "Lilevitchi | Modding" dans le tiroir menu */
     .md-nav__title[for="__drawer"] {
         color: transparent !important;
         font-size: 0 !important;
@@ -166,43 +152,28 @@
         display: block !important;
     } 
 
-    /* Logo à gauche dans le menu */
+    /* Logo seul dans le menu mobile */
     .md-nav__title .md-logo {
         display: block !important;
-        width: auto !important;
         margin: 15px 0 !important;
-        font-size: 1rem !important; /* Pour que l'image s'affiche correctement */
+    }
+
+    /* Supprime fond gris sur mobile */
+    .md-nav__item .md-nav__link--active {
+        background-color: transparent !important;
+    }
+
+    .md-nav__item--nested > .md-nav__link:focus {
+        background-color: rgba(255, 87, 34, 0.1) !important;
+    }
+
+    /* Cache les onglets */
+    .md-tabs {
+        display: none !important;
     }
 }
 
-/* 2. Correction PC & Mobile : Harmonisation des textes */
-
-/* Force Fallout 4 (titre de section) à ressembler au reste */
-.md-nav__item--nested > .md-nav__link {
-    font-weight: 400 !important;
-    color: var(--md-default-fg-color) !important;
-    font-size: 0.8rem !important;
-    text-transform: none !important;
-}
-
-/* Force l'état actif (quand on a cliqué dessus) */
-.md-nav__link--active {
-    font-weight: 400 !important;
-    text-transform: none !important;
-}
-
-/* 3. Typographie : Minuscules partout pour tout le monde */
-h2, .md-nav__link, .md-ellipsis, .md-nav__title {
-    text-transform: none !important;
-}
-
-/* 4. Curseur & Grille (Inchangés) */
-@media screen and (min-width: 60em) {
-    .game-card, .hub-button, .hub-button * {
-        cursor: url('../assets/curseur.png') 32 32, pointer !important;
-    }
-}
-
+/* --- 7. GRILLE DES JEUX & CURSEUR --- */
 .game-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -218,21 +189,8 @@ h2, .md-nav__link, .md-ellipsis, .md-nav__title {
     .game-card {
         height: 250px !important; 
     }
-}
-
-/* 5. Cacher les onglets sur mobile */
-@media screen and (max-width: 76.25em) {
-    .md-tabs {
-        display: none !important;
+    /* Curseur PC uniquement */
+    .game-card, .hub-button, .hub-button * {
+        cursor: url('../assets/curseur.png') 32 32, pointer !important;
     }
-}
-
-/* 6. Nettoyage du menu déroulant (Orange et transparent) */
-.md-nav__item .md-nav__link--active {
-    background-color: transparent !important;
-    color: #ff5722 !important;
-}
-
-.md-nav__item--nested > .md-nav__link:focus {
-    background-color: rgba(255, 87, 34, 0.1) !important;
 }
