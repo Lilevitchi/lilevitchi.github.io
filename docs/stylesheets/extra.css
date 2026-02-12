@@ -156,43 +156,7 @@
 }
 
 /* --- 9. RÉSEAUX SOCIAUX --- */
-.orange-icon-svg, .custom-social-icon {
-    height: 1.1rem !important;
-    width: auto !important;
-    vertical-align: middle;
-    display: inline-block;
-    filter: brightness(0) invert(1);
-    transition: filter 0.3s ease, transform 0.3s ease;
-}
 
-.md-social__link {
-    color: #ffffff !important;
-    transition: color 0.3s ease;
-    width: auto !important;
-    margin-right: 1.2rem !important;
-}
-
-.md-social__link:hover {
-    color: #ff5722 !important;
-}
-
-.md-typeset a:hover .orange-icon-svg, 
-.md-social__link:hover .custom-social-icon {
-    filter: invert(48%) sepia(89%) saturate(2476%) hue-rotate(346deg) brightness(101%) contrast(101%) !important;
-}
-
-.md-social {
-    display: flex !important;
-    justify-content: flex-start !important;
-    flex-wrap: nowrap !important;
-    gap: 0 !important;
-    padding: 20px 0 !important;
-}
-
-.md-social__link svg {
-    max-height: 1.1rem !important;
-    width: 1.1rem !important;
-}
 
 /* ============================================================
    ============================================================ */
