@@ -150,8 +150,34 @@
 .md-search__input:focus { background-color: rgba(255, 87, 34, 0.1); }
 
 /* --- 7. ADAPTATION MOBILE --- */
-@media screen and (max-width: 76.25em) {
-    .md-tabs {
-        display: none; /* MkDocs cache les onglets pour utiliser le menu burger sur mobile */
+
+/* 1. Masquer le titre à côté du logo sur mobile pour éviter le chevauchement */
+@media screen and (max-width: 45em) {
+    .md-header__title {
+        display: none !important;
+    }
+}
+
+/* 2. Supprimer les majuscules forcées (Fallout 4, menus, etc.) */
+h2, .md-nav__link, .md-ellipsis {
+    text-transform: none !important;
+}
+
+/* 3. Grille responsive pour l'accueil (index.md) */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+    padding: 10px;
+}
+
+/* 4. Ajustement des cartes de jeu pour qu'elles ne soient pas "énormes" sur mobile */
+.game-card {
+    height: 180px !important; /* Hauteur réduite sur mobile */
+}
+
+@media screen and (min-width: 60em) {
+    .game-card {
+        height: 250px !important; /* Hauteur normale sur PC */
     }
 }
