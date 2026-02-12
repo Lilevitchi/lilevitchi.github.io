@@ -38,7 +38,7 @@ extra_css:
 
 markdown_extensions:
   - toc:
-      permalink: true
+      permalink: false
   - admonition
   - pymdownx.details
   - pymdownx.superfences
