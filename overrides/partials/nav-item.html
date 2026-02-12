@@ -1,0 +1,36 @@
+{% macro render(nav_item, parent, level) %}
+  {% set class = "md-nav__item" %}
+  {% if nav_item.active %}
+    {% set class = class ~ " md-nav__item--active" %}
+  {% endif %}
+
+  <li class="{{ class }}">
+    {% if nav_item.children %}
+      <input class="md-nav__toggle md-toggle" data-md-toggle="{{ nav_item.path }}" type="checkbox" id="{{ nav_item.path }}" {{ 'checked' if nav_item.active }}>
+      
+      <label class="md-nav__link" for="{{ nav_item.path }}">
+        <span class="md-nav__icon md-icon"></span>
+        {{ nav_item.title }}
+      </label>
+      
+      <nav class="md-nav" data-md-level="{{ level }}" aria-labelledby="{{ nav_item.path }}-label" data-md-component="nav">
+        <label class="md-nav__title" for="{{ nav_item.path }}">
+          <span class="md-nav__icon md-icon"></span>
+          <a href="{{ config.site_url | default('/') }}" class="md-nav__button md-logo">
+            <img src="{{ config.theme.logo | url }}" alt="logo">
+          </a>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          {% for child in nav_item.children %}
+            {{ render(child, nav_item, level + 1) }}
+          {% endfor %}
+        </ul>
+      </nav>
+    {% else %}
+      <a href="{{ nav_item.url | url }}" class="md-nav__link {{ 'md-nav__link--active' if nav_item.active }}">
+        <span class="md-ellipsis">{{ nav_item.title }}</span>
+      </a>
+    {% endif %}
+  </li>
+{% endmacro %}
+{{ render(nav_item, parent, level) }}
