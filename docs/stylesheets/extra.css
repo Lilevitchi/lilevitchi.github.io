@@ -215,3 +215,13 @@ h2, .md-nav__link, .md-ellipsis, .md-nav__title {
         display: none !important;
     }
 }
+
+/* Nettoyage du menu déroulant sur mobile */
+.md-nav__item .md-nav__link--active {
+    background-color: transparent !important; /* Enlève le fond gris bizarre */
+    color: #ff5722 !important; /* Garde le texte en orange */
+}
+
+.md-nav__item--nested > .md-nav__link:focus {
+    background-color: rgba(255, 87, 34, 0.1) !important; /* Un orange très subtil au lieu du gris */
+}
