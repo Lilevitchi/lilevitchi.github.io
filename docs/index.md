@@ -1,6 +1,8 @@
 # :material-tools: Bienvenue Moddeur
 
-Plongez au cœur du **modding** ! Que vous soyez novice ou expérimenté, vous êtes au bon endroit. Ici, vous trouverez des **guides précis et complets** pour modder votre jeu favori.
+Que vous soyez novice ou expérimenté, vous êtes au bon endroit !
+
+Vous trouverez des **guides précis et complets** pour plongez dans le monde du **modding**.
 
 ---
 
