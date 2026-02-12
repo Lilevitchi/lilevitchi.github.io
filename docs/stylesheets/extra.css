@@ -2,211 +2,68 @@
    Lilevitchi | Modding - Custom CSS
    ============================================================ */
 
-/* --- 1. HEADER & BANNIÈRE (NOIR PUR & TITRE ORANGE) --- */
-.md-header {
-    background-color: #000000 !important;
-}
+/* --- 1. HEADER & BANNIÈRE --- */
+.md-header { background-color: #000000 !important; }
+.md-header__inner { height: 3.2rem !important; }
+.md-grid { max-width: 95% !important; }
+.md-logo img { height: 64px !important; width: auto !important; }
+.md-header__title .md-ellipsis { color: #ff5722 !important; font-weight: bold; font-size: 1.4rem; text-transform: none !important; }
 
-.md-header__inner {
-    height: 3.2rem !important;
-}
+/* --- 2. NAVIGATION (PC) --- */
+.md-tabs { background-color: #000000 !important; }
+.md-tabs__link { transition: all 0.3s ease; opacity: 0.6; color: #ffffff !important; padding: 7px 0 6px 0 !important; border-bottom: 3px solid transparent !important; display: inline-block; border-radius: 4px 4px 0 0; text-transform: none !important; }
+.md-tabs__link:hover { opacity: 1 !important; background-color: rgba(255, 255, 255, 0.08) !important; color: #ff5722 !important; }
+.md-tabs__item--active .md-tabs__link { color: #ff5722 !important; opacity: 1 !important; background-color: rgba(255, 87, 34, 0.1) !important; border-bottom: 3px solid #ff5722 !important; }
 
-.md-grid {
-    max-width: 95% !important;
-}
+/* --- 3. TEXTE, LIENS & TITRES --- */
+.md-typeset { font-size: 0.85rem !important; }
+.md-typeset h1, .md-typeset h2, .md-typeset h3 { color: var(--md-default-fg-color) !important; opacity: 1 !important; font-weight: 700; }
+.md-nav--secondary .md-nav__title { color: var(--md-default-fg-color) !important; opacity: 1 !important; font-weight: bold; }
+.md-nav--secondary .md-nav__link { color: var(--md-typeset-color); opacity: 0.7; }
+.md-nav--secondary .md-nav__link:hover { color: #ff5722 !important; opacity: 1; }
 
-.md-logo img {
-    height: 64px !important;
-    width: auto !important;
-}
+.md-typeset h1 { font-size: 1.8rem; margin-bottom: 1rem; }
+.md-typeset a { color: inherit !important; transition: color 0.3s ease; }
+.md-typeset a:hover { color: #ff5722 !important; }
+.md-typeset a .twemoji svg { fill: currentColor !important; }
+.md-typeset a:hover .twemoji svg { fill: #ff5722 !important; }
 
-.md-header__title .md-ellipsis {
-    color: #ff5722 !important; 
-    font-weight: bold;
-    font-size: 1.4rem;
-    text-transform: none !important;
-}
+/* Icônes oranges automatiques */
+.md-typeset h1 .twemoji svg, .md-typeset h2 .twemoji svg, .md-typeset h3 .twemoji svg { fill: #ff5722 !important; }
+.headerlink { display: none !important; }
 
-/* --- 2. ONGLETS DE NAVIGATION (VERSION PC) --- */
-.md-tabs {
-    background-color: #000000 !important;
-}
+/* --- 4. MENU LATÉRAL --- */
+.md-nav__link, .md-nav__title, .md-ellipsis { text-transform: none !important; font-weight: 400 !important; }
+.md-nav__link { padding-left: 0.8rem !important; display: flex !important; align-items: center; }
+.md-nav__link--active { color: #ff5722 !important; font-weight: bold !important; background: transparent !important; }
 
-.md-tabs__link {
-    transition: all 0.3s ease;
-    opacity: 0.6;
-    color: #ffffff !important;
-    padding-top: 7px !important;
-    padding-bottom: 6px !important;
-    border-bottom: 3px solid transparent !important;
-    display: inline-block;
-    border-radius: 4px 4px 0 0;
-    text-transform: none !important;
-}
-
-.md-tabs__link:hover {
-    opacity: 1 !important;
-    background-color: rgba(255, 255, 255, 0.08) !important;
-    color: #ff5722 !important;
-}
-
-.md-tabs__item--active .md-tabs__link {
-    color: #ff5722 !important;
-    opacity: 1 !important;
-    background-color: rgba(255, 87, 34, 0.1) !important;
-    border-bottom: 3px solid #ff5722 !important;
-}
-
-/* --- 3. UNIFORMISATION DU TEXTE ET LIENS --- */
-.md-typeset {
-    font-size: 0.85rem !important;
-}
-
-/* Titres adaptatifs : Blanc en mode sombre, Noir en mode clair */
-.md-typeset h1, .md-typeset h2, .md-typeset h3 {
-    color: var(--md-default-fg-color) !important;
-    opacity: 1 !important;
-    font-weight: 700;
-}
-
-/* Titre de la Table des matières (droite) plus éclatant */
-.md-nav--secondary .md-nav__title {
-    color: var(--md-default-fg-color) !important;
-    opacity: 1 !important;
-    font-weight: bold;
-}
-
-/* On s'assure que les liens de la table des matières sont aussi lisibles */
-.md-nav--secondary .md-nav__link {
-    color: var(--md-typeset-color);
-    opacity: 0.7; /* Légèrement estompé pour hiérarchiser */
-}
-
-.md-nav--secondary .md-nav__link:hover {
-    color: #ff5722 !important;
-    opacity: 1;
-}
-
-.md-typeset h1 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-}
-
-/* Liens : Couleur adaptative par défaut (blanc/noir), Orange au survol */
-.md-typeset a {
-    color: inherit !important;
-    transition: color 0.3s ease;
-}
-
-.md-typeset a:hover {
-    color: #ff5722 !important;
-}
-
-/* Icônes de liens (YouTube, Twitch, Discord) : Restent blanches par défaut */
-.md-typeset a .twemoji svg {
-    fill: currentColor !important;
-}
-
-.md-typeset a:hover .twemoji svg {
-    fill: #ff5722 !important;
-}
-
-/* AUTOMATISATION ORANGE : Toutes les icônes dans les titres deviennent orange */
-.md-typeset h1 .twemoji svg, 
-.md-typeset h2 .twemoji svg,
-.md-typeset h3 .twemoji svg {
-    fill: #ff5722 !important;
-}
-
-/* --- 4. STYLE DU MENU LATÉRAL (CORRECTION ALIGNEMENT) --- */
-
-.md-nav__link, .md-nav__title, .md-ellipsis {
-    text-transform: none !important;
-    font-weight: 400 !important;
-}
-
-.md-nav__link {
-    padding-left: 0.8rem !important;
-    margin-left: 0 !important;
-    display: flex !important;
-    align-items: center;
-}
-
-.md-nav__link--active {
-    color: #ff5722 !important;
-    font-weight: bold !important;
-    background-color: transparent !important;
-}
-
-/* --- 5. L'ENCADRÉ LILE-BOT & ÉLÉMENTS UI --- */
-.bot-advice {
-    display: flex;
-    align-items: center;
-    background-color: rgba(255, 87, 34, 0.08) !important;
-    border-left: 4px solid #ff5722 !important;
-    padding: 15px;
-    border-radius: 4px;
-    margin: 20px 0;
-}
-
-.bot-advice img {
-    margin-right: 20px !important;
-    flex-shrink: 0;
-}
-
+/* --- 5. UI ELEMENTS (BOT & KO-FI) --- */
+.bot-advice { display: flex; align-items: center; background-color: rgba(255, 87, 34, 0.08) !important; border-left: 4px solid #ff5722 !important; padding: 15px; border-radius: 4px; margin: 20px 0; }
+.bot-advice img { margin-right: 20px !important; flex-shrink: 0; }
 #lile-bot-title { color: #ff5722; font-weight: bold; }
 #lile-bot-tip { font-style: italic; opacity: 0.8; }
 
-.kofi-button {
-    background-color: #ff5722;
-    color: white !important;
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
+.kofi-button { background-color: #ff5722; color: white !important; padding: 6px 12px; border-radius: 4px; font-size: 0.75rem; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s; }
+.kofi-button:hover { background-color: #1a1a1a; box-shadow: 0 0 10px #ff5722; }
 
 /* --- 6. ADAPTATION MOBILE --- */
 @media screen and (max-width: 45em) {
-    .md-header__title {
-        display: none !important;
-    }
-
-    .md-nav__title[for="__drawer"] {
-        color: transparent !important;
-        font-size: 0 !important;
-        padding: 0 16px !important;
-        display: block !important;
-    } 
-
-    .md-nav__title .md-logo {
-        display: block !important;
-        margin: 15px 0 !important;
-    }
-
-    .md-nav__item .md-nav__link--active {
-        background-color: transparent !important;
-    }
-
-    .md-nav__item--nested > .md-nav__link:focus {
-        background-color: rgba(255, 87, 34, 0.1) !important;
-    }
-
-    .md-tabs {
-        display: none !important;
-    }
+    .md-header__title { display: none !important; }
+    .md-nav__title[for="__drawer"] { color: transparent !important; font-size: 0 !important; padding: 0 16px !important; display: block !important; } 
+    .md-nav__title .md-logo { display: block !important; margin: 15px 0 !important; }
+    .md-nav__item .md-nav__link--active { background-color: transparent !important; }
+    .md-nav__item--nested > .md-nav__link:focus { background-color: rgba(255, 87, 34, 0.1) !important; }
+    .md-tabs { display: none !important; }
 }
 
-/* --- 7. GRILLE DES JEUX & CURSEUR --- */
+/* --- 7. GRILLE DES JEUX (HUB) --- */
 .game-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 15px;
     padding: 10px;
-    height: auto !important; /* Force la hauteur à s'adapter au contenu */
-    overflow: visible !important; /* Autorise le contenu à dépasser pour scroller */
+    height: auto !important;
+    overflow: visible !important;
 }
 
 .game-card {
@@ -214,39 +71,53 @@
     display: block;
     position: relative;
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
+    border: 3px solid #ff5722;
+    transition: transform 0.3s ease;
 }
 
+.game-card-bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px) brightness(0.7); 
+    transition: filter 0.4s ease;
+}
+
+.game-card:hover .game-card-bg {
+    filter: blur(0px) brightness(1.2);
+}
+
+.game-card:hover { transform: scale(1.02); }
+
+.game-card h2 {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff !important;
+    font-size: 1.5rem !important;
+    font-weight: 900 !important;
+    text-shadow: 2px 2px 10px #000;
+    margin: 0 !important;
+    border: none !important;
+    background: rgba(0,0,0,0.3);
+}
+
+/* --- 8. CURSEURS & TAILLE PC --- */
 @media screen and (min-width: 60em) {
-    .game-card {
-        height: 250px !important; 
-    }
-   
-/* Ton curseur (main tendue) */
-    .game-card,
-    .md-logo,
-    .md-header__button,
-    .md-tabs__link,    /* Les liens dans la bannière sous le titre */
-    .md-nav__link,     /* Les liens du menu de gauche */
-    .md-typeset a,     /* Tous les liens dans ton texte */
-    .kofi-button {
+    .game-card { height: 250px !important; }
+
+    /* Curseur normal */
+    .game-card, .md-logo, .md-header__button, .md-tabs__link, .md-nav__link, .md-typeset a, .kofi-button {
         cursor: url('../assets/curseur.png') 10 0, pointer !important;
     }
 
-    /* Ton curseur (doigt replié au clic) */
-    .game-card:active,
-    .md-logo:active,
-    .md-header__button:active,
-    .md-tabs__link:active,
-    .md-nav__link:active,
-    .md-typeset a:active,
-    .kofi-button:active  {
+    /* Curseur clic (doigt replié) */
+    .game-card:active, .md-logo:active, .md-header__button:active, .md-tabs__link:active, .md-nav__link:active, .md-typeset a:active, .kofi-button:active  {
         cursor: url('../assets/curseur-clic.png') 10 0, pointer !important;
     }
-}
-
-/* Cache le symbole de lien permanent à côté des titres */
-.headerlink {
-    display: none !important;
 }
