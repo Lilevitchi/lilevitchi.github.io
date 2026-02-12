@@ -210,19 +210,21 @@
 /* ============================================================
    ============================================================ */
 
-/* --- 10. HUB IMMERSIF (ÉQUILIBRE FINAL) --- */
+/* --- 10. HUB IMMERSIF (FIX TOTAL) --- */
 
-/* 1. Blocage du scroll et nettoyage des marges MkDocs */
+/* 1. On tue le scroll et les marges grises de MkDocs */
 body:has(.hub-wrapper) {
     overflow: hidden !important;
 }
 
+/* Cache le footer et force les conteneurs à 100% */
 body:has(.hub-wrapper) .md-footer,
 body:has(.hub-wrapper) .md-sidebar {
     display: none !important;
 }
 
 body:has(.hub-wrapper) .md-main__inner,
+body:has(.hub-wrapper) .md-content,
 body:has(.hub-wrapper) .md-content__inner {
     max-width: none !important;
     margin: 0 !important;
@@ -231,61 +233,63 @@ body:has(.hub-wrapper) .md-content__inner {
 
 /* 2. Titre Header Direct */
 body:has(.hub-wrapper) .md-header__topic:nth-child(1) { display: none !important; }
-body:has(.hub-wrapper) .md-header__topic:nth-child(2) { 
-    opacity: 1 !important; 
-    transform: none !important; 
-}
+body:has(.hub-wrapper) .md-header__topic:nth-child(2) { opacity: 1 !important; transform: none !important; }
 
-/* 3. Le Wrapper et le Fond */
+/* 3. Le Wrapper (Hauteur dynamique) */
 .hub-wrapper {
     position: relative;
     width: 100vw;
-    height: calc(100vh - 6.4rem);
+    height: calc(100vh - 6.4rem); /* S'arrête pile aux onglets */
+    background-color: #000;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #000;
     overflow: hidden;
 }
 
+/* Fond Flou et Assombri */
 .hub-bg {
     position: absolute;
     inset: 0;
     background-size: cover;
     background-position: center;
-    filter: blur(5px) brightness(0.35); /* Flou + Sombre pour le contraste */
+    filter: blur(5px) brightness(0.35);
     z-index: 1;
 }
 
 /* 4. Contenu Remonté */
 .hub-content {
     position: relative;
-    z-index: 5;
+    z-index: 10;
     text-align: center;
-    margin-top: -8vh; /* Remonte tout le bloc vers le haut */
+    margin-top: -12vh; /* Remonte tout le bloc vers le haut */
 }
 
+/* Robot (lile-bot-fo4.png) */
 .hub-bot {
-    width: 400px; /* Robot plus grand */
+    width: 420px; /* Taille imposante */
     height: auto;
-    margin-bottom: 0;
+    margin-bottom: -15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hub-title {
     color: #ffffff !important;
-    font-size: 2.4rem !important; /* Taille équilibrée */
+    font-size: 2.6rem !important;
     font-weight: 900 !important;
     text-transform: uppercase;
     text-shadow: 0 4px 15px rgba(0,0,0,1);
     border: none !important;
-    margin-bottom: 45px !important;
+    margin-bottom: 50px !important;
 }
 
-/* 5. Boutons (Style Index sans image) */
+/* 5. Boutons et Animation de Survol */
 .hub-buttons-gap {
     display: flex;
-    gap: 35px;
+    gap: 40px;
     justify-content: center;
 }
 
@@ -293,37 +297,35 @@ body:has(.hub-wrapper) .md-header__topic:nth-child(2) {
     display: flex !important;
     align-items: center;
     justify-content: center;
-    width: 250px;
-    height: 70px;
+    width: 260px;
+    height: 75px;
     border-radius: 4px;
     font-weight: 800;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     text-transform: uppercase;
     text-decoration: none !important;
-    transition: all 0.3s ease-in-out;
-    color: #ffffff !important; /* Texte toujours blanc */
+    transition: all 0.3s ease;
+    color: #ffffff !important;
 }
 
-/* Guide Écrit (Gris sombre -> Orange) */
+/* Guide Écrit : Gris -> Orange plein */
 .btn-orange {
-    background: rgba(44, 44, 44, 0.9) !important;
+    background: rgba(45, 45, 45, 0.9) !important;
     border: 2px solid #ff5722 !important;
 }
-
 .btn-orange:hover {
     background: #ff5722 !important;
-    transform: scale(1.04);
-    box-shadow: 0 0 20px rgba(255, 87, 34, 0.4);
+    box-shadow: 0 0 25px rgba(255, 87, 34, 0.6);
+    transform: scale(1.05);
 }
 
-/* Guide Vidéo (Rouge sombre -> Rouge vif) */
+/* Guide Vidéo : Rouge sombre -> Rouge vif plein */
 .btn-red {
-    background: rgba(120, 0, 0, 0.9) !important;
+    background: rgba(100, 0, 0, 0.9) !important;
     border: 2px solid #ff0000 !important;
 }
-
 .btn-red:hover {
     background: #ff0000 !important;
-    transform: scale(1.04);
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+    transform: scale(1.05);
 }
