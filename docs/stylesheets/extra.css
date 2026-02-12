@@ -62,6 +62,7 @@
     font-size: 0.85rem !important;
 }
 
+/* Force tous les titres en blanc pur pour la clarté */
 .md-typeset h1, .md-typeset h2 {
     color: #ffffff !important;
     opacity: 1 !important;
@@ -82,7 +83,7 @@
     color: #ff5722 !important;
 }
 
-/* Icônes (YouTube, etc.) : Suivent la couleur du lien */
+/* Icônes de liens (YouTube, Twitch, Discord) : Restent blanches par défaut */
 .md-typeset a .twemoji svg {
     fill: currentColor !important;
 }
@@ -91,6 +92,7 @@
     fill: #ff5722 !important;
 }
 
+/* AUTOMATISATION ORANGE : Toutes les icônes dans les titres deviennent orange */
 .md-typeset h1 .twemoji svg, 
 .md-typeset h2 .twemoji svg,
 .md-typeset h3 .twemoji svg {
