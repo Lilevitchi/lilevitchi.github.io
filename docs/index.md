@@ -7,23 +7,30 @@ Ici, pas de blabla inutile : uniquement des guides précis, testés et approuvé
 ---
 
 <style>
-    /* Tuiles Carrées et Effets */
+    /* 1. Grille intelligente : s'adapte à la largeur de l'écran */
     .game-grid {
         display: grid; 
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-        gap: 25px; 
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+        gap: 20px; 
         margin: 40px 0;
     }
 
+    /* 2. Format des cartes : finit les carrés géants sur mobile */
     .game-card {
         position: relative;
-        aspect-ratio: 1 / 1; /* Force le format carré */
+        height: 200px; /* Hauteur fixe pour mobile */
         border-radius: 12px;
         overflow: hidden;
         border: 3px solid #ff5722;
         transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
         background: #1a1a1a;
-        cursor: url('assets/curseur.png') 32 32, pointer !important;
+        cursor: pointer !important;
+        text-decoration: none !important;
+    }
+
+    /* Taille plus grande pour le confort sur PC */
+    @media screen and (min-width: 60em) {
+        .game-card { height: 280px; }
     }
 
     .game-card:hover {
@@ -46,7 +53,7 @@ Ici, pas de blabla inutile : uniquement des guides précis, testés et approuvé
 
     .game-card-overlay {
         position: absolute;
-        top: 0; left: 0; width: 100%; height: 100%;
+        inset: 0;
         background: rgba(0, 0, 0, 0.5);
         display: flex;
         align-items: center;
@@ -55,17 +62,19 @@ Ici, pas de blabla inutile : uniquement des guides précis, testés et approuvé
         padding: 10px;
     }
 
+    /* 3. Correction du texte (Minuscules et centrage) */
     .game-card h2 {
-        color: #fff;
-        text-transform: uppercase;
-        font-size: 1.5em !important;
+        color: #fff !important;
+        text-transform: none !important; 
+        font-size: 1.5rem !important;
         font-weight: 900;
         letter-spacing: 1px;
         text-shadow: 2px 2px 15px #000;
         border: none !important;
+        margin: 0 !important;
     }
 
-    /* Bouton Ko-fi Style Nexus */
+    /* Style du bouton Ko-fi */
     .kofi-button {
         background-color: #ff5722;
         color: white !important;
