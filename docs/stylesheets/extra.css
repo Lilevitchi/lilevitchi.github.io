@@ -151,46 +151,37 @@
 
 /* --- 7. ADAPTATION MOBILE & CURSEUR --- */
 
-/* 1. Header & Menu latéral : On cache le titre du site UNIQUEMENT */
+/* 1. Header & Menu latéral : On cache tout texte pour ne laisser QUE le logo */
 @media screen and (max-width: 45em) {
     /* Cache le titre dans la barre du haut */
     .md-header__title {
         display: none !important;
     }
-
-    /* Cible le titre du menu (Lilevitchi | Modding) sans toucher aux liens */
-    .md-nav__title[for="__drawer"] {
-        font-size: 0 !important; /* Cache le texte */
+    
+   .md-nav__title {
         color: transparent !important;
-        display: block !important;
-        padding: 10px 16px !important;
-    }
+        font-size: 0 !important;
+        padding: 0 16px !important;
+    } 
 
-    /* Le logo dans le titre principal */
-    .md-nav__title[for="__drawer"] .md-logo {
+    /* Force le logo à être seul */
+    .md-nav__title .md-logo {
         display: block !important;
-        margin: 0 !important;
-    }
-
-    .md-nav__title[for="__drawer"] .md-logo img {
-        height: 60px !important; /* Taille de ton robot */
         width: auto !important;
+        margin: 15px 0 !important;
+        font-size: 1rem !important;
     }
 
-    /* RESTAURATION : On force les liens (Accueil, etc.) à être visibles */
-    .md-nav__link {
-        font-size: 1rem !important; /* Remet le texte d'Accueil */
-        color: var(--md-default-fg-color) !important;
-        visibility: visible !important;
+    .md-nav__title[for="__drawer"] {
+        display: block !important;
     }
 }
 
-/* 2. Correction spécifique pour "Fallout 4" (le titre de section) */
-/* Pour qu'il ne soit plus en gras bizarre ou police différente */
-.md-nav__item--nested > .md-nav__link {
-    font-weight: 400 !important;
-    text-transform: none !important;
-    font-size: 1rem !important;
+/* 2. Retour du Curseur Personnalisé (Uniquement sur PC) */
+@media screen and (min-width: 60em) {
+    .game-card, .hub-button, .hub-button * {
+        cursor: url('../assets/curseur.png') 32 32, pointer !important;
+    }
 }
 
 /* 3. Typographie : Respect des minuscules partout */
@@ -223,12 +214,12 @@ h2, .md-nav__link, .md-ellipsis, .md-nav__title {
     }
 }
 
-/* 6. Nettoyage des états du menu (Actif/Focus) sur mobile */
+/* Nettoyage du menu déroulant sur mobile */
 .md-nav__item .md-nav__link--active {
     background-color: transparent !important;
-    color: #ff5722 !important;
+    color: #ff5722 !important; /* Garde le texte en orange */
 }
 
 .md-nav__item--nested > .md-nav__link:focus {
-    background-color: rgba(255, 87, 34, 0.1) !important;
+    background-color: rgba(255, 87, 34, 0.1) !important; /* Un orange très subtil au lieu du gris */
 }
