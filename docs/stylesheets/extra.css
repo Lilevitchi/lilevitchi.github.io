@@ -146,12 +146,12 @@
 
     /* Curseur normal */
     .game-card, .md-logo, .md-header__button, .md-tabs__link, .md-nav__link, .md-typeset a, .kofi-button {
-        cursor: url('../assets/curseur.png') 10 0, pointer !important;
+        cursor: url('../assets/curseur.png') 14 0, pointer !important;
     }
 
     /* Curseur clic (doigt replié) */
     .game-card:active, .md-logo:active, .md-header__button:active, .md-tabs__link:active, .md-nav__link:active, .md-typeset a:active, .kofi-button:active  {
-        cursor: url('../assets/curseur-clic.png') 10 0, pointer !important;
+        cursor: url('../assets/curseur-clic.png') 14 0, pointer !important;
     }
 }
 
