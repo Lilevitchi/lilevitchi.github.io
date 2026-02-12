@@ -151,21 +151,18 @@
 
 /* --- 7. ADAPTATION MOBILE & CURSEUR --- */
 
-/* 1. Header & Menu latéral : On cache tout texte pour ne laisser QUE le logo */
+/* 1. Header & Menu latéral : Logo seul sur mobile */
 @media screen and (max-width: 45em) {
-    /* Cache le titre dans la barre du haut */
     .md-header__title {
         display: none !important;
     }
 
-    /* Supprime le texte mais garde l'espace pour le logo (même dans les sous-menus) */
     .md-nav__title, .md-nav__link--active {
         color: transparent !important;
         font-size: 0 !important;
         padding: 0 16px !important;
     } 
 
-    /* Force le logo à être seul à gauche (Header du menu) */
     .md-nav__title .md-logo, .md-nav__button.md-logo {
         display: block !important;
         width: auto !important;
@@ -173,7 +170,6 @@
         font-size: 1rem !important;
     }
 
-    /* Assure que le logo ne soit pas masqué par les règles de texte à 0 */
     .md-nav__title .md-logo img, .md-nav__button.md-logo img {
         height: 50px !important;
         width: auto !important;
@@ -185,19 +181,19 @@
     }
 }
 
-/* 2. Retour du Curseur Personnalisé (Uniquement sur PC) */
+/* 2. Curseur Personnalisé (Uniquement sur PC) */
 @media screen and (min-width: 60em) {
     .game-card, .hub-button, .hub-button * {
         cursor: url('../assets/curseur.png') 32 32, pointer !important;
     }
 }
 
-/* 3. Typographie : Respect des minuscules partout */
+/* 3. Typographie : Minuscules partout */
 h2, .md-nav__link, .md-ellipsis, .md-nav__title {
     text-transform: none !important;
 }
 
-/* 4. Grille & Cartes : Taille adaptative */
+/* 4. Grille & Cartes : Accueil */
 .game-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -206,12 +202,12 @@ h2, .md-nav__link, .md-ellipsis, .md-nav__title {
 }
 
 .game-card {
-    height: 180px !important; /* Hauteur smartphone */
+    height: 180px !important; 
 }
 
 @media screen and (min-width: 60em) {
     .game-card {
-        height: 250px !important; /* Hauteur PC */
+        height: 250px !important; 
     }
 }
 
@@ -222,7 +218,7 @@ h2, .md-nav__link, .md-ellipsis, .md-nav__title {
     }
 }
 
-/* 6. Nettoyage des états du menu (Actif/Focus) sur mobile */
+/* 6. Nettoyage du menu sur mobile */
 .md-nav__item .md-nav__link--active {
     background-color: transparent !important;
     color: #ff5722 !important;
