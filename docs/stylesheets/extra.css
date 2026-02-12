@@ -211,16 +211,13 @@
    ============================================================ */
 
  /* --- 10. HUB IMMERSIF (FIX BANNIÈRE & BOUTONS) --- */
-/* --- 10. HUB IMMERSIF (EFFET HALO LUMINEUX) --- */
 
-/* 1. Fix Marge Grise */
 body:has(.hub-wrapper) .md-content__inner,
 body:has(.hub-wrapper) .md-main__inner {
     margin-top: 0 !important;
     padding-top: 0 !important;
 }
 
-/* 2. Le Wrapper & Robot */
 @media screen and (min-width: 60em) {
     .hub-wrapper {
         position: fixed;
@@ -239,7 +236,6 @@ body:has(.hub-wrapper) .md-main__inner {
     .hub-content { position: relative; z-index: 3; margin-top: -8vh; text-align: center; }
 }
 
-/* 3. LES BOUTONS (Bordure et Halo uniquement) */
 .hub-buttons-gap {
     display: flex;
     gap: 60px;
@@ -258,36 +254,31 @@ body:has(.hub-wrapper) .md-main__inner {
     align-items: center;
     justify-content: center;
     gap: 15px;
-    transition: all 0.3s ease; /* Transition fluide pour le halo */
+    transition: all 0.3s ease;
     color: #ffffff !important; 
 }
 
-/* --- BOUTON ORANGE --- */
 .btn-orange {
-    background: rgba(30, 30, 30, 0.9) !important; /* Fond sombre fixe */
-    border: 2px solid rgba(255, 87, 34, 0.5) !important; /* Bordure discrète au repos */
+    background: rgba(30, 30, 30, 0.9) !important;
+    border: 2px solid rgba(255, 87, 34, 0.5) !important;
 }
 
 .btn-orange:hover {
-    /* Le fond NE CHANGE PAS */
-    border-color: #ff5722 !important; /* La bordure s'allume */
-    box-shadow: 0 0 20px 2px rgba(255, 87, 34, 0.7); /* Le halo extérieur */
-    transform: scale(1.02); /* Très léger zoom pour le feeling */
+    border-color: #ff5722 !important;
+    box-shadow: 0 0 20px 2px rgba(255, 87, 34, 0.7);
+    transform: scale(1.02);
 }
 
-/* --- BOUTON ROUGE --- */
 .btn-red {
-    background: rgba(30, 30, 30, 0.9) !important; /* Même fond sombre fixe */
+    background: rgba(139, 0, 0, 0.9) !important;
     border: 2px solid rgba(255, 0, 0, 0.5) !important;
 }
 
 .btn-red:hover {
-    /* Le fond NE CHANGE PAS */
-    border-color: #ff0000 !important; /* La bordure s'allume */
-    box-shadow: 0 0 20px 2px rgba(255, 0, 0, 0.7); /* Le halo extérieur */
+    border-color: #ff0000 !important;
+    box-shadow: 0 0 20px 2px rgba(255, 0, 0, 0.7);
     transform: scale(1.02);
 }
 
-/* 4. Fond et Titre */
 .hub-bg { position: absolute; inset: 0; background-size: cover; background-position: center; filter: blur(6px) brightness(0.4); z-index: 1; }
 .hub-title { color: white !important; font-size: 2.2rem !important; font-weight: 800 !important; text-transform: uppercase; text-shadow: 2px 2px 15px #000; margin-bottom: 50px !important; border: none !important; }
