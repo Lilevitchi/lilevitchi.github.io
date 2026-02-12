@@ -210,21 +210,18 @@
 /* ============================================================
    ============================================================ */
 
-/* --- 10. HUB IMMERSIF (FIX FINAL) --- */
+/* --- 10. HUB IMMERSIF (ÉQUILIBRE FINAL) --- */
 
-/* Bloquer le scroll et supprimer les marges grises */
+/* 1. Blocage du scroll et nettoyage des marges MkDocs */
 body:has(.hub-wrapper) {
     overflow: hidden !important;
 }
 
-/* Cache le footer et les conteneurs inutiles */
 body:has(.hub-wrapper) .md-footer,
-body:has(.hub-wrapper) .md-sidebar,
-body:has(.hub-wrapper) .md-content__button {
+body:has(.hub-wrapper) .md-sidebar {
     display: none !important;
 }
 
-/* On force le conteneur principal à ignorer ses marges */
 body:has(.hub-wrapper) .md-main__inner,
 body:has(.hub-wrapper) .md-content__inner {
     max-width: none !important;
@@ -232,19 +229,18 @@ body:has(.hub-wrapper) .md-content__inner {
     padding: 0 !important;
 }
 
-/* TITRE HEADER : On affiche "Fallout 4" direct */
+/* 2. Titre Header Direct */
 body:has(.hub-wrapper) .md-header__topic:nth-child(1) { display: none !important; }
 body:has(.hub-wrapper) .md-header__topic:nth-child(2) { 
     opacity: 1 !important; 
     transform: none !important; 
-    pointer-events: auto !important; 
 }
 
-/* LE WRAPPER */
+/* 3. Le Wrapper et le Fond */
 .hub-wrapper {
     position: relative;
     width: 100vw;
-    height: calc(100vh - 6.4rem); /* On déduit la barre du haut */
+    height: calc(100vh - 6.4rem);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -253,45 +249,43 @@ body:has(.hub-wrapper) .md-header__topic:nth-child(2) {
     overflow: hidden;
 }
 
-/* FOND : Flou et sombre */
 .hub-bg {
     position: absolute;
     inset: 0;
     background-size: cover;
     background-position: center;
-    filter: blur(4px) brightness(0.35); /* Flou + Sombre */
+    filter: blur(5px) brightness(0.35); /* Flou + Sombre pour le contraste */
     z-index: 1;
 }
 
-/* ROBOT : On le ramène au premier plan */
-.hub-bot {
-    position: relative;
-    z-index: 5;
-    width: 300px; /* Taille massive */
-    height: auto;
-    margin-bottom: -10px;
-}
-
+/* 4. Contenu Remonté */
 .hub-content {
     position: relative;
-    z-index: 6;
+    z-index: 5;
     text-align: center;
+    margin-top: -8vh; /* Remonte tout le bloc vers le haut */
+}
+
+.hub-bot {
+    width: 400px; /* Robot plus grand */
+    height: auto;
+    margin-bottom: 0;
 }
 
 .hub-title {
     color: #ffffff !important;
-    font-size: 3.5rem !important; /* Gros titre */
+    font-size: 2.4rem !important; /* Taille équilibrée */
     font-weight: 900 !important;
     text-transform: uppercase;
-    text-shadow: 0 5px 20px rgba(0,0,0,1);
+    text-shadow: 0 4px 15px rgba(0,0,0,1);
     border: none !important;
-    margin-bottom: 50px !important;
+    margin-bottom: 45px !important;
 }
 
-/* BOUTONS : Style "Image que j'aime" */
+/* 5. Boutons (Style Index sans image) */
 .hub-buttons-gap {
     display: flex;
-    gap: 40px;
+    gap: 35px;
     justify-content: center;
 }
 
@@ -299,38 +293,37 @@ body:has(.hub-wrapper) .md-header__topic:nth-child(2) {
     display: flex !important;
     align-items: center;
     justify-content: center;
-    width: 280px;  /* Plus large */
-    height: 75px;  /* Plus haut */
-    border-radius: 6px;
-    font-weight: 900;
-    font-size: 1.3rem; /* Gros texte */
+    width: 250px;
+    height: 70px;
+    border-radius: 4px;
+    font-weight: 800;
+    font-size: 1.2rem;
     text-transform: uppercase;
     text-decoration: none !important;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    color: #ffffff !important; /* Texte toujours blanc */
 }
 
+/* Guide Écrit (Gris sombre -> Orange) */
 .btn-orange {
-    background: rgba(30, 30, 30, 0.9) !important;
-    border: 3px solid #ff5722 !important;
-    color: #ffffff !important;
+    background: rgba(44, 44, 44, 0.9) !important;
+    border: 2px solid #ff5722 !important;
 }
 
 .btn-orange:hover {
     background: #ff5722 !important;
-    color: #000000 !important;
-    transform: scale(1.08) translateY(-5px);
-    box-shadow: 0 0 30px rgba(255, 87, 34, 0.6);
+    transform: scale(1.04);
+    box-shadow: 0 0 20px rgba(255, 87, 34, 0.4);
 }
 
+/* Guide Vidéo (Rouge sombre -> Rouge vif) */
 .btn-red {
-    background: #8b0000 !important;
-    border: 3px solid #ff0000 !important;
-    color: #ffffff !important;
+    background: rgba(120, 0, 0, 0.9) !important;
+    border: 2px solid #ff0000 !important;
 }
 
 .btn-red:hover {
     background: #ff0000 !important;
-    transform: scale(1.08) translateY(-5px);
-    box-shadow: 0 0 30px rgba(255, 0, 0, 0.6);
+    transform: scale(1.04);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
 }
