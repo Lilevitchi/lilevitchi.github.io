@@ -21,10 +21,10 @@
 
 .md-typeset { font-size: 0.85rem !important; }
 .md-typeset h1, .md-typeset h2, .md-typeset h3 { color: var(--md-default-fg-color) !important; opacity: 1 !important; font-weight: 700; }
-.md-typeset p { margin-left: auto; margin-right: auto; text-align: left; max-width: 1200px; }
+.md-typeset p { text-align: left; max-width: 100%; margin-left: 0; margin-right: 0; }
 
 .md-typeset h1 { font-size: 1.8rem; margin-bottom: 1rem; }
-.md-typeset h1:first-child { margin-top: 0 !important; padding-top: 0 !important; display: flex; justify-content: center; align-items: center; gap: 15px; text-align: center; }
+.md-typeset h1:first-child { margin-top: 0 !important; padding-top: 0 !important; display: flex; justify-content: center; align-items: center; gap: 15px; text-align: center; width: 100%; }
 
 .md-typeset a { color: inherit !important; transition: color 0.3s ease; }
 .md-typeset a:hover { color: #ff5722 !important; }
@@ -64,8 +64,9 @@
 }
 
 /* --- 7. GRILLE DES JEUX (HUB) --- */
-[data-md-color-scheme] .md-sidebar--primary {
-    display: none;
+.md-sidebar--primary:has(~ .md-content .game-grid),
+.md-content:has(.game-grid) ~ .md-sidebar--primary {
+    display: none !important;
 }
 
 .game-grid {
