@@ -17,22 +17,23 @@
 
 /* --- 3. TEXTE, LIENS & TITRES --- */
 .md-main__inner, .md-content { margin-top: 0 !important; margin-left: 0 !important; }
-.md-content__inner { max-width: 1400px !important; margin: 0 auto !important; padding-top: 1.5rem !important; text-align: center; }
+.md-content__inner { max-width: 1400px !important; margin: 0 auto !important; padding-top: 1.5rem !important; }
 
 .md-typeset { font-size: 0.85rem !important; }
 .md-typeset h1, .md-typeset h2, .md-typeset h3 { color: var(--md-default-fg-color) !important; opacity: 1 !important; font-weight: 700; }
-.md-typeset h1:first-child { margin-top: 0 !important; padding-top: 0 !important; display: flex; justify-content: center; align-items: center; gap: 15px; }
-.md-typeset p { text-align: center; margin-left: auto; margin-right: auto; max-width: 900px; }
-
-.md-nav--secondary .md-nav__title { color: var(--md-default-fg-color) !important; opacity: 1 !important; font-weight: bold; }
-.md-nav--secondary .md-nav__link { color: var(--md-typeset-color); opacity: 0.7; }
-.md-nav--secondary .md-nav__link:hover { color: #ff5722 !important; opacity: 1; }
+.md-typeset p { margin-left: auto; margin-right: auto; text-align: left; max-width: 900px; }
 
 .md-typeset h1 { font-size: 1.8rem; margin-bottom: 1rem; }
+.md-typeset h1:first-child { margin-top: 0 !important; padding-top: 0 !important; display: flex; justify-content: center; align-items: center; gap: 15px; text-align: center; }
+
 .md-typeset a { color: inherit !important; transition: color 0.3s ease; }
 .md-typeset a:hover { color: #ff5722 !important; }
 .md-typeset a .twemoji svg { fill: currentColor !important; }
 .md-typeset a:hover .twemoji svg { fill: #ff5722 !important; }
+
+.md-nav--secondary .md-nav__title { color: var(--md-default-fg-color) !important; opacity: 1 !important; font-weight: bold; }
+.md-nav--secondary .md-nav__link { color: var(--md-typeset-color); opacity: 0.7; }
+.md-nav--secondary .md-nav__link:hover { color: #ff5722 !important; opacity: 1; }
 
 /* Icônes oranges automatiques */
 .md-typeset h1 .twemoji svg, .md-typeset h2 .twemoji svg, .md-typeset h3 .twemoji svg { fill: #ff5722 !important; }
