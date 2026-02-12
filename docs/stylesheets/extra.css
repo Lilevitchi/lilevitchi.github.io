@@ -81,8 +81,13 @@
 /* Icônes (YouTube, etc.) : Suivent la couleur du lien */
 .md-typeset a .twemoji svg, 
 .md-typeset a svg {
-    fill: currentColor !important; /* Adaptatif par défaut */
+    fill: #ff5722 !important; /* Adaptatif par défaut */
     transition: fill 0.3s ease;
+}
+
+.md-typeset a .twemoji svg, 
+.md-typeset a svg {
+    fill: currentColor !important;
 }
 
 .md-typeset a:hover .twemoji svg,
