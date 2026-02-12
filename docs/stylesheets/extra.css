@@ -154,11 +154,14 @@
 /* 1. Header & Menu latéral : On cache tout texte pour ne laisser QUE le logo */
 @media screen and (max-width: 45em) {
     /* Cache le titre dans la barre du haut */
-    .md-header__title, 
-    .md-nav__title span, 
-    .md-nav__title br {
+    .md-header__title {
         display: none !important;
     }
+
+   .md-nav__title {
+        color: transparent !important;
+        font-size: 0 !important;
+    } 
 
     /* Force le logo à être seul et centré dans le menu */
     .md-nav__title .md-logo {
@@ -166,6 +169,13 @@
         justify-content: center !important;
         width: 100% !important;
         margin: 10px 0 !important;
+        font-size: 1rem !important;
+    }
+
+    .md-nav__title[for="__drawer"] {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
