@@ -26,12 +26,10 @@ theme:
     - navigation.sections
     - navigation.top
     - content.code.copy
-    - stylesheets/extra.css
 
 extra_javascript:
   - javascripts/random_tips.js
-  
-# Cette partie force le site à utiliser toute la largeur disponible
+
 extra_css:
   - stylesheets/extra.css
 
@@ -47,7 +45,7 @@ markdown_extensions:
 nav:
   - Accueil: index.md
   - Fallout 4:
-      - Index: fallout4/index.md
+      - Hub: fallout4/index.md
       - Introduction: fallout4/intro.md
   - Fallout London: fallout-london/index.md
   - Fallout New Vegas: fnv/index.md
