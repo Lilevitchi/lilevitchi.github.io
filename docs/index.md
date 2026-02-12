@@ -1,4 +1,4 @@
-# :material-tools:{ .orange-icon } Bienvenue dans le Nexus de Lilevitchi
+# :material-tools: Bienvenue dans le Nexus de Lilevitchi
 
 **Plongez au cœur de l'excellence du modding.** Que vous soyez ici pour stabiliser votre jeu, transformer son visuel ou vivre une aventure totalement nouvelle sur les terres désolées, vous êtes au bon endroit. 
 
@@ -119,7 +119,7 @@ Ici, pas de blabla inutile : uniquement des guides précis, testés et approuvé
 
 ---
 
-## :material-lightbulb-outline:{ .orange-icon } Le Conseil de Lile-Bot
+## :material-lightbulb-outline: Le Conseil de Lile-Bot
 
 <div class="bot-advice">
     <img src="assets/lile-bot.png" width="80">
@@ -131,7 +131,7 @@ Ici, pas de blabla inutile : uniquement des guides précis, testés et approuvé
 
 ---
 
-## :material-coffee:{ .orange-icon } Soutenir le Travail
+## :material-coffee: Soutenir le Travail
 Si mes guides vous font gagner du temps et du plaisir de jeu, n'hésitez pas à soutenir le projet. Chaque don permet d'améliorer la qualité des contenus et de maintenir les serveurs.
 
 <a href="https://ko-fi.com/lilevitchi" target="_blank" class="kofi-button">
@@ -140,6 +140,6 @@ Si mes guides vous font gagner du temps et du plaisir de jeu, n'hésitez pas à 
 
 ---
 
-## :material-link:{ .orange-icon } Liens Utiles
+## :material-link: Liens Utiles
 
 [:fontawesome-brands-youtube:{ .orange-icon } YouTube](https://www.youtube.com/@Lilevitchi){ target="_blank" } | [:fontawesome-brands-twitch:{ .orange-icon } Twitch](https://twitch.tv/lilevitchi){ target="_blank" } | [:fontawesome-brands-discord:{ .orange-icon } Discord](https://discord.gg/aFJxsPC){ target="_blank" }
