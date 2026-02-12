@@ -14,10 +14,10 @@ hide:
 
         <div class="hub-buttons-gap">
             <a href="guide-ecrit/" class="btn-hub-large btn-orange">
-                <i class="fas fa-book"></i> Guide Écrit
+                Guide Écrit
             </a>
             <a href="https://youtu.be/m_CawhgGBGk?si=V8ovH2IEi1shkF6d" class="btn-hub-large btn-red">
-                <i class="fab fa-youtube"></i> Guide Vidéo
+                Guide Vidéo
             </a>
         </div>
     </div>
