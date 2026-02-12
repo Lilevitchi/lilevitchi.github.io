@@ -151,65 +151,61 @@
 
 /* --- 7. ADAPTATION MOBILE & CURSEUR --- */
 
-/* 1. Header & Menu latéral : Logo seul (Texte masqué sans casser les liens) */
+/* 1. Header & Menu latéral : On masque "Lilevitchi | Modding" proprement */
 @media screen and (max-width: 45em) {
     /* Cache le titre dans la barre du haut */
     .md-header__title {
         display: none !important;
     }
 
-    /* Masque le texte "Lilevitchi | Modding" à côté du logo uniquement */
-    .md-nav__title .md-logo, 
-    .md-nav__button.md-logo {
-        display: block !important;
-        width: auto !important;
-        margin: 15px 0 15px 16px !important;
-        font-size: 0 !important; /* Rend le texte du logo invisible */
-        color: transparent !important;
-    }
-
-    /* Maintient l'image du logo bien visible */
-    .md-nav__title .md-logo img, 
-    .md-nav__button.md-logo img {
-        height: 55px !important;
-        width: auto !important;
-        opacity: 1 !important;
-    }
-
-    /* RESTAURATION DU TEXTE POUR LES LIENS (Accueil, Fallout 4, etc.) */
-    .md-nav__link {
-        font-size: 1rem !important;
-        color: var(--md-default-fg-color) !important;
-        font-weight: normal !important;
-    }
-
-    .md-nav__title[for="__drawer"] {
-        display: block !important;
+    /* Supprime UNIQUEMENT le texte brut dans le titre du menu (le nom du site) */
+    /* On utilise une technique qui ne touche pas aux liens (Accueil, etc.) */
+    .md-nav__title {
+        visibility: hidden !important;
         height: auto !important;
+        padding: 0 16px !important;
+    }
+
+    /* On fait réapparaître uniquement le logo et les icônes de retour */
+    .md-nav__title .md-logo, 
+    .md-nav__title .md-nav__icon {
+        visibility: visible !important;
+    }
+
+    /* Style du logo pour qu'il soit bien à gauche sans texte collé */
+    .md-nav__title .md-logo {
+        display: block !important;
+        margin: 15px 0 !important;
+    }
+
+    .md-nav__title .md-logo img {
+        height: 50px !important;
+        width: auto !important;
     }
 }
 
-/* 2. Harmonisation de la police (Fallout 4 et titres de sections) */
-.md-nav__link--active, 
-.md-nav__item--nested > .md-nav__link {
-    font-weight: normal !important; /* Enlève le gras forcé par MkDocs */
-    text-transform: none !important; /* Respecte les minuscules */
-    font-family: inherit !important;
+/* 2. Correction PC & Mobile : Restaurer Accueil et harmoniser Fallout 4 */
+/* On s'assure que les liens sont bien visibles et en minuscules */
+.md-nav__link {
+    visibility: visible !important;
+    text-transform: none !important;
+    font-weight: normal !important;
 }
 
-/* 3. Curseur Personnalisé (Uniquement sur PC) */
+/* Style spécifique pour Fallout 4 (titre de section) pour qu'il ne soit pas "bizarre" */
+.md-nav__item--nested > .md-nav__link {
+    font-weight: 700 !important; /* Un peu de gras mais pas trop */
+    color: var(--md-default-fg-color);
+}
+
+/* 3. Retour du Curseur Personnalisé (Uniquement sur PC) */
 @media screen and (min-width: 60em) {
     .game-card, .hub-button, .hub-button * {
         cursor: url('../assets/curseur.png') 32 32, pointer !important;
     }
 }
 
-/* 4. Typographie : Minuscules partout */
-h2, .md-nav__link, .md-ellipsis, .md-nav__title {
-    text-transform: none !important;
-}
-
-/* 5. Grille & Cartes : Accueil */
+/* 4. Grille & Cartes Accueil */
 .game-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -227,19 +223,9 @@ h2, .md-nav__link, .md-ellipsis, .md-nav__title {
     }
 }
 
-/* 6. Cacher les onglets sur mobile */
+/* 5. Cacher les onglets sur mobile */
 @media screen and (max-width: 76.25em) {
     .md-tabs {
         display: none !important;
     }
-}
-
-/* 7. Nettoyage des états du menu sur mobile */
-.md-nav__item .md-nav__link--active {
-    background-color: transparent !important;
-    color: #ff5722 !important; /* Ton orange */
-}
-
-.md-nav__item--nested > .md-nav__link:focus {
-    background-color: rgba(255, 87, 34, 0.1) !important;
 }
