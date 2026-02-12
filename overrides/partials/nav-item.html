@@ -33,4 +33,6 @@
     {% endif %}
   </li>
 {% endmacro %}
-{{ render(item, parent, level) }}
+
+{# Appel de la macro avec la variable globale 'nav_item' de MkDocs #}
+{{ render(nav_item, parent, level) }}
