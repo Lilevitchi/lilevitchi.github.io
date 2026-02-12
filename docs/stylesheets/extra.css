@@ -156,6 +156,14 @@
 }
 
 /* --- 9. RÉSEAUX SOCIAUX --- */ 
+.md-footer-social {
+    display: flex !important;
+    justify-content: flex-end !important;
+    gap: 15px !important;
+    margin-left: auto !important;
+    padding-top: 8px !important;
+}
+
 .md-footer-social__link {
     margin-left: 10px !important;
 }
@@ -191,102 +199,4 @@
 /* ============================================================
    ============================================================ */
 
-/* --- 10. HUB IMMERSIF (CORRECTION LARGEUR & FOOTER) --- */
 
-/* On cache le footer global uniquement sur les pages contenant un hub */
-body:has(.hub-wrapper) .md-footer {
-    display: none !important;
-}
-
-/* On s'assure que le conteneur principal de MkDocs ne limite pas la largeur */
-body:has(.hub-wrapper) .md-content {
-    margin-left: 0 !important;
-    max-width: none !important;
-}
-
-body:has(.hub-wrapper) .md-main__inner {
-    max-width: none !important;
-    margin: 0 !important;
-}
-
-.hub-wrapper {
-    position: relative;
-    /* On utilise vw pour ignorer les marges parentes */
-    width: 100vw; 
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    
-    /* Hauteur : toute la vue moins le header et les tabs */
-    min-height: calc(100vh - 6.4rem); 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background-color: #000;
-}
-
-/* Image de fond en plein écran */
-.hub-bg {
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center;
-    filter: blur(4px) brightness(0.35);
-    z-index: 1;
-}
-
-/* Robot Patch */
-.hub-bot {
-    position: relative;
-    z-index: 2;
-    width: 280px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.hub-content {
-    position: relative;
-    z-index: 3;
-    text-align: center;
-    width: 90%; /* Pour éviter que le texte touche les bords sur mobile */
-}
-
-.hub-title {
-    color: #ffffff !important;
-    font-size: clamp(1.8rem, 5vw, 3.2rem) !important; /* Taille fluide */
-    font-weight: 900 !important;
-    text-transform: uppercase;
-    text-shadow: 0 5px 20px rgba(0,0,0,0.9);
-    border: none !important;
-    margin-bottom: 50px !important;
-}
-
-.hub-buttons-gap {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-/* Style Boutons Massifs (Conservé) */
-.btn-hub-large {
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    width: 250px;
-    height: 70px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    text-decoration: none !important;
-    transition: all 0.2s ease-in-out;
-}
-
-.btn-orange { background-color: #2c2c2c !important; border: 2px solid #ff5722 !important; color: #ffffff !important; }
-.btn-red { background-color: #8b0000 !important; border: 2px solid #ff0000 !important; color: #ffffff !important; }
-
-.btn-hub-large:hover { transform: scale(1.05); }
