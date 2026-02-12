@@ -62,43 +62,44 @@
     font-size: 0.85rem !important;
 }
 
-.md-typeset h1, .md-typeset h2, .md-typeset h3, .md-typeset h4 {
+.md-typeset h1, .md-typeset h2, .md-typeset h3 {
     margin-bottom: 1rem;
-    text-transform: none !important;
 }
 
-/* Liens : Couleur adaptative par défaut (blanc/noir), Orange au survol */
+/* RÉGLAGE PAR DÉFAUT : Tout ce qui est dans un lien est adaptable (YouTube) */
 .md-typeset a {
     color: inherit !important; 
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.md-typeset a:hover {
+.md-typeset a .twemoji svg {
+    fill: currentColor !important; /* Blanc en sombre, Noir en clair */
+}
+
+/* SURVOL : Tout lien devient orange au passage de la souris */
+.md-typeset a:hover,
+.md-typeset a:hover .twemoji svg {
     color: #ff5722 !important;
+    fill: #ff5722 !important;
 }
 
-/* Icônes (YouTube, etc.) : Suivent la couleur du lien */
-.md-typeset a .twemoji svg, 
-.md-typeset a svg {
-    fill: currentColor !important; /* Adaptatif par défaut */
-    transition: fill 0.3s ease;
+/* FIX DES ICONES DE STRUCTURE (Orange permanent) */
+/* On force l'orange sur les emojis qui NE sont PAS dans un lien <a> */
+.md-typeset .twemoji svg {
+    fill: #ff5722; /* On met orange par défaut pour les emojis isolés */
 }
 
-.md-typeset a:hover .twemoji svg,
-.md-typeset a:hover svg {
-    fill: #ff5722 !important; /* Orange au survol */
+/* On ré-isole les emojis qui sont DANS des liens pour qu'ils ne soient PAS orange par défaut */
+.md-typeset a .twemoji svg {
+    fill: currentColor !important;
 }
 
+/* On s'assure que les icônes de titre et de bot sont bien orange */
 .md-typeset h1 .twemoji svg,
 .md-typeset h2 .twemoji svg,
 .md-typeset h3 .twemoji svg,
-.md-typeset h4 .twemoji svg,
-.md-typeset h5 .twemoji svg,
-.md-typeset h6 .twemoji svg,
-.md-typeset .bot-advice .twemoji svg,
-.md-typeset .orange-icon svg,
-.md-typeset li .twemoji svg:not(a .twemoji svg) { 
+.bot-advice .twemoji svg {
     fill: #ff5722 !important;
 }
 
