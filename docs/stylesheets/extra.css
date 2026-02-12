@@ -205,10 +205,17 @@
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 15px;
     padding: 10px;
+    height: auto !important; /* Force la hauteur à s'adapter au contenu */
+    overflow: visible !important; /* Autorise le contenu à dépasser pour scroller */
 }
 
 .game-card {
     height: 180px !important; 
+    display: block;
+    position: relative;
+    text-decoration: none;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 @media screen and (min-width: 60em) {
