@@ -24,7 +24,6 @@ Ici, pas de blabla inutile : uniquement des guides précis, testés et approuvé
         border: 3px solid #ff5722;
         transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
         background: #1a1a1a;
-        cursor: pointer !important;
         text-decoration: none !important;
     }
 
