@@ -158,18 +158,26 @@
         display: none !important;
     }
 
-   .md-nav__title {
+    /* Supprime le texte mais garde l'espace pour le logo (même dans les sous-menus) */
+    .md-nav__title, .md-nav__link--active {
         color: transparent !important;
         font-size: 0 !important;
-               padding: 0 16px !important;
+        padding: 0 16px !important;
     } 
 
-    /* Force le logo à être seul */
-    .md-nav__title .md-logo {
+    /* Force le logo à être seul à gauche (Header du menu) */
+    .md-nav__title .md-logo, .md-nav__button.md-logo {
         display: block !important;
         width: auto !important;
-        margin: 15px 0 !important;
+        margin: 15px 0 15px 16px !important;
         font-size: 1rem !important;
+    }
+
+    /* Assure que le logo ne soit pas masqué par les règles de texte à 0 */
+    .md-nav__title .md-logo img, .md-nav__button.md-logo img {
+        height: 50px !important;
+        width: auto !important;
+        opacity: 1 !important;
     }
 
     .md-nav__title[for="__drawer"] {
@@ -214,12 +222,12 @@ h2, .md-nav__link, .md-ellipsis, .md-nav__title {
     }
 }
 
-/* Nettoyage du menu déroulant sur mobile */
+/* 6. Nettoyage des états du menu (Actif/Focus) sur mobile */
 .md-nav__item .md-nav__link--active {
     background-color: transparent !important;
-    color: #ff5722 !important; /* Garde le texte en orange */
+    color: #ff5722 !important;
 }
 
 .md-nav__item--nested > .md-nav__link:focus {
-    background-color: rgba(255, 87, 34, 0.1) !important; /* Un orange très subtil au lieu du gris */
+    background-color: rgba(255, 87, 34, 0.1) !important;
 }
