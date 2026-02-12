@@ -88,17 +88,25 @@
 
 /* --- 4. STYLE DU MENU LATÉRAL (TOUT SITE) --- */
 
-/* Titres de dossiers (ex: Fallout 4) et Liens (ex: Accueil) */
+/* Force les minuscules et la graisse normale partout */
 .md-nav__link, .md-nav__title, .md-ellipsis {
-    text-transform: none !important; /* Force les minuscules partout */
+    text-transform: none !important;
     font-weight: 400 !important;
 }
 
-/* Alignement spécifique pour les dossiers */
+/* Alignement spécifique pour les dossiers (ex: Fallout 4) */
 .md-nav__item--nested > .md-nav__link {
-    padding-left: 0.8rem !important; /* Aligne avec Accueil */
+    display: flex !important;
+    align-items: center;
+    padding-left: 0.8rem !important; /* Même alignement que "Accueil" */
     color: var(--md-default-fg-color) !important;
     font-size: 0.8rem !important;
+}
+
+/* On déplace la flèche (l'icône) à la fin de la ligne */
+.md-nav__item--nested > .md-nav__link .md-nav__icon {
+    order: 2;
+    margin-left: auto; /* Pousse la flèche à droite toute */
 }
 
 /* État actif (Chapitre en cours) */
@@ -158,16 +166,17 @@
         margin: 15px 0 !important;
     }
 
-    /* Supprime fond gris sur mobile */
+    /* Supprime fond gris sur mobile pour rester sur du noir pur */
     .md-nav__item .md-nav__link--active {
         background-color: transparent !important;
     }
 
+    /* Effet orange très léger quand on appuie sur un dossier */
     .md-nav__item--nested > .md-nav__link:focus {
         background-color: rgba(255, 87, 34, 0.1) !important;
     }
 
-    /* Cache les onglets */
+    /* Cache les onglets de navigation en haut sur mobile */
     .md-tabs {
         display: none !important;
     }
