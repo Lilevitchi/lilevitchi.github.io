@@ -81,23 +81,13 @@
 /* Icônes (YouTube, etc.) : Suivent la couleur du lien */
 .md-typeset a .twemoji svg, 
 .md-typeset a svg {
-    fill: currentColor !important;
+    fill: #ff5722 !important;
     transition: fill 0.3s ease;
 }
 
 .md-typeset a:hover .twemoji svg,
 .md-typeset a:hover svg {
     fill: #ff5722 !important; /* Orange au survol */
-}
-
-.md-typeset h1 .twemoji svg,
-.md-typeset h2 .twemoji svg,
-.md-typeset h3 .twemoji svg,
-.md-typeset h4 .twemoji svg,
-.bot-advice .twemoji svg,
-.orange-icon {
-    fill: #ff5722 !important;
-    color: #ff5722 !important;
 }
 
 /* --- 4. STYLE DU MENU LATÉRAL (CORRECTION ALIGNEMENT) --- */
