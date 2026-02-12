@@ -163,6 +163,9 @@
     transition: fill 0.3s ease;
 } 
 
+.md-footer-social__link:hover svg {
+    fill: #ff5722 !important;
+}
 
 .orange-icon-svg, .custom-social-icon, .md-footer-social__icon { 
     height: 1.1rem !important; 
