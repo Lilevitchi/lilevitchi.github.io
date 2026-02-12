@@ -149,47 +149,21 @@
 .orange-icon { color: #ff5722 !important; fill: #ff5722 !important; }
 .md-search__input:focus { background-color: rgba(255, 87, 34, 0.1); }
 
-/* --- 7. ADAPTATION MOBILE & CURSEUR --- */
+/* --- 7. ADAPTATION MOBILE --- */
 
-/* 1. Header & Menu latéral : On cache tout texte pour ne laisser QUE le logo */
+/* 1. Masquer le titre à côté du logo sur mobile pour éviter le chevauchement */
 @media screen and (max-width: 45em) {
-    /* Cache le titre dans la barre du haut */
     .md-header__title {
         display: none !important;
     }
-    
-   .md-nav__title {
-        color: transparent !important;
-        font-size: 0 !important;
-        padding: 0 16px !important;
-    } 
-
-    /* Force le logo à être seul */
-    .md-nav__title .md-logo {
-        display: block !important;
-        width: auto !important;
-        margin: 15px 0 !important;
-        font-size: 1rem !important;
-    }
-
-    .md-nav__title[for="__drawer"] {
-        display: block !important;
-    }
 }
 
-/* 2. Retour du Curseur Personnalisé (Uniquement sur PC) */
-@media screen and (min-width: 60em) {
-    .game-card, .hub-button, .hub-button * {
-        cursor: url('../assets/curseur.png') 32 32, pointer !important;
-    }
-}
-
-/* 3. Typographie : Respect des minuscules partout */
-h2, .md-nav__link, .md-ellipsis, .md-nav__title {
+/* 2. Supprimer les majuscules forcées (Fallout 4, menus, etc.) */
+h2, .md-nav__link, .md-ellipsis {
     text-transform: none !important;
 }
 
-/* 4. Grille & Cartes : Taille adaptative */
+/* 3. Grille responsive pour l'accueil (index.md) */
 .game-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -197,29 +171,13 @@ h2, .md-nav__link, .md-ellipsis, .md-nav__title {
     padding: 10px;
 }
 
+/* 4. Ajustement des cartes de jeu pour qu'elles ne soient pas "énormes" sur mobile */
 .game-card {
-    height: 180px !important; /* Hauteur smartphone */
+    height: 180px !important; /* Hauteur réduite sur mobile */
 }
 
 @media screen and (min-width: 60em) {
     .game-card {
-        height: 250px !important; /* Hauteur PC */
+        height: 250px !important; /* Hauteur normale sur PC */
     }
-}
-
-/* 5. Cacher les onglets sur mobile */
-@media screen and (max-width: 76.25em) {
-    .md-tabs {
-        display: none !important;
-    }
-}
-
-/* Nettoyage du menu déroulant sur mobile */
-.md-nav__item .md-nav__link--active {
-    background-color: transparent !important;
-    color: #ff5722 !important; /* Garde le texte en orange */
-}
-
-.md-nav__item--nested > .md-nav__link:focus {
-    background-color: rgba(255, 87, 34, 0.1) !important; /* Un orange très subtil au lieu du gris */
 }
