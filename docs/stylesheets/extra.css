@@ -156,22 +156,10 @@
 }
 
 /* --- 9. RÉSEAUX SOCIAUX --- */ 
-.md-footer-social__link svg { 
-   max-height: 1.1rem !important; 
-   width: 1.1rem !important; 
-} 
 
-.orange-icon-svg, .custom-social-icon { 
-   height: 1.1rem !important; 
-   width: auto !important; 
-   vertical-align: middle; 
-   display: inline-block; 
-   filter: brightness(0) invert(1); /* Blanc par défaut */ 
-   transition: filter 0.3s ease; 
-} 
 
-.md-typeset a:hover .orange-icon-svg, md-footer-social__link:hover .custom-social-icon { 
-   filter: invert(48%) sepia(89%) saturate(2476%) hue-rotate(346deg) brightness(101%) contrast(101%) !important; 
+.nexusmods {
+  height: 1.2rem;
 }
 
 /* ============================================================
