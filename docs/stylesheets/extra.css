@@ -149,34 +149,39 @@
 .orange-icon { color: #ff5722 !important; fill: #ff5722 !important; }
 .md-search__input:focus { background-color: rgba(255, 87, 34, 0.1); }
 
-/* --- 7. ADAPTATION MOBILE & RESPONSIVE --- */
+/* --- 7. ADAPTATION MOBILE & CURSEUR --- */
 
-/* 1. Header & Menu latéral : On ne garde QUE le logo sur mobile */
+/* 1. Header & Menu latéral : On cache tout texte pour ne laisser QUE le logo */
 @media screen and (max-width: 45em) {
     /* Cache le titre dans la barre du haut */
-    .md-header__title {
+    .md-header__title, 
+    .md-nav__title span, 
+    .md-nav__title br {
         display: none !important;
     }
 
-    /* Cache le texte sous le logo dans le menu déroulant */
-    .md-nav__title[for="__drawer"] {
-        font-size: 0 !important;
-    }
-
-    /* Ajuste la position du logo seul dans le menu pour qu'il soit propre */
+    /* Force le logo à être seul et centré dans le menu */
     .md-nav__title .md-logo {
-        margin-bottom: 0 !important;
-        display: flex;
-        justify-content: center;
+        display: flex !important;
+        justify-content: center !important;
+        width: 100% !important;
+        margin: 10px 0 !important;
     }
 }
 
-/* 2. Typographie : Supprimer les majuscules forcées partout */
+/* 2. Retour du Curseur Personnalisé (Uniquement sur PC) */
+@media screen and (min-width: 60em) {
+    .game-card, .hub-button {
+        cursor: url('../assets/curseur.png'), auto !important;
+    }
+}
+
+/* 3. Typographie : Respect des minuscules partout */
 h2, .md-nav__link, .md-ellipsis, .md-nav__title {
     text-transform: none !important;
 }
 
-/* 3. Grille responsive : L'accueil s'adapte à la largeur de l'écran */
+/* 4. Grille & Cartes : Taille adaptative */
 .game-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -184,20 +189,19 @@ h2, .md-nav__link, .md-ellipsis, .md-nav__title {
     padding: 10px;
 }
 
-/* 4. Cartes de jeu : Hauteur adaptative (Mobile vs PC) */
 .game-card {
-    height: 180px !important; /* Hauteur par défaut (Mobile) */
+    height: 180px !important; /* Hauteur smartphone */
 }
 
 @media screen and (min-width: 60em) {
     .game-card {
-        height: 250px !important; /* Hauteur sur PC */
+        height: 250px !important; /* Hauteur PC */
     }
 }
 
 /* 5. Cacher les onglets sur mobile */
 @media screen and (max-width: 76.25em) {
     .md-tabs {
-        display: none;
+        display: none !important;
     }
 }
