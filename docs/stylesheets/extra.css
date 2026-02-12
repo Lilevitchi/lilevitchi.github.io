@@ -155,6 +155,49 @@
     }
 }
 
+/* --- 9. RÉSEAUX SOCIAUX --- */
+.orange-icon-svg, .custom-social-icon {
+    height: 1.1rem !important;
+    width: auto !important;
+    vertical-align: middle;
+    display: inline-block;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+/* On force les icônes standards (YouTube, etc.) en blanc par défaut */
+.orange-icon, .md-social__link {
+    color: #ffffff !important;
+    transition: color 0.3s ease;
+}
+
+/* --- EFFET HOVER (SURVOL) --- */
+
+/* Au survol d'un lien dans le texte ou du footer */
+.md-typeset a:hover .orange-icon, 
+.md-social__link:hover {
+    color: #ff5722 !important;
+}
+
+/* Au survol du SVG Nexus (on applique le filtre orange) */
+.md-typeset a:hover .orange-icon-svg, 
+.md-social__link:hover .custom-social-icon {
+    filter: invert(48%) sepia(89%) saturate(2476%) hue-rotate(346deg) brightness(101%) contrast(101%) !important;
+}
+
+/* Correction du pied de page (Footer) pour éviter l'éparpillement */
+.md-social {
+    display: flex !important;
+    justify-content: flex-start;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+/* Taille des icônes dans le footer */
+.md-social__link svg {
+    max-height: 1.1rem !important;
+}
+
 /* ============================================================
    ============================================================ */
 
