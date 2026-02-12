@@ -93,8 +93,9 @@
 .md-typeset h1 .twemoji svg,
 .md-typeset h2 .twemoji svg,
 .md-typeset h3 .twemoji svg,
-.md-typeset .orange-icon,
-.bot-advice .twemoji svg {
+.md-typeset h4 .twemoji svg,
+.bot-advice .twemoji svg,
+.orange-icon {
     fill: #ff5722 !important;
     color: #ff5722 !important;
 }
@@ -109,7 +110,8 @@
 .md-nav__link {
     padding-left: 0.8rem !important;
     margin-left: 0 !important;
-    display: block !important;
+    display: flex !important;
+    align-items: center;
 }
 
 .md-nav__link--active {
