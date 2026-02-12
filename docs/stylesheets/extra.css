@@ -59,28 +59,40 @@
 
 /* --- 3. UNIFORMISATION DU TEXTE ET LIENS --- */
 :root {
-    /* On force l'orange sur les variables de liens et d'icônes du thème */
+    /* On force l'orange dans les veines du thème */
     --md-typeset-a-color: #ff5722 !important;
     --md-accent-fg-color: #ff5722 !important;
-    --md-accent-fg-color--transparent: rgba(255, 87, 34, 0.1) !important;
 }
 
 .md-typeset {
     font-size: 0.85rem !important;
 }
 
-/* Force la couleur de TOUS les liens du contenu (évite le bleu) */
+/* On force la couleur de TOUS les liens pour éviter le bleu */
 .md-typeset a {
     color: #ff5722 !important;
     text-decoration: none !important;
 }
 
-/* Force TOUS les SVG/Emojis à devenir orange */
+/* On cible TOUS les SVG possibles */
 .md-typeset svg, 
 .md-typeset .twemoji svg,
 .twemoji svg {
     fill: #ff5722 !important;
     color: #ff5722 !important;
+}
+
+/* FIX POUR L'AMPOULE ET LE CAFÉ (Si ce sont des icônes de bloc/admonition) */
+.md-typeset .admonition-title::before,
+.md-typeset summary::before {
+    background-color: #ff5722 !important; /* Pour les icônes en mode masque */
+    color: #ff5722 !important;
+}
+
+/* On s'assure que même au survol, tout reste orange pour l'instant */
+.md-typeset a:hover {
+    color: #ff5722 !important;
+    filter: brightness(1.2); /* Petit effet de brillance au lieu du changement de couleur */
 }
 
 /* --- 4. STYLE DU MENU LATÉRAL (CORRECTION ALIGNEMENT) --- */
