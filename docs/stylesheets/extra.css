@@ -17,11 +17,12 @@
 
 /* --- 3. TEXTE, LIENS & TITRES --- */
 .md-main__inner, .md-content { margin-top: 0 !important; margin-left: 0 !important; }
-.md-content__inner { max-width: 1400px !important; margin: 0 auto !important; padding-top: 0 !important; }
+.md-content__inner { max-width: 1400px !important; margin: 0 auto !important; padding-top: 1.5rem !important; text-align: center; }
 
 .md-typeset { font-size: 0.85rem !important; }
 .md-typeset h1, .md-typeset h2, .md-typeset h3 { color: var(--md-default-fg-color) !important; opacity: 1 !important; font-weight: 700; }
-.md-typeset h1:first-child { margin-top: 0 !important; padding-top: 0 !important; }
+.md-typeset h1:first-child { margin-top: 0 !important; padding-top: 0 !important; display: flex; justify-content: center; align-items: center; gap: 15px; }
+.md-typeset p { text-align: center; margin-left: auto; margin-right: auto; max-width: 900px; }
 
 .md-nav--secondary .md-nav__title { color: var(--md-default-fg-color) !important; opacity: 1 !important; font-weight: bold; }
 .md-nav--secondary .md-nav__link { color: var(--md-typeset-color); opacity: 0.7; }
@@ -72,7 +73,7 @@
     gap: 15px;
     padding: 10px;
     max-width: 1400px; /* Limite la largeur totale pour ne pas s'étaler trop sur ultra-wide */
-    margin: 0 auto;    /* Centre la grille si l'écran est trop large */
+    margin: 20px auto 0 auto !important; /* Centre la grille si l'écran est trop large */
     height: auto !important;
     overflow: visible !important;
 }
