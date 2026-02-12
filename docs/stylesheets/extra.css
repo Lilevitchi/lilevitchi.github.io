@@ -90,6 +90,15 @@
     fill: #ff5722 !important; /* Orange au survol */
 }
 
+.md-typeset h1 .twemoji svg,
+.md-typeset h2 .twemoji svg,
+.md-typeset h3 .twemoji svg,
+.md-typeset .orange-icon,
+.bot-advice .twemoji svg {
+    fill: #ff5722 !important;
+    color: #ff5722 !important;
+}
+
 /* --- 4. STYLE DU MENU LATÉRAL (CORRECTION ALIGNEMENT) --- */
 
 .md-nav__link, .md-nav__title, .md-ellipsis {
