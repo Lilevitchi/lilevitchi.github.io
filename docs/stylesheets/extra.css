@@ -207,52 +207,34 @@
 /* ============================================================
    ============================================================ */
 
-/* --- 10. HUB IMMERSIF (PLEIN ÉCRAN TOTAL) --- */
+/* --- 10. HUB JEUX --- */
 
-/* Bloquer le scroll et masquer le footer sur cette page */
 body:has(.hub-wrapper) {
     overflow: hidden !important;
 }
 
-body:has(.hub-wrapper) .md-footer, 
-body:has(.hub-wrapper) .md-sidebar {
+body:has(.hub-wrapper) .md-footer,
+body:has(.hub-wrapper) .md-main__inner,
+body:has(.hub-wrapper) .md-content__inner {
     display: none !important;
-}
-
-/* Forcer le contenu à prendre toute la largeur */
-body:has(.hub-wrapper) .md-content__inner,
-body:has(.hub-wrapper) .md-main__inner {
-    max-width: none !important;
     margin: 0 !important;
     padding: 0 !important;
 }
 
-body:has(.hub-wrapper) .md-content {
-    margin-left: 0 !important;
-}
-
-/* Gestion du titre dans le Header (Fallout 4 direct) */
-body:has(.hub-wrapper) .md-header__topic:nth-child(1) {
-    display: none !important;
-}
-body:has(.hub-wrapper) .md-header__topic:nth-child(2) {
-    opacity: 1 !important;
-    transform: none !important;
-}
-
-/* Le Wrapper : occupe tout l'espace sous les tabs */
 .hub-wrapper {
-    position: relative;
+    position: fixed;
+    top: 6.4rem;
+    left: 0;
     width: 100vw;
-    height: calc(100vh - 6.4rem); /* Ajuste selon la hauteur de ton header+tabs */
+    height: calc(100vh - 6.4rem);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 10;
     background-color: #000;
 }
 
-/* Image de fond (fo4.jpg) */
 .hub-bg {
     position: absolute;
     inset: 0;
@@ -262,27 +244,59 @@ body:has(.hub-wrapper) .md-header__topic:nth-child(2) {
     z-index: 1;
 }
 
-/* Robot (lile-bot-fo4.png) */
-.hub-bot {
+.hub-buttons-gap {
     position: relative;
-    z-index: 2;
-    width: clamp(150px, 20vw, 300px);
-    height: auto;
-    margin-bottom: 10px;
+    z-index: 5;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 20px;
 }
 
-.hub-content {
-    position: relative;
-    z-index: 3;
-    text-align: center;
+.btn-hub-large {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 240px;
+    height: 65px;
+    border-radius: 4px;
+    font-weight: 800;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
 }
 
-.hub-title {
+.btn-orange {
+    background: rgba(40, 40, 40, 0.85) !important;
+    border: 2px solid #ff5722 !important;
     color: #ffffff !important;
-    font-size: clamp(1.5rem, 5vw, 3.2rem) !important;
+}
+.btn-orange:hover {
+    background: #ff5722 !important;
+    color: #000000 !important;
+    box-shadow: 0 0 20px rgba(255, 87, 34, 0.6);
+}
+
+.btn-red {
+    background: rgba(139, 0, 0, 0.85) !important;
+    border: 2px solid #ff0000 !important;
+    color: #ffffff !important;
+}
+.btn-red:hover {
+    background: #ff0000 !important;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+}
+
+.hub-bot { position: relative; z-index: 5; width: 280px; margin-bottom: 0; }
+.hub-title {
+    position: relative;
+    z-index: 5;
+    color: #fff !important;
+    font-size: 3rem !important;
     font-weight: 900 !important;
     text-transform: uppercase;
-    text-shadow: 0 5px 20px rgba(0,0,0,0.9);
+    text-shadow: 0 0 15px rgba(0,0,0,1);
     border: none !important;
     margin-bottom: 40px !important;
 }
