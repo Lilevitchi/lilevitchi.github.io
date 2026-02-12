@@ -244,3 +244,13 @@ body:has(.hub-wrapper) .md-content {
     filter: blur(4px) brightness(0.35);
     z-index: 1;
 }
+
+/* 5. Forcer le titre "Fallout 4" dans le header */
+body:has(.hub-wrapper) .md-header__topic:nth-child(1) span {
+    display: none !important; /* Cache "Lilevitchi Modding" */
+}
+body:has(.hub-wrapper) .md-header__topic:nth-child(2) {
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto !important;
+}
