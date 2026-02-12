@@ -176,11 +176,6 @@
     transition: filter 0.3s ease; 
 }
 
-.md-typeset a:hover .orange-icon-svg,
-.md-footer-social__link:hover .md-footer-social__icon { 
-   filter: invert(48%) sepia(89%) saturate(2476%) hue-rotate(346deg) brightness(101%) contrast(101%) !important; 
-}
-
 /* ============================================================
    ============================================================ */
 
