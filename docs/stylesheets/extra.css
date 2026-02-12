@@ -211,15 +211,19 @@
    ============================================================ */
 
  /* --- 10. HUB IMMERSIF (FIX BANNIÈRE & BOUTONS) --- */
+body:has(.hub-wrapper) .md-content__inner {
+    margin-top: -2rem !important;
+    padding-top: 0 !important;
+}
 
 @media screen and (min-width: 60em) {
     .hub-wrapper {
         position: fixed;
-        top: 5rem;
+        top: 6.4rem;
         left: 0;
         width: 100vw;
-        height: calc(100vh - 5rem);
-        z-index: 10;
+        height: calc(100vh - 6.4rem);
+        z-index: 100;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -236,7 +240,7 @@
     justify-content: center;
 }
 
-.btn-hub-large {
+.md-typeset .btn-hub-large {
     width: 280px;
     padding: 22px 10px;
     border-radius: 6px;
@@ -252,6 +256,12 @@
     color: #ffffff !important; 
 }
 
+.md-typeset a.btn-orange:hover, 
+.md-typeset a.btn-red:hover {
+    color: #ffffff !important; 
+    text-decoration: none !important;
+}
+
 .btn-orange {
     background: #2c2c2c !important;
     border: 2px solid rgba(255, 87, 34, 0.5) !important;
@@ -262,7 +272,6 @@
     border-color: #ff5722 !important;
     box-shadow: 0 0 25px 2px rgba(255, 87, 34, 0.7);
     transform: scale(1.03);
-    color: #ffffff !important;
 }
 
 .btn-red {
@@ -275,7 +284,6 @@
     border-color: #ff0000 !important;
     box-shadow: 0 0 25px 2px rgba(255, 0, 0, 0.7);
     transform: scale(1.03);
-    color: #ffffff !important;
 }
 
 .hub-bg { position: absolute; inset: 0; background-size: cover; background-position: center; filter: blur(6px) brightness(0.4); z-index: 1; }
