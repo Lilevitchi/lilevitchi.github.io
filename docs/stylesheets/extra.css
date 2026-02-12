@@ -179,7 +179,7 @@
     filter: brightness(0) invert(1) !important;
     transition: filter 0.3s ease; 
     position: relative;
-    top: -1.5px;
+    top: -3px;
 }
 
 .md-typeset a:hover .orange-icon-svg, 
@@ -191,7 +191,7 @@
 /* ============================================================
    ============================================================ */
 
-/* --- 9. HUB IMMERSIF (FIX BANNIÈRE & BOUTONS) --- */
+/* --- 10. HUB IMMERSIF (FIX BANNIÈRE & BOUTONS) --- */
 .hub-wrapper {
     position: relative;
     width: 100%;
