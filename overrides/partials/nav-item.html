@@ -34,5 +34,5 @@
   </li>
 {% endmacro %}
 
-{# Appel de la macro avec la variable globale 'nav_item' de MkDocs #}
-{{ render(nav_item, parent, level) }}
+{# Cette ligne est la clé : elle teste 'item' PUIS 'nav_item' pour éviter l'erreur Undefined #}
+{{ render(item | default(nav_item), parent, level) }}
