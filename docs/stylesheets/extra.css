@@ -211,100 +211,83 @@
    ============================================================ */
 
  /* --- 10. HUB IMMERSIF (FIX BANNIÈRE & BOUTONS) --- */
+/* --- 10. HUB IMMERSIF (EFFET HALO LUMINEUX) --- */
+
+/* 1. Fix Marge Grise */
 body:has(.hub-wrapper) .md-content__inner,
 body:has(.hub-wrapper) .md-main__inner {
     margin-top: 0 !important;
     padding-top: 0 !important;
 }
 
-.hub-wrapper {
-    position: relative;
-    width: 100%;
-    background-color: #000;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
+/* 2. Le Wrapper & Robot */
 @media screen and (min-width: 60em) {
     .hub-wrapper {
         position: fixed;
-        top: 6.4rem; /* Ajusté pour coller aux onglets */
+        top: 6.4rem;
         left: 0;
         width: 100vw;
         height: calc(100vh - 6.4rem);
         z-index: 10;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #000;
     }
-    .hub-bot {
-        position: absolute;
-        width: 450px;
-        top: 15%; /* Remonté un peu pour l'équilibre */
-        z-index: 2;
-    }
-    .hub-content {
-        position: relative;
-        z-index: 3;
-        margin-top: 18vh;
-    }
+    .hub-bot { width: 400px; margin-bottom: 0; z-index: 2; }
+    .hub-content { position: relative; z-index: 3; margin-top: -8vh; text-align: center; }
 }
 
-/* --- STYLE DES BOUTONS DU HUB --- */
+/* 3. LES BOUTONS (Bordure et Halo uniquement) */
 .hub-buttons-gap {
     display: flex;
-    gap: 80px;
+    gap: 60px;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 .btn-hub-large {
-    width: 300px;
-    padding: 25px 10px;
-    border-radius: 8px;
-    font-weight: 800; /* Texte plus épais */
-    font-size: 1.3rem;
+    width: 280px;
+    padding: 22px 10px;
+    border-radius: 6px;
+    font-weight: 800;
+    font-size: 1.25rem;
     text-transform: uppercase;
     text-decoration: none !important;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    text-align: center;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+    gap: 15px;
+    transition: all 0.3s ease; /* Transition fluide pour le halo */
+    color: #ffffff !important; 
 }
 
+/* --- BOUTON ORANGE --- */
 .btn-orange {
-    background: #2c2c2c;
-    border: 2px solid #ff5722;
-    color: #ffffff !important;
+    background: rgba(30, 30, 30, 0.9) !important; /* Fond sombre fixe */
+    border: 2px solid rgba(255, 87, 34, 0.5) !important; /* Bordure discrète au repos */
 }
 
 .btn-orange:hover {
-    background: #ff5722 !important;
-    transform: scale(1.05) translateY(-3px);
-    box-shadow: 0 0 30px rgba(255, 87, 34, 0.6);
+    /* Le fond NE CHANGE PAS */
+    border-color: #ff5722 !important; /* La bordure s'allume */
+    box-shadow: 0 0 20px 2px rgba(255, 87, 34, 0.7); /* Le halo extérieur */
+    transform: scale(1.02); /* Très léger zoom pour le feeling */
 }
 
+/* --- BOUTON ROUGE --- */
 .btn-red {
-    background: #8b0000;
-    border: 2px solid #ff0000;
-    color: #ffffff !important;
+    background: rgba(30, 30, 30, 0.9) !important; /* Même fond sombre fixe */
+    border: 2px solid rgba(255, 0, 0, 0.5) !important;
 }
 
 .btn-red:hover {
-    background: #ff0000 !important;
-    transform: scale(1.05) translateY(-3px);
-    box-shadow: 0 0 30px rgba(255, 0, 0, 0.6);
+    /* Le fond NE CHANGE PAS */
+    border-color: #ff0000 !important; /* La bordure s'allume */
+    box-shadow: 0 0 20px 2px rgba(255, 0, 0, 0.7); /* Le halo extérieur */
+    transform: scale(1.02);
 }
 
-.hub-bg { position: absolute; inset: 0; background-size: cover; background-position: center; filter: blur(8px) brightness(0.5); z-index: 1; }
-.hub-title { color: white !important; font-size: 2.2rem !important; font-weight: 800 !important; text-transform: uppercase; text-shadow: 2px 2px 10px #000; margin-bottom: 50px !important; border: none !important; position: relative; z-index: 3; }
-
-@media screen and (max-width: 45em) {
-    .hub-wrapper { min-height: 100vh; padding: 40px 0; display: flex; }
-    .hub-bot { width: 160px; margin-bottom: 20px; position: relative; top: 0; }
-    .btn-hub-large { width: 260px; font-size: 1.1rem; }
-    .hub-buttons-gap { gap: 20px; flex-direction: column; align-items: center; }
-}
+/* 4. Fond et Titre */
+.hub-bg { position: absolute; inset: 0; background-size: cover; background-position: center; filter: blur(6px) brightness(0.4); z-index: 1; }
+.hub-title { color: white !important; font-size: 2.2rem !important; font-weight: 800 !important; text-transform: uppercase; text-shadow: 2px 2px 15px #000; margin-bottom: 50px !important; border: none !important; }
