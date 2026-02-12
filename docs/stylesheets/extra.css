@@ -58,21 +58,29 @@
 }
 
 /* --- 3. UNIFORMISATION DU TEXTE ET LIENS --- */
+:root {
+    /* On force l'orange sur les variables de liens et d'icônes du thème */
+    --md-typeset-a-color: #ff5722 !important;
+    --md-accent-fg-color: #ff5722 !important;
+    --md-accent-fg-color--transparent: rgba(255, 87, 34, 0.1) !important;
+}
+
 .md-typeset {
     font-size: 0.85rem !important;
 }
 
-.md-typeset svg {
-    fill: #ff5722 !important;
+/* Force la couleur de TOUS les liens du contenu (évite le bleu) */
+.md-typeset a {
     color: #ff5722 !important;
+    text-decoration: none !important;
 }
 
-.md-typeset a:hover {
-    color: #ff5722 !important;
-}
-
+/* Force TOUS les SVG/Emojis à devenir orange */
+.md-typeset svg, 
+.md-typeset .twemoji svg,
 .twemoji svg {
     fill: #ff5722 !important;
+    color: #ff5722 !important;
 }
 
 /* --- 4. STYLE DU MENU LATÉRAL (CORRECTION ALIGNEMENT) --- */
