@@ -196,7 +196,11 @@
     .game-card {
         height: 250px !important; 
     }
-    .game-card, .hub-button, .hub-button *, .md-typeset a {
+    .game-card, 
+    .game-card *, 
+    .md-typeset a, 
+    .md-nav__link, 
+    .md-tabs__link, {
         cursor: url('../assets/curseur.png') 10 0, pointer !important;
     }
 }
