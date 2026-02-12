@@ -58,41 +58,36 @@
 }
 
 /* --- 3. UNIFORMISATION DU TEXTE ET LIENS --- */
-:root {
-    /* On force l'orange dans les veines du thème */
-    --md-typeset-a-color: #ff5722 !important;
-    --md-accent-fg-color: #ff5722 !important;
-}
-
 .md-typeset {
     font-size: 0.85rem !important;
 }
 
-/* On force la couleur de TOUS les liens pour éviter le bleu */
+.md-typeset h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* Liens : Couleur adaptative par défaut (blanc/noir), Orange au survol */
 .md-typeset a {
-    color: #ff5722 !important;
-    text-decoration: none !important;
+    color: inherit !important; 
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-/* On cible TOUS les SVG possibles */
-.md-typeset svg, 
-.md-typeset .twemoji svg,
-.twemoji svg {
-    fill: #ff5722 !important;
-    color: #ff5722 !important;
-}
-
-/* FIX POUR L'AMPOULE ET LE CAFÉ (Si ce sont des icônes de bloc/admonition) */
-.md-typeset .admonition-title::before,
-.md-typeset summary::before {
-    background-color: #ff5722 !important; /* Pour les icônes en mode masque */
-    color: #ff5722 !important;
-}
-
-/* On s'assure que même au survol, tout reste orange pour l'instant */
 .md-typeset a:hover {
     color: #ff5722 !important;
-    filter: brightness(1.2); /* Petit effet de brillance au lieu du changement de couleur */
+}
+
+/* Icônes (YouTube, etc.) : Suivent la couleur du lien */
+.md-typeset a .twemoji svg, 
+.md-typeset a svg {
+    fill: currentColor !important; /* Adaptatif par défaut */
+    transition: fill 0.3s ease;
+}
+
+.md-typeset a:hover .twemoji svg,
+.md-typeset a:hover svg {
+    fill: #ff5722 !important; /* Orange au survol */
 }
 
 /* --- 4. STYLE DU MENU LATÉRAL (CORRECTION ALIGNEMENT) --- */
