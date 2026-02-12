@@ -17,6 +17,8 @@
 
 /* --- 3. TEXTE, LIENS & TITRES --- */
 .md-main__inner, .md-content { margin-top: 0 !important; margin-left: 0 !important; }
+.md-content__inner { max-width: 1400px !important; margin: 0 auto !important; padding-top: 0 !important; }
+
 .md-typeset { font-size: 0.85rem !important; }
 .md-typeset h1, .md-typeset h2, .md-typeset h3 { color: var(--md-default-fg-color) !important; opacity: 1 !important; font-weight: 700; }
 .md-typeset h1:first-child { margin-top: 0 !important; padding-top: 0 !important; }
@@ -66,10 +68,10 @@
 
 .game-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Réduit de 280px à 240px */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Réduit de 280px à 220px */
     gap: 15px;
     padding: 10px;
-    max-width: 1200px; /* Limite la largeur totale pour ne pas s'étaler trop sur ultra-wide */
+    max-width: 1400px; /* Limite la largeur totale pour ne pas s'étaler trop sur ultra-wide */
     margin: 0 auto;    /* Centre la grille si l'écran est trop large */
     height: auto !important;
     overflow: visible !important;
