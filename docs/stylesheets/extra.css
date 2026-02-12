@@ -62,10 +62,29 @@
     font-size: 0.85rem !important;
 }
 
-/* Force tous les titres en blanc pur pour la clarté */
-.md-typeset h1, .md-typeset h2 {
-    color: #ffffff !important;
+/* Titres adaptatifs : Blanc en mode sombre, Noir en mode clair */
+.md-typeset h1, .md-typeset h2, .md-typeset h3 {
+    color: var(--md-default-fg-color) !important;
     opacity: 1 !important;
+    font-weight: 700;
+}
+
+/* Titre de la Table des matières (droite) plus éclatant */
+.md-nav--secondary .md-nav__title {
+    color: var(--md-default-fg-color) !important;
+    opacity: 1 !important;
+    font-weight: bold;
+}
+
+/* On s'assure que les liens de la table des matières sont aussi lisibles */
+.md-nav--secondary .md-nav__link {
+    color: var(--md-typeset-color);
+    opacity: 0.7; /* Légèrement estompé pour hiérarchiser */
+}
+
+.md-nav--secondary .md-nav__link:hover {
+    color: #ff5722 !important;
+    opacity: 1;
 }
 
 .md-typeset h1 {
@@ -196,13 +215,19 @@
     .game-card {
         height: 250px !important; 
     }
-    .game-card, 
-    .game-card *, 
-    .md-typeset a, 
-    .md-nav__link, 
-    .md-logo, 
+    .game-card,
+    .game-card *,
+    .md-logo,
+    .md-logo img,
+    .md-header__inner,
+    .md-header__inner *,
+    .md-tabs__link,
+    .md-tabs__item,
+    .md-nav__link,
+    .md-nav__link span,
+    .md-typeset a,
     .kofi-button,
-    .md-header__button {
+    .kofi-button * {
         cursor: url('../assets/curseur.png') 10 0, pointer !important;
     }
 }
