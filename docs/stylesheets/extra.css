@@ -187,15 +187,18 @@
     filter: brightness(0) invert(1) !important;
     transition: filter 0.3s ease; 
     position: relative;
-    top: -7px;
+    filter: brightness(0) invert(var(--md-icons-invert, 1)) !important;
 }
 
+[data-md-color-scheme="default"] { --md-icons-invert: 0.2; } /* Mode Clair : sombre */
+[data-md-color-scheme="slate"] { --md-icons-invert: 1; }   /* Mode Sombre : blanc */
+
 .orange-icon-svg {
-    top: -1.5px !important; /* Ajuste cette valeur pour l'index */
+    top: -1.5px !important;
 }
 
 .md-footer-social__icon {
-    top: -7px !important; /* On garde tes -7px qui marchent pour le footer */
+    top: -7px !important;
 }
 
 .md-typeset a:hover .orange-icon-svg, 
@@ -207,52 +210,84 @@
 /* ============================================================
    ============================================================ */
 
-/* --- 10. HUB JEUX --- */
+/* --- 10. HUB IMMERSIF (FIX TOTAL LARGEUR/HAUTEUR) --- */
 
+/* 1. On vide les marges de MkDocs pour cette page */
 body:has(.hub-wrapper) {
     overflow: hidden !important;
 }
 
-body:has(.hub-wrapper) .md-footer,
 body:has(.hub-wrapper) .md-main__inner,
-body:has(.hub-wrapper) .md-content__inner {
-    display: none !important;
+body:has(.hub-wrapper) .md-content,
+body:has(.hub-wrapper) .md-content__inner,
+body:has(.hub-wrapper) article {
+    max-width: none !important;
     margin: 0 !important;
     padding: 0 !important;
 }
 
+/* On cache le footer et la navigation latérale */
+body:has(.hub-wrapper) .md-footer,
+body:has(.hub-wrapper) .md-sidebar {
+    display: none !important;
+}
+
+/* 2. Le Wrapper : Utilise le calcul de hauteur exacte */
 .hub-wrapper {
-    position: fixed;
-    top: 6.4rem;
-    left: 0;
+    position: relative;
     width: 100vw;
-    height: calc(100vh - 6.4rem);
+    /* 100vh = toute la hauteur, 6.4rem = header+tabs */
+    height: calc(100vh - 6.4rem); 
+    background-color: #000;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 10;
-    background-color: #000;
 }
 
+/* Image de fond (fo4.jpg) - On s'assure qu'elle couvre tout */
 .hub-bg {
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
     filter: brightness(0.4);
     z-index: 1;
 }
 
-.hub-buttons-gap {
+/* 3. Contenu et Boutons (Restauration du style) */
+.hub-content {
     position: relative;
     z-index: 5;
+    text-align: center;
+}
+
+.hub-bot {
+    width: 280px;
+    height: auto;
+    margin-bottom: 0;
+}
+
+.hub-title {
+    color: #ffffff !important;
+    font-size: 3rem !important;
+    font-weight: 900 !important;
+    text-transform: uppercase;
+    text-shadow: 0 5px 20px rgba(0,0,0,1);
+    border: none !important;
+    margin-bottom: 40px !important;
+}
+
+.hub-buttons-gap {
     display: flex;
     gap: 30px;
     justify-content: center;
-    margin-top: 20px;
 }
 
+/* Boutons avec cadres restaurés */
 .btn-hub-large {
     display: flex !important;
     align-items: center;
@@ -261,42 +296,19 @@ body:has(.hub-wrapper) .md-content__inner {
     height: 65px;
     border-radius: 4px;
     font-weight: 800;
-    font-size: 1.1rem;
     text-transform: uppercase;
     text-decoration: none !important;
-    transition: all 0.2s ease;
+    transition: 0.2s;
 }
 
 .btn-orange {
-    background: rgba(40, 40, 40, 0.85) !important;
+    background: rgba(44, 44, 44, 0.9) !important;
     border: 2px solid #ff5722 !important;
-    color: #ffffff !important;
-}
-.btn-orange:hover {
-    background: #ff5722 !important;
-    color: #000000 !important;
-    box-shadow: 0 0 20px rgba(255, 87, 34, 0.6);
+    color: #fff !important;
 }
 
 .btn-red {
-    background: rgba(139, 0, 0, 0.85) !important;
+    background: #8b0000 !important;
     border: 2px solid #ff0000 !important;
-    color: #ffffff !important;
-}
-.btn-red:hover {
-    background: #ff0000 !important;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
-}
-
-.hub-bot { position: relative; z-index: 5; width: 280px; margin-bottom: 0; }
-.hub-title {
-    position: relative;
-    z-index: 5;
     color: #fff !important;
-    font-size: 3rem !important;
-    font-weight: 900 !important;
-    text-transform: uppercase;
-    text-shadow: 0 0 15px rgba(0,0,0,1);
-    border: none !important;
-    margin-bottom: 40px !important;
 }
