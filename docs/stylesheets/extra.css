@@ -207,50 +207,82 @@
 /* ============================================================
    ============================================================ */
 
-/* --- 10. HUB JEUX --- */
+/* --- 10. HUB IMMERSIF (PLEIN ÉCRAN TOTAL) --- */
 
+/* Bloquer le scroll et masquer le footer sur cette page */
 body:has(.hub-wrapper) {
     overflow: hidden !important;
 }
-body:has(.hub-wrapper) .md-footer {
+
+body:has(.hub-wrapper) .md-footer, 
+body:has(.hub-wrapper) .md-sidebar {
     display: none !important;
 }
 
+/* Forcer le contenu à prendre toute la largeur */
+body:has(.hub-wrapper) .md-content__inner,
 body:has(.hub-wrapper) .md-main__inner {
     max-width: none !important;
     margin: 0 !important;
-}
-body:has(.hub-wrapper) .md-content {
-    max-width: none !important;
+    padding: 0 !important;
 }
 
+body:has(.hub-wrapper) .md-content {
+    margin-left: 0 !important;
+}
+
+/* Gestion du titre dans le Header (Fallout 4 direct) */
+body:has(.hub-wrapper) .md-header__topic:nth-child(1) {
+    display: none !important;
+}
+body:has(.hub-wrapper) .md-header__topic:nth-child(2) {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+/* Le Wrapper : occupe tout l'espace sous les tabs */
 .hub-wrapper {
     position: relative;
     width: 100vw;
-    height: calc(100vh - 6.4rem); 
+    height: calc(100vh - 6.4rem); /* Ajuste selon la hauteur de ton header+tabs */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
     background-color: #000;
 }
 
+/* Image de fond (fo4.jpg) */
 .hub-bg {
     position: absolute;
     inset: 0;
     background-size: cover;
     background-position: center;
-    filter: blur(4px) brightness(0.35);
+    filter: brightness(0.4);
     z-index: 1;
 }
 
-/* 5. Forcer le titre "Fallout 4" dans le header */
-body:has(.hub-wrapper) .md-header__topic:nth-child(1) span {
-    display: none !important; /* Cache "Lilevitchi Modding" */
+/* Robot (lile-bot-fo4.png) */
+.hub-bot {
+    position: relative;
+    z-index: 2;
+    width: clamp(150px, 20vw, 300px);
+    height: auto;
+    margin-bottom: 10px;
 }
-body:has(.hub-wrapper) .md-header__topic:nth-child(2) {
-    opacity: 1 !important;
-    transform: none !important;
-    pointer-events: auto !important;
+
+.hub-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+}
+
+.hub-title {
+    color: #ffffff !important;
+    font-size: clamp(1.5rem, 5vw, 3.2rem) !important;
+    font-weight: 900 !important;
+    text-transform: uppercase;
+    text-shadow: 0 5px 20px rgba(0,0,0,0.9);
+    border: none !important;
+    margin-bottom: 40px !important;
 }
