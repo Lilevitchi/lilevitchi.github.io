@@ -62,9 +62,9 @@
     font-size: 0.85rem !important;
 }
 
-.md-typeset h1 {
-    font-size: 1.8rem;
+.md-typeset h1, .md-typeset h2, .md-typeset h3, .md-typeset h4 {
     margin-bottom: 1rem;
+    text-transform: none !important;
 }
 
 /* Liens : Couleur adaptative par défaut (blanc/noir), Orange au survol */
@@ -93,8 +93,12 @@
 .md-typeset h1 .twemoji svg,
 .md-typeset h2 .twemoji svg,
 .md-typeset h3 .twemoji svg,
+.md-typeset h4 .twemoji svg,
+.md-typeset h5 .twemoji svg,
+.md-typeset h6 .twemoji svg,
 .md-typeset .bot-advice .twemoji svg,
-.md-typeset .orange-icon svg {
+.md-typeset .orange-icon svg,
+.md-typeset li .twemoji svg:not(a .twemoji svg) { 
     fill: #ff5722 !important;
 }
 
