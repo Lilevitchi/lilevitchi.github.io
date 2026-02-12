@@ -61,13 +61,14 @@
     .md-nav__item .md-nav__link--active { background-color: transparent !important; }
     .md-nav__item--nested > .md-nav__link:focus { background-color: rgba(255, 87, 34, 0.1) !important; }
     .md-tabs { display: none !important; }
-    .md-nav--primary { z-index: 1000 !important; background-color: #000000 !important; visibility: visible !important; }
 }
 
 /* --- 7. GRILLE DES JEUX (HUB) --- */
-.md-sidebar--primary:has(~ .md-content .game-grid),
-.md-content:has(.game-grid) ~ .md-sidebar--primary {
-    display: none !important;
+@media screen and (min-width: 60em) {
+    .md-sidebar--primary:has(~ .md-content .game-grid),
+    .md-content:has(.game-grid) ~ .md-sidebar--primary {
+        display: none !important;
+    }
 }
 
 .game-grid {
@@ -81,6 +82,19 @@
     overflow: visible !important;
     padding-left: 25px !important;
     padding-right: 0 !important;
+}
+
+@media screen and (max-width: 45em) {
+    .game-grid {
+        grid-template-columns: 1fr !important;
+        padding-left: 0 !important; 
+        padding-right: 0 !important;
+        margin: 20px auto !important;
+        justify-items: center !important;
+    }
+    .game-card {
+        width: 85% !important;
+    }
 }
 
 .game-card {
@@ -124,19 +138,6 @@
     margin: 0 !important;
     border: none !important;
     background: rgba(0,0,0,0.3);
-}
-
-@media screen and (max-width: 45em) {
-    .game-grid {
-        grid-template-columns: 1fr !important;
-        padding-left: 0 !important; 
-        padding-right: 0 !important;
-        margin: 20px auto !important;
-        justify-items: center !important;
-    }
-    .game-card {
-        width: 85% !important;
-    }
 }
 
 /* --- 8. CURSEURS & TAILLE PC --- */
