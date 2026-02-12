@@ -26,6 +26,8 @@ theme:
     - navigation.sections
     - navigation.top
     - content.code.copy
+    - navigation.indexes
+    - navigation.expand
 
 extra_javascript:
   - javascripts/random_tips.js
