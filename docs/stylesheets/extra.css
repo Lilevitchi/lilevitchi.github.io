@@ -24,7 +24,7 @@
 .md-typeset p { text-align: left; max-width: 100%; margin-left: 0; margin-right: 0; }
 
 .md-typeset h1 { font-size: 1.8rem; margin-bottom: 1rem; }
-.md-typeset h1:first-child { margin-top: 0 !important; padding-top: 0 !important; display: flex; justify-content: center; align-items: center; gap: 15px; text-align: center; width: 100%; }
+.md-typeset h1:first-child { margin-top: 0 !important; padding-top: 0 !important; display: flex; justify-content: flex-start; align-items: center; gap: 15px; text-align: left; width: 100%; }
 
 .md-typeset a { color: inherit !important; transition: color 0.3s ease; }
 .md-typeset a:hover { color: #ff5722 !important; }
