@@ -1,6 +1,6 @@
 # :material-tools: Bienvenue Moddeur
 
-Plongez au cœur du **modding**. Que vous soyez novice ou expérimenté, vous êtes au bon endroit. Ici, vous trouverez des **guides précis** et complets pour modder votre jeu favori.
+Plongez au cœur du **modding** ! Que vous soyez novice ou expérimenté, vous êtes au bon endroit. Ici, vous trouverez des **guides précis et complets** pour modder votre jeu favori.
 
 ---
 
@@ -29,27 +29,27 @@ Plongez au cœur du **modding**. Que vous soyez novice ou expérimenté, vous ê
 
 ---
 
-## :material-lightbulb-outline: Le Conseil de Lile-Bot
+## :material-lightbulb-outline: Les conseils de Patch
 
 <div class="bot-advice">
     <img src="assets/lile-bot.png" width="80">
     <div>
         <strong id="lile-bot-title">Chargement...</strong><br>
-        <span id="lile-bot-tip">Lile-Bot réfléchit à une astuce...</span>
+        <span id="lile-bot-tip">Patch réfléchit à une astuce...</span>
     </div>
 </div>
 
 ---
 
-## :material-coffee: Soutenir le Travail
-Si mes guides vous font gagner du temps et du plaisir de jeu, n'hésitez pas à soutenir le projet. Chaque don permet d'améliorer la qualité des contenus et de maintenir les serveurs.
+## :material-coffee: Me soutenir
+Si mes guides vous ont plu et que vous en avez envie, n'hésitez pas à me soutenir.
 
 <a href="https://ko-fi.com/lilevitchi" target="_blank" class="kofi-button">
-    :simple-kofi: Soutenir sur Ko-fi
+    :simple-kofi: Buy me a coffee
 </a>
 
 ---
 
-## :material-link: Liens Utiles
+## :material-link: Mes réseaux
 
 [:fontawesome-brands-youtube:{ .orange-icon } YouTube](https://www.youtube.com/@Lilevitchi){ target="_blank" } | [:fontawesome-brands-twitch:{ .orange-icon } Twitch](https://twitch.tv/lilevitchi){ target="_blank" } | [:fontawesome-brands-discord:{ .orange-icon } Discord](https://discord.gg/aFJxsPC){ target="_blank" }
