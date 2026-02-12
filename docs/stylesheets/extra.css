@@ -125,7 +125,7 @@
 /* ============================================================
    ============================================================ */
 
-/* --- 9. HUB IMMERSIF (PC FIXED / MOBILE OPTIMISÉ) --- */
+/* --- 9. HUB IMMERSIF (OPTIMISATION FINALE PC/MOBILE) --- */
 .hub-wrapper {
     position: relative;
     width: 100%;
@@ -137,7 +137,7 @@
     overflow: hidden;
 }
 
-/* RENDU PC : Mascotte plus discrète et centrée */
+/* RENDU PC : Espacé et Immersif */
 @media screen and (min-width: 60em) {
     .hub-wrapper {
         position: fixed;
@@ -149,66 +149,45 @@
     }
     .hub-bot {
         position: absolute;
-        max-width: 350px; /* Taille réduite sur PC */
-        top: 40%; /* Remonte un peu pour laisser de la place aux boutons */
-        left: 50%;
-        transform: translate(-50%, -50%);
-        opacity: 0.9;
+        width: 450px; /* Taille optimale : ni trop gros, ni trop petit */
+        top: 22%;     /* Positionné pour laisser le titre respirer */
+        z-index: 2;
     }
-    .hub-content { 
-        margin-top: 20vh; /* Ajuste la position du texte */
-    } 
+    .hub-content {
+        position: relative;
+        z-index: 3;
+        margin-top: 15vh; /* Décale le texte vers le bas par rapport au bot */
+    }
+    .hub-title {
+        font-size: 2.2rem !important;
+        margin-bottom: 50px !important;
+        letter-spacing: 1.5px;
+    }
+    .hub-buttons-gap {
+        gap: 80px !important; /* Espace élégant entre les deux choix */
+    }
 }
 
-/* RENDU MOBILE : Mascotte encore plus petite */
+/* RENDU MOBILE : Compact et Scrollable */
 @media screen and (max-width: 45em) {
-    .hub-wrapper {
-        min-height: 100vh;
-        padding: 40px 0;
-        display: block;
+    .hub-wrapper { 
+        min-height: 100vh; 
+        padding: 30px 0; 
+        display: flex; 
     }
-    .hub-bot {
-        display: block;
-        max-width: 150px; /* Taille réduite sur Mobile */
-        margin: 0 auto 10px auto;
+    .hub-bot { 
+        width: 160px; 
+        margin-bottom: 20px; 
+        order: 1; /* Le robot en premier */
     }
-    .hub-title { 
-        font-size: 1.3rem !important; 
-        margin: 15px 0 30px 0 !important; 
-    }
+    .hub-content { order: 2; }
+    .hub-title { font-size: 1.4rem !important; margin-bottom: 30px !important; }
+    .hub-buttons-gap { gap: 20px; flex-direction: column; align-items: center; }
 }
 
-/* ÉLÉMENTS COMMUNS (Ne changent pas) */
-.hub-bg {
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center;
-    filter: blur(6px) brightness(0.4);
-    z-index: 1;
-}
-.hub-bot {
-    z-index: 2;
-    filter: drop-shadow(0 0 15px rgba(0,0,0,0.8));
-    pointer-events: none;
-}
-.hub-content {
-    position: relative;
-    z-index: 3;
-    text-align: center;
-    width: 100%;
-}
-.hub-title {
-    color: white !important;
-    font-weight: 800 !important;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 10px #000;
-    border: none !important;
-}
-.hub-buttons-gap {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 0 20px;
-}
+/* COMMUNS (Performance) */
+.hub-bg { position: absolute; inset: 0; background-size: cover; background-position: center; filter: blur(8px) brightness(0.5); z-index: 1; }
+.hub-bot { filter: drop-shadow(0 0 20px rgba(0,0,0,0.8)); pointer-events: none; }
+.hub-content { text-align: center; width: 100%; padding: 0 20px; }
+.hub-title { color: white !important; font-weight: 800 !important; text-transform: uppercase; text-shadow: 2px 2px 12px #000; border: none !important; }
+.hub-buttons-gap { display: flex; justify-content: center; }
