@@ -1,8 +1,10 @@
-# :material-tools: Bienvenue dans le Nexus de Lilevitchi
+# :material-tools: Bienvenue Moddeur
 
-**Plongez au cœur de l'excellence du modding.** Que vous soyez ici pour stabiliser votre jeu, transformer son visuel ou vivre une aventure totalement nouvelle sur les terres désolées, vous êtes au bon endroit. 
+Plongez au cœur du **modding**. Que vous soyez novice ou expérimenté, vous êtes au bon endroit.
 
-Ici, pas de blabla inutile : uniquement des guides précis, testés et approuvés pour garantir une expérience de jeu ultime. Choisissez votre univers et commencez la transformation.
+Ici, vous trouverez des **guides précis** et complets pour modder votre jeu favori.
+
+**Choisissez votre univers et lancez-vous.**
 
 ---
 
