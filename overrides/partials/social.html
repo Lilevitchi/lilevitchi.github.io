@@ -1,8 +1,10 @@
 {% for social in config.extra.social %}
   <a href="{{ social.link }}" target="_blank" rel="noopener" title="{{ social.name }}" class="md-social__link">
     {% if "nexusmods" in social.link %}
-      <img src="{{ base_url }}/assets/icons/nexusmods.svg" alt="Nexus Mods" style="height: 1.1rem; vertical-align: middle; filter: brightness(0) invert(1);">
+      {# Ton SVG personnalisé pour Nexus #}
+      <img src="{{ base_url }}/assets/icons/nexusmods.svg" class="custom-social-icon">
     {% else %}
+      {# Les icônes standards (YouTube, Twitch, etc.) #}
       {% include ".icons/" ~ social.icon ~ ".svg" %}
     {% endif %}
   </a>
