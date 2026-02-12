@@ -1,24 +1,43 @@
----
+ ---
+
 hide:
+
   - navigation
+
   - toc
+
 ---
 
+
 <div class="hub-wrapper">
+
     <div class="hub-bg" style="background-image: url('../assets/fo4.jpg');"></div>
+
 
     <img src="../assets/lile-bot-fo4.png" class="hub-bot">
 
+
     <div class="hub-content">
+
         <h1 class="hub-title">Bienvenue dans le Commonwealth Moddé</h1>
 
+
         <div class="hub-buttons-gap">
+
             <a href="guide-ecrit/" class="btn-hub-large btn-orange">
-                Guide Écrit
+
+                <i class="fas fa-book"></i> Guide Écrit
+
             </a>
+
             <a href="https://youtu.be/m_CawhgGBGk?si=V8ovH2IEi1shkF6d" class="btn-hub-large btn-red">
-                Guide Vidéo
+
+                <i class="fab fa-youtube"></i> Guide Vidéo
+
             </a>
+
         </div>
+
     </div>
-</div>
+
+</div> 
