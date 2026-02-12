@@ -2,7 +2,7 @@
 
 Que vous soyez novice ou expérimenté, vous êtes au bon endroit !
 
-Vous trouverez des **guides précis et complets** pour plongez dans le monde du **modding**.
+Vous trouverez des **guides précis et complets** pour plonger dans le monde du **modding**.
 
 ---
 
