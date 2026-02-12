@@ -190,6 +190,14 @@
     top: -7px;
 }
 
+.orange-icon-svg {
+    top: -1.5px !important; /* Ajuste cette valeur pour l'index */
+}
+
+.md-footer-social__icon {
+    top: -7px !important; /* On garde tes -7px qui marchent pour le footer */
+}
+
 .md-typeset a:hover .orange-icon-svg, 
 .md-footer-social__link:hover .md-footer-social__icon,
 .md-footer-social__link:hover .custom-social-icon { 
@@ -199,7 +207,7 @@
 /* ============================================================
    ============================================================ */
 
-/* --- 10. HUB IMMERSIF (FIX TOTAL) --- */
+/* --- 10. HUB JEUX --- */
 
 body:has(.hub-wrapper) {
     overflow: hidden !important;
