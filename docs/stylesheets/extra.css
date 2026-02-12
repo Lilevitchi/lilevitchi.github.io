@@ -93,11 +93,9 @@
 .md-typeset h1 .twemoji svg,
 .md-typeset h2 .twemoji svg,
 .md-typeset h3 .twemoji svg,
-.md-typeset h4 .twemoji svg,
-.bot-advice .twemoji svg,
-.orange-icon {
+.md-typeset .bot-advice .twemoji svg,
+.md-typeset .orange-icon svg {
     fill: #ff5722 !important;
-    color: #ff5722 !important;
 }
 
 /* --- 4. STYLE DU MENU LATÉRAL (CORRECTION ALIGNEMENT) --- */
