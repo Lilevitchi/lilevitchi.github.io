@@ -191,95 +191,110 @@
 /* ============================================================
    ============================================================ */
 
-/* --- 10. HUB IMMERSIF (FIX BANNIÈRE & BOUTONS) --- */
+/* --- 10. HUB IMMERSIF (FALLOUT 4) --- */
+
+/* Conteneur principal qui centre tout */
 .hub-wrapper {
     position: relative;
     width: 100%;
-    background-color: #000;
+    min-height: 85vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    margin-top: -30px; /* Remonte le hub vers le header */
 }
 
-@media screen and (min-width: 60em) {
-    .hub-wrapper {
-        position: fixed;
-        /* Ajuste le top pour ne pas cacher tes onglets/tabs */
-        top: 6.5rem; 
-        left: 0;
-        width: 100vw;
-        height: calc(100vh - 6.5rem);
-        z-index: 10;
-    }
-    .hub-bot {
-        position: absolute;
-        width: 450px;
-        top: 20%;
-        z-index: 2;
-    }
-    .hub-content {
-        position: relative;
-        z-index: 3;
-        margin-top: 15vh;
-    }
+/* Image de fond (fo4.jpg) */
+.hub-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px) brightness(0.4);
+    z-index: 1;
 }
 
-/* --- STYLE DES BOUTONS DU HUB --- */
+/* Robot Patch (lile-bot-fo4.png) */
+.hub-bot {
+    position: relative;
+    z-index: 2;
+    width: 300px; 
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Texte et Boutons */
+.hub-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+}
+
+.hub-title {
+    color: #ffffff !important;
+    font-size: 3.2rem !important;
+    font-weight: 900 !important;
+    text-transform: uppercase;
+    text-shadow: 0 5px 20px rgba(0,0,0,0.9);
+    border: none !important;
+    margin-bottom: 50px !important;
+}
+
+/* Groupe de boutons */
 .hub-buttons-gap {
     display: flex;
-    gap: 80px;
+    gap: 30px;
     justify-content: center;
     flex-wrap: wrap;
 }
 
+/* --- LE STYLE DES BOUTONS (CE QUE TU RECHERCHAIS) --- */
 .btn-hub-large {
-    width: 300px; /* Taille originale */
-    padding: 25px 10px;
-    border-radius: 8px;
+    display: flex !important; /* Force le bouton à être un bloc */
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 70px;
+    border-radius: 6px;
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
     text-decoration: none !important;
-    display: inline-block;
-    transition: all 0.3s ease;
-    text-align: center;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
 }
 
-/* Couleur Guide Écrit (Orange) */
+/* Bouton Guide Écrit (Gris foncé / Bord orange) */
 .btn-orange {
-    background: #2c2c2c;
-    border: 2px solid #ff5722;
+    background-color: #2c2c2c !important;
+    border: 2px solid #ff5722 !important;
     color: #ffffff !important;
 }
+
 .btn-orange:hover {
-    background: #404040;
+    background-color: #404040 !important;
     transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(255, 87, 34, 0.5);
+    box-shadow: 0 0 25px rgba(255, 87, 34, 0.5);
 }
 
-/* Couleur Guide Vidéo (Rouge) */
+/* Bouton Guide Vidéo (Rouge) */
 .btn-red {
-    background: #8b0000;
-    border: 2px solid #ff0000;
+    background-color: #8b0000 !important;
+    border: 2px solid #ff0000 !important;
     color: #ffffff !important;
 }
+
 .btn-red:hover {
-    background: #b30000;
+    background-color: #b30000 !important;
     transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
 }
 
-/* ADAPTATION MOBILE */
+/* Mobile */
 @media screen and (max-width: 45em) {
-    .hub-wrapper { min-height: 100vh; padding: 40px 0; display: flex; }
-    .hub-bot { width: 160px; margin-bottom: 20px; }
-    .btn-hub-large { width: 260px; font-size: 1.1rem; }
-    .hub-buttons-gap { gap: 20px; flex-direction: column; align-items: center; }
+    .hub-title { font-size: 1.8rem !important; }
+    .hub-bot { width: 160px; }
+    .btn-hub-large { width: 220px; height: 60px; }
 }
-
-/* COMMUNS */
-.hub-bg { position: absolute; inset: 0; background-size: cover; background-position: center; filter: blur(8px) brightness(0.5); z-index: 1; }
-.hub-title { color: white !important; font-size: 2.2rem !important; font-weight: 800 !important; text-transform: uppercase; text-shadow: 2px 2px 10px #000; margin-bottom: 50px !important; border: none !important; position: relative; z-index: 3; }
