@@ -39,7 +39,6 @@ extra_css:
 markdown_extensions:
   - toc:
       permalink: true
-      allow_code_inline_in_toc: true
   - admonition
   - pymdownx.details
   - pymdownx.superfences
