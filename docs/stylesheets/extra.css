@@ -87,7 +87,7 @@
 }
 
 .game-card:hover .game-card-bg {
-    filter: blur(0px) brightness(1.2);
+    filter: blur(0px) brightness(1.4);
 }
 
 .game-card:hover { transform: scale(1.02); }
