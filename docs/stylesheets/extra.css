@@ -119,10 +119,12 @@
 
 .game-card:hover .game-card-bg {
     filter: blur(0px) brightness(1.4);
-    box-shadow: 0 0 20px rgba(255, 87, 34, 0.6) !important;
 }
 
-.game-card:hover { transform: scale(1.02); }
+.game-card:hover { 
+   transform: scale(1.02); 
+   box-shadow: 0 0 20px rgba(255, 87, 34, 0.6) !important; 
+}
 
 .game-card h2 {
     position: absolute;
@@ -273,7 +275,7 @@
 .btn-orange:hover {
     border-color: #ff5722 !important;
     box-shadow: 0 0 25px 2px rgba(255, 87, 34, 0.7);
-    transform: scale(1.4);
+    transform: scale(1.03);
 }
 
 .btn-red {
@@ -284,7 +286,7 @@
 .btn-red:hover {
     border-color: #ff0000 !important;
     box-shadow: 0 0 25px 2px rgba(255, 0, 0, 0.7);
-    transform: scale(1.4);
+    transform: scale(1.03);
 }
 
 .hub-bg { position: absolute; inset: 0; background-size: cover; background-position: center; filter: blur(6px) brightness(0.4); z-index: 1; }
