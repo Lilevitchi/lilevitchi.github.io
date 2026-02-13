@@ -55,8 +55,11 @@
 
 /* --- 6. ADAPTATION MOBILE --- */
 @media screen and (max-width: 45em) {
+    .md-header { z-index: 10 !important; }
     .md-header__title { display: none !important; }
     .md-nav__title[for="__drawer"] { color: transparent !important; font-size: 0 !important; padding: 0 16px !important; display: block !important; } 
+    .md-nav--primary { z-index: 1000 !important; } 
+    .md-overlay { z-index: 900 !important; }
     .md-nav__title .md-logo { display: block !important; margin: 15px 0 !important; }
     .md-nav__item .md-nav__link--active { background-color: transparent !important; }
     .md-nav__item--nested > .md-nav__link:focus { background-color: rgba(255, 87, 34, 0.1) !important; }
@@ -223,12 +226,8 @@
    ============================================================ */
 
  /* --- 10. HUB JEUX --- */
-.md-header {
-    z-index: 120 !important;
-}
-.md-tabs {
-    z-index: 110 !important; 
-}
+.md-header { z-index: 120 !important; }
+.md-tabs { z-index: 110 !important; }
 
 @media screen and (min-width: 60em) {
     .hub-wrapper {
@@ -245,7 +244,7 @@
         background: #000;
     }
     .hub-bot { width: 400px; margin-bottom: 0; z-index: 2; }
-    .hub-content { position: relative; z-index: 3; margin-top: -8vh; text-align: center; }
+    .hub-content { position: relative; z-index: 3; margin-top: -15vh; text-align: center; }
 }
 
 .hub-buttons-gap {
@@ -256,10 +255,10 @@
 
 .md-typeset .btn-hub-large {
     width: 280px;
-    padding: 22px 10px;
-    border-radius: 6px;
+    padding: 15px 10px;
+    border-radius: 20px;
     font-weight: 800;
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     text-transform: uppercase;
     text-decoration: none !important;
     display: flex;
