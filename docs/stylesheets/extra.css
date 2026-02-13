@@ -112,31 +112,31 @@
 /* 2.1 Conteneur des onglets déplacés dans le header (via JS) */
 [data-md-color-scheme] .md-tabs.in-header {
   position: absolute;
-  bottom: 8px;
+  bottom: 12px;
   left: 0;
   width: 100%;
   background: transparent;
-     pointer-events: none;
+     /*pointer-events: none;*/
 }
 
 /* 2.2 Liste des onglets */
 [data-md-color-scheme] .md-tabs.in-header .md-tabs__list {
-     display: flex;
+     /*display: flex;*/
   justify-content: center;
-  /*align-items: flex-end;*/
-     align-items: center;
+  align-items: flex-end;
+     /*align-items: center;
      height: 25px;
      margin: 0;
      padding: 0;
-     pointer-events: auto;
+     pointer-events: auto;*/
 }
 
 /* 2.3 Onglet — état normal */
 [data-md-color-scheme] .md-tabs.in-header .md-tabs__link {
   display: inline-block;
-  /*padding: 7px 0 6px;*/
-      padding: 2px 15px !important;
-      line-height: 1.2;
+  padding: 7px 0 6px;
+     /* padding: 2px 15px !important;
+      line-height: 1.2;*/
   border-bottom: 3px solid transparent;
   border-radius: var(--radius-sm) var(--radius-sm) 0 0;
 
