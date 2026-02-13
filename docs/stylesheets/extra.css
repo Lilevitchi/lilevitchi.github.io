@@ -72,8 +72,8 @@
 
 [data-md-color-scheme] .md-header {
   position: relative;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 [data-md-color-scheme] .md-header__inner {
@@ -101,8 +101,12 @@
    ==============================*/
 
 [data-md-color-scheme] .md-tabs {
+  position: absolute;
+  top: var(--header-height);
+  left: 0;
+  width: 100%;
   background: transparent;
-  transform: translateY(-100%);
+  z-index: 20;
 }
 
 [data-md-color-scheme] .md-tabs__list {
@@ -141,7 +145,10 @@
   border-bottom: 3px solid var(--accent);
 }
 
-/* --- 3. TEXTE, LIENS & TITRES --- */
+/* ==============================
+   3. TEXTE, LIENS & TITRES
+   ==============================*/
+
 .md-main__inner, .md-content { margin-top: 0 !important; margin-left: 0 !important; }
 .md-content__inner { max-width: 1400px !important; margin: 0 auto !important; padding-top: 1.5rem !important; padding-left: 25px !important; padding-right: 0 !important; padding-bottom: 1.5rem !important; }
 
