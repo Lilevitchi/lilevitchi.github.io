@@ -110,17 +110,21 @@
    ==============================*/
 
 /* 2.1 — Suppression de l’espace réservé par Material */
-[data-md-color-scheme] .md-tabs {
+[data-md-color-scheme] .md-tabs.in-header {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   background: transparent;
 }
 
-/* 2.2 — Liste des onglets (centrage et alignement) */
-[data-md-color-scheme] .md-tabs__list {
+[data-md-color-scheme] .md-tabs.in-header .md-tabs__list {
   justify-content: center;
+  align-items: flex-end;
 }
 
 /* 2.3 — Onglet (état normal) */
-[data-md-color-scheme] .md-tabs .md-tabs__link {
+[data-md-color-scheme] .md-tabs.in-header .md-tabs__link {
   display: inline-block;
   padding: 7px 0 6px;
   border-bottom: 3px solid transparent;
@@ -138,20 +142,20 @@
 }
 
 /* 2.4 — Onglet au survol */
-[data-md-color-scheme] .md-tabs .md-tabs__link:hover {
+[data-md-color-scheme] .md-tabs.in-header .md-tabs__link:hover {
   opacity: 1;
   color: var(--accent);
   background-color: var(--tab-bg-hover);
 }
 
 /* 2.5 — Onglet actif */
-[data-md-color-scheme] .md-tabs
+[data-md-color-scheme] .md-tabs.in-header
 .md-tabs__item--active
 .md-tabs__link {
   opacity: 1;
   color: var(--accent);
   background-color: var(--tab-bg-active);
-  border-bottom: 3px solid var(--accent);
+  border-bottom-color: var(--accent);
 }
 
 /* ==============================
