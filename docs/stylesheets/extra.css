@@ -86,7 +86,7 @@
 
 /* Contenu interne du header */
 [data-md-color-scheme] .md-header__inner {
-  height: var(--header-height);
+  min-height: var(--header-height);
 }
 
 /* Largeur globale du contenu du header */
@@ -168,7 +168,7 @@
    ==============================*/
 
 /* --------------------------------------------------
-   3.1 STRUCTURE GLOBALE DU CONTENU
+   STRUCTURE GLOBALE DU CONTENU
    -------------------------------------------------- */
 
 [data-md-color-scheme] .md-main__inner,
@@ -178,14 +178,17 @@
 
 /* Conteneur principal */
 [data-md-color-scheme] .md-content__inner {
-  max-width: 1400px;
+  max-width: var(--content-max-width);
   margin-left: auto;
   margin-right: auto;
 
   padding-top: var(--space-lg);
   padding-bottom: var(--space-lg);
+  padding-left: var(--space-lg);
+  padding-right: var(--space-lg);
 }
 
+/* Page index : plus large visuellement */
 [data-md-color-scheme] body:has(.game-grid) .md-content__inner {
   max-width: 100%;
   padding-left: var(--space-sm);
@@ -193,19 +196,7 @@
 }
 
 /* --------------------------------------------------
-   3.2 TEXTE GLOBAL
-   -------------------------------------------------- */
-
-[data-md-color-scheme] .md-typeset {
-  font-size: clamp(
-    0.95rem,
-    0.25vw + 0.9rem,
-    var(--font-base-size)
-  );
-}
-
-/* --------------------------------------------------
-   3.3 TITRES
+   TITRES
    -------------------------------------------------- */
 
 [data-md-color-scheme] .md-typeset h1,
@@ -235,7 +226,7 @@
 }
 
 /* --------------------------------------------------
-   3.4 PARAGRAPHES
+   PARAGRAPHES
    -------------------------------------------------- */
 
 [data-md-color-scheme] .md-typeset p {
@@ -246,7 +237,7 @@
 }
 
 /* --------------------------------------------------
-   3.5 LIENS
+   LIENS
    -------------------------------------------------- */
 
 [data-md-color-scheme] .md-typeset a {
@@ -268,7 +259,7 @@
 }
 
 /* --------------------------------------------------
-   3.6 NAVIGATION SECONDAIRE (SIDEBAR DROITE)
+   NAVIGATION SECONDAIRE (SIDEBAR DROITE)
    -------------------------------------------------- */
 
 [data-md-color-scheme] .md-nav--secondary .md-nav__title {
@@ -289,7 +280,7 @@
 }
 
 /* --------------------------------------------------
-   3.7 ICÔNES ORANGES DANS LES TITRES
+   ICÔNES ORANGES DANS LES TITRES
    -------------------------------------------------- */
 
 [data-md-color-scheme] .md-typeset h1 .twemoji svg,
@@ -299,7 +290,7 @@
 }
 
 /* --------------------------------------------------
-   3.8 SUPPRESSION DES ANCRES AUTOMATIQUES
+   SUPPRESSION DES ANCRES AUTOMATIQUES
    -------------------------------------------------- */
 
 [data-md-color-scheme] .headerlink {
@@ -364,6 +355,10 @@
     overflow: visible !important;
     padding-left: 25px !important;
     padding-right: 0 !important;
+}
+
+[data-md-color-scheme] body:has(.game-grid) .game-grid {
+  grid-template-columns: repeat(5, minmax(200px, 1fr));
 }
 
 /* @media screen and (max-width: 45em) {
