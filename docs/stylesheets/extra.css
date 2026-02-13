@@ -188,9 +188,21 @@
     width: 1.1rem !important;
     vertical-align: middle; 
     display: inline-block; 
-    filter: brightness(0) invert(1) !important;
     transition: filter 0.3s ease; 
     position: relative;
+}
+
+[data-md-color-scheme="default"] { --md-icons-invert: 0.2; } /* Mode Clair : sombre */
+[data-md-color-scheme="slate"] { --md-icons-invert: 1; }   /* Mode Sombre : blanc */
+
+.orange-icon-svg, .custom-social-icon, .md-footer-social__icon {
+    filter: brightness(0) invert(var(--md-icons-invert, 1)) !important;
+}
+
+.md-footer .custom-social-icon, 
+.md-footer .md-footer-social__icon,
+.hub-wrapper .custom-social-icon { 
+    filter: brightness(0) invert(1) !important; 
 }
 
 .orange-icon-svg {
