@@ -237,8 +237,7 @@
         z-index: 100;
         display: flex;
         justify-content: center;
-        align-items: flex-start;
-        padding-top: 5vh;
+        align-items: center;
         overflow: hidden;
     }
    .hub-bg { 
@@ -258,6 +257,7 @@
         align-items: center;
         text-align: center;
         width: 100%;
+        margin-top: -10vh;
     }
     .hub-bot { width: 700px; max-width: 90vw; height: auto; margin-bottom: -100px; }
     .hub-content { position: relative; }
