@@ -306,7 +306,10 @@ body:has(.hub-wrapper) .md-header__topic:first-child {
 }
 
 body:has(.hub-wrapper) .md-header__topic:last-child {
-    display: inline-block !important;
+    display: block !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    pointer-events: auto !important;
 }
 
 .hub-bg { position: absolute; inset: 0; background-size: cover; background-position: center; filter: blur(6px) brightness(0.6); z-index: 1; }
