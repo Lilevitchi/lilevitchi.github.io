@@ -72,14 +72,12 @@
 
 [data-md-color-scheme] .md-header {
   position: relative;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-  overflow: visible;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 
 [data-md-color-scheme] .md-header__inner {
   height: var(--header-height);
-  overflow: visible;
 }
 
 [data-md-color-scheme] .md-grid {
@@ -103,23 +101,17 @@
    ==============================*/
 
 [data-md-color-scheme] .md-tabs {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
   background: transparent;
-  z-index: 10;
+  transform: translateY(-100%);
 }
 
 [data-md-color-scheme] .md-tabs__list {
   justify-content: center;
-  align-items: flex-end;
-  height: var(--header-height);
 }
 
 [data-md-color-scheme] .md-tabs .md-tabs__link {
   display: inline-block;
-  padding: 0 0 8px;
+  padding: 7px 0 6px;
   border-bottom: 3px solid transparent;
   border-radius: var(--radius-sm) var(--radius-sm) 0 0;
 
