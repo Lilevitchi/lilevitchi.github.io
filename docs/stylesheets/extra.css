@@ -85,6 +85,8 @@
 /* Contenu interne du header */
 [data-md-color-scheme] .md-header__inner {
   min-height: var(--header-height);
+   display: flex; /* Ajoutez ceci */
+  align-items: center; /* Ajoutez ceci */
 }
 
 /* Largeur globale du contenu du header */
@@ -115,15 +117,22 @@
 /* Conteneur des onglets déplacés dans le header (via JS) */
 [data-md-color-scheme] .md-tabs.in-header {
   position: static;
-  margin-top: var(--space-xs);
   background: transparent;
+  flex: 1; /* Prend l'espace disponible */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Alignement à droite */
+  margin: 0;
+  padding-right: var(--space-lg);
 }
 
 /* Liste des onglets */
 [data-md-color-scheme] .md-tabs.in-header .md-tabs__list {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  margin: 0;
+  gap: var(--space-xs); /* Espacement entre les onglets */
 }
 
 /* Onglet — état normal */
