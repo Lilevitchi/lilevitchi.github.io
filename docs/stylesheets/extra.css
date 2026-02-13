@@ -63,6 +63,18 @@
 }
 
 /* ==============================
+   TYPOGRAPHIE — BASE RESPONSIVE
+   ==============================*/
+
+[data-md-color-scheme] html {
+  font-size: clamp(0.9rem, 0.85vw + 0.6rem, 1rem);
+}
+
+[data-md-color-scheme] .md-typeset {
+  font-size: var(--font-base-size);
+}
+
+/* ==============================
    1. HEADER & BANNIÈRE
    ==============================*/
 
