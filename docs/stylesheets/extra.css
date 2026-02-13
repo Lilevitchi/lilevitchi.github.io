@@ -73,9 +73,7 @@
 
 /* 1.2 — Conteneur du header */
 [data-md-color-scheme] .md-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  position: relative;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -87,10 +85,9 @@
 
 /* 1.4 — Largeur globale du contenu du header */
 [data-md-color-scheme] .md-header .md-grid {
-  display: flex !important;
-  align-items: center; /* Aligne tout verticalement au milieu */
   max-width: var(--grid-max-width);
   margin-left: 0;
+  margin-right: auto;
   padding-left: 12px;
 }
 
@@ -102,8 +99,10 @@
 
 /* 1.6 — Titre du site */
 [data-md-color-scheme] .md-header__title .md-ellipsis {
-flex: 0 0 auto; 
-  margin-right: 20px; /* Espace entre "Modding" et le début du menu */
+  color: var(--accent);
+  font-weight: var(--font-bold);
+  font-size: 1.4rem;
+  text-transform: none;
 }
 
 /* ==============================
@@ -112,28 +111,24 @@ flex: 0 0 auto;
 
 /* 2.1 Conteneur des onglets déplacés dans le header (via JS) */
 [data-md-color-scheme] .md-tabs.in-header {
-position: static !important; /* Rejoint la ligne du logo/titre */
-  width: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   background: transparent;
 }
 
 /* 2.2 Liste des onglets */
 [data-md-color-scheme] .md-tabs.in-header .md-tabs__list {
-display: flex !important;
-  justify-content: flex-start; /* Aligne les liens après le titre */
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  height: var(--header-height);
+  justify-content: center;
+  align-items: flex-end;
 }
 
 /* 2.3 Onglet — état normal */
 [data-md-color-scheme] .md-tabs.in-header .md-tabs__link {
-padding: 0 12px;
-  height: 100%;
-  display: flex;
-  align-items: center; /* Centre le texte dans la hauteur du header */
-  border-bottom: 3px solid transparent; /* Prêt pour l'état actif */
+  display: inline-block;
+  padding: 7px 0 6px;
+  border-bottom: 3px solid transparent;
   border-radius: var(--radius-sm) var(--radius-sm) 0 0;
 
   color: var(--white);
@@ -166,8 +161,9 @@ padding: 0 12px;
 
 /* Supprime l’espace réservé par Material (header + tabs) */
 [data-md-color-scheme] .md-main {
-  padding-top: 0 !important;
+  padding-top: var(--header-height);
 }
+
 
 /* ==============================
    3. TEXTE, LIENS & TITRES
