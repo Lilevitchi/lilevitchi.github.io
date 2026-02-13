@@ -23,7 +23,6 @@
   --dark-1: #1a1a1a;
   --dark-2: #2c2c2c;
   --white: #ffffff;
-  --grey: #1a1b1e;
 
   /* ---------- Layout ---------- */
   --header-height: 3.2rem;
@@ -69,7 +68,7 @@
 
 /* 1.1 — Fond de la bannière */
 [data-md-color-scheme] .md-header.md-header {
-  background-color: var(--grey);
+  background-color: var(--black);
 }
 
 /* 1.2 — Conteneur du header */
@@ -88,11 +87,10 @@
 
 /* 1.4 — Largeur globale du contenu du header */
 [data-md-color-scheme] .md-header .md-grid {
-  max-width: var(--grid-max-width);
   display: flex !important;
-  align-items: center;
+  align-items: center; /* Aligne tout verticalement au milieu */
+  max-width: var(--grid-max-width);
   margin-left: 0;
-  margin-right: auto;
   padding-left: 12px;
 }
 
@@ -104,8 +102,8 @@
 
 /* 1.6 — Titre du site */
 [data-md-color-scheme] .md-header__title .md-ellipsis {
-  flex: 0 0 auto; /* Empêche le titre de prendre toute la place */
-  margin-right: 30px; /* Espace entre "Modding" et le début du menu */
+flex: 0 0 auto; 
+  margin-right: 20px; /* Espace entre "Modding" et le début du menu */
 }
 
 /* ==============================
@@ -114,26 +112,28 @@
 
 /* 2.1 Conteneur des onglets déplacés dans le header (via JS) */
 [data-md-color-scheme] .md-tabs.in-header {
-  position: static !important;
+position: static !important; /* Rejoint la ligne du logo/titre */
   width: auto;
   background: transparent;
-  display: block;
 }
 
 /* 2.2 Liste des onglets */
 [data-md-color-scheme] .md-tabs.in-header .md-tabs__list {
-  justify-content: flex-start;
+display: flex !important;
+  justify-content: flex-start; /* Aligne les liens après le titre */
   align-items: center;
   margin: 0;
   padding: 0;
-  height: var(--header-height); /* Aligne la hauteur sur le header */
+  height: var(--header-height);
 }
 
 /* 2.3 Onglet — état normal */
 [data-md-color-scheme] .md-tabs.in-header .md-tabs__link {
-  display: inline-block;
-  padding: 7px 0 6px;
-  border-bottom: 3px solid transparent;
+padding: 0 12px;
+  height: 100%;
+  display: flex;
+  align-items: center; /* Centre le texte dans la hauteur du header */
+  border-bottom: 3px solid transparent; /* Prêt pour l'état actif */
   border-radius: var(--radius-sm) var(--radius-sm) 0 0;
 
   color: var(--white);
