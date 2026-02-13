@@ -112,16 +112,21 @@
 /* 2.1 Conteneur des onglets déplacés dans le header (via JS) */
 [data-md-color-scheme] .md-tabs.in-header {
   position: absolute;
-  bottom: 0;
+  bottom: 2px;
   left: 0;
   width: 100%;
   background: transparent;
+     pointer-events: none;
 }
 
 /* 2.2 Liste des onglets */
 [data-md-color-scheme] .md-tabs.in-header .md-tabs__list {
+     display: flex;
   justify-content: center;
   align-items: flex-end;
+     margin: 0;
+     padding: 0;
+     pointer-events: auto;
 }
 
 /* 2.3 Onglet — état normal */
