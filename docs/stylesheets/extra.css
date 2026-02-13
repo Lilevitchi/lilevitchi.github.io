@@ -66,8 +66,8 @@
    TYPOGRAPHIE — BASE RESPONSIVE
    ==============================*/
 
-[data-md-color-scheme] .md-typeset {
-  font-size: clamp(0.95rem, 0.3vw + 0.9rem, 1rem);
+[data-md-color-scheme] html {
+  font-size: clamp(15px, 0.6vw + 13px, 16px);
 }
 
 /* ==============================
@@ -80,6 +80,8 @@
   position: relative;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Contenu interne du header */
@@ -114,7 +116,7 @@
 
 /* Conteneur des onglets déplacés dans le header (via JS) */
 [data-md-color-scheme] .md-tabs.in-header {
-  position: relative;
+  position: static;
   margin-top: var(--space-xs);
   background: transparent;
 }
@@ -128,7 +130,7 @@
 
 /* Onglet — état normal */
 [data-md-color-scheme] .md-tabs.in-header .md-tabs__link {
-  display: inline-block;
+  /*display: inline-block;*/
   padding: 0.45rem 0.9rem;
   border-bottom: 3px solid transparent;
   border-radius: var(--radius-sm) var(--radius-sm) 0 0;
@@ -182,12 +184,12 @@
 
   padding-top: var(--space-lg);
   padding-bottom: var(--space-lg);
-  padding-left: var(--space-xl);
-  padding-right: var(--space-xl);
 }
 
 [data-md-color-scheme] body:has(.game-grid) .md-content__inner {
   max-width: 100%;
+  padding-left: var(--space-sm);
+  padding-right: var(--space-sm);
 }
 
 /* --------------------------------------------------
@@ -313,7 +315,7 @@
 .md-nav__link--active { color: #ff5722 !important; font-weight: bold !important; background: transparent !important; }
 
 /* ==============================
-   4. 5. UI ELEMENTS (BOT & KO-FI)
+   5. UI ELEMENTS (BOT & KO-FI)
    ==============================*/
 
 .bot-advice { display: flex; align-items: center; background-color: rgba(255, 87, 34, 0.08) !important; border-left: 4px solid #ff5722 !important; padding: 15px; border-radius: 4px; margin: 20px 0; }
