@@ -72,6 +72,9 @@
 
 [data-md-color-scheme] .md-header {
   position: relative;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  overflow: visible;
 }
 
 [data-md-color-scheme] .md-header__inner {
