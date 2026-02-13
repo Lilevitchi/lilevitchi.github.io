@@ -75,9 +75,14 @@
     }
 } */
 
+.md-content:has(.game-grid) ~ .md-sidebar,
+.md-sidebar--primary:has(~ .md-content .game-grid) {
+    display: none !important;
+}
+
 .game-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Réduit de 280px à 220px */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 220px à 250px */
     gap: 15px;
     padding: 10px;
     max-width: 1400px; /* Limite la largeur totale pour ne pas s'étaler trop sur ultra-wide */
@@ -257,7 +262,7 @@
         text-align: center;
         width: 100%;
         margin-top: -15vh;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .hub-bot { width: 700px; max-width: 80vw; height: auto; margin-bottom: -100px; }
     .hub-content { position: relative; }
@@ -265,7 +270,7 @@
 
 .hub-buttons-gap {
     display: flex;
-    gap: 120px;
+    gap: 80px;
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
