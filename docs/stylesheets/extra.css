@@ -304,7 +304,7 @@
         gap: 30px;
     }
     .md-typeset .btn-hub-large {
-        width: 250px;
+        width: 250px !important;
         font-size: 1.4rem;
         padding: 12px 10px;
     }
