@@ -261,20 +261,20 @@
         align-items: center;
         text-align: center;
         width: 100%;
-        margin-top: -15vh;
-        transition: all 0.3s ease-in-out;
+        margin-top: -25vh;
+     /* transition: all 0.3s ease-in-out; */
     }
-    .hub-bot { width: 700px; max-width: 80vw; height: auto; margin-bottom: -100px; }
+    .hub-bot { width: 600px; max-width: 80vw; height: auto; margin-bottom: -100px; }
     .hub-content { position: relative; }
 /* } */
 
 .hub-buttons-gap {
     display: flex;
-    gap: 120px;
+    gap: 140px;
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
-    transition: all 0.3s ease-in-out;
+ /* transition: all 0.3s ease-in-out; */
 }
 
 .md-typeset .btn-hub-large {
@@ -289,7 +289,7 @@
     align-items: center;
     justify-content: center;
     gap: 15px;
-    transition: all 0.3s ease;
+ /* transition: all 0.3s ease-in-out; */
     color: #ffffff !important; 
 }
 
@@ -361,7 +361,7 @@
    display: block !important;
    width: 100% !important;
    line-height: 1.2;
-   transition: all 0.4s ease-in-out;
+/* transition: all 0.3s ease-in-out; */
 }
 
 body:has(.hub-wrapper) .md-content__inner h1:first-child:not(.hub-title),
