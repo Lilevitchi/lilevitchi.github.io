@@ -11,7 +11,6 @@
   /* ---------- Brand / Accent ---------- */
   --accent: #ff5722;
   --accent-soft: rgba(255, 87, 34, 0.08);
-  --accent-soft-strong: rgba(255, 87, 34, 0.12);
   --accent-border: rgba(255, 87, 34, 0.5);
   --accent-glow: rgba(255, 87, 34, 0.6);
 
@@ -129,7 +128,7 @@
 .md-tabs__item--active .md-tabs__link {
   opacity: 1;
   color: var(--accent);
-  background-color: var(--accent-soft-strong);
+  background-color: var(--tab-bg-active);
   border-bottom: 3px solid var(--accent);
 }
 
