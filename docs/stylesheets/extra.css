@@ -55,9 +55,10 @@
 
 /* --- 6. ADAPTATION MOBILE --- */
 @media screen and (max-width: 45em) {
-    .md-header { z-index: 10 !important; }
+    .hub-wrapper { z-index: 10 !important; }
+    .md-header { z-index: 5 !important; }
     .md-header__title { display: none !important; }
-    .md-nav__title[for="__drawer"] { color: transparent !important; font-size: 0 !important; padding: 0 16px !important; display: block !important; } 
+    .md-nav__title[for="__drawer"] { color: transparent !important; font-size: 1.1rem !important; padding: 15px 16px !important; display: block !important; } 
     .md-nav--primary { z-index: 1000 !important; } 
     .md-overlay { z-index: 900 !important; }
     .md-nav__title .md-logo { display: block !important; margin: 15px 0 !important; }
@@ -309,5 +310,5 @@ body:has(.hub-wrapper) .md-header__topic:last-child {
     pointer-events: auto !important;
 }
 
-.hub-bg { position: absolute; inset: 0; background-size: cover; background-position: center; filter: blur(6px) brightness(0.6); z-index: 1; }
+.hub-bg { position: absolute; inset: 0; background-size: cover; background-position: center; filter: blur(6px) brightness(0.7); z-index: 1; }
 .md-typeset .hub-title { color: #ffffff !important; font-size: 2.2rem !important; font-weight: 800 !important; text-transform: uppercase; text-shadow: 2px 2px 15px #000; margin-bottom: 40px !important; border: none !important; text-align: center; }
