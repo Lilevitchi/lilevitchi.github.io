@@ -101,7 +101,7 @@
   width: auto;
 }
 
-/* 1.6 — Titre du site */
+/* Titre du site */
 [data-md-color-scheme] .md-header__title .md-ellipsis {
   color: var(--accent);
   font-weight: var(--font-bold);
@@ -112,40 +112,29 @@
    2. NAVIGATION
    ==============================*/
 
-/* 2.1 Conteneur des onglets déplacés dans le header (via JS) */
+/* Conteneur des onglets déplacés dans le header (via JS) */
 [data-md-color-scheme] .md-tabs.in-header {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  position: relative;
+  margin-top: var(--space-xs);
   background: transparent;
-     /*pointer-events: none;*/
 }
 
-/* 2.2 Liste des onglets */
+/* Liste des onglets */
 [data-md-color-scheme] .md-tabs.in-header .md-tabs__list {
-     /*display: flex;*/
+  display: flex;
   justify-content: center;
-  align-items: flex-end;
-     /*align-items: center;
-     height: 25px;
-     margin: 0;
-     padding: 0;
-     pointer-events: auto;*/
+  align-items: center;
 }
 
-/* 2.3 Onglet — état normal */
+/* Onglet — état normal */
 [data-md-color-scheme] .md-tabs.in-header .md-tabs__link {
   display: inline-block;
-  padding: 7px 0 6px;
-     /* padding: 2px 15px !important;
-      line-height: 1.2;*/
+  padding: 0.45rem 0.9rem;
   border-bottom: 3px solid transparent;
   border-radius: var(--radius-sm) var(--radius-sm) 0 0;
 
   color: var(--white);
   opacity: 0.75;
-  text-transform: none;
 
   transition:
     color var(--transition-base),
@@ -154,15 +143,16 @@
     border-color var(--transition-base);
 }
 
-/* 2.4 Onglet — survol (hover) */
+/* Onglet — survol (hover) */
 [data-md-color-scheme] .md-tabs.in-header .md-tabs__link:hover {
   opacity: 1;
   color: var(--accent);
   background-color: var(--tab-bg-hover);
 }
 
-/* 2.5 Onglet — état actif */
-[data-md-color-scheme] .md-tabs.in-header
+/* Onglet — état actif */
+[data-md-color-scheme]
+.md-tabs.in-header
 .md-tabs__item--active
 .md-tabs__link {
   opacity: 1;
@@ -170,11 +160,6 @@
   background-color: var(--tab-bg-active);
   border-bottom-color: var(--accent);
 }
-
-/* Supprime l’espace réservé par Material (header + tabs) 
-[data-md-color-scheme] .md-main {
-  padding-top: var(--header-height);
-}*/
 
 /* ==============================
    3. CONTENU & TYPOGRAPHIE
