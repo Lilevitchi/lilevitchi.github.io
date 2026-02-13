@@ -249,13 +249,13 @@
 
 .hub-buttons-gap {
     display: flex;
-    gap: 80px;
+    gap: 120px;
     justify-content: center;
 }
 
 .md-typeset .btn-hub-large {
-    width: 280px;
-    padding: 15px 10px;
+    width: 300px;
+    padding: 10px 10px;
     border-radius: 20px;
     font-weight: 800;
     font-size: 1.35rem;
