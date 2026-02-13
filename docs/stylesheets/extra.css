@@ -66,24 +66,24 @@
    1. HEADER & BANNIÈRE
    ==============================*/
 
-.md-header {
+[data-md-color-scheme] .md-header.md-header {
   background-color: var(--black);
 }
 
-.md-header__inner {
+[data-md-color-scheme] .md-header__inner {
   height: var(--header-height);
 }
 
-.md-grid {
+[data-md-color-scheme] .md-grid {
   max-width: var(--grid-max-width);
 }
 
-.md-logo img {
+[data-md-color-scheme] .md-logo img {
   height: 64px;
   width: auto;
 }
 
-.md-header__title .md-ellipsis {
+[data-md-color-scheme] .md-header__title .md-ellipsis {
   color: var(--accent);
   font-weight: var(--font-bold);
   font-size: 1.4rem;
@@ -94,15 +94,15 @@
    2. NAVIGATION
    ==============================*/
 
-.md-tabs {
+[data-md-color-scheme] .md-tabs {
   background: transparent;
 }
 
-.md-tabs__list {
+[data-md-color-scheme] .md-tabs__list {
   justify-content: center;
 }
 
-.md-tabs__link {
+[data-md-color-scheme] .md-tabs .md-tabs__link {
   display: inline-block;
   padding: 7px 0 6px;
   border-bottom: 3px solid transparent;
@@ -119,13 +119,15 @@
     border-color var(--transition-base);
 }
 
-.md-tabs__link:hover {
+[data-md-color-scheme] .md-tabs .md-tabs__link:hover {
   opacity: 1;
   color: var(--accent);
   background-color: var(--tab-bg-hover);
 }
 
-.md-tabs__item--active .md-tabs__link {
+[data-md-color-scheme] .md-tabs
+.md-tabs__item--active
+.md-tabs__link {
   opacity: 1;
   color: var(--accent);
   background-color: var(--tab-bg-active);
