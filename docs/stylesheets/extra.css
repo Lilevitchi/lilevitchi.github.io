@@ -222,9 +222,6 @@
     filter: invert(48%) sepia(89%) saturate(2476%) hue-rotate(346deg) brightness(101%) contrast(101%) !important; 
 }
 
-/* ============================================================
-   ============================================================ */
-
  /* --- 10. HUB JEUX --- */
 .md-header { z-index: 120 !important; }
 .md-tabs { z-index: 110 !important; }
