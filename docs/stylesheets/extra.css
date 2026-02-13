@@ -1,20 +1,137 @@
  /* ============================================================
    Lilevitchi | Modding - Custom CSS
    ============================================================ */
+   
+/* ==============================
+   GLOBAL THEME VARIABLES
+================================*/
 
-/* --- 1. HEADER & BANNIÈRE --- */
-.md-header { background-color: #000000 !important; }
-.md-header__inner { height: 3.2rem !important; }
-.md-grid { max-width: 95% !important; }
-.md-logo img { height: 64px !important; width: auto !important; }
-.md-header__title .md-ellipsis { color: #ff5722 !important; font-weight: bold; font-size: 1.4rem; text-transform: none !important; }
+:root {
 
-/* --- 2. NAVIGATION --- */
-.md-tabs { background-color: transparent !important; margin-top: -3.2rem !important; }
-.md-tabs__list { justify-content: center !important; }
-.md-tabs__link { transition: all 0.3s ease; opacity: 0.6; color: #ffffff !important; padding: 7px 0 6px 0 !important; border-bottom: 3px solid transparent !important; display: inline-block; border-radius: 4px 4px 0 0; text-transform: none !important; }
-.md-tabs__link:hover { opacity: 1 !important; background-color: rgba(255, 255, 255, 0.08) !important; color: #ff5722 !important; }
-.md-tabs__item--active .md-tabs__link { color: #ff5722 !important; opacity: 1 !important; background-color: rgba(255, 87, 34, 0.1) !important; border-bottom: 3px solid #ff5722 !important; }
+  /* ---------- Brand / Accent ---------- */
+  --accent: #ff5722;
+  --accent-soft: rgba(255, 87, 34, 0.08);
+  --accent-soft-strong: rgba(255, 87, 34, 0.12);
+  --accent-border: rgba(255, 87, 34, 0.5);
+  --accent-glow: rgba(255, 87, 34, 0.6);
+
+   /* ---------- Tabs / Navigation ---------- */
+  --tab-bg-hover: rgba(255, 255, 255, 0.08);
+  --tab-bg-active: rgba(255, 87, 34, 0.12);
+
+  /* ---------- Base Colors ---------- */
+  --black: #000000;
+  --dark-1: #1a1a1a;
+  --dark-2: #2c2c2c;
+  --white: #ffffff;
+
+  /* ---------- Layout ---------- */
+  --header-height: 3.2rem;
+  --content-max-width: 1400px;
+  --grid-max-width: 95%;
+
+  /* ---------- Spacing ---------- */
+  --space-xs: 6px;
+  --space-sm: 10px;
+  --space-md: 15px;
+  --space-lg: 20px;
+  --space-xl: 25px;
+
+  /* ---------- Radius ---------- */
+  --radius-sm: 4px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* ---------- Typography ---------- */
+  --font-base-size: 0.85rem;
+  --font-h1-size: 1.8rem;
+  --font-hub-title: 2.2rem;
+  --font-heavy: 800;
+  --font-bold: 700;
+
+  /* ---------- Motion ---------- */
+  --transition-fast: 0.25s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.4s ease;
+
+  /* ---------- Effects ---------- */
+  --blur-soft: blur(5px);
+  --blur-strong: blur(6px);
+
+  /* ---------- Cursor ---------- */
+  --cursor-default: url('../assets/curseur.png') 7 0, pointer;
+  --cursor-click: url('../assets/curseur-clic.png') 7 0, pointer;
+}
+
+/* ==============================
+   1. HEADER & BANNIÈRE
+   ==============================*/
+
+.md-header {
+  background-color: var(--black);
+}
+
+.md-header__inner {
+  height: var(--header-height);
+}
+
+.md-grid {
+  max-width: var(--grid-max-width);
+}
+
+.md-logo img {
+  height: 64px;
+  width: auto;
+}
+
+.md-header__title .md-ellipsis {
+  color: var(--accent);
+  font-weight: var(--font-bold);
+  font-size: 1.4rem;
+  text-transform: none;
+}
+
+/* ==============================
+   2. NAVIGATION
+   ==============================*/
+
+.md-tabs {
+  background: transparent;
+}
+
+.md-tabs__list {
+  justify-content: center;
+}
+
+.md-tabs__link {
+  display: inline-block;
+  padding: 7px 0 6px;
+  border-bottom: 3px solid transparent;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+
+  color: var(--white);
+  opacity: 0.75;
+  text-transform: none;
+
+  transition:
+    color var(--transition-base),
+    background-color var(--transition-base),
+    opacity var(--transition-base),
+    border-color var(--transition-base);
+}
+
+.md-tabs__link:hover {
+  opacity: 1;
+  color: var(--accent);
+  background-color: var(--tab-bg-hover);
+}
+
+.md-tabs__item--active .md-tabs__link {
+  opacity: 1;
+  color: var(--accent);
+  background-color: var(--accent-soft-strong);
+  border-bottom: 3px solid var(--accent);
+}
 
 /* --- 3. TEXTE, LIENS & TITRES --- */
 .md-main__inner, .md-content { margin-top: 0 !important; margin-left: 0 !important; }
