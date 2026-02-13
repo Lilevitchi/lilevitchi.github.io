@@ -84,8 +84,11 @@
 }
 
 /* 1.4 — Largeur globale du contenu du header */
-[data-md-color-scheme] .md-grid {
+[data-md-color-scheme] .md-header .md-grid {
   max-width: var(--grid-max-width);
+  margin-left: 0;
+  margin-right: auto;
+  padding-left: 12px; /* ajuste ici si besoin */
 }
 
 /* 1.5 — Logo */
@@ -102,12 +105,6 @@
   text-transform: none;
 }
 
-[data-md-color-scheme] .md-header .md-grid {
-  margin-left: 0;
-  margin-right: auto;
-  padding-left: 12px;
-}
-
 /* ==============================
    2. NAVIGATION
    ==============================*/
@@ -115,7 +112,7 @@
 /* 2.1 — Suppression de l’espace réservé par Material */
 [data-md-color-scheme] .md-tabs {
   position: absolute;
-  top: calc(var(--header-height) * -1);
+  bottom: 0;
   left: 0;
   width: 100%;
  
