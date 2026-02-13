@@ -76,6 +76,7 @@
 
 [data-md-color-scheme] .md-header__inner {
   height: var(--header-height);
+  overflow: visible;
 }
 
 [data-md-color-scheme] .md-grid {
@@ -104,6 +105,7 @@
   left: 0;
   width: 100%;
   background: transparent;
+  z-index: 10;
 }
 
 [data-md-color-scheme] .md-tabs__list {
@@ -114,7 +116,7 @@
 
 [data-md-color-scheme] .md-tabs .md-tabs__link {
   display: inline-block;
-  padding: 7px 0 6px;
+  padding: 0 0 8px;
   border-bottom: 3px solid transparent;
   border-radius: var(--radius-sm) var(--radius-sm) 0 0;
 
