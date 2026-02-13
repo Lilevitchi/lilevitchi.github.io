@@ -56,11 +56,11 @@
 /* --- 6. ADAPTATION MOBILE --- */
 @media screen and (max-width: 45em) {
     .hub-wrapper { z-index: 10 !important; }
-    .md-header { z-index: 5 !important; }
+    .md-header { z-index: 100 !important; }
     .md-header__title { display: none !important; }
-    .md-nav__title[for="__drawer"] { color: transparent !important; font-size: 1.1rem !important; padding: 15px 16px !important; display: block !important; } 
-    .md-nav--primary { z-index: 1000 !important; } 
-    .md-overlay { z-index: 900 !important; }
+    .md-nav__title[for="__drawer"] { color: var(--md-default-fg-color) !important; font-size: 1.1rem !important; padding: 20px 16px !important; display: block !important; visibility: visible !important; } 
+    .md-nav--primary { z-index: 2000 !important; display: block !important; visibility: visible !important; } 
+    .md-overlay { z-index: 500 !important; }
     .md-nav__title .md-logo { display: block !important; margin: 15px 0 !important; }
     .md-nav__item .md-nav__link--active { background-color: transparent !important; }
     .md-nav__item--nested > .md-nav__link:focus { background-color: rgba(255, 87, 34, 0.1) !important; }
