@@ -112,7 +112,7 @@
 /* 2.1 Conteneur des onglets déplacés dans le header (via JS) */
 [data-md-color-scheme] .md-tabs.in-header {
   position: absolute;
-  bottom: 12px;
+  bottom: 8px;
   left: 0;
   width: 100%;
   background: transparent;
@@ -123,7 +123,9 @@
 [data-md-color-scheme] .md-tabs.in-header .md-tabs__list {
      display: flex;
   justify-content: center;
-  align-items: flex-end;
+  /*align-items: flex-end;*/
+     align-items: center;
+     height: 25px;
      margin: 0;
      padding: 0;
      pointer-events: auto;
@@ -132,7 +134,9 @@
 /* 2.3 Onglet — état normal */
 [data-md-color-scheme] .md-tabs.in-header .md-tabs__link {
   display: inline-block;
-  padding: 7px 0 6px;
+  /*padding: 7px 0 6px;*/
+      padding: 2px 15px !important;
+      line-height: 1.2;
   border-bottom: 3px solid transparent;
   border-radius: var(--radius-sm) var(--radius-sm) 0 0;
 
@@ -173,28 +177,99 @@
    3. TEXTE, LIENS & TITRES
    ==============================*/
 
-.md-main__inner, .md-content { margin-top: 0 !important; margin-left: 0 !important; }
-.md-content__inner { max-width: 1400px !important; margin: 0 auto !important; padding-top: 1.5rem !important; padding-left: 25px !important; padding-right: 0 !important; padding-bottom: 1.5rem !important; }
+.md-main__inner,
+.md-content {
+  margin-top: 0 !important;
+  margin-left: 0 !important;
+}
 
-.md-typeset { font-size: 0.85rem !important; }
-.md-typeset h1, .md-typeset h2, .md-typeset h3 { color: var(--md-default-fg-color) !important; opacity: 1 !important; font-weight: 700; }
-.md-typeset p { text-align: left; max-width: 100%; margin-left: 0; margin-right: 0; }
+.md-content__inner {
+  max-width: 1400px !important;
+  margin: 0 auto !important;
+  padding-top: 1.5rem !important;
+  padding-left: 25px !important;
+  padding-right: 0 !important;
+  padding-bottom: 1.5rem !important;
+}
 
-.md-typeset h1 { font-size: 1.8rem; margin-bottom: 1rem; }
-.md-typeset h1:first-child { margin-top: 0 !important; padding-top: 0 !important; display: flex; justify-content: flex-start; align-items: center; gap: 15px; text-align: left; width: 100%; }
+.md-typeset {
+  font-size: 0.85rem !important;
+}
 
-.md-typeset a { color: inherit !important; transition: color 0.3s ease; }
-.md-typeset a:hover { color: #ff5722 !important; }
-.md-typeset a .twemoji svg { fill: currentColor !important; }
-.md-typeset a:hover .twemoji svg { fill: #ff5722 !important; }
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  color: var(--md-default-fg-color) !important;
+  opacity: 1 !important;
+  font-weight: 700;
+}
 
-.md-nav--secondary .md-nav__title { color: var(--md-default-fg-color) !important; opacity: 1 !important; font-weight: bold; }
-.md-nav--secondary .md-nav__link { color: var(--md-typeset-color); opacity: 0.7; }
-.md-nav--secondary .md-nav__link:hover { color: #ff5722 !important; opacity: 1; }
+.md-typeset p {
+  text-align: left;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.md-typeset h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.md-typeset h1:first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  text-align: left;
+  width: 100%;
+}
+
+.md-typeset a {
+  color: inherit !important;
+  transition: color 0.3s ease;
+}
+
+.md-typeset a:hover {
+  color: #ff5722 !important;
+}
+
+.md-typeset a .twemoji svg {
+  fill: currentColor !important;
+}
+
+.md-typeset a:hover .twemoji svg {
+  fill: #ff5722 !important;
+}
+
+.md-nav--secondary .md-nav__title {
+  color: var(--md-default-fg-color) !important;
+  opacity: 1 !important;
+  font-weight: bold;
+}
+
+.md-nav--secondary .md-nav__link {
+  color: var(--md-typeset-color);
+  opacity: 0.7;
+}
+
+.md-nav--secondary .md-nav__link:hover {
+  color: #ff5722 !important;
+  opacity: 1;
+}
 
 /* Icônes oranges automatiques */
-.md-typeset h1 .twemoji svg, .md-typeset h2 .twemoji svg, .md-typeset h3 .twemoji svg { fill: #ff5722 !important; }
-.headerlink { display: none !important; }
+.md-typeset h1 .twemoji svg,
+.md-typeset h2 .twemoji svg,
+.md-typeset h3 .twemoji svg {
+  fill: #ff5722 !important;
+}
+
+.headerlink {
+  display: none !important;
+}
 
 /* ==============================
    4. MENU LATÉRAL
