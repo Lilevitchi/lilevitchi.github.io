@@ -1,4 +1,4 @@
-/* ============================================================
+ /* ============================================================
    Lilevitchi | Modding - Custom CSS
    ============================================================ */
 
@@ -75,14 +75,14 @@
     }
 } */
 
-.md-content:has(.game-grid) ~ .md-sidebar,
-.md-sidebar--primary:has(~ .md-content .game-grid) {
+.md-sidebar--primary:has(~ .md-content .game-grid),
+.md-content:has(.game-grid) ~ .md-sidebar--primary {
     display: none !important;
 }
 
 .game-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 220px à 250px */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Réduit de 280px à 220px */
     gap: 15px;
     padding: 10px;
     max-width: 1400px; /* Limite la largeur totale pour ne pas s'étaler trop sur ultra-wide */
@@ -262,7 +262,7 @@
         text-align: center;
         width: 100%;
         margin-top: -15vh;
-        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: all 0.3s ease-in-out;
     }
     .hub-bot { width: 700px; max-width: 80vw; height: auto; margin-bottom: -100px; }
     .hub-content { position: relative; }
@@ -270,7 +270,7 @@
 
 .hub-buttons-gap {
     display: flex;
-    gap: 80px;
+    gap: 120px;
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
@@ -374,4 +374,4 @@ body:has(.hub-wrapper) .md-header__topic:last-child {
     opacity: 1 !important;
     transform: translateY(0) !important;
     pointer-events: auto !important;
-}
+} 
