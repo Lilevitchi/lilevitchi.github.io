@@ -301,21 +301,97 @@
    4. MENU LATÉRAL
    ==============================*/
 
-.md-nav__link, .md-nav__title, .md-ellipsis { text-transform: none !important; font-weight: 400 !important; }
+/* Liens et titres du menu latéral uniquement */
+[data-md-color-scheme] .md-nav--primary .md-nav__link,
+[data-md-color-scheme] .md-nav--primary .md-nav__title {
+  text-transform: none;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+
+/* Espacement des liens */
+[data-md-color-scheme] .md-nav--primary .md-nav__link {
+  padding-left: 0.8rem;
+}
+
+/* Lien actif */
+[data-md-color-scheme] .md-nav--primary .md-nav__link--active {
+  color: var(--accent);
+  font-weight: var(--font-bold);
+  background: transparent;
+}
+
+/*.md-nav__link, .md-nav__title, .md-ellipsis { text-transform: none !important; font-weight: 400 !important; }
 .md-nav__link { padding-left: 0.8rem !important; display: flex !important; align-items: center; }
-.md-nav__link--active { color: #ff5722 !important; font-weight: bold !important; background: transparent !important; }
+.md-nav__link--active { color: #ff5722 !important; font-weight: bold !important; background: transparent !important; }*/
 
 /* ==============================
    5. UI ELEMENTS (BOT & KO-FI)
    ==============================*/
 
-.bot-advice { display: flex; align-items: center; background-color: rgba(255, 87, 34, 0.08) !important; border-left: 4px solid #ff5722 !important; padding: 15px; border-radius: 4px; margin: 20px 0; }
+/* Bloc conseil du bot */
+.bot-advice {
+  display: flex;
+  align-items: center;
+
+  background-color: var(--accent-soft);
+  border-left: 4px solid var(--accent);
+
+  padding: var(--space-md);
+  border-radius: var(--radius-sm);
+  margin: var(--space-lg) 0;
+}
+
+/* Image du bot */
+.bot-advice img {
+  margin-right: var(--space-lg);
+  flex-shrink: 0;
+}
+
+/* Titre du conseil */
+#lile-bot-title {
+  color: var(--accent);
+  font-weight: var(--font-bold);
+}
+
+/* Texte du conseil */
+#lile-bot-tip {
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* Bouton Ko-fi */
+.kofi-button {
+  background-color: var(--accent);
+  color: var(--white);
+
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-sm);
+
+  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+
+  transition:
+    background-color var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+/* Hover Ko-fi */
+.kofi-button:hover {
+  background-color: var(--dark-1);
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+/*.bot-advice { display: flex; align-items: center; background-color: rgba(255, 87, 34, 0.08) !important; border-left: 4px solid #ff5722 !important; padding: 15px; border-radius: 4px; margin: 20px 0; }
 .bot-advice img { margin-right: 20px !important; flex-shrink: 0; }
 #lile-bot-title { color: #ff5722; font-weight: bold; }
 #lile-bot-tip { font-style: italic; opacity: 0.8; }
 
 .kofi-button { background-color: #ff5722; color: white !important; padding: 6px 12px; border-radius: 4px; font-size: 0.75rem; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s; }
-.kofi-button:hover { background-color: #1a1a1a; box-shadow: 0 0 10px #ff5722; }
+.kofi-button:hover { background-color: #1a1a1a; box-shadow: 0 0 10px #ff5722; }*/
 
 /* --- 6. ADAPTATION MOBILE --- 
 @media screen and (max-width: 45em) {
