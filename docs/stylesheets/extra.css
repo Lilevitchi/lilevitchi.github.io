@@ -9,8 +9,9 @@
 .md-logo img { height: 64px !important; width: auto !important; }
 .md-header__title .md-ellipsis { color: #ff5722 !important; font-weight: bold; font-size: 1.4rem; text-transform: none !important; }
 
-/* --- 2. NAVIGATION (PC) --- */
+/* --- 2. NAVIGATION --- */
 .md-tabs { background-color: #000000 !important; }
+.md-tabs__list { justify-content: center !important; }
 .md-tabs__link { transition: all 0.3s ease; opacity: 0.6; color: #ffffff !important; padding: 7px 0 6px 0 !important; border-bottom: 3px solid transparent !important; display: inline-block; border-radius: 4px 4px 0 0; text-transform: none !important; }
 .md-tabs__link:hover { opacity: 1 !important; background-color: rgba(255, 255, 255, 0.08) !important; color: #ff5722 !important; }
 .md-tabs__item--active .md-tabs__link { color: #ff5722 !important; opacity: 1 !important; background-color: rgba(255, 87, 34, 0.1) !important; border-bottom: 3px solid #ff5722 !important; }
