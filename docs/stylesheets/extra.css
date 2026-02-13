@@ -243,13 +243,17 @@
         overflow: hidden;
     }
    .hub-bg { 
-        position: absolute;
-        inset: 0;
+        position: fixed;
+        top: 5rem;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: calc(100vh - 5rem);
         background-size: cover; 
         background-position: center; 
-        background-attachment: fixed;
         filter: blur(6px) brightness(0.7); 
-        z-index: 1; 
+        z-index: 1;
         pointer-events: none;
     }
     .hub-bot { width: 700px; max-width: 90vw; height: auto; margin-top: 50px; margin-bottom: -100px; z-index: 2; position: relative; }
