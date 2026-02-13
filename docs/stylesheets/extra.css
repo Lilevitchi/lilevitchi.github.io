@@ -257,7 +257,7 @@
         align-items: center;
         text-align: center;
         width: 100%;
-        margin-top: -10vh;
+        margin-top: -20vh;
     }
     .hub-bot { width: 700px; max-width: 90vw; height: auto; margin-bottom: -100px; }
     .hub-content { position: relative; }
@@ -267,6 +267,7 @@
     display: flex;
     gap: 120px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .md-typeset .btn-hub-large {
@@ -285,10 +286,20 @@
     color: #ffffff !important; 
 }
 
-.md-typeset a.btn-orange:hover, 
-.md-typeset a.btn-red:hover {
-    color: #ffffff !important; 
-    text-decoration: none !important;
+@media screen and (max-width: 60em) {
+    .hub-buttons-gap {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .md-typeset .btn-hub-large {
+        width: 280px;
+        font-size: 1.1rem;
+    }
+   .md-typeset .hub-title {
+        font-size: 1.6rem !important;
+        margin-bottom: 25px !important;
+    }
 }
 
 .btn-orange {
@@ -313,10 +324,26 @@
     transform: scale(1.03);
 }
 
-body:has(.hub-wrapper) .md-content__inner h1:first-child:not(.hub-title) {
-    display: none !important;
+.md-typeset a.btn-orange:hover, 
+.md-typeset a.btn-red:hover {
+    color: #ffffff !important; 
+    text-decoration: none !important;
 }
 
+.md-typeset .hub-title { 
+   color: #ffffff !important; 
+   font-size: 2.2rem !important; 
+   font-weight: 800 !important; 
+   text-transform: uppercase; 
+   text-shadow: 2px 2px 15px #000; 
+   margin-bottom: 40px !important; 
+   border: none !important; 
+   text-align: center; 
+   line-height: 1.2;
+}
+
+
+body:has(.hub-wrapper) .md-content__inner h1:first-child:not(.hub-title),
 body:has(.hub-wrapper) .md-header__topic:first-child {
     display: none !important;
 }
@@ -327,5 +354,3 @@ body:has(.hub-wrapper) .md-header__topic:last-child {
     transform: translateY(0) !important;
     pointer-events: auto !important;
 }
-
-.md-typeset .hub-title { color: #ffffff !important; font-size: 2.2rem !important; font-weight: 800 !important; text-transform: uppercase; text-shadow: 2px 2px 15px #000; margin-bottom: 40px !important; border: none !important; text-align: center; }
