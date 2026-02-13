@@ -259,7 +259,7 @@
     border-radius: 20px;
     font-weight: 800;
     font-size: 1.35rem;
-    text-transform: uppercase;
+    text-transform: none !important;
     text-decoration: none !important;
     display: flex;
     align-items: center;
