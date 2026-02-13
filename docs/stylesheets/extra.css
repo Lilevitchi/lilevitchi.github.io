@@ -23,7 +23,7 @@
   --dark-1: #1a1a1a;
   --dark-2: #2c2c2c;
   --white: #ffffff;
-  --grey: #292c35;
+  --grey: #1a1b1e;
 
   /* ---------- Layout ---------- */
   --header-height: 3.2rem;
@@ -162,13 +162,7 @@
 
 /* Supprime l’espace réservé par Material (header + tabs) */
 [data-md-color-scheme] .md-main {
-  margin-top: var(--header-height);
-}
-
-/* Sécurité : aucun espace résiduel */
-[data-md-color-scheme] .md-main__inner,
-[data-md-color-scheme] .md-content {
-  margin-top: 0;
+  padding-top: var(--header-height);
 }
 
 /* ==============================
