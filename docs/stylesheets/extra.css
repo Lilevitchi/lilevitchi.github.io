@@ -70,6 +70,10 @@
   background-color: var(--black);
 }
 
+[data-md-color-scheme] .md-header {
+  position: relative;
+}
+
 [data-md-color-scheme] .md-header__inner {
   height: var(--header-height);
 }
@@ -95,11 +99,17 @@
    ==============================*/
 
 [data-md-color-scheme] .md-tabs {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   background: transparent;
 }
 
 [data-md-color-scheme] .md-tabs__list {
   justify-content: center;
+  align-items: flex-end;
+  height: var(--header-height);
 }
 
 [data-md-color-scheme] .md-tabs .md-tabs__link {
