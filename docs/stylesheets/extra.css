@@ -53,7 +53,7 @@
 .kofi-button { background-color: #ff5722; color: white !important; padding: 6px 12px; border-radius: 4px; font-size: 0.75rem; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s; }
 .kofi-button:hover { background-color: #1a1a1a; box-shadow: 0 0 10px #ff5722; }
 
-/* --- 6. ADAPTATION MOBILE --- */
+/* --- 6. ADAPTATION MOBILE --- 
 @media screen and (max-width: 45em) {
     .hub-wrapper { z-index: 10 !important; }
     .md-header { z-index: 100 !important; }
@@ -65,15 +65,15 @@
     .md-nav__item .md-nav__link--active { background-color: transparent !important; }
     .md-nav__item--nested > .md-nav__link:focus { background-color: rgba(255, 87, 34, 0.1) !important; }
     .md-tabs { display: none !important; }
-}
+} */
 
 /* --- 7. GRILLE DES JEUX (HUB) --- */
-@media screen and (min-width: 60em) {
+/* @media screen and (min-width: 60em) {
     .md-sidebar--primary:has(~ .md-content .game-grid),
     .md-content:has(.game-grid) ~ .md-sidebar--primary {
         display: none !important;
     }
-}
+} */
 
 .game-grid {
     display: grid;
@@ -88,7 +88,7 @@
     padding-right: 0 !important;
 }
 
-@media screen and (max-width: 45em) {
+/* @media screen and (max-width: 45em) {
     .game-grid {
         grid-template-columns: 1fr !important;
         padding-left: 0 !important; 
@@ -99,7 +99,7 @@
     .game-card {
         width: 85% !important;
     }
-}
+} */
 
 .game-card {
     height: 160px !important; /* Réduit de 180px à 160px */
@@ -149,7 +149,7 @@
 }
 
 /* --- 8. CURSEURS & TAILLE PC --- */
-@media screen and (min-width: 60em) {
+/* @media screen and (min-width: 60em) { */
     .game-card { height: 200px !important; } /* Réduit de 250px à 200px */
 
     /* Curseur normal */
@@ -161,7 +161,7 @@
     .game-card:active, .md-logo:active, .md-header__button:active, .md-tabs__link:active, .md-nav__link:active, .md-typeset a:active, .kofi-button:active  {
         cursor: url('../assets/curseur-clic.png') 7 0, pointer !important;
     }
-}
+/* } */
 
 /* --- 9. RÉSEAUX SOCIAUX --- */ 
 .md-footer-social {
@@ -227,7 +227,7 @@
 .md-header { z-index: 120 !important; }
 .md-tabs { z-index: 110 !important; }
 
-@media screen and (min-width: 45.01em) {
+/* @media screen and (min-width: 45.01em) { */
     .hub-wrapper {
         position: fixed;
         top: 0;
@@ -261,7 +261,7 @@
     }
     .hub-bot { width: 700px; max-width: 80vw; height: auto; margin-bottom: -100px; }
     .hub-content { position: relative; }
-}
+/* } */
 
 .hub-buttons-gap {
     display: flex;
@@ -288,14 +288,14 @@
     color: #ffffff !important; 
 }
 
-@media screen and (max-width: 76.25em) {
+/* @media screen and (max-width: 76.25em) {
    .md-typeset .btn-hub-large {
         width: 250px;
         font-size: 1.15rem;
     }
-}
+} */
 
-@media screen and (max-width: 60em) {
+/* @media screen and (max-width: 60em) {
     .hub-buttons-gap {
         flex-direction: column;
         align-items: center;
@@ -314,7 +314,7 @@
         margin-right: auto !important;
         margin-bottom: 25px !important;
     }
-}
+} */
 
 .btn-orange {
     background: #2c2c2c !important;
