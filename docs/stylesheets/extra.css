@@ -174,12 +174,11 @@
 [data-md-color-scheme] .md-main__inner,
 [data-md-color-scheme] .md-content {
   margin-top: 0;
-  margin-left: 0;
 }
 
 /* Conteneur principal */
 [data-md-color-scheme] .md-content__inner {
-  max-width: var(--content-max-width);
+  max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
 
