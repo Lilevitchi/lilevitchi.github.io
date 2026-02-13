@@ -74,7 +74,9 @@
 
 /* 1.2 — Conteneur du header */
 [data-md-color-scheme] .md-header {
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -87,9 +89,11 @@
 /* 1.4 — Largeur globale du contenu du header */
 [data-md-color-scheme] .md-header .md-grid {
   max-width: var(--grid-max-width);
+  display: flex !important;
+  align-items: center;
   margin-left: 0;
   margin-right: auto;
-  padding-left: 12px; /* ajuste ici si besoin */
+  padding-left: 12px;
 }
 
 /* 1.5 — Logo */
@@ -100,10 +104,8 @@
 
 /* 1.6 — Titre du site */
 [data-md-color-scheme] .md-header__title .md-ellipsis {
-  color: var(--accent);
-  font-weight: var(--font-bold);
-  font-size: 1.4rem;
-  text-transform: none;
+  flex: 0 0 auto; /* Empêche le titre de prendre toute la place */
+  margin-right: 30px; /* Espace entre "Modding" et le début du menu */
 }
 
 /* ==============================
@@ -112,17 +114,19 @@
 
 /* 2.1 Conteneur des onglets déplacés dans le header (via JS) */
 [data-md-color-scheme] .md-tabs.in-header {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  position: static !important;
+  width: auto;
   background: transparent;
+  display: block;
 }
 
 /* 2.2 Liste des onglets */
 [data-md-color-scheme] .md-tabs.in-header .md-tabs__list {
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: var(--header-height); /* Aligne la hauteur sur le header */
 }
 
 /* 2.3 Onglet — état normal */
@@ -162,7 +166,7 @@
 
 /* Supprime l’espace réservé par Material (header + tabs) */
 [data-md-color-scheme] .md-main {
-  padding-top: var(--header-height);
+  padding-top: 0 !important;
 }
 
 /* ==============================
