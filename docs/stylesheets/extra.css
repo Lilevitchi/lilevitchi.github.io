@@ -297,9 +297,5 @@
     transform: scale(1.03);
 }
 
-body:has(.hub-wrapper) .md-content__inner h1:first-child:not(.hub-title) {
-    display: none !important;
-}
-
 .hub-bg { position: absolute; inset: 0; background-size: cover; background-position: center; filter: blur(6px) brightness(0.6); z-index: 1; }
-.md-typeset .hub-title { color: #ffffff !important; font-size: 2.2rem !important; font-weight: 800 !important; text-transform: uppercase; text-shadow: 2px 2px 15px #000; margin-bottom: 20px !important; border: none !important; text-align: center; }
+.md-typeset .hub-title { color: #ffffff !important; font-size: 2.2rem !important; font-weight: 800 !important; text-transform: uppercase; text-shadow: 2px 2px 15px #000; margin-bottom: 50px !important; border: none !important; text-align: center; }
