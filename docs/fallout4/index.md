@@ -1,4 +1,5 @@
 ---
+title: Fallout 4
 hide:
   - navigation
   - toc
