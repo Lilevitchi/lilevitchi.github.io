@@ -66,48 +66,39 @@
    TYPOGRAPHIE — BASE RESPONSIVE
    ==============================*/
 
-[data-md-color-scheme] html {
-  font-size: clamp(0.9rem, 0.85vw + 0.6rem, 1rem);
-}
-
 [data-md-color-scheme] .md-typeset {
-  font-size: var(--font-base-size);
+  font-size: clamp(0.95rem, 0.3vw + 0.9rem, 1rem);
 }
 
 /* ==============================
    1. HEADER & BANNIÈRE
    ==============================*/
 
-/* 1.1 — Fond de la bannière */
-[data-md-color-scheme] .md-header.md-header {
-  background-color: var(--black);
-}
-
-/* 1.2 — Conteneur du header */
+/* Fond du header */
 [data-md-color-scheme] .md-header {
+  background-color: var(--black);
   position: relative;
-       padding-bottom: 2.5rem; /* espace pour les tabs */
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
-/* 1.3 — Hauteur du header 
+/* Contenu interne du header */
 [data-md-color-scheme] .md-header__inner {
   height: var(--header-height);
-}*/
+}
 
-/* 1.4 — Largeur globale du contenu du header */
+/* Largeur globale du contenu du header */
 [data-md-color-scheme] .md-header .md-grid {
   max-width: var(--grid-max-width);
   margin-left: 0;
   margin-right: auto;
-  padding-left: 12px;
+  padding-left: var(--space-sm);
 }
 
-/* 1.5 — Logo */
+/* Logo */
 [data-md-color-scheme] .md-logo img {
   height: 64px;
-  /*width: auto;*/
+  width: auto;
 }
 
 /* 1.6 — Titre du site */
@@ -115,7 +106,6 @@
   color: var(--accent);
   font-weight: var(--font-bold);
   font-size: 1.4rem;
- /* text-transform: none;*/
 }
 
 /* ==============================
