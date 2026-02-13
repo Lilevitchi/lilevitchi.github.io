@@ -109,7 +109,7 @@
    2. NAVIGATION
    ==============================*/
 
-/* 2.1 — Suppression de l’espace réservé par Material */
+/* 2.1 Conteneur des onglets déplacés dans le header (via JS) */
 [data-md-color-scheme] .md-tabs.in-header {
   position: absolute;
   bottom: 0;
@@ -118,12 +118,13 @@
   background: transparent;
 }
 
+/* 2.2 Liste des onglets */
 [data-md-color-scheme] .md-tabs.in-header .md-tabs__list {
   justify-content: center;
   align-items: flex-end;
 }
 
-/* 2.3 — Onglet (état normal) */
+/* 2.3 Onglet — état normal */
 [data-md-color-scheme] .md-tabs.in-header .md-tabs__link {
   display: inline-block;
   padding: 7px 0 6px;
@@ -141,14 +142,14 @@
     border-color var(--transition-base);
 }
 
-/* 2.4 — Onglet au survol */
+/* 2.4 Onglet — survol (hover) */
 [data-md-color-scheme] .md-tabs.in-header .md-tabs__link:hover {
   opacity: 1;
   color: var(--accent);
   background-color: var(--tab-bg-hover);
 }
 
-/* 2.5 — Onglet actif */
+/* 2.5 Onglet — état actif */
 [data-md-color-scheme] .md-tabs.in-header
 .md-tabs__item--active
 .md-tabs__link {
@@ -156,6 +157,14 @@
   color: var(--accent);
   background-color: var(--tab-bg-active);
   border-bottom-color: var(--accent);
+}
+
+[data-md-color-scheme] .md-main__inner {
+  margin-top: 0;
+}
+
+[data-md-color-scheme] .md-content {
+  margin-top: 0;
 }
 
 /* ==============================
