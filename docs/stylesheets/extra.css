@@ -93,11 +93,8 @@
 [data-md-color-scheme] .md-header .md-grid {
   display: flex;
   align-items: center;
-  /* width: 100%;*/
   max-width: 100%;
-  /*margin: 0 auto;
-   margin-left: 0;
-  margin-right: auto;*/
+  margin: 0 auto;
   padding: 12px;
   background-color: rgba(255, 0, 0, 0.08);
   outline: 1px dashed rgba(255, 0, 0, 0.25);
@@ -118,22 +115,12 @@
   flex-shrink: 0;
 }
 
-/* Titre du site 
-[data-md-color-scheme] .md-header__title {
-  display: flex;
-  align-items: center;
-  margin-left: 0.5rem;
-}*/
-
 /* Texte du titre */
 [data-md-color-scheme] .md-header__title .md-ellipsis {
   color: var(--accent);
   font-weight: var(--font-bold);
   font-size: 1.4rem;
-  /*line-height: 1;
-  white-space: nowrap;
-  position: relative;*/
-  top: 3px;
+  /*top: 3px;*/
 }
 
 /* ==============================
