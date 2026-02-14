@@ -83,9 +83,9 @@
 
 /* Contenu interne du header */
 [data-md-color-scheme] .md-header__inner {
-  min-height: var(--header-height);
   display: flex;
   align-items: center;
+  padding: 0.4rem 0; 
 }
 
 /* Largeur et centrage du contenu */
@@ -95,7 +95,7 @@
   justify-content: space-between;
   max-width: var(--grid-max-width);
   margin: 0 auto;
-  padding: 0 var(--space-md);
+  padding-left: 12px;
 }
 
 [data-md-color-scheme] .md-header__title {
@@ -139,6 +139,8 @@
   align-items: flex-end;
   justify-content: center;
   flex: 1;
+  background-color: rgba(255, 255, 255, 0.08);
+  outline: 1px dashed rgba(255, 255, 255, 0.25);
 }
 
 /* Tabs bar */
