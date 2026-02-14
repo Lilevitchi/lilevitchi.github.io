@@ -123,7 +123,7 @@
 /* Conteneur des tabs (injecté par Material) */
 [data-md-color-scheme] .md-header__tabs {
   display: flex;
-  justify-content: center;
+  align-items: center;
   /*align-items: flex-end;
   justify-content: center;
   /*flex: 1;
