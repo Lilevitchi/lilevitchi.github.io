@@ -127,6 +127,9 @@
   left: 50%;
   transform: translateX(-50%);
   bottom: 0;
+
+  width: 100%;
+  max-width: var(--grid-max-width);
  
   display: flex;
   justify-content: center;
@@ -134,14 +137,7 @@
   background-color: rgba(255, 255, 255, 0.08);
 }
 
-/* Tabs bar 
-[data-md-color-scheme] .md-tabs {
-  display: flex;
-  background: transparent;
-  border-bottom: none;
-}*/
-
-/* === BLOC DES TABS === */
+/* Tabs bar */
 [data-md-color-scheme] .md-tabs {
   width: 100%;
   max-width: var(--grid-max-width);
@@ -161,9 +157,7 @@
 /* Onglet — état normal */
 [data-md-color-scheme] .md-tabs__link {
   display: flex;
-  /*align-items: center;*/
   padding: 0.4rem 0.8rem;
-  /*line-height: 1;*/
   color: var(--white);
   opacity: 0.75;
  
@@ -189,6 +183,7 @@
 .md-tabs__link {
   opacity: 1;
   color: var(--accent);
+  border-bottom: 3px solid transparent;
   background-color: var(--tab-bg-active);
   border-bottom-color: var(--accent);
 }
