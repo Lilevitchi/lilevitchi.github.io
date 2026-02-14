@@ -137,11 +137,12 @@
 
 /* Conteneur des tabs (injecté par Material) */
 [data-md-color-scheme] .md-header__tabs {
-  display: flex;
-  /*align-items: flex-end;*/
+  height: var(--header-height);
+  /*display: flex;
+  align-items: flex-end;
   justify-content: center;
-  /*flex: 1;*/
-  margin-top: 0.35rem;
+  /*flex: 1;
+  margin-top: 0.35rem;*/
   background-color: rgba(255, 255, 255, 0.08);
   outline: 1px dashed rgba(255, 255, 255, 0.25);
 }
