@@ -97,7 +97,7 @@
   margin: 0 auto;
  /* margin-left: 0;
   margin-right: auto;*/
-  padding-left: 0 var(--space-md);
+  padding: 0 var(--space-md);
 }
 
 [data-md-color-scheme] .md-header__title {
