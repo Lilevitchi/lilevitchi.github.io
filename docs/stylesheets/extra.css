@@ -114,7 +114,7 @@
 /* Texte du titre */
 [data-md-color-scheme] .md-header__title .md-ellipsis {
   color: var(--accent);
-  font-size: 1.4rem;
+  font-size: 1rem;
 }
 
 /* ==============================
@@ -167,12 +167,11 @@
 [data-md-color-scheme] .md-tabs__link {
   pointer-events: auto;
   display: flex;
-  /*align-self: flex-end;*/
   padding: 0.4rem 0.8rem;
   color: var(--white);
   opacity: 0.75;
  
-  border-bottom: 3px solid transparent;
+  border-bottom: 4px solid transparent;
   background: transparent;
   border-radius: var(--radius-xs) var(--radius-xs) 0 0;
  
