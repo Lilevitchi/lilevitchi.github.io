@@ -95,8 +95,8 @@
   align-items: center;
   /* width: 100%;*/
   max-width: var(--grid-max-width);
-  /* margin-left: 0;
   margin: 0 auto;
+  /* margin-left: 0;
   margin-right: auto;*/
   padding: 12px;
   background-color: rgba(255, 0, 0, 0.08);
@@ -115,7 +115,7 @@
   align-items: center;
   margin-left: 0.5rem;
   margin-right: 1.5rem;
-  flex-shrink: 0;                 /* Empêche le titre d’être écrasé */
+  flex-shrink: 0;
 }
 
 /* Titre du site 
