@@ -112,22 +112,22 @@
   /*display: block;*/
 }
 
-/* Titre du site — RESTAURÉ */
+/* Titre du site — RESTAURÉ 
 [data-md-color-scheme] .md-header__title {
   display: flex;
   align-items: center;
   margin-right: var(--space-md);
   flex-shrink: 0;
-}
+}*/
 
 /* Titre du site */
 [data-md-color-scheme] .md-header__title .md-ellipsis {
   color: var(--accent);
   font-weight: var(--font-bold);
   font-size: 1.4rem;
-  line-height: 1;
+  /*line-height: 1;
   white-space: nowrap;
-  position: relative;
+  position: relative;*/
   top: 3px;
 }
 
@@ -143,6 +143,7 @@
   justify-content: center;
   /*flex: 1;
   margin-top: 0.35rem;*/
+  justify-content: center;
   background-color: rgba(255, 255, 255, 0.08);
   outline: 1px dashed rgba(255, 255, 255, 0.25);
 }
