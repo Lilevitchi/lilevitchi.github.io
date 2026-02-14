@@ -134,6 +134,8 @@
   display: flex;
   justify-content: center;
   height: var(--header-height);
+  background: none;
+  pointer-events: none;
 }
 
 /* Tabs bar */
@@ -164,8 +166,9 @@
   padding: 0.4rem 0.8rem;
   color: var(--white);
   opacity: 0.75;
+  pointer-events: auto;
  
-  /*border-bottom: 3px solid transparent;*/
+  border-bottom: 3px solid transparent;
   /*border-radius: var(--radius-sm) var(--radius-sm) 0 0;*/
  
   transition: color var(--transition-base),
@@ -187,7 +190,6 @@
 .md-tabs__link {
   opacity: 1;
   color: var(--accent);
-  border-bottom: 3px solid transparent;
   background-color: var(--tab-bg-active);
   border-bottom-color: var(--accent);
 }
