@@ -121,7 +121,7 @@
    2. NAVIGATION
    ==============================*/
 
-/* Conteneur des tabs (injecté par Material) */
+/* Conteneur général */
 [data-md-color-scheme] .md-header__tabs {
   position: absolute;
   left: 50%;
@@ -134,17 +134,20 @@
   display: flex;
   justify-content: center;
   height: var(--header-height);
-  background: none;
+  background: transparent;
   pointer-events: none;
 }
 
-/* Tabs bar */
+/* Barre des tabs */
 [data-md-color-scheme] .md-tabs {
-  width: 100%;
-  max-width: var(--grid-max-width);
-  margin: 0 auto;
   display: flex;
   justify-content: center;
+  width: 100%;
+  /*max-width: var(--grid-max-width);*/
+  background: transparent;
+  /*margin: 0 auto;*/
+  box-shadow: none;
+  pointer-events: none;
   outline: 1px dashed orange;
 }
 
@@ -152,23 +155,28 @@
 [data-md-color-scheme] .md-tabs__list {
   display: flex;
   align-items: center;
-  gap: 0.2rem;
-  padding-top: 12px;
+  gap: 0;
+  padding: 0;
+  margin: 0;
+  pointer-events: none;
 }
 
+/* Item = Source de l'espace */
 [data-md-color-scheme] .md-tabs__item {
   margin: 0;
+  padding: 0;
 }
 
 /* Onglet — état normal */
 [data-md-color-scheme] .md-tabs__link {
+  pointer-events: auto;
   display: flex;
   padding: 0.4rem 0.8rem;
   color: var(--white);
   opacity: 0.75;
-  pointer-events: auto;
  
   border-bottom: 3px solid transparent;
+  background: transparent;
   /*border-radius: var(--radius-sm) var(--radius-sm) 0 0;*/
  
   transition: color var(--transition-base),
