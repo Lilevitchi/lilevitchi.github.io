@@ -74,11 +74,11 @@
    1. HEADER & BANNIÈRE
    ==============================*/
 
-/* Fond du header */
+/* Header global */
 [data-md-color-scheme] .md-header {
   background-color: var(--black);
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: var(--radius-md);
+  border-bottom-right-radius: var(--radius-md);
 }
 
 /* Contenu interne du header */
@@ -86,9 +86,10 @@
   min-height: var(--header-height);
   display: flex;
   align-items: center;
+  gap: var(--space-md);
 }
 
-/* Largeur globale du contenu du header */
+/* Largeur et centrage du contenu */
 [data-md-color-scheme] .md-header .md-grid {
   max-width: var(--grid-max-width);
   margin-left: auto;
@@ -108,21 +109,24 @@
   color: var(--accent);
   font-weight: var(--font-bold);
   font-size: 1.4rem;
+  white-space: nowrap;
 }
 
 /* ==============================
    2. NAVIGATION
    ==============================*/
 
-/* Conteneur des onglets déplacés dans le header (via JS) */
+/* Conteneur des tabs (injecté par Material) */
 [data-md-color-scheme] .md-header__tabs {
   display: flex;
   align-items: center;
   margin-left: var(--space-md);
 }
 
-[data-md-color-scheme] .md-tabs {
+/* Suppression de l'apparence Material par défaut */
+[data-md-color-scheme] .md-header .md-tabs {
   background: transparent;
+  border-bottom: none;
   box-shadow: none;
   margin: 0;
 }
@@ -143,6 +147,8 @@
 
   color: var(--white);
   opacity: 0.75;
+  font-weight: 500;
+  white-space: nowrap;
 
   transition:
     color var(--transition-base),
