@@ -85,7 +85,7 @@
 [data-md-color-scheme] .md-header__inner {
   display: flex;
   width: 100%;
-  align-items: center;
+  /*align-items: center;*/
   height: var(--header-height);
 }
 
@@ -94,8 +94,8 @@
   display: flex;
   align-items: center;
   max-width: 100%;
-  margin: 0 auto;
-  padding: 12px;
+  /*margin: 0 auto;
+  padding: 12px;*/
 }
 
 /* Logo */
@@ -108,15 +108,15 @@
 [data-md-color-scheme] .md-header__title {
   display: flex;
   align-items: center;
-  margin-left: 0.5rem;
+  /*margin-left: 0.5rem;
   margin-right: 1.5rem;
-  flex-shrink: 0;
+  flex-shrink: 0;*/
 }
 
 /* Texte du titre */
 [data-md-color-scheme] .md-header__title .md-ellipsis {
   color: var(--accent);
-  font-weight: var(--font-bold);
+  /*font-weight: var(--font-bold);*/
   font-size: 1.4rem;
 }
 
@@ -126,6 +126,7 @@
 
 /* Conteneur des tabs (injecté par Material) */
 [data-md-color-scheme] .md-header__tabs {
+  flex: 1; 
   display: flex;
   justify-content: center;
   /*align-items: flex-end;
