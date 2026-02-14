@@ -84,8 +84,9 @@
 /* Contenu interne du header */
 [data-md-color-scheme] .md-header__inner {
   min-height: var(--header-height);
-  display: flex;
+  display: flex !important;
   align-items: center;
+  justify-content: flex-start;
 }
 
 /* Largeur et centrage du contenu */
@@ -93,6 +94,11 @@
   max-width: var(--grid-max-width);
   margin: 0 auto;
   padding: 0 var(--space-md);
+}
+
+[data-md-color-scheme] .md-header__title {
+  flex: 0 1 auto; /* Permet au titre de garder sa taille naturelle */
+  margin-right: 2rem; /* Espace entre ton nom et le menu */
 }
 
 /* Logo */
@@ -114,31 +120,34 @@
 
 /* Conteneur des tabs (injecté par Material) */
 [data-md-color-scheme] .md-header__tabs {
-  background: transparent;
-  box-shadow: none;
+  flex: 1; /* Il prend tout l'espace vide entre le titre et la recherche */
+  display: flex;
+  justify-content: center; /* CENTRE LE MENU ICI */
+  align-items: center;
+  height: 100%;
 }
 
 /* Tabs bar */
 [data-md-color-scheme] .md-tabs {
-  background: transparent;
-  border-bottom: none;
+  margin: 0;
 }
 
 /* Liste des onglets */
 [data-md-color-scheme] .md-tabs__list {
   display: flex;
-  align-items: center;
   gap: var(--space-sm);
+  margin: 0;
+  padding: 0;
 }
 
 /* Onglet — état normal */
 [data-md-color-scheme] .md-tabs__link {
-  padding: 0.45rem 0.9rem;
-  color: var(--white);
-  opacity: 0.75;
+padding: 0.2rem 0.9rem !important; 
+  line-height: var(--header-height); /* Force l'alignement vertical sur la hauteur du header */
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
   border-bottom: 3px solid transparent;
-  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
-  transition: all var(--transition-base);
 }
 
 /* Onglet — survol (hover) */
