@@ -105,6 +105,14 @@ flex: 0 0 auto !important;
   height: 64px;
 }
 
+/* Titre du site — RESTAURÉ */
+[data-md-color-scheme] .md-header__title {
+  display: flex;
+  align-items: center;
+  margin-right: var(--space-md);
+  flex-shrink: 0;
+}
+
 /* Titre du site */
 [data-md-color-scheme] .md-header__title .md-ellipsis {
   color: var(--accent);
@@ -119,8 +127,11 @@ flex: 0 0 auto !important;
 
 /* Conteneur des tabs (injecté par Material) */
 [data-md-color-scheme] .md-header__tabs {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   background-color: var(--black);
-  box-shadow: none;
 }
 
 /* Tabs bar */
@@ -132,17 +143,17 @@ flex: 0 0 auto !important;
 /* Liste des onglets */
 [data-md-color-scheme] .md-tabs__list {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  gap: 0.6rem;
   min-height: var(--header-height);
-  gap: var(--space-sm);
 }
 
 /* Onglet — état normal */
 [data-md-color-scheme] .md-tabs__link {
   display: flex;
-  align-items: center;
-  padding: 0.45rem 1rem;
+  align-items: flex-end;
+  padding: 0.35rem 0.75rem; /* PLUS PROCHE + PLUS BAS */
+  margin-bottom: 0.2rem;   /* DESCEND LE TEXTE */
   color: var(--white);
   opacity: 0.75;
   border-bottom: 3px solid transparent;
@@ -177,11 +188,7 @@ flex: 0 0 auto !important;
   padding-top: 0 !important;
 }
 
-/* --- 4. LA LIGNE ORANGE --- */
-[data-md-color-scheme] .md-tabs__item--active .md-tabs__link {
-  border-bottom-color: var(--accent) !important;
-  background-color: var(--tab-bg-active) !important;
-}
+
 
 /* ==============================
    3. CONTENU & TYPOGRAPHIE
