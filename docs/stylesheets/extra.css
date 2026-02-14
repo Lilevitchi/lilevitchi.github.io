@@ -155,13 +155,13 @@
 /* Onglet — état normal */
 [data-md-color-scheme] .md-tabs__link {
   display: flex;
-  align-items: center;
-  /*padding: 0.4rem 0.8rem;*/
-  line-height: 1;
+  /*align-items: center;*/
+  padding: 0.4rem 0.8rem;
+  /*line-height: 1;*/
   color: var(--white);
   opacity: 0.75;
  
-  border-bottom: 3px solid transparent;
+  /*border-bottom: 3px solid transparent;*/
   /*border-radius: var(--radius-sm) var(--radius-sm) 0 0;*/
  
   transition: color var(--transition-base),
