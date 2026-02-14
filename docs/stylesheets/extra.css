@@ -124,6 +124,7 @@ flex: 0 0 auto !important;
 }
 
 /* Tabs bar */
+[data-md-color-scheme] .md-tabs {
   background: transparent;
   border-bottom: none;
 }
