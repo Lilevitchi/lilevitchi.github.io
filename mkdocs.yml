@@ -32,7 +32,6 @@ theme:
 
 extra_javascript:
   - javascripts/random_tips.js
-  - assets/js/header-tabs.js
 
 extra_css:
   - stylesheets/extra.css
