@@ -138,8 +138,8 @@
 /* Conteneur des tabs (injecté par Material) */
 [data-md-color-scheme] .md-header__tabs {
   height: var(--header-height);
-  /*display: flex;
-  align-items: flex-end;
+  display: flex;
+  /*align-items: flex-end;
   justify-content: center;
   /*flex: 1;
   margin-top: 0.35rem;*/
