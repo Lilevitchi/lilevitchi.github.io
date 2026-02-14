@@ -146,7 +146,6 @@
   /*margin: 0 auto;*/
   box-shadow: none;
   pointer-events: none;
-  outline: 1px dashed orange;
 }
 
 /* Liste des onglets */
@@ -170,14 +169,13 @@
 [data-md-color-scheme] .md-tabs__link {
   pointer-events: auto;
   display: flex;
-align-self: flex-end;
+  /*align-self: flex-end;*/
   padding: 0.4rem 0.8rem;
   color: var(--white);
   opacity: 0.75;
  
   border-bottom: 3px solid transparent;
   background: transparent;
- outline: 1px dashed red;
   /*border-radius: var(--radius-sm) var(--radius-sm) 0 0;*/
  
   transition: color var(--transition-base),
@@ -202,16 +200,6 @@ align-self: flex-end;
   background-color: var(--tab-bg-active);
   border-bottom-color: var(--accent);
 }
-
-/* On cache la barre de navigation originale qui apparaît en haut à cause du mode sticky */
-/*.md-container > .md-tabs {
-  display: none;
-}*/
-
-/* On annule le décalage du contenu principal */
-/*[data-md-color-scheme] .md-main {
-  padding-top: 0;
-}*/
 
 /* ==============================
    3. CONTENU & TYPOGRAPHIE
