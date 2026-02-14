@@ -90,14 +90,18 @@
 
 /* Largeur et centrage du contenu */
 [data-md-color-scheme] .md-header .md-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   max-width: var(--grid-max-width);
   margin: 0 auto;
   padding: 0 var(--space-md);
 }
 
 [data-md-color-scheme] .md-header__title {
-flex: 0 0 auto !important;
-  margin-right: 1.5rem !important;
+  display: flex;
+  align-items: center;
+  margin-right: var(--space-md);
 }
 
 /* Logo */
@@ -118,6 +122,7 @@ flex: 0 0 auto !important;
   color: var(--accent);
   font-weight: var(--font-bold);
   font-size: 1.4rem;
+  line-height: 1;
   white-space: nowrap;
 }
 
@@ -127,11 +132,10 @@ flex: 0 0 auto !important;
 
 /* Conteneur des tabs (injecté par Material) */
 [data-md-color-scheme] .md-header__tabs {
-  flex: 1;
   display: flex;
+  align-items: flex-end; /* ⬅️ DESCEND les tabs */
   justify-content: center;
-  align-items: flex-end;
-  background-color: var(--black);
+  padding-top: 0.35rem;  /* ⬅️ Ajustement vertical fin */
 }
 
 /* Tabs bar */
@@ -143,22 +147,26 @@ flex: 0 0 auto !important;
 /* Liste des onglets */
 [data-md-color-scheme] .md-tabs__list {
   display: flex;
-  align-items: flex-end;
-  gap: 0.6rem;
-  min-height: var(--header-height);
+  align-items: center;
+  gap: 0.25rem; /* ⬅️ PLUS SERRÉ */
 }
 
 /* Onglet — état normal */
 [data-md-color-scheme] .md-tabs__link {
   display: flex;
-  align-items: flex-end;
-  padding: 0.35rem 0.75rem; /* PLUS PROCHE + PLUS BAS */
-  margin-bottom: 0.2rem;   /* DESCEND LE TEXTE */
+  align-items: center;
+  padding: 0.35rem 1rem; /* PLUS PROCHE + PLUS BAS */
+  line-height: 1;
   color: var(--white);
   opacity: 0.75;
+ 
   border-bottom: 3px solid transparent;
   border-radius: var(--radius-sm) var(--radius-sm) 0 0;
-  transition: all var(--transition-base);
+ 
+  transition: color var(--transition-base),
+              background-color var(--transition-base),
+              opacity var(--transition-base),
+              border-color var(--transition-base);
 }
 
 /* Onglet — survol (hover) */
@@ -180,12 +188,12 @@ flex: 0 0 auto !important;
 
 /* On cache la barre de navigation originale qui apparaît en haut à cause du mode sticky */
 .md-container > .md-tabs {
-  display: none !important;
+  display: none;
 }
 
 /* On annule le décalage du contenu principal */
 [data-md-color-scheme] .md-main {
-  padding-top: 0 !important;
+  padding-top: 0;
 }
 
 
