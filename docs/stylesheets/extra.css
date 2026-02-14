@@ -134,12 +134,11 @@
   display: flex;
   justify-content: center;
   height: var(--header-height);
-  background-color: rgba(255, 255, 255, 0.08);
 }
 
 /* Tabs bar */
 [data-md-color-scheme] .md-tabs {
-  width: 100%;
+ /* width: 100%;*/
   max-width: var(--grid-max-width);
   margin: 0 auto;
   display: flex;
@@ -151,7 +150,12 @@
 [data-md-color-scheme] .md-tabs__list {
   display: flex;
   align-items: center;
+  gap: 0.2rem;
   padding-top: 12px;
+}
+
+[data-md-color-scheme] .md-tabs__item {
+  margin: 0;
 }
 
 /* Onglet — état normal */
