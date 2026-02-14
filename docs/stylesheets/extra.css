@@ -83,8 +83,8 @@
 
 /* Contenu interne du header */
 [data-md-color-scheme] .md-header__inner {
-  display: flex;
-  /*align-items: center;*/
+  /*display: flex;
+  align-items: center;*/
   height: var(--header-height);
 }
 
@@ -138,9 +138,9 @@
 /* Conteneur des tabs (injecté par Material) */
 [data-md-color-scheme] .md-header__tabs {
   /*display: flex;
-  align-items: flex-end;
+  align-items: flex-end;*/
   justify-content: center;
-  flex: 1;*/
+  /*flex: 1;*/
   background-color: rgba(255, 255, 255, 0.08);
   outline: 1px dashed rgba(255, 255, 255, 0.25);
 }
