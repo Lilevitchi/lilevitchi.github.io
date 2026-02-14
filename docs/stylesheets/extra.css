@@ -106,8 +106,8 @@
 [data-md-color-scheme] .md-header__title {
   display: flex;
   align-items: center;
-  /*margin-left: 0.5rem;
-  margin-right: 1.5rem;
+  margin-left: 0.5rem;
+  /*margin-right: 1.5rem;
   flex-shrink: 0;*/
 }
 
