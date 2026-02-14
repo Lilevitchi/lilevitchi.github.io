@@ -101,12 +101,13 @@
 [data-md-color-scheme] .md-header__title {
   display: flex;
   align-items: center;
-  margin-right: var(--space-md);
+  margin-left: 0.5rem;
 }
 
 /* Logo */
 [data-md-color-scheme] .md-logo img {
   height: 64px;
+  display: block;
 }
 
 /* Titre du site — RESTAURÉ */
@@ -124,6 +125,8 @@
   font-size: 1.4rem;
   line-height: 1;
   white-space: nowrap;
+  position: relative;
+  top: 3px;
 }
 
 /* ==============================
@@ -133,13 +136,14 @@
 /* Conteneur des tabs (injecté par Material) */
 [data-md-color-scheme] .md-header__tabs {
   display: flex;
-  align-items: flex-end; /* ⬅️ DESCEND les tabs */
+  align-items: flex-end;
   justify-content: center;
-  padding-top: 0.35rem;  /* ⬅️ Ajustement vertical fin */
+  flex: 1;
 }
 
 /* Tabs bar */
 [data-md-color-scheme] .md-tabs {
+  display: inline-flex;
   background: transparent;
   border-bottom: none;
 }
@@ -148,14 +152,14 @@
 [data-md-color-scheme] .md-tabs__list {
   display: flex;
   align-items: center;
-  gap: 0.25rem; /* ⬅️ PLUS SERRÉ */
+  gap: 0.10rem;
 }
 
 /* Onglet — état normal */
 [data-md-color-scheme] .md-tabs__link {
   display: flex;
   align-items: center;
-  padding: 0.35rem 1rem; /* PLUS PROCHE + PLUS BAS */
+  padding: 0.35rem 0.75rem;
   line-height: 1;
   color: var(--white);
   opacity: 0.75;
@@ -196,8 +200,6 @@
   padding-top: 0;
 }
 
-
-
 /* ==============================
    3. CONTENU & TYPOGRAPHIE
    ==============================*/
@@ -226,8 +228,8 @@
 /* Page index : plus large visuellement */
 [data-md-color-scheme] body:has(.game-grid) .md-content__inner {
   max-width: 100%;
-  padding-left: var(--space-sm);
-  padding-right: var(--space-sm);
+  padding-left: clamp(1rem, 4vw, 3rem);
+  padding-right: clamp(1rem, 4vw, 3rem);
 }
 
 /* --------------------------------------------------
