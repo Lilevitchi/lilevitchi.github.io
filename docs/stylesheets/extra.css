@@ -83,8 +83,8 @@
 
 /* Contenu interne du header */
 [data-md-color-scheme] .md-header__inner {
-  /*display: flex;
-  align-items: center;*/
+  display: flex;
+  /*align-items: center;*/
   height: var(--header-height);
 }
 
