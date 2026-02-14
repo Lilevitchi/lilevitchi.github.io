@@ -76,6 +76,7 @@
 
 /* Header global */
 [data-md-color-scheme] .md-header {
+  position: relative;
   background-color: var(--black);
   border-bottom-left-radius: var(--radius-md);
   border-bottom-right-radius: var(--radius-md);
@@ -122,6 +123,11 @@
 
 /* Conteneur des tabs (injecté par Material) */
 [data-md-color-scheme] .md-header__tabs {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+ 
   display: flex;
   justify-content: center;
   height: var(--header-height);
