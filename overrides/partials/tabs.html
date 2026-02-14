@@ -1,1 +1,44 @@
+<nav class="md-tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+
+      <li class="md-tabs__item{% if page.url.startswith('/') %} md-tabs__item--active{% endif %}">
+        <a href="{{ '/' | url }}" class="md-tabs__link"
+           data-full="Accueil"
+           data-short="Home"></a>
+      </li>
+
+      <li class="md-tabs__item{% if page.url.startswith('/fallout4') %} md-tabs__item--active{% endif %}">
+        <a href="{{ 'fallout4/' | url }}" class="md-tabs__link"
+           data-full="Fallout 4"
+           data-short="FO4"></a>
+      </li>
+
+      <li class="md-tabs__item{% if page.url.startswith('/fallout-london') %} md-tabs__item--active{% endif %}">
+        <a href="{{ 'fallout-london/' | url }}" class="md-tabs__link"
+           data-full="Fallout London"
+           data-short="FOLON"></a>
+      </li>
+
+      <li class="md-tabs__item{% if page.url.startswith('/fnv') %} md-tabs__item--active{% endif %}">
+        <a href="{{ 'fnv/' | url }}" class="md-tabs__link"
+           data-full="Fallout New Vegas"
+           data-short="FNV"></a>
+      </li>
+
+      <li class="md-tabs__item{% if page.url.startswith('/ttw') %} md-tabs__item--active{% endif %}">
+        <a href="{{ 'ttw/' | url }}" class="md-tabs__link"
+           data-full="Tale of Two Wastelands"
+           data-short="TTW"></a>
+      </li>
+
+      <li class="md-tabs__item{% if page.url.startswith('/cyberpunk') %} md-tabs__item--active{% endif %}">
+        <a href="{{ 'cyberpunk/' | url }}" class="md-tabs__link"
+           data-full="Cyberpunk 2077"
+           data-short="CP77"></a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
 
