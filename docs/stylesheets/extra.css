@@ -177,6 +177,7 @@ align-self: flex-end;
  
   border-bottom: 3px solid transparent;
   background: transparent;
+ outline: 1px dashed red;
   /*border-radius: var(--radius-sm) var(--radius-sm) 0 0;*/
  
   transition: color var(--transition-base),
