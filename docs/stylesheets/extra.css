@@ -95,7 +95,7 @@
   display: flex;
   align-items: center;
   width: 100%;
-  /*max-width: var(--grid-max-width);*/
+  max-width: var(--grid-max-width);
   margin-left: 0;
  /* margin: 0 auto;
   margin-right: auto;*/
@@ -152,8 +152,8 @@
   justify-content: center;*/
   align-items: center;
   height: var(--header-height);
-  background-color: rgba(255, 255, 255, 0.08);
-  outline: 1px dashed rgba(255, 255, 255, 0.25);
+  /*background-color: rgba(255, 255, 255, 0.08);
+  outline: 1px dashed rgba(255, 255, 255, 0.25);*/
 }
 
 /* Tabs bar */
@@ -201,8 +201,8 @@
 .md-tabs__link {
   opacity: 1;
   color: var(--accent);
-  /*background-color: var(--tab-bg-active);
-  border-bottom-color: var(--accent);*/
+  background-color: var(--tab-bg-active);
+  border-bottom-color: var(--accent);
 }
 
 /* On cache la barre de navigation originale qui apparaît en haut à cause du mode sticky */
