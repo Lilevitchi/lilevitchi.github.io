@@ -140,7 +140,7 @@
 
 /* Tabs bar */
 [data-md-color-scheme] .md-tabs {
- /* width: 100%;*/
+  width: 100%;
   max-width: var(--grid-max-width);
   margin: 0 auto;
   display: flex;
