@@ -83,10 +83,9 @@
 
 /* Contenu interne du header */
 [data-md-color-scheme] .md-header__inner {
-display: flex !important;
-  align-items: center !important; /* Centre tout verticalement */
-  justify-content: space-between;
-  height: var(--header-height);
+  min-height: var(--header-height);
+  display: flex;
+  align-items: center;
 }
 
 /* Largeur et centrage du contenu */
@@ -120,33 +119,33 @@ flex: 0 0 auto !important;
 
 /* Conteneur des tabs (injecté par Material) */
 [data-md-color-scheme] .md-header__tabs {
-flex: 1 !important; /* Prend tout l'espace central libre */
-  display: flex !important;
-  justify-content: center !important; /* CENTRE LE MENU HORIZONTALEMENT */
-  align-self: center !important;
+  background-color: var(--black);
+  box-shadow: none;
 }
 
 /* Tabs bar */
-[data-md-color-scheme] .md-tabs {
-  margin: 0;
+  background: transparent;
+  border-bottom: none;
 }
 
 /* Liste des onglets */
 [data-md-color-scheme] .md-tabs__list {
-display: flex !important;
-  align-items: center !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  height: var(--header-height) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: var(--header-height);
+  gap: var(--space-sm);
 }
 
 /* Onglet — état normal */
 [data-md-color-scheme] .md-tabs__link {
-height: var(--header-height) !important;
-  display: flex !important;
-  align-items: center !important; /* Centre le texte verticalement */
-  padding: 0 1rem !important;
-  border-bottom: 3px solid transparent !important;
+  display: flex;
+  align-items: center;
+  padding: 0.45rem 1rem;
+  color: var(--white);
+  opacity: 0.75;
+  border-bottom: 3px solid transparent;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
   transition: all var(--transition-base);
 }
 
