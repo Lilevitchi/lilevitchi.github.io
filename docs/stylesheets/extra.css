@@ -107,14 +107,12 @@
   display: flex;
   align-items: center;
   margin-left: 0.5rem;
-  /*margin-right: 1.5rem;
-  flex-shrink: 0;*/
+  /*flex-shrink: 0;*/
 }
 
 /* Texte du titre */
 [data-md-color-scheme] .md-header__title .md-ellipsis {
   color: var(--accent);
-  /*font-weight: var(--font-bold);*/
   font-size: 1.4rem;
 }
 
@@ -124,25 +122,33 @@
 
 /* Conteneur des tabs (injecté par Material) */
 [data-md-color-scheme] .md-header__tabs {
-  flex: 1; 
   display: flex;
   justify-content: center;
   /*align-items: flex-end;
   justify-content: center;
   /*flex: 1;
   margin-top: 0.35rem;
-  justify-content: center;*/
-  align-items: center;
+  justify-content: center;
+  align-items: center;*/
   height: var(--header-height);
   background-color: rgba(255, 255, 255, 0.08);
-  outline: 1px dashed rgba(255, 255, 255, 0.25);
 }
 
-/* Tabs bar */
+/* Tabs bar 
 [data-md-color-scheme] .md-tabs {
   display: flex;
   background: transparent;
   border-bottom: none;
+}*/
+
+/* === BLOC DES TABS === */
+[data-md-color-scheme] .md-tabs {
+  width: 100%;
+  max-width: var(--grid-max-width); /* même largeur que le contenu */
+  margin: 0 auto;                  /* centre le bloc */
+  display: flex;
+  justify-content: center;          /* centre la liste dedans */
+   outline: 1px dashed orange;
 }
 
 /* Liste des onglets */
@@ -220,6 +226,9 @@
   padding-bottom: var(--space-lg);
   padding-left: var(--space-lg);
   padding-right: var(--space-lg);
+
+  background-color: rgba(255, 255, 255, 0.08);
+  outline: 1px dashed rgba(255, 255, 255, 0.25);
 }
 
 /* Page index : plus large visuellement */
