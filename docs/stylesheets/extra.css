@@ -77,8 +77,8 @@
 /* Header global */
 [data-md-color-scheme] .md-header {
   background-color: var(--black);
-  border-bottom-left-radius: var(--radius-sm);
-  border-bottom-right-radius: var(--radius-sm);
+  border-bottom-left-radius: var(--radius-md);
+  border-bottom-right-radius: var(--radius-md);
 }
 
 /* Contenu interne du header */
@@ -109,7 +109,7 @@
 /* Logo */
 [data-md-color-scheme] .md-logo img {
   height: 60px;
-  display: block;
+  /*display: block;*/
 }
 
 /* Titre du site — RESTAURÉ */
