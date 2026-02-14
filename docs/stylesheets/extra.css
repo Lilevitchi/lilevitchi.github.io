@@ -77,7 +77,6 @@
 /* Fond du header */
 [data-md-color-scheme] .md-header {
   background-color: var(--black);
-  position: relative;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -85,16 +84,17 @@
 /* Contenu interne du header */
 [data-md-color-scheme] .md-header__inner {
   min-height: var(--header-height);
-   display: flex; /* Ajoutez ceci */
-  align-items: center; /* Ajoutez ceci */
+  display: flex;
+  align-items: center;
 }
 
 /* Largeur globale du contenu du header */
 [data-md-color-scheme] .md-header .md-grid {
   max-width: var(--grid-max-width);
-  margin-left: 0;
+  margin-left: auto;
   margin-right: auto;
   padding-left: var(--space-sm);
+  padding-right: var(--space-sm);
 }
 
 /* Logo */
@@ -115,28 +115,27 @@
    ==============================*/
 
 /* Conteneur des onglets déplacés dans le header (via JS) */
-[data-md-color-scheme] .md-tabs.in-header {
-  position: static;
-  background: transparent;
-  flex: 1; /* Prend l'espace disponible */
+[data-md-color-scheme] .md-header__tabs {
   display: flex;
   align-items: center;
-  justify-content: flex-end; /* Alignement à droite */
+  margin-left: var(--space-md);
+}
+
+[data-md-color-scheme] .md-tabs {
+  background: transparent;
+  box-shadow: none;
   margin: 0;
-  padding-right: var(--space-lg);
 }
 
 /* Liste des onglets */
-[data-md-color-scheme] .md-tabs.in-header .md-tabs__list {
+[data-md-color-scheme] .md-tabs__list {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  margin: 0;
-  gap: var(--space-xs); /* Espacement entre les onglets */
+  gap: var(--space-xs);
 }
 
 /* Onglet — état normal */
-[data-md-color-scheme] .md-tabs.in-header .md-tabs__link {
+[data-md-color-scheme] .md-tabs__link {
   /*display: inline-block;*/
   padding: 0.45rem 0.9rem;
   border-bottom: 3px solid transparent;
@@ -153,7 +152,7 @@
 }
 
 /* Onglet — survol (hover) */
-[data-md-color-scheme] .md-tabs.in-header .md-tabs__link:hover {
+[data-md-color-scheme] .md-tabs__link:hover {
   opacity: 1;
   color: var(--accent);
   background-color: var(--tab-bg-hover);
@@ -161,7 +160,6 @@
 
 /* Onglet — état actif */
 [data-md-color-scheme]
-.md-tabs.in-header
 .md-tabs__item--active
 .md-tabs__link {
   opacity: 1;
