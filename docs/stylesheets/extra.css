@@ -86,22 +86,18 @@
   min-height: var(--header-height);
   display: flex;
   align-items: center;
-  gap: var(--space-md);
 }
 
 /* Largeur et centrage du contenu */
 [data-md-color-scheme] .md-header .md-grid {
   max-width: var(--grid-max-width);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--space-sm);
-  padding-right: var(--space-sm);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
 }
 
 /* Logo */
 [data-md-color-scheme] .md-logo img {
   height: 64px;
-  width: auto;
 }
 
 /* Titre du site */
@@ -118,43 +114,31 @@
 
 /* Conteneur des tabs (injecté par Material) */
 [data-md-color-scheme] .md-header__tabs {
-  display: flex;
-  align-items: center;
-  margin-left: var(--space-md);
+  background: transparent;
+  box-shadow: none;
 }
 
-/* Suppression de l'apparence Material par défaut */
-[data-md-color-scheme] .md-header .md-tabs {
+/* Tabs bar */
+[data-md-color-scheme] .md-tabs {
   background: transparent;
   border-bottom: none;
-  box-shadow: none;
-  margin: 0;
 }
 
 /* Liste des onglets */
 [data-md-color-scheme] .md-tabs__list {
   display: flex;
   align-items: center;
-  gap: var(--space-xs);
+  gap: var(--space-sm);
 }
 
 /* Onglet — état normal */
 [data-md-color-scheme] .md-tabs__link {
-  /*display: inline-block;*/
   padding: 0.45rem 0.9rem;
-  border-bottom: 3px solid transparent;
-  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
-
   color: var(--white);
   opacity: 0.75;
-  font-weight: 500;
-  white-space: nowrap;
-
-  transition:
-    color var(--transition-base),
-    background-color var(--transition-base),
-    opacity var(--transition-base),
-    border-color var(--transition-base);
+  border-bottom: 3px solid transparent;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  transition: all var(--transition-base);
 }
 
 /* Onglet — survol (hover) */
