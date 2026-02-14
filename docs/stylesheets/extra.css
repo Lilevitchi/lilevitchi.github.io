@@ -94,8 +94,8 @@
   align-items: center;
   width: 100%;
   max-width: var(--grid-max-width);
-  margin: 0 auto;
- /* margin-left: 0;
+  margin-left: 0;
+ /* margin: 0 auto;
   margin-right: auto;*/
   padding-left: 12px;
 }
