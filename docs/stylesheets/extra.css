@@ -83,10 +83,10 @@
 
 /* Contenu interne du header */
 [data-md-color-scheme] .md-header__inner {
-  min-height: var(--header-height);
-  display: flex !important;
-  align-items: center;
-  justify-content: flex-start;
+display: flex !important;
+  align-items: center !important; /* Centre tout verticalement */
+  justify-content: space-between;
+  height: var(--header-height);
 }
 
 /* Largeur et centrage du contenu */
@@ -97,8 +97,8 @@
 }
 
 [data-md-color-scheme] .md-header__title {
-  flex: 0 1 auto; /* Permet au titre de garder sa taille naturelle */
-  margin-right: 2rem; /* Espace entre ton nom et le menu */
+flex: 0 0 auto !important;
+  margin-right: 1.5rem !important;
 }
 
 /* Logo */
@@ -120,11 +120,10 @@
 
 /* Conteneur des tabs (injecté par Material) */
 [data-md-color-scheme] .md-header__tabs {
-  flex: 1; /* Il prend tout l'espace vide entre le titre et la recherche */
-  display: flex;
-  justify-content: center; /* CENTRE LE MENU ICI */
-  align-items: center;
-  height: 100%;
+flex: 1 !important; /* Prend tout l'espace central libre */
+  display: flex !important;
+  justify-content: center !important; /* CENTRE LE MENU HORIZONTALEMENT */
+  align-self: center !important;
 }
 
 /* Tabs bar */
@@ -134,20 +133,21 @@
 
 /* Liste des onglets */
 [data-md-color-scheme] .md-tabs__list {
-  display: flex;
-  gap: var(--space-sm);
-  margin: 0;
-  padding: 0;
+display: flex !important;
+  align-items: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: var(--header-height) !important;
 }
 
 /* Onglet — état normal */
 [data-md-color-scheme] .md-tabs__link {
-padding: 0.2rem 0.9rem !important; 
-  line-height: var(--header-height); /* Force l'alignement vertical sur la hauteur du header */
-  height: var(--header-height);
-  display: flex;
-  align-items: center;
-  border-bottom: 3px solid transparent;
+height: var(--header-height) !important;
+  display: flex !important;
+  align-items: center !important; /* Centre le texte verticalement */
+  padding: 0 1rem !important;
+  border-bottom: 3px solid transparent !important;
+  transition: all var(--transition-base);
 }
 
 /* Onglet — survol (hover) */
@@ -165,6 +165,22 @@ padding: 0.2rem 0.9rem !important;
   color: var(--accent);
   background-color: var(--tab-bg-active);
   border-bottom-color: var(--accent);
+}
+
+/* On cache la barre de navigation originale qui apparaît en haut à cause du mode sticky */
+.md-container > .md-tabs {
+  display: none !important;
+}
+
+/* On annule le décalage du contenu principal */
+[data-md-color-scheme] .md-main {
+  padding-top: 0 !important;
+}
+
+/* --- 4. LA LIGNE ORANGE --- */
+[data-md-color-scheme] .md-tabs__item--active .md-tabs__link {
+  border-bottom-color: var(--accent) !important;
+  background-color: var(--tab-bg-active) !important;
 }
 
 /* ==============================
