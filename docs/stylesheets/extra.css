@@ -149,7 +149,6 @@ body {
   width: 100%;
   background: transparent;
   box-shadow: none;
-   outline: 1px dashed rgba(255, 0, 0, 0.25);
 }
 
 /* Liste des onglets */
@@ -158,7 +157,7 @@ body {
   align-items: center;
   height: 100%;
   gap: 0;
-  padding: 0;
+  padding-bot: 0.8rem;
   margin: 0;
    outline: 1px dashed rgba(255, 255, 255, 0.25);
 }
@@ -184,21 +183,7 @@ body {
               background-color var(--transition-base),
               opacity var(--transition-base),
               border-color var(--transition-base);
-
-/* border-bottom: none;
- position: relative;*/
 }
-
-/*[data-md-color-scheme] .md-tabs__link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 4px;
-  background: transparent;
-  transition: background-color var(--transition-base);
-}*/
 
 /* Onglet — survol (hover) */
 [data-md-color-scheme] .md-tabs__link:hover {
@@ -216,12 +201,6 @@ body {
   background-color: var(--tab-bg-active);
   border-bottom-color: var(--accent);
 }
-
-/*[data-md-color-scheme]
-.md-tabs__item--active
-.md-tabs__link::after {
-  background-color: var(--accent);
-}*/
 
 /* Texte long */
 .md-tabs__link::before {
