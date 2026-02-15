@@ -176,14 +176,14 @@ body {
   opacity: 0.75;
   overflow: visible !important;
   text-indent: 0 !important;
-  /*border-bottom: 4px solid transparent;*/
+  border-bottom: 4px solid transparent;
   background: transparent;
   transition: color var(--transition-base),
               background-color var(--transition-base),
               opacity var(--transition-base),
               border-color var(--transition-base);
 
-/* border-bottom: none;*/
+/* border-bottom: none;
  position: relative;
 }
 
@@ -196,7 +196,7 @@ body {
   height: 4px;
   background: transparent;
   transition: background-color var(--transition-base);
-}
+}*/
 
 /* Onglet — survol (hover) */
 [data-md-color-scheme] .md-tabs__link:hover {
@@ -215,11 +215,11 @@ body {
   border-bottom-color: var(--accent);
 }
 
-[data-md-color-scheme]
+/*[data-md-color-scheme]
 .md-tabs__item--active
 .md-tabs__link::after {
   background-color: var(--accent);
-}
+}*/
 
 /* Texte long */
 .md-tabs__link::before {
