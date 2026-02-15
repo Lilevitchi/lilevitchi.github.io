@@ -614,7 +614,7 @@ body:has(.game-grid) .md-main__inner {
    ==============================*/
 
 /* Conteneur des icônes sociales */
-.md-footer-social {
+[data-md-color-scheme] .md-footer-social {
     display: flex;
     justify-content: flex-end;
     gap: 15px;
