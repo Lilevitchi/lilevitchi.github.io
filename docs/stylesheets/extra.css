@@ -244,6 +244,7 @@ body:has(.game-grid) .md-sidebar--primary {
   visibility: hidden;
   pointer-events: none;
   transition: transform 0.3s ease, opacity 0.2s ease;
+  z-index: 120; /* 🔹 essentiel : au-dessus du contenu */
 }
 
 /* Burger ouvert → sidebar visible */
@@ -254,6 +255,13 @@ input[data-md-toggle="drawer"]:checked
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+}
+
+/* Overlay derrière la sidebar (sinon clics bloqués) */
+body:has(.game-grid)
+input[data-md-toggle="drawer"]:checked
+~ .md-overlay {
+  z-index: 110;
 }
 
 /* Conteneur principal */
@@ -267,12 +275,17 @@ input[data-md-toggle="drawer"]:checked
   border-bottom-right-radius: var(--radius-sm);
 }
 
-/* Page index : plus large visuellement */
+/* Force Material à recalculer la grille */
+body:has(.game-grid) .md-main__inner {
+  grid-template-columns: 1fr !important;
+}
+
+/* Page index : plus large visuellement 
 [data-md-color-scheme] body:has(.game-grid) .md-content__inner {
   max-width: 100%;
   padding-left: clamp(1rem, 4vw, 3rem);
   padding-right: clamp(1rem, 4vw, 3rem);
-}
+}*/
 
 /* --------------------------------------------------
    TITRES
@@ -400,10 +413,6 @@ input[data-md-toggle="drawer"]:checked
   width: auto; 
   height: 100px;
   align-self: center;
-}
-
-.bot-advice:hover img {
-  transform: translateY(-2px);
 }
 
 /* Titre du conseil */
@@ -651,16 +660,17 @@ input[data-md-toggle="drawer"]:checked
     align-items: center;
     transition: filter 0.3s ease; 
     position: relative;
-    fill: currentColor;
+    color: var(--white);
 }
-/*
+
 .orange-icon-svg {
     top: -1.5px !important;
 }
 
+/*
 .md-footer-social__icon {
     top: -7px !important;
-}*/
+}
 
 .md-typeset a:hover .orange-icon-svg, 
 .md-footer-social__link:hover .md-footer-social__icon,
@@ -686,20 +696,7 @@ input[data-md-toggle="drawer"]:checked
 .hub-wrapper .custom-social-icon { 
     filter: brightness(0) invert(1) !important; 
 }
-
-.orange-icon-svg {
-    top: -1.5px !important;
-}
-
-.md-footer-social__icon {
-    top: -7px !important;
-}
-
-.md-typeset a:hover .orange-icon-svg, 
-.md-footer-social__link:hover .md-footer-social__icon,
-.md-footer-social__link:hover .custom-social-icon { 
-    filter: invert(48%) sepia(89%) saturate(2476%) hue-rotate(346deg) brightness(101%) contrast(101%) !important; 
-}*/
+*/
 
 /* ==============================
    9. RÉSEAUX SOCIAUX — FOOTER
