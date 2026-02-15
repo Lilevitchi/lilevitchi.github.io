@@ -703,8 +703,9 @@ body:has(.game-grid) .md-main__inner {
     height: 1.1rem;
     transition: color var(--transition-base);
     align-items: center;
-    /*fill: currentColor;
     justify-content: center;
+    /*fill: currentColor;
+
     vertical-align: middle;
     transition: fill var(--transition-base);*/
     filter: brightness(0) invert(1);
