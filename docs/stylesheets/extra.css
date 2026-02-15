@@ -656,19 +656,19 @@ body:has(.game-grid) .md-main__inner {
     padding: 0.5rem 0;
 }
 
-/* Lien individuel */
+/* Lien individuel 
  [data-md-color-scheme] .md-footer-social__link {
     display: inline-flex;
     color: var(--white) !important;
     opacity: 0.7;
     transition: color var(--transition-base);
-}
+}*/
 
 /* SVG des icônes sociales */
 [data-md-color-scheme] .md-footer-social__link svg { 
    max-height: 1.1rem; 
    width: 1.1rem; 
-   fill: currentColor !important;
+   fill: currentColor;
 } 
 
 [data-md-color-scheme] .md-footer-social__link svg path {
