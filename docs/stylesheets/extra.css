@@ -321,6 +321,18 @@ body:has(.game-grid) .md-main__inner {
   fill: var(--accent);
 }
 
+[data-md-color-scheme] .orange-icon-svg {     
+    width: 1.1rem;
+    height: 1.1rem;
+    transition: color var(--transition-base);
+    transform: translateY(5px);
+    filter: brightness(0) invert(1);
+}
+
+[data-md-color-scheme] .md-typeset a:hover .orange-icon-svg { 
+    filter: invert(48%) sepia(89%) saturate(2476%) hue-rotate(346deg) brightness(101%) contrast(101%);
+} 
+
 /* --------------------------------------------------
    NAVIGATION SECONDAIRE (SIDEBAR DROITE)
    -------------------------------------------------- */
@@ -563,8 +575,10 @@ body:has(.game-grid) .md-main__inner {
 } */
 
 
+/* ==============================
+   8. CURSEURS & TAILLE PC
+   ==============================*/
 
-/* --- 8. CURSEURS & TAILLE PC --- */
 /* @media screen and (min-width: 60em) { */
     .game-card { height: 200px !important; } /* Réduit de 250px à 200px */
 
@@ -594,23 +608,12 @@ body:has(.game-grid) .md-main__inner {
  [data-md-color-scheme] .md-footer-social__link {
     display: inline-flex;
     align-items: center;
-   /* justify-content: center;
-    max-height: 1.1rem; 
-    width: 1.1rem; */
     color: var(--white);
     opacity: 0.7;
     transition: color var(--transition-base);
 }
 
-/* SVG des icônes sociales
-[data-md-color-scheme] .md-footer-social__link svg { 
-   /* justify-content: center;
-    max-height: 1.1rem; 
-    width: 1.1rem; 
-    display: block; 
-    fill: currentColor;
-} */
-
+/* SVG des icônes sociales */
 [data-md-color-scheme] .md-footer-social__link svg,
 [data-md-color-scheme] .md-footer-social__link img {
   width: 1.1rem;
@@ -618,87 +621,25 @@ body:has(.game-grid) .md-main__inner {
   fill: currentColor;
 }
 
+/* Hover global */
 [data-md-color-scheme] .md-footer-social__link:hover {
     transform: translateY(-2px);
 }
 
-/* Hover global */
+/* Hover des icônes sociales  */
 [data-md-color-scheme] .md-footer-social__link:hover svg {
     color: var(--accent);
     opacity: 1;
-    /*transform: translateY(-2px);*/
 }
 
+/* SVG de Nexusmod */
 [data-md-color-scheme] .md-footer-social__icon {   
-   /* width: 1.1rem;
-    height: 1.1rem;
-    fill: currentColor;
-    vertical-align: middle;
-    transition: fill var(--transition-base);*/
     filter: brightness(0) invert(1) opacity(0.7);
 }
 
-[data-md-color-scheme] .orange-icon-svg {     
-    width: 1.1rem;
-    height: 1.1rem;
-    transition: color var(--transition-base);
-    transform: translateY(5px);
-    filter: brightness(0) invert(1);
-}
-
-[data-md-color-scheme] .md-typeset a:hover .orange-icon-svg, 
 [data-md-color-scheme] .md-footer-social__link:hover .md-footer-social__icon { 
     filter: invert(48%) sepia(89%) saturate(2476%) hue-rotate(346deg) brightness(101%) contrast(101%);
 } 
-
-/*
-[data-md-color-scheme] .custom-social-icon {   
-    width: 1.1rem;
-    height: 1.1rem;
-    fill: currentColor;
-    vertical-align: middle;
-    transition: fill var(--transition-base);
-    outline: 1px dashed rgba(255, 255, 0, 0.25);
-}
-
-/*
-[data-md-color-scheme] .md-typeset a:hover .orange-icon-svg, 
-[data-md-color-scheme] .md-footer-social__link:hover .md-footer-social__icon,
-[data-md-color-scheme] .md-footer-social__link:hover .custom-social-icon { 
-    fill: var(--accent);
-}  
-
-
-[data-md-color-scheme] .orange-icon-svg {
-    top: -1.5px;
-}
-
-
-[data-md-color-scheme] .orange-icon-svg,
-[data-md-color-scheme] .custom-social-icon,
-[data-md-color-scheme] .md-footer-social__icon {   
-    width: 1.1rem;
-    height: 1.1rem;
-    fill: currentColor;
-    vertical-align: middle;
-    transition: fill var(--transition-base);
-    outline: 1px dashed rgba(255, 255, 0, 0.25);
-}
-
-[data-md-color-scheme] .md-footer-social__icon {
-    top: -6.5px;
-}*/
-
-
-
-/*
-[data-md-color-scheme] .md-typeset a:hover .orange-icon-svg, 
-[data-md-color-scheme] .md-footer-social__link:hover .md-footer-social__icon,
-[data-md-color-scheme] .md-footer-social__link:hover .custom-social-icon { 
-    filter: invert(48%) sepia(89%) saturate(2476%) hue-rotate(346deg) brightness(101%) contrast(101%) !important; 
-} */
-
-
 
 
  /* --- 10. HUB JEUX --- */
