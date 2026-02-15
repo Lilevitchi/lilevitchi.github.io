@@ -699,6 +699,7 @@ body:has(.game-grid) .md-main__inner {
 [data-md-color-scheme] .md-typeset a:hover .orange-icon-svg,
 [data-md-color-scheme] .md-footer-social__link:hover .custom-social-icon { 
     fill: var(--accent);
+    transform: translateY(-2px);
 } 
 
 /*
