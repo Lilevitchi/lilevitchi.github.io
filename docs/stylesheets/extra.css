@@ -171,7 +171,7 @@ body {
   min-height: var(--header-height); 
   display: flex;
   align-self: flex-end; 
-  padding: 0.4rem 0.6rem;
+  /*padding: 0.4rem 0.8rem;*/
   color: var(--white);
   opacity: 0.75;
   overflow: visible !important;
@@ -182,6 +182,20 @@ body {
               background-color var(--transition-base),
               opacity var(--transition-base),
               border-color var(--transition-base);
+
+ border-bottom: none;
+ position: relative;
+}
+
+[data-md-color-scheme] .md-tabs__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background: transparent;
+  transition: background-color var(--transition-base);
 }
 
 /* Onglet — survol (hover) */
@@ -199,6 +213,12 @@ body {
   color: var(--accent);
   background-color: var(--tab-bg-active);
   border-bottom-color: var(--accent);
+}
+
+[data-md-color-scheme]
+.md-tabs__item--active
+.md-tabs__link::after {
+  background-color: var(--accent);
 }
 
 /* Texte long */
