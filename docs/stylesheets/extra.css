@@ -100,12 +100,12 @@ body {
   display: flex;
   align-items: center;
   max-width: 100%;
-  padding-right: 20px;
+  padding-right: var(--space-lg);
 }
 
 /* Logo */
 [data-md-color-scheme] .md-logo img {
-  height: 60px;
+  height: 3.7rem;
   display: block;
 }
 
@@ -113,13 +113,13 @@ body {
 [data-md-color-scheme] .md-header__title {
   display: flex;
   align-items: center;
-  margin-left: 0.5rem;
+  margin-left: var(--space-xs);
 }
 
 /* Texte du titre */
 [data-md-color-scheme] .md-header__title .md-ellipsis {
   color: var(--accent);
-  font-size: 1rem;
+  font-size: var(--font-base-size);
   font-weight: normal;
 }
 
@@ -172,7 +172,7 @@ body {
   display: flex;
   padding: 0.4rem 0.8rem;
   color: var(--white);
-  /*opacity: 0.75;*/
+  opacity: 1;
   border-bottom: 4px solid transparent;
   background: transparent;
   transition: color var(--transition-base),
@@ -183,7 +183,7 @@ body {
 
 /* Onglet — survol (hover) */
 [data-md-color-scheme] .md-tabs__link:hover {
-  opacity: 1;
+  /*opacity: 1;*/
   color: var(--accent);
   background-color: var(--tab-bg-hover);
 }
@@ -192,7 +192,7 @@ body {
 [data-md-color-scheme]
 .md-tabs__item--active
 .md-tabs__link {
-  opacity: 1;
+  /*opacity: 1;*/
   color: var(--accent);
   background-color: var(--tab-bg-active);
   border-bottom-color: var(--accent);
@@ -229,7 +229,7 @@ body {
 
 [data-md-color-scheme] .md-main__inner,
 [data-md-color-scheme] .md-content {
-  margin-top: 10px;
+  margin-top: var(--space-sm);
 }
 
 /* Page index : sidebar droite masquée par défaut */
@@ -305,6 +305,7 @@ input[data-md-toggle="drawer"]:checked
 [data-md-color-scheme] .md-typeset p {
   text-align: left;
   max-width: 100%;
+  color: var(--white);
  /* margin-left: 0;
   margin-right: 0;*/
 }
@@ -391,6 +392,7 @@ input[data-md-toggle="drawer"]:checked
 .bot-advice img {
   margin-right: var(--space-lg);
   flex-shrink: 0;
+  height: 60px;
 }
 
 /* Titre du conseil */
@@ -403,6 +405,7 @@ input[data-md-toggle="drawer"]:checked
 #lile-bot-tip {
   font-style: italic;
   opacity: 0.8;
+  color: var(--white);
 }
 
 /* Bouton Ko-fi */
@@ -410,7 +413,7 @@ input[data-md-toggle="drawer"]:checked
   background-color: var(--accent);
   color: var(--white);
 
-  padding: 0.45rem 0.9rem;
+  padding: var(--space-xs) var(--space-md);
   border-radius: var(--radius-sm);
 
   font-size: 0.75rem;
@@ -429,7 +432,10 @@ input[data-md-toggle="drawer"]:checked
   box-shadow: 0 0 10px var(--accent-glow);
 }
 
-/* --- 7. GRILLE DES JEUX (HUB) --- */
+/* ==============================
+   HUB — GRILLE DES JEUX
+   ============================== */
+
 /* @media screen and (min-width: 60em) {
     .md-sidebar--primary:has(~ .md-content .game-grid),
     .md-content:has(.game-grid) ~ .md-sidebar--primary {
@@ -443,11 +449,11 @@ input[data-md-toggle="drawer"]:checked
 }*/
 
 .game-grid {
-    /*display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Réduit de 280px à 220px */
-    gap: 15px;
-    padding: 10px;
-    max-width: 1400px; /* Limite la largeur totale pour ne pas s'étaler trop sur ultra-wide */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-md);
+    /*padding: 10px;*/
+    max-width: var( --content-max-width); /* Limite la largeur totale pour ne pas s'étaler trop sur ultra-wide */
     margin: 20px auto 0 auto !important; /* Centre la grille si l'écran est trop large */
     height: auto !important;
     overflow: visible !important;
