@@ -654,29 +654,29 @@ body:has(.game-grid) .md-main__inner {
     display: flex;
     gap: var(--space-sm);
     padding: 0.5rem 0;
- outline: 1px dashed rgba(255, 0, 0, 0.25);
+    outline: 1px dashed rgba(255, 0, 0, 0.25); /* Rouge */
 }
 
 /* Lien individuel */
  [data-md-color-scheme] .md-footer-social__link {
-    display: inline-flex;
+  /*  display: inline-flex;
     align-items: center;
-    justify-content: center;
-    width: 1.1rem;
-    height: 1.1rem; 
-    color: var(--white);
-    opacity: 0.7;
-    transition: color var(--transition-base);
-   outline: 1px dashed rgba(0, 0, 255, 0.25);
+    justify-content: center;*/
+    max-height: 1.1rem; 
+    width: 1.1rem; 
+    color: currentColor;
+   /* opacity: 1;
+    transition: color var(--transition-base);*/
+    outline: 1px dashed rgba(0, 0, 255, 0.25); /* Bleu */
 }
 
 /* SVG des icônes sociales */
 [data-md-color-scheme] .md-footer-social__link svg { 
-   max-height: 1.1rem; 
-   width: 1.1rem; 
-   fill: currentColor;
-   display: block; 
-    outline: 1px dashed rgba(0, 255, 0, 0.25);
+    max-height: 1.1rem; 
+    width: 1.1rem; 
+    fill: currentColor;
+ /*   display: block; */
+    outline: 1px dashed rgba(0, 255, 0, 0.25); /* Vert */
 } 
 /*
 [data-md-color-scheme] .md-footer-social__link svg path {
@@ -697,16 +697,16 @@ body:has(.game-grid) .md-main__inner {
     fill: currentColor;
     vertical-align: middle;
     transition: fill var(--transition-base);
-    outline: 1px dashed rgba(255, 255, 0, 0.25);
+    outline: 1px dashed rgba(255, 255, 0, 0.25); /* Jaune */
 }
-
+/*
 [data-md-color-scheme] .md-typeset a:hover .orange-icon-svg,
 [data-md-color-scheme] .md-footer-social__link:hover .custom-social-icon { 
     fill: var(--accent);
     transform: translateY(-2px);
 } 
 
-/*
+
 [data-md-color-scheme] .orange-icon-svg {
     top: -1.5px;
 }
