@@ -689,7 +689,7 @@ body:has(.game-grid) .md-main__inner {
    /* margin-left: auto;*/
     padding-top: 8px;
 
-    align-items: center;
+    
 }
 
 /* Lien individuel */
@@ -720,6 +720,7 @@ body:has(.game-grid) .md-main__inner {
     /*filter: brightness(0) invert(1);*/
     transition: fill var(--transition-base);
     position: relative;
+ align-items: center;
     /*filter: brightness(0) invert(var(--md-icons-invert, 1)) !important;*/
 }
 
