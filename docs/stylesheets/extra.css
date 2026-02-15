@@ -270,17 +270,18 @@ body {
 }
 
 [data-md-color-scheme] .md-content__inner {
-    max-width: none; /* Le texte peut s'étaler sans limite */
+    max-width: none;
     width: 100%;
     padding: var(--space-lg);
     background-color: var(--tab-bg-hover);
     border-radius: var(--radius-sm);
+    box-sizing: border-box;
     outline: 2px dashed rgba(255, 255, 0, 0.8); /* Jaune (Debug) */
 }
 
 [data-md-color-scheme] .md-sidebar {
-    width: 12.1rem; /* Taille standard des guides ModdingLinked */
-    flex-shrink: 0;  /* Empêche les colonnes de s'écraser */
+    width: 12.1rem;
+    flex-shrink: 0;
     outline: 2px dashed rgba(255, 0, 255, 0.5); /* Rose (Debug) */
 }
 
