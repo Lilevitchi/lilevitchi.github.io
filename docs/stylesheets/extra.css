@@ -308,13 +308,13 @@ body:has(.game-grid) .md-main__inner {
    LIENS
    -------------------------------------------------- */
 
-[data-md-color-scheme] .md-typeset a {
+[data-md-color-scheme] .md-typeset a:not(.kofi-button) {
   color: var(--white);
   transition: color var(--transition-base), transform var(--transition-base);
   display: inline-block;
 }
 
-[data-md-color-scheme] .md-typeset a:hover {
+[data-md-color-scheme] .md-typeset a:hover:not(.kofi-button) {
   color: var(--accent);
   transform: translateY(-2px);
 }
@@ -441,7 +441,6 @@ line-height: 1.4;
 .kofi-button:hover {
   background-color: var(--dark-1);
   box-shadow: 0 0 10px var(--accent-glow);
-  transform: translateY(2px);
 }
 
 /* ==============================
