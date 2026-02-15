@@ -602,14 +602,21 @@ body:has(.game-grid) .md-main__inner {
     transition: color var(--transition-base), transform var(--transition-base);
 }
 
-/* SVG des icônes sociales */
+/* SVG des icônes sociales
 [data-md-color-scheme] .md-footer-social__link svg { 
    /* justify-content: center;
     max-height: 1.1rem; 
     width: 1.1rem; 
-    display: block; */
+    display: block; 
     fill: currentColor;
-} 
+} */
+
+[data-md-color-scheme] .md-footer-social__link svg,
+[data-md-color-scheme] .md-footer-social__link img {
+  width: 1.1rem;
+  height: 1.1rem;
+  display: block;
+}
 
 [data-md-color-scheme] .md-footer-social__link:hover {
     transform: translateY(-2px);
