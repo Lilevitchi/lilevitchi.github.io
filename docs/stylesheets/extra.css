@@ -109,6 +109,11 @@ body {
   display: block;
 }
 
+/* Logo Hover */
+[data-md-color-scheme] .md-logo img:hover {
+   transform: translateY(-2px);
+}
+
 /* Titre du site */
 [data-md-color-scheme] .md-header__title {
   display: flex;
@@ -186,6 +191,7 @@ body {
   opacity: 1;
   color: var(--accent);
   background-color: var(--tab-bg-hover);
+  transform: translateY(-2px);
 }
 
 /* Onglet — état actif */
@@ -310,6 +316,7 @@ body:has(.game-grid) .md-main__inner {
 
 [data-md-color-scheme] .md-typeset a:hover {
   color: var(--accent);
+  transform: translateY(-2px);
 }
 
 /* Icônes Material dans les liens */
@@ -325,7 +332,7 @@ body:has(.game-grid) .md-main__inner {
     width: 1.1rem;
     height: 1.1rem;
     transition: color var(--transition-base);
-    transform: translateY(5px);
+    transform: translateY(7px);
     filter: brightness(0) invert(1);
 }
 
@@ -352,6 +359,7 @@ body:has(.game-grid) .md-main__inner {
 [data-md-color-scheme] .md-nav--secondary .md-nav__link:hover {
   color: var(--accent);
   opacity: 1;
+  transform: translateY(-2px);
 }
 
 /* --------------------------------------------------
