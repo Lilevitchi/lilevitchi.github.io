@@ -675,40 +675,99 @@ body:has(.game-grid) .md-main__inner {
     color: var(--accent);
 }*/
 
-/* --- 9. RÉSEAUX SOCIAUX & ICÔNES --- */ 
+ /* --- 9. RÉSEAUX SOCIAUX --- */ 
 
-/* 1. Règle de base : les icônes s'adaptent au thème (clair/sombre) sur l'index */
+.md-footer-social {
+
+    display: flex !important;
+
+    justify-content: flex-end !important;
+
+    gap: 15px !important;
+
+    margin-left: auto !important;
+
+    padding-top: 8px !important;
+
+}
+
+
+.md-footer-social__link {
+
+    margin-left: 10px !important;
+
+}
+
+
+.md-footer-social__link svg { 
+
+   max-height: 1.1rem !important; 
+
+   width: 1.1rem !important; 
+
+   fill: #ffffff !important;
+
+   transition: fill 0.3s ease;
+
+} 
+
+
+.md-footer-social__link:hover svg {
+
+    fill: #ff5722 !important;
+
+}
+
+
 .orange-icon-svg, .custom-social-icon, .md-footer-social__icon { 
+
     height: 1.1rem !important; 
+
     width: 1.1rem !important;
+
     vertical-align: middle; 
+
     display: inline-block; 
-    position: relative;
+
+    filter: brightness(0) invert(1) !important;
+
     transition: filter 0.3s ease; 
-}
 
-/* Variables d'adaptation automatique pour le reste du site (index) */
-[data-md-color-scheme="default"] { --md-icons-invert: 0.2; } /* Gris/Noir en mode clair */
-[data-md-color-scheme="slate"] { --md-icons-invert: 1; }   /* Blanc en mode sombre */
+    position: relative;
 
-/* Application de la variable par défaut */
-.orange-icon-svg, .custom-social-icon, .md-footer-social__icon {
     filter: brightness(0) invert(var(--md-icons-invert, 1)) !important;
+
 }
 
-/* 2. EXCEPTION : Force le BLANC dans le FOOTER (toujours noir) et le HUB */
-.md-footer .custom-social-icon, 
-.md-footer .md-footer-social__icon,
-.hub-wrapper .custom-social-icon { 
-    filter: brightness(0) invert(1) !important; 
+
+[data-md-color-scheme="default"] { --md-icons-invert: 0.2; } /* Mode Clair : sombre */
+
+[data-md-color-scheme="slate"] { --md-icons-invert: 1; }   /* Mode Sombre : blanc */
+
+
+.orange-icon-svg {
+
+    top: -1.5px !important;
+
 }
 
-/* 3. Le survol orange (reste universel) */
+
+.md-footer-social__icon {
+
+    top: -7px !important;
+
+}
+
+
 .md-typeset a:hover .orange-icon-svg, 
+
 .md-footer-social__link:hover .md-footer-social__icon,
+
 .md-footer-social__link:hover .custom-social-icon { 
+
     filter: invert(48%) sepia(89%) saturate(2476%) hue-rotate(346deg) brightness(101%) contrast(101%) !important; 
-}
+
+} 
 
  /* --- 10. HUB JEUX --- */
 /* .md-header { z-index: 120 !important; }
