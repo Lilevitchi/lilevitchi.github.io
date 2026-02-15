@@ -232,9 +232,9 @@ body {
   margin-top: 10px;
 }*/
 
-body:has(.game-grid) .md-sidebar--secondary {
+/*body:has(.game-grid) .md-sidebar--secondary {
   display: none !important;
-}
+}*/
 
 /* Conteneur principal */
 [data-md-color-scheme] .md-content__inner {
@@ -291,8 +291,8 @@ body:has(.game-grid) .md-sidebar--secondary {
 [data-md-color-scheme] .md-typeset p {
   text-align: left;
   max-width: 100%;
-  margin-left: 0;
-  margin-right: 0;
+ /* margin-left: 0;
+  margin-right: 0;*/
 }
 
 /* --------------------------------------------------
@@ -325,6 +325,8 @@ body:has(.game-grid) .md-sidebar--secondary {
   color: var(--md-default-fg-color);
   opacity: 1;
   font-weight: var(--font-bold);
+
+   background-color: rgba(255, 255, 255, 0.08);
 }
 
 [data-md-color-scheme] .md-nav--secondary .md-nav__link {
