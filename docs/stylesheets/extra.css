@@ -705,9 +705,9 @@ body:has(.game-grid) .md-main__inner {
 }
 
 [data-md-color-scheme] .orange-icon-svg {   
-   /*width: 1.1rem;
+    width: 1.1rem;
     height: 1.1rem;
-    fill: currentColor;
+    /*fill: currentColor;
     vertical-align: middle;
     transition: fill var(--transition-base);*/
     filter: brightness(0) invert(1);
