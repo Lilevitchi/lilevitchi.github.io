@@ -685,13 +685,22 @@ body:has(.game-grid) .md-main__inner {
 [data-md-color-scheme] .md-footer-social {
     display: flex;
    /*  justify-content: flex-end;*/
-    gap: 1rem;
+    gap: 0.9rem;
    /* margin-left: auto;*/
-    padding-top: 8px;
+    padding: 0.5rem 0;
 }
 
 /* Lien individuel */
  [data-md-color-scheme] .md-footer-social__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--white);
+    opacity: 0.7;
+    transition: color var(--transition-base), opacity var(--transition-base);
+  
     margin-left: 10px;
 }
 
@@ -700,42 +709,39 @@ body:has(.game-grid) .md-main__inner {
    max-height: 1.1rem; 
    width: 1.1rem; 
    fill: currentColor;
-   transition: fill var(--transition-base);
+   display: block;
 } 
 
-/* Hover global 
+/* Hover global */
 [data-md-color-scheme] .md-footer-social__link:hover svg {
     fill: var(--accent);
-}*/
-
-[data-md-color-scheme] .orange-icon-svg,
-[data-md-color-scheme] .custom-social-icon,
-[data-md-color-scheme] .md-footer-social__icon { 
-    height: 1.1rem; 
-    width: 1.1rem;
-    vertical-align: middle; 
-    display: inline-block; 
-    /*filter: brightness(0) invert(1);*/
-    transition: fill var(--transition-base);
-    position: relative;
-    /*filter: brightness(0) invert(var(--md-icons-invert, 1)) !important;*/
+    opacity: 1;
 }
 
+[data-md-color-scheme] .orange-icon-svg,
+[data-md-color-scheme] .custom-social-icon { 
+    width: 1.1rem;
+    height: 1.1rem;
+    fill: currentColor;
+    vertical-align: middle;
+    transition: fill var(--transition-base);
+}
+
+/*
 [data-md-color-scheme] .orange-icon-svg {
     top: -1.5px;
 }
 
 [data-md-color-scheme] .md-footer-social__icon {
     top: -6.5px;
-}
-/*
-[data-md-color-scheme] .md-typeset a:hover .orange-icon-svg, 
-[data-md-color-scheme] .md-footer-social__link:hover .md-footer-social__icon,
+}*/
+
+[data-md-color-scheme] .md-typeset a:hover .orange-icon-svg,
 [data-md-color-scheme] .md-footer-social__link:hover .custom-social-icon { 
     fill: var(--accent);
 } 
 
-
+/*
 [data-md-color-scheme] .md-typeset a:hover .orange-icon-svg, 
 [data-md-color-scheme] .md-footer-social__link:hover .md-footer-social__icon,
 [data-md-color-scheme] .md-footer-social__link:hover .custom-social-icon { 
