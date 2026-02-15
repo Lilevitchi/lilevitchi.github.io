@@ -246,7 +246,29 @@ body {
 [data-md-color-scheme] .md-main__inner {
   max-width: none;
   margin: 0;
+  display: grid;
+  grid-template-columns:
+    minmax(0, 260px)   /* sidebar gauche */
+    minmax(0, 1fr)    /* contenu principal */
+    minmax(0, 300px); /* sidebar droite */
+  gap: 0;
   outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu */
+}
+
+/* Sidebar gauche */
+[data-md-color-scheme] .md-sidebar--primary {
+  grid-column: 1;
+}
+
+/* Contenu */
+[data-md-color-scheme] .md-content {
+  grid-column: 2;
+  width: 100%;
+}
+
+/* Sidebar droite (TOC) */
+[data-md-color-scheme] .md-sidebar--secondary {
+  grid-column: 3;
 }
 
 [data-md-color-scheme] .md-content {
