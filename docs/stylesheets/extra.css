@@ -37,7 +37,7 @@
   --space-xl: 1.6rem;
 
   /* ---------- Radius ---------- */
-  --radius-sm: 0.45rem;
+  --radius-sm: 0.35rem;
   --radius-md: 0.75rem;
   --radius-lg: 1.25rem;
 
@@ -171,7 +171,6 @@ body {
 [data-md-color-scheme] .md-tabs__link {
   min-height: var(--header-height); 
   display: flex;
-  align-self: flex-end; 
   padding: 0.4rem 0.8rem;
   color: var(--white);
   opacity: 0.75;
@@ -184,7 +183,7 @@ body {
               opacity var(--transition-base),
               border-color var(--transition-base);
 
- border-bottom: none;
+/* border-bottom: none;*/
  position: relative;
 }
 
