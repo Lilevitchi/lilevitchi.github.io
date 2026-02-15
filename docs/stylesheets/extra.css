@@ -687,10 +687,9 @@ body:has(.game-grid) .md-main__inner {
    /*  justify-content: flex-end;*/
     gap: 1rem;
    /* margin-left: auto;*/
-   /* padding-top: 8px;*/
+    padding-top: 8px;
 
-     align-items: center;
-     background-color: var(--tab-bg-hover);
+    align-items: center;
 }
 
 /* Lien individuel */
@@ -702,8 +701,8 @@ body:has(.game-grid) .md-main__inner {
 [data-md-color-scheme] .md-footer-social__link svg { 
    max-height: 1.1rem; 
    width: 1.1rem; 
-   fill: var(--white);
-   transition: fill 0.3s ease;
+   fill: currentColor;
+   transition: fill var(--transition-base);
 } 
 
 /* Hover global */
@@ -718,19 +717,19 @@ body:has(.game-grid) .md-main__inner {
     width: 1.1rem;
     vertical-align: middle; 
     display: inline-block; 
-    filter: brightness(0) invert(1);
-    transition: filter 0.3s ease; 
+    /*filter: brightness(0) invert(1);*/
+    transition: fill var(--transition-base);
     position: relative;
-    filter: brightness(0) invert(var(--md-icons-invert, 1)) !important;
+    /*filter: brightness(0) invert(var(--md-icons-invert, 1)) !important;*/
 }
 
-[data-md-color-scheme] .orange-icon-svg {
+/*[data-md-color-scheme] .orange-icon-svg {
     top: -1.5px;
 }
 
 [data-md-color-scheme] .md-footer-social__icon {
     top: -7px;
-}
+}*/
 
 [data-md-color-scheme] .md-typeset a:hover .orange-icon-svg, 
 [data-md-color-scheme] .md-footer-social__link:hover .md-footer-social__icon,
