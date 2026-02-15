@@ -227,13 +227,29 @@ body {
    STRUCTURE GLOBALE DU CONTENU
    -------------------------------------------------- */
 
-/*[data-md-color-scheme] .md-main__inner,
+[data-md-color-scheme] .md-main__inner,
 [data-md-color-scheme] .md-content {
   margin-top: 10px;
-}*/
+}
 
+/* Page index : sidebar droite masquée par défaut */
 body:has(.game-grid) .md-sidebar--secondary {
   display: none !important;
+}
+
+/* Page index : sidebar gauche masquée par défaut */
+body:has(.game-grid) .md-sidebar--primary {
+  transform: translateX(-100%);
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
+
+/* Burger ouvert → sidebar visible */
+body:has(.game-grid)
+input[data-md-toggle="drawer"]:checked
+~ .md-sidebar--primary {
+  transform: translateX(0);
+  pointer-events: auto;
 }
 
 /* Conteneur principal */
@@ -470,27 +486,13 @@ body:has(.game-grid) .md-sidebar--secondary {
     }
 } */
 
-.md-sidebar--primary:has(~ .md-content .game-grid),
+/*.md-sidebar--primary:has(~ .md-content .game-grid),
 .md-content:has(.game-grid) ~ .md-sidebar--primary {
     display: none !important;
-}
-
-/* PAGE HUB : sidebar cachée par défaut
-body:has(.game-grid) .md-sidebar--primary {
-  transform: translateX(-100%) !important;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-/* BURGER OUVERT → sidebar visible
-body:has(.game-grid) #__drawer:checked ~ .md-container .md-sidebar--primary {
-  transform: translateX(0) !important;
-  visibility: visible;
-  pointer-events: auto;
-} */
+}*/
 
 .game-grid {
-    display: grid;
+    /*display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Réduit de 280px à 220px */
     gap: 15px;
     padding: 10px;
