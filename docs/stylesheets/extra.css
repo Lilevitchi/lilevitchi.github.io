@@ -472,26 +472,26 @@ body {
     .md-content:has(.game-grid) ~ .md-sidebar--primary {
         display: none !important;
     }
-} 
+} */
 
 .md-sidebar--primary:has(~ .md-content .game-grid),
 .md-content:has(.game-grid) ~ .md-sidebar--primary {
     display: none !important;
-}*/
+}
 
-/* PAGE HUB : sidebar cachée par défaut */
+/* PAGE HUB : sidebar cachée par défaut
 body:has(.game-grid) .md-sidebar--primary {
   transform: translateX(-100%) !important;
   visibility: hidden;
   pointer-events: none;
 }
 
-/* BURGER OUVERT → sidebar visible */
+/* BURGER OUVERT → sidebar visible
 body:has(.game-grid) #__drawer:checked ~ .md-container .md-sidebar--primary {
   transform: translateX(0) !important;
   visibility: visible;
   pointer-events: auto;
-}
+} */
 
 .game-grid {
     display: grid;
