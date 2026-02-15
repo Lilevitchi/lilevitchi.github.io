@@ -654,6 +654,7 @@ body:has(.game-grid) .md-main__inner {
     display: flex;
     gap: var(--space-sm);
     padding: 0.5rem 0;
+ outline: 1px dashed rgba(255, 0, 0, 0.25);
 }
 
 /* Lien individuel */
@@ -666,6 +667,7 @@ body:has(.game-grid) .md-main__inner {
     color: var(--white);
     opacity: 0.7;
     transition: color var(--transition-base);
+   outline: 1px dashed rgba(0, 0, 255, 0.25);
 }
 
 /* SVG des icônes sociales */
@@ -674,6 +676,7 @@ body:has(.game-grid) .md-main__inner {
    width: 1.1rem; 
    fill: currentColor;
    display: block; 
+    outline: 1px dashed rgba(0, 255, 0, 0.25);
 } 
 /*
 [data-md-color-scheme] .md-footer-social__link svg path {
@@ -694,6 +697,7 @@ body:has(.game-grid) .md-main__inner {
     fill: currentColor;
     vertical-align: middle;
     transition: fill var(--transition-base);
+    outline: 1px dashed rgba(255, 255, 0, 0.25);
 }
 
 [data-md-color-scheme] .md-typeset a:hover .orange-icon-svg,
