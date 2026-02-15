@@ -66,13 +66,9 @@
    TYPOGRAPHIE — BASE RESPONSIVE
    ==============================*/
 
-/*html,
+html,
 body {
   font-size: 24px !important;
-}*/
-
-[data-md-color-scheme] {
-  font-size: 20px;
 }
 
 /* ==============================
@@ -86,9 +82,6 @@ body {
   border-bottom-left-radius: var(--radius-sm);
   border-bottom-right-radius: var(--radius-sm);
   height: var(--header-height);
-
-   min-height: var(--header-height);
-  max-height: var(--header-height);
 }
 
 [data-md-color-scheme] .md-header * {
@@ -100,8 +93,6 @@ body {
   display: flex;
   width: 100%;
   height: var(--header-height);
-
-   min-height: var(--header-height);
 }
 
 /* Largeur et centrage du contenu */
@@ -158,6 +149,7 @@ body {
   width: 100%;
   background: transparent;
   box-shadow: none;
+   outline: 1px dashed rgba(255, 0, 0, 0.25);
 }
 
 /* Liste des onglets */
@@ -168,6 +160,7 @@ body {
   gap: 0;
   padding: 0;
   margin: 0;
+   outline: 1px dashed rgba(255, 255, 255, 0.25);
 }
 
 /* Item = Source de l'espace */
