@@ -149,7 +149,6 @@
   width: 100%;
   background: transparent;
   box-shadow: none;
-  font-size: 0.85rem;
 }
 
 /* Liste des onglets */
@@ -172,6 +171,7 @@
 [data-md-color-scheme] .md-tabs__link {
   display: flex;
   padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
   color: var(--white);
   opacity: 0.75;
   border-bottom: 4px solid transparent;
