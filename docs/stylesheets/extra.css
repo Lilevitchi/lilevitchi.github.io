@@ -696,6 +696,11 @@ body:has(.game-grid) .md-main__inner {
     transition: fill var(--transition-base);
 }
 
+[data-md-color-scheme] .md-typeset a:hover .orange-icon-svg,
+[data-md-color-scheme] .md-footer-social__link:hover .custom-social-icon { 
+    fill: var(--accent);
+} 
+
 /*
 [data-md-color-scheme] .orange-icon-svg {
     top: -1.5px;
@@ -703,12 +708,9 @@ body:has(.game-grid) .md-main__inner {
 
 [data-md-color-scheme] .md-footer-social__icon {
     top: -6.5px;
-}
+}*/
 
-[data-md-color-scheme] .md-typeset a:hover .orange-icon-svg,
-[data-md-color-scheme] .md-footer-social__link:hover .custom-social-icon { 
-    fill: var(--accent);
-} */
+
 
 /*
 [data-md-color-scheme] .md-typeset a:hover .orange-icon-svg, 
