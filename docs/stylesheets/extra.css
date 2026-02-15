@@ -232,6 +232,10 @@ body {
   margin-top: 0;
 }
 
+body:has(.game-grid) .md-sidebar--secondary {
+  display: none !important;
+}
+
 /* Conteneur principal */
 [data-md-color-scheme] .md-content__inner {
   max-width: var(--content-max-width);
