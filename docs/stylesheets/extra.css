@@ -232,38 +232,6 @@ body {
   margin-top: var(--space-sm);
 }
 
-/* Page index : sidebar droite masquée par défaut */
-body:has(.game-grid) .md-sidebar--secondary {
-  display: none !important;
-}
-
-/* Sidebar gauche cachée par défaut */
-body:has(.game-grid) .md-sidebar--primary {
-  transform: translateX(-100%);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: transform 0.3s ease, opacity 0.2s ease;
-  z-index: 120; /* 🔹 essentiel : au-dessus du contenu */
-}
-
-/* Burger ouvert → sidebar visible */
-body:has(.game-grid)
-input[data-md-toggle="drawer"]:checked
-~ .md-sidebar--primary {
-  transform: translateX(0);
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
-/* Overlay derrière la sidebar (sinon clics bloqués) */
-body:has(.game-grid)
-input[data-md-toggle="drawer"]:checked
-~ .md-overlay {
-  z-index: 110;
-}
-
 /* Conteneur principal */
 [data-md-color-scheme] .md-content__inner {
   max-width: var(--content-max-width);
