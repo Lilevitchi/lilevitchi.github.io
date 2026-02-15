@@ -140,7 +140,6 @@
   justify-content: center;
   height: var(--header-height);
   background: transparent;
-  pointer-events: none;
 }
 
 /* Barre des tabs */
@@ -150,7 +149,6 @@
   width: 100%;
   background: transparent;
   box-shadow: none;
-  pointer-events: none;
 }
 
 /* Liste des onglets */
@@ -161,7 +159,6 @@
   gap: 0;
   padding: 0;
   margin: 0;
-  pointer-events: none;
 }
 
 /* Item = Source de l'espace */
@@ -172,7 +169,6 @@
 
 /* Onglet — état normal */
 [data-md-color-scheme] .md-tabs__link {
-  pointer-events: auto;
   display: flex;
   padding: 0.4rem 0.8rem;
   color: var(--white);
