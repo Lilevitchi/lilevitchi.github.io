@@ -81,8 +81,8 @@
   border-bottom-left-radius: var(--radius-md);
   border-bottom-right-radius: var(--radius-md);
   height: var(--header-height) !important;
-  min-height: var(--header-height) !important;
-  max-height: var(--header-height) !important;
+  /*min-height: var(--header-height) !important;
+  max-height: var(--header-height) !important;*/
 }
 
 [data-md-color-scheme] .md-header * {
@@ -170,10 +170,12 @@
 
 /* Onglet — état normal */
 [data-md-color-scheme] .md-tabs__link {
+  min-height: var(--header-height); 
   display: flex;
   padding: 0.4rem 0.8rem;
   color: var(--white);
   opacity: 0.75;
+  overflow: visible;
   border-bottom: 4px solid transparent;
   background: transparent;
   transition: color var(--transition-base),
