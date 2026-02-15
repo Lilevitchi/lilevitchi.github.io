@@ -227,10 +227,10 @@ body {
    STRUCTURE GLOBALE DU CONTENU
    -------------------------------------------------- */
 
-/*[data-md-color-scheme] .md-main__inner,
+[data-md-color-scheme] .md-main__inner,
 [data-md-color-scheme] .md-content {
   margin-top: 0;
-}*/
+}
 
 body:has(.game-grid) .md-sidebar--secondary {
   display: none !important;
