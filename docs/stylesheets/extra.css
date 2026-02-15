@@ -691,9 +691,9 @@ body:has(.game-grid) .md-main__inner {
 }
 
 /* Lien individuel */
- /*[data-md-color-scheme] .md-footer-social__link {
+ [data-md-color-scheme] .md-footer-social__link {
     margin-left: 10px;
-}*/
+}
 
 /* SVG des icônes sociales */
 [data-md-color-scheme] .md-footer-social__link svg { 
@@ -726,9 +726,9 @@ body:has(.game-grid) .md-main__inner {
 }
 
 [data-md-color-scheme] .md-footer-social__icon {
-    top: -7px;
+    top: -6.5px;
 }
-
+/*
 [data-md-color-scheme] .md-typeset a:hover .orange-icon-svg, 
 [data-md-color-scheme] .md-footer-social__link:hover .md-footer-social__icon,
 [data-md-color-scheme] .md-footer-social__link:hover .custom-social-icon { 
@@ -736,7 +736,7 @@ body:has(.game-grid) .md-main__inner {
 } 
 
 
-/*[data-md-color-scheme] .md-typeset a:hover .orange-icon-svg, 
+[data-md-color-scheme] .md-typeset a:hover .orange-icon-svg, 
 [data-md-color-scheme] .md-footer-social__link:hover .md-footer-social__icon,
 [data-md-color-scheme] .md-footer-social__link:hover .custom-social-icon { 
     filter: invert(48%) sepia(89%) saturate(2476%) hue-rotate(346deg) brightness(101%) contrast(101%) !important; 
