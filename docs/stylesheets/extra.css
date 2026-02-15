@@ -642,7 +642,7 @@ body:has(.game-grid) .md-main__inner {
     width: 1.1rem;
     height: 1.1rem;
     transition: color var(--transition-base);
-    top: -1.5px;
+    transform: translateY(1px);
     filter: brightness(0) invert(1);
 }
 
