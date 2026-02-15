@@ -37,7 +37,7 @@
   --space-xl: 1.6rem;
 
   /* ---------- Radius ---------- */
-  --radius-sm: 0.25rem;
+  --radius-sm: 0.45rem;
   --radius-md: 0.75rem;
   --radius-lg: 1.25rem;
 
@@ -79,8 +79,8 @@ body {
 [data-md-color-scheme] .md-header {
   position: relative;
   background-color: var(--black);
-  border-bottom-left-radius: var(--radius-md);
-  border-bottom-right-radius: var(--radius-md);
+  border-bottom-left-radius: var(--radius-sm);
+  border-bottom-right-radius: var(--radius-sm);
   height: var(--header-height);
 }
 
@@ -120,6 +120,7 @@ body {
 [data-md-color-scheme] .md-header__title .md-ellipsis {
   color: var(--accent);
   font-size: 1rem;
+  font-weight: normal;
 }
 
 /* ==============================
