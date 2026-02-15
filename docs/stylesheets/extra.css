@@ -172,7 +172,7 @@ body {
   display: flex;
   padding: 0.4rem 0.8rem;
   color: var(--white);
-  opacity: 0.75;
+  /*opacity: 0.75;*/
   border-bottom: 4px solid transparent;
   background: transparent;
   transition: color var(--transition-base),
@@ -257,10 +257,8 @@ input[data-md-toggle="drawer"]:checked
   max-width: var(--content-max-width);
   margin-left: auto;
   margin-right: auto;
-
   padding: var(--space-lg);
-
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: var(--tab-bg-hover);
 }
 
 /* Page index : plus large visuellement */
@@ -277,7 +275,7 @@ input[data-md-toggle="drawer"]:checked
 [data-md-color-scheme] .md-typeset h1,
 [data-md-color-scheme] .md-typeset h2,
 [data-md-color-scheme] .md-typeset h3 {
-  color: var(--md-default-fg-color);
+  color: var(--white);
   opacity: 1;
   font-weight: var(--font-bold);
 }
@@ -316,7 +314,7 @@ input[data-md-toggle="drawer"]:checked
    -------------------------------------------------- */
 
 [data-md-color-scheme] .md-typeset a {
-  color: inherit;
+  color: var(--white);
   transition: color var(--transition-base);
 }
 
@@ -338,13 +336,13 @@ input[data-md-toggle="drawer"]:checked
    -------------------------------------------------- */
 
 [data-md-color-scheme] .md-nav--secondary .md-nav__title {
-  color: var(--md-default-fg-color);
+  color: var(--white);
   opacity: 1;
   font-weight: var(--font-bold);
 }
 
 [data-md-color-scheme] .md-nav--secondary .md-nav__link {
-  color: var(--md-typeset-color);
+  color: var(--white);
   opacity: 0.7;
   transition: color var(--transition-base), opacity var(--transition-base);
 }
@@ -617,9 +615,6 @@ input[data-md-toggle="drawer"]:checked
     transition: filter 0.3s ease; 
     position: relative;
 }
-
-[data-md-color-scheme="default"] { --md-icons-invert: 0.2; } /* Mode Clair : sombre */
-[data-md-color-scheme="slate"] { --md-icons-invert: 1; }   /* Mode Sombre : blanc */
 
 .orange-icon-svg, .custom-social-icon, .md-footer-social__icon {
     filter: brightness(0) invert(var(--md-icons-invert, 1)) !important;
