@@ -1,0 +1,13 @@
+{% extends "partials/footer.html" %}
+
+{% block social %}
+  {% if config.extra.social %}
+    <div class="md-social">
+      {% for social in config.extra.social %}
+        <a href="{{ social.link | url }}" target="_blank" rel="noopener" title="{{ social.name | e }}" class="md-social__link">
+          {% include ".icons/" ~ social.icon ~ ".svg" %}
+        </a>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endblock %}
