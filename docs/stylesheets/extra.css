@@ -191,7 +191,6 @@ body {
   opacity: 1;
   color: var(--accent);
   background-color: var(--tab-bg-hover);
-  transform: translateY(-2px);
 }
 
 /* Onglet — état actif */
@@ -316,7 +315,6 @@ body:has(.game-grid) .md-main__inner {
 
 [data-md-color-scheme] .md-typeset a:hover {
   color: var(--accent);
-  transform: translateY(-2px);
 }
 
 /* Icônes Material dans les liens */
@@ -326,6 +324,7 @@ body:has(.game-grid) .md-main__inner {
 
 [data-md-color-scheme] .md-typeset a:hover .twemoji svg {
   fill: var(--accent);
+  transform: translateY(-2px);
 }
 
 [data-md-color-scheme] .orange-icon-svg {     
@@ -333,7 +332,7 @@ body:has(.game-grid) .md-main__inner {
     height: 1.1rem;
     transition: color var(--transition-base);
     transform: translateY(7px);
-    filter: brightness(0) invert(1);
+    /*filter: brightness(0) invert(1);*/
 }
 
 [data-md-color-scheme] .md-typeset a:hover .orange-icon-svg { 
@@ -640,10 +639,10 @@ body:has(.game-grid) .md-main__inner {
     opacity: 1;
 }
 
-/* SVG de Nexusmod */
+/* SVG de Nexusmod 
 [data-md-color-scheme] .md-footer-social__icon {   
     filter: brightness(0) invert(1) opacity(0.7);
-}
+}*/
 
 [data-md-color-scheme] .md-footer-social__link:hover .md-footer-social__icon { 
     filter: invert(48%) sepia(89%) saturate(2476%) hue-rotate(346deg) brightness(101%) contrast(101%);
