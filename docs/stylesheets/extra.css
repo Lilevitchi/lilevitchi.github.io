@@ -240,16 +240,19 @@ body {
 
 [data-md-color-scheme] .md-main {
   max-width: none;
+  outline: 2px dashed rgba(255, 0, 0, 0.8); /* Rouge */
 }
 
 [data-md-color-scheme] .md-main__inner {
   max-width: none;
   margin: 0;
+ outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu */
 }
 
 [data-md-color-scheme] .md-content {
   max-width: none;
   width: 100%;
+ outline: 2px dashed rgba(0, 255, 0, 0.8); /* Vert */
 }
 
 /* Conteneur principal */
@@ -260,6 +263,7 @@ body {
   padding: var(--space-lg);
   background-color: var(--tab-bg-hover);
   border-radius: var(--radius-sm);
+ outline: 2px dashed rgba(255, 255, 0, 0.8); /* Jaune */
 }
 
 /* Force Material à recalculer la grille 
@@ -361,7 +365,7 @@ body:has(.game-grid) .md-main__inner {
 
 /* --------------------------------------------------
    NAVIGATION SECONDAIRE (SIDEBAR DROITE)
-   -------------------------------------------------- 
+   -------------------------------------------------- */
 
 [data-md-color-scheme] .md-nav--secondary {
   position: sticky;
@@ -370,6 +374,7 @@ body:has(.game-grid) .md-main__inner {
   overflow-y: auto;
   background-color: var(--tab-bg-hover);
   border-radius: var(--radius-sm);
+ outline: 2px dashed rgba(255, 255, 255, 0.8); /* BLanc */
 }
 
 [data-md-color-scheme] .md-nav--secondary .md-nav__title {
@@ -388,7 +393,7 @@ body:has(.game-grid) .md-main__inner {
   color: var(--accent);
   opacity: 1;
   transform: translateY(-2px);
-}*/
+}
 
 /* --------------------------------------------------
    ICÔNES ORANGES DANS LES TITRES
