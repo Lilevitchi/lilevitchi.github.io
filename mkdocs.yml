@@ -1,6 +1,8 @@
 site_name: Lilevitchi | Modding
 site_url: https://lilevitchi.github.io/
 
+copyright: "Copyright &copy; 2026 Lilevitchi"
+
 theme:
   name: material
   custom_dir: overrides
@@ -18,6 +20,7 @@ theme:
     - content.code.copy
     - navigation.indexes
     - navigation.expand
+    - footer.hide.generator
 
 extra_javascript:
   - javascripts/random_tips.js
