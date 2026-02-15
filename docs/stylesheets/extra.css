@@ -82,8 +82,6 @@ body {
   border-bottom-left-radius: var(--radius-md);
   border-bottom-right-radius: var(--radius-md);
   height: var(--header-height);
-  /*min-height: var(--header-height) !important;
-  max-height: var(--header-height) !important;*/
 }
 
 [data-md-color-scheme] .md-header * {
@@ -218,7 +216,7 @@ body {
 }
 
 /* Cache tabs plus tard */
-@media (max-width: 702px) {
+@media (max-width: 1221px) {
   .md-header__tabs {
     display: none;
   }
