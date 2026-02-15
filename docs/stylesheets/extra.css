@@ -78,7 +78,6 @@ body {
 /* Header global */
 [data-md-color-scheme] .md-header {
   position: stiky;
- /*position: relative;*/
   background-color: var(--black);
   border-bottom-left-radius: var(--radius-sm);
   border-bottom-right-radius: var(--radius-sm);
@@ -149,7 +148,7 @@ body {
 
 /* Barre des tabs */
 [data-md-color-scheme] .md-tabs {
-   position: stiky;
+  position: stiky;
   display: flex;
   justify-content: center;
   font-size: 0.75rem;
@@ -239,16 +238,25 @@ body {
   margin-top: var(--space-sm);
 }*/
 
-/* Contenu central */
+[data-md-color-scheme] .md-main {
+  max-width: none;
+}
+
+[data-md-color-scheme] .md-main__inner {
+  max-width: none;
+  margin: 0;
+}
+
 [data-md-color-scheme] .md-content {
   max-width: none;
-  flex: 1;
+  width: 100%;
 }
 
 /* Conteneur principal */
 [data-md-color-scheme] .md-content__inner {
-  gap: var(--space-lg);
-  max-width: 100%;
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
   padding: var(--space-lg);
   background-color: var(--tab-bg-hover);
   border-radius: var(--radius-sm);
@@ -353,7 +361,7 @@ body:has(.game-grid) .md-main__inner {
 
 /* --------------------------------------------------
    NAVIGATION SECONDAIRE (SIDEBAR DROITE)
-   -------------------------------------------------- */
+   -------------------------------------------------- 
 
 [data-md-color-scheme] .md-nav--secondary {
   position: sticky;
@@ -380,7 +388,7 @@ body:has(.game-grid) .md-main__inner {
   color: var(--accent);
   opacity: 1;
   transform: translateY(-2px);
-}
+}*/
 
 /* --------------------------------------------------
    ICÔNES ORANGES DANS LES TITRES
