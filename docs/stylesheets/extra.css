@@ -177,10 +177,8 @@
   padding: 0.4rem 0.8rem;
   color: var(--white);
   opacity: 0.75;
- 
   border-bottom: 4px solid transparent;
   background: transparent;
- 
   transition: color var(--transition-base),
               background-color var(--transition-base),
               opacity var(--transition-base),
@@ -202,6 +200,18 @@
   color: var(--accent);
   background-color: var(--tab-bg-active);
   border-bottom-color: var(--accent);
+}
+
+/* Texte long par défaut */
+[data-md-color-scheme] .md-tabs__link::before {
+  content: attr(data-full);
+  white-space: nowrap;
+}
+
+@media (max-width: 1100px) {
+  [data-md-color-scheme] .md-tabs__link::before {
+    content: attr(data-short);
+  }
 }
 
 @media (max-width: 1100px) {
