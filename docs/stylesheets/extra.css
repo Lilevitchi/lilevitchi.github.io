@@ -617,6 +617,7 @@ body:has(.game-grid) .md-main__inner {
 [data-md-color-scheme] .md-footer-social {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     gap: 1rm;
     margin-left: auto;
 }
@@ -625,6 +626,8 @@ body:has(.game-grid) .md-main__inner {
 [data-md-color-scheme] .md-footer-social__link {
   display: inline-flex;
   align-items: center;
+  color: var(--white);
+  line-height: 1;
 }
 
 /* Lien individuel 
@@ -662,6 +665,12 @@ body:has(.game-grid) .md-main__inner {
     fill: var(--white);
 }
 
+.md-typeset a:hover .orange-icon-svg, 
+.md-footer-social__link:hover .md-footer-social__icon,
+.md-footer-social__link:hover .custom-social-icon { 
+    filter: invert(48%) sepia(89%) saturate(2476%) hue-rotate(346deg) brightness(101%) contrast(101%) !important; 
+}
+
 /*.orange-icon-svg {
     top: -1.5px !important;
 }
@@ -671,11 +680,7 @@ body:has(.game-grid) .md-main__inner {
     top: -7px !important;
 }
 
-.md-typeset a:hover .orange-icon-svg, 
-.md-footer-social__link:hover .md-footer-social__icon,
-.md-footer-social__link:hover .custom-social-icon { 
-    filter: invert(48%) sepia(89%) saturate(2476%) hue-rotate(346deg) brightness(101%) contrast(101%) !important; 
-}
+
 
 /* .orange-icon-svg, .custom-social-icon, .md-footer-social__icon { 
     height: 1.1rem !important; 
