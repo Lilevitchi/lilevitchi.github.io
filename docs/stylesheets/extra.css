@@ -172,6 +172,7 @@ body {
 [data-md-color-scheme] .md-tabs__link {
   min-height: var(--header-height); 
   display: flex;
+  align-self: flex-end; 
   padding: 0.4rem 0.8rem;
   color: var(--white);
   opacity: 0.75;
@@ -209,21 +210,8 @@ body {
   display: inline-block;
 }
 
-@media (max-width: 1244px) {
-  [data-md-color-scheme] .md-tabs__link::before {
-    white-space: normal;
-    max-width: 6.5rem;
-    line-height: 1.1;
-    text-align: center;
-  }
-
-  [data-md-color-scheme] .md-tabs__link {
-    align-items: center;
-  }
-}
-
 /* Texte court */
-@media (max-width: 901px) {
+@media (max-width: 1825px) {
   .md-tabs__link::before {
     content: attr(data-short);
   }
