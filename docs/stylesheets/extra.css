@@ -310,7 +310,7 @@ body:has(.game-grid) .md-main__inner {
 
 [data-md-color-scheme] .md-typeset a {
   color: var(--white);
-  transition: all var(--transition-base);
+  transition: color var(--transition-base), transform var(--transition-base);
   display: inline-block;
 }
 
@@ -326,13 +326,12 @@ body:has(.game-grid) .md-main__inner {
 
 [data-md-color-scheme] .md-typeset a:hover .twemoji svg {
   fill: var(--accent);
-  transform: translateY(-2px);
 }
 
 [data-md-color-scheme] .orange-icon-svg {     
     width: 1.1rem;
     height: 1.1rem;
-    transition: color var(--transition-base);
+    transition: color var(--transition-base), transform var(--transition-base);
     transform: translateY(7px);
 }
 
@@ -346,14 +345,14 @@ body:has(.game-grid) .md-main__inner {
 
 [data-md-color-scheme] .md-nav--secondary .md-nav__title {
   color: var(--white);
-  opacity: 1;
+  opacity: 0.7;
   font-weight: var(--font-bold);
 }
 
 [data-md-color-scheme] .md-nav--secondary .md-nav__link {
   color: var(--white);
   opacity: 1;
-  transition: color var(--transition-base), opacity var(--transition-base);
+  transition: color var(--transition-base), opacity var(--transition-base), transform var(--transition-base);
 }
 
 [data-md-color-scheme] .md-nav--secondary .md-nav__link:hover {
@@ -442,6 +441,7 @@ line-height: 1.4;
 .kofi-button:hover {
   background-color: var(--dark-1);
   box-shadow: 0 0 10px var(--accent-glow);
+  transform: translateY(2px);
 }
 
 /* ==============================
@@ -620,7 +620,7 @@ line-height: 1.4;
     align-items: center;
     color: var(--white);
     opacity: 0.7;
-    transition: color var(--transition-base);
+    transition: color var(--transition-base), transform var(--transition-base);
 }
 
 /* SVG des icônes sociales */
