@@ -8,20 +8,9 @@ theme:
   favicon: assets/favicon.png
   language: fr
   palette:
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: black
-      accent: deep orange
-      toggle:
-        icon: material/brightness-4
-        name: Passer au mode clair
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: black
-      accent: deep orange
-      toggle:
-        icon: material/brightness-7
-        name: Passer au mode sombre
+    scheme: slate
+    primary: black
+    accent: deep orange
   features:
     - navigation.tabs
     - navigation.tabs.sticky
