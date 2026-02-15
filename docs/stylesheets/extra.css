@@ -64,9 +64,9 @@
 
 /* ==============================
    TYPOGRAPHIE — BASE RESPONSIVE
-   ==============================
+   ==============================*/
 
-html,
+/*html,
 body {
   font-size: 24px !important;
 }*/
@@ -193,10 +193,10 @@ body {
               border-color var(--transition-base);
 
 /* border-bottom: none;
- position: relative;
+ position: relative;*/
 }
 
-[data-md-color-scheme] .md-tabs__link::after {
+/*[data-md-color-scheme] .md-tabs__link::after {
   content: "";
   position: absolute;
   left: 0;
