@@ -310,7 +310,8 @@ body:has(.game-grid) .md-main__inner {
 
 [data-md-color-scheme] .md-typeset a {
   color: var(--white);
-  transition: color var(--transition-base);
+  transition: all var(--transition-base);
+  display: inline-block;
 }
 
 [data-md-color-scheme] .md-typeset a:hover {
@@ -337,7 +338,6 @@ body:has(.game-grid) .md-main__inner {
 
 [data-md-color-scheme] .md-typeset a:hover .orange-icon-svg { 
     filter: invert(48%) sepia(89%) saturate(2476%) hue-rotate(346deg) brightness(101%) contrast(101%);
-    transform: translateY(-2px);
 } 
 
 /* --------------------------------------------------
