@@ -630,11 +630,6 @@ body:has(.game-grid) .md-main__inner {
   line-height: 1;
 }
 
-/* Lien individuel 
-.md-footer-social__link {
-    margin-left: 10px !important;
-}*/
-
 /* SVG des icônes sociales */
 [data-md-color-scheme] .md-footer-social__link svg {
   width: 1.1rem;
@@ -642,14 +637,6 @@ body:has(.game-grid) .md-main__inner {
   fill: currentColor;
   transition: fill var(--transition-base);
 }
-
-/* SVG des icônes sociales 
-.md-footer-social__link svg { 
-   max-height: 1.1rem !important; 
-   width: 1.1rem !important; 
-   fill: #ffffff !important;
-   transition: fill 0.3s ease;
-} */
 
 [data-md-color-scheme] .md-footer-social__link:hover svg {
     fill: var(--accent);
@@ -680,47 +667,6 @@ body:has(.game-grid) .md-main__inner {
 /*
 .md-footer-social__icon {
     top: -7px !important;
-}
-
-
-
-/* .orange-icon-svg, .custom-social-icon, .md-footer-social__icon { 
-    height: 1.1rem !important; 
-    width: 1.1rem !important;
-    vertical-align: middle; 
-    display: inline-block; 
-    transition: filter 0.3s ease; 
-    position: relative;
-}
-
-.orange-icon-svg, .custom-social-icon, .md-footer-social__icon {
-    filter: brightness(0) invert(var(--md-icons-invert, 1)) !important;
-}
-
-.md-footer .custom-social-icon, 
-.md-footer .md-footer-social__icon,
-.hub-wrapper .custom-social-icon { 
-    filter: brightness(0) invert(1) !important; 
-}
-*/
-
-/* ==============================
-   9. RÉSEAUX SOCIAUX — FOOTER
-   ============================== 
-
-.md-footer-social__link svg {
-  width: 1.1rem;
-  height: 1.1rem;
-  fill: currentColor;
-  transition: fill 0.3s ease;
-}
-
-.md-footer {
-  color: var(--white);
-}
-
-.md-footer-social__link:hover {
-  color: var(--accent);
 }
 
  /* --- 10. HUB JEUX --- */
