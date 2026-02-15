@@ -55,7 +55,7 @@ extra:
     - icon: fontawesome/brands/discord
       link: https://discord.gg/aFJxsPC
       name: Discord
-    - icon: material/link
+    - icon: icons/nexusmods
       link: https://www.nexusmods.com/profile/Lilevitchi
       name: Nexus Mods
     - icon: simple/kofi
