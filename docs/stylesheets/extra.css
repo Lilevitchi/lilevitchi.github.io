@@ -232,18 +232,21 @@ body {
    STRUCTURE GLOBALE DU CONTENU
    -------------------------------------------------- */
 
-[data-md-color-scheme] .md-main__inner,
+/*[data-md-color-scheme] .md-main__inner,
 [data-md-color-scheme] .md-content {
   margin-top: var(--space-sm);
+}*/
+
+/* Contenu central */
+[data-md-color-scheme] .md-content {
+  max-width: none;
+  flex: 1;
 }
 
 /* Conteneur principal */
 [data-md-color-scheme] .md-content__inner {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
   gap: var(--space-lg);
-  max-width: none;
-  width: 100%;
+  max-width: 100%;
   padding: var(--space-lg);
   background-color: var(--tab-bg-hover);
   border-radius: var(--radius-sm);
@@ -418,7 +421,7 @@ line-height: 1.4;
   margin-right: var(--space-lg);
   flex-shrink: 0;
   width: auto; 
-  height: 72px;
+  height: 100px;
  /* align-self: center;*/
 }
 
@@ -557,7 +560,7 @@ line-height: 1.4;
    ==============================*/
 
 /* Liens et titres du menu latéral uniquement */
-[data-md-color-scheme] .md-nav--primary .md-nav__link,
+/*[data-md-color-scheme] .md-nav--primary .md-nav__link,
 [data-md-color-scheme] .md-nav--primary .md-nav__title {
   text-transform: none;
   font-weight: 400;
@@ -566,12 +569,12 @@ line-height: 1.4;
 }
 
 /* Espacement des liens */
-[data-md-color-scheme] .md-nav--primary .md-nav__link {
+/*[data-md-color-scheme] .md-nav--primary .md-nav__link {
   padding-left: 0.8rem;
 }
 
 /* Lien actif */
-[data-md-color-scheme] .md-nav--primary .md-nav__link--active {
+/*[data-md-color-scheme] .md-nav--primary .md-nav__link--active {
   color: var(--accent);
   font-weight: var(--font-bold);
   background: transparent;
