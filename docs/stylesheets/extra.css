@@ -652,9 +652,7 @@ body:has(.game-grid) .md-main__inner {
 /* Conteneur des icônes sociales */
 [data-md-color-scheme] .md-footer-social {
     display: flex;
-   /*  justify-content: flex-end;*/
-    gap: 0.9rem;
-   /* margin-left: auto;*/
+    gap: var(--space-sm);
     padding: 0.5rem 0;
 }
 
@@ -663,10 +661,10 @@ body:has(.game-grid) .md-main__inner {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.1rem;
+    height: 1.1rem;
     color: var(--white);
-    opacity: 0.7;
+    opacity: 1;
     transition: color var(--transition-base), opacity var(--transition-base);
   
     margin-left: 10px;
