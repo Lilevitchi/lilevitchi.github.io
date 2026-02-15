@@ -613,15 +613,15 @@ body:has(.game-grid) .md-main__inner {
 
 /* ==============================
    3. FOOTER (PIED DE PAGE)
-   ==============================*/
+   ==============================
 
-/* Fond du footer */
+
 [data-md-color-scheme] .md-footer {
     background-color: var(--black);
     border-top: 1px solid var(--dark-2);
 }
 
-/* Liens de navigation (Précédent / Suivant) */
+
 [data-md-color-scheme] .md-footer__link {
     transition: background-color var(--transition-base);
 }
@@ -630,13 +630,13 @@ body:has(.game-grid) .md-main__inner {
     background-color: var(--tab-bg-hover);
 }
 
-/* Texte "Précédent" / "Suivant" */
+
 [data-md-color-scheme] .md-footer__direction {
     color: var(--white);
     opacity: 0.6;
 }
 
-/* Titre de la page suivante/précédente */
+
 [data-md-color-scheme] .md-footer__title {
     color: var(--accent);
     font-weight: var(--font-bold);
@@ -644,27 +644,27 @@ body:has(.game-grid) .md-main__inner {
 
 /* ==============================
    4. RÉSEAUX SOCIAUX & COPYRIGHT
-   ==============================*/
+   ==============================
 
-/* Barre de copyright et réseaux */
+
 [data-md-color-scheme] .md-footer-meta {
     background-color: var(--dark-1);
 }
 
-/* Icônes des réseaux sociaux */
+
 [data-md-color-scheme] .md-social__link {
     color: var(--white);
     opacity: 0.7;
     transition: color var(--transition-fast), opacity var(--transition-fast);
 }
 
-/* Survol des icônes (deviennent orange) */
+
 [data-md-color-scheme] .md-social__link:hover {
     color: var(--accent);
     opacity: 1;
 }
 
-/* Copyright texte */
+
 [data-md-color-scheme] .md-copyright {
     color: var(--white);
     opacity: 0.5;
@@ -673,86 +673,41 @@ body:has(.game-grid) .md-main__inner {
 
 [data-md-color-scheme] .md-copyright__highlight {
     color: var(--accent);
-}
+}*/
 
-/* ==============================
-   9. RÉSEAUX SOCIAUX - FOOTER
-   ==============================*/
+/* --- 9. RÉSEAUX SOCIAUX & ICÔNES --- */ 
 
-/* Conteneur des icônes sociales */
-[data-md-color-scheme] .md-footer-social {
-    display: flex;
-    align-items: center;
-    gap: 1rm;
-    margin-left: auto;
-}
-
-/* Lien individuel */
-[data-md-color-scheme] .md-footer-social__link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  color: var(--white);
-  line-height: 1;
-  text-decoration: none;
-  transition: color var(--transition-base);
-}
-
-/* Hover global */
-[data-md-color-scheme] .md-footer-social__link:hover {
-  color: var(--accent);
-}
-
-/* SVG des icônes sociales */
-[data-md-color-scheme] .md-footer-social__link svg {
-  width: 1.1rem;
-  height: 1.1rem;
-  fill: currentColor;
-  flex-shrink: 0;
-}
-
-[data-md-color-scheme] .nexus-icon::before {
-  content: "";
-  width: 1.1rem;
-  height: 1.1rem;
-  background-color: currentColor;
-  mask: url("../assets/icons/nexusmods.svg") no-repeat center / contain;
-  -webkit-mask: url("../assets/icons/nexusmods.svg") no-repeat center / contain;
-  display: inline-block;
-  flex-shrink: 0;
-}
-
-/*[data-md-color-scheme] .md-footer-social__link:hover svg {
-    fill: var(--accent);
-}
-
-
-
-[data-md-color-scheme] .orange-icon-svg,
-[data-md-color-scheme] .custom-social-icon,
-[data-md-color-scheme] .md-footer-social__icon { 
-    max-height: 1.1rem; 
-    width: 1.1rem;
-    display: inline-flex;
-    align-items: center;
-    transition: filter 0.3s ease; 
+/* 1. Règle de base : les icônes s'adaptent au thème (clair/sombre) sur l'index */
+.orange-icon-svg, .custom-social-icon, .md-footer-social__icon { 
+    height: 1.1rem !important; 
+    width: 1.1rem !important;
+    vertical-align: middle; 
+    display: inline-block; 
     position: relative;
-    fill: var(--white);
+    transition: filter 0.3s ease; 
 }
 
-[data-md-color-scheme] .md-typeset a:hover .orange-icon-svg, 
-[data-md-color-scheme] .md-footer-social__link:hover .md-footer-social__icon,
-[data-md-color-scheme] .md-footer-social__link:hover .custom-social-icon { 
+/* Variables d'adaptation automatique pour le reste du site (index) */
+[data-md-color-scheme="default"] { --md-icons-invert: 0.2; } /* Gris/Noir en mode clair */
+[data-md-color-scheme="slate"] { --md-icons-invert: 1; }   /* Blanc en mode sombre */
+
+/* Application de la variable par défaut */
+.orange-icon-svg, .custom-social-icon, .md-footer-social__icon {
+    filter: brightness(0) invert(var(--md-icons-invert, 1)) !important;
+}
+
+/* 2. EXCEPTION : Force le BLANC dans le FOOTER (toujours noir) et le HUB */
+.md-footer .custom-social-icon, 
+.md-footer .md-footer-social__icon,
+.hub-wrapper .custom-social-icon { 
+    filter: brightness(0) invert(1) !important; 
+}
+
+/* 3. Le survol orange (reste universel) */
+.md-typeset a:hover .orange-icon-svg, 
+.md-footer-social__link:hover .md-footer-social__icon,
+.md-footer-social__link:hover .custom-social-icon { 
     filter: invert(48%) sepia(89%) saturate(2476%) hue-rotate(346deg) brightness(101%) contrast(101%) !important; 
-}
-
-/*.orange-icon-svg {
-    top: -1.5px !important;
-}
-
-/*
-.md-footer-social__icon {
-    top: -7px !important;
 }
 
  /* --- 10. HUB JEUX --- */
