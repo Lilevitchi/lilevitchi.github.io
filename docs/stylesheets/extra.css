@@ -636,7 +636,7 @@ input[data-md-toggle="drawer"]:checked
 .md-footer-social__link svg {
   width: 1.1rem;
   max-height: 1.1rem;
-  /*fill: currentColor;*/
+  fill: currentColor;
   transition: fill 0.3s ease;
 }
 
