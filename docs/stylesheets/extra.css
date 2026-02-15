@@ -707,20 +707,28 @@ body:has(.game-grid) .md-main__inner {
 [data-md-color-scheme] .orange-icon-svg {   
     width: 1.1rem;
     height: 1.1rem;
-    /*fill: currentColor;
+    justify-content: center;
+    /*align-items: center;
+    fill: currentColor;
     vertical-align: middle;
     transition: fill var(--transition-base);*/
     filter: brightness(0) invert(1);
     outline: 1px dashed rgba(0, 0, 255, 0.25); /* Bleu */
 }
 
+[data-md-color-scheme] .md-typeset a:hover .orange-icon-svg, 
+[data-md-color-scheme] .md-footer-social__link:hover .md-footer-social__icon { 
+    fill: var(--accent);
+} 
+
+/*
 [data-md-color-scheme] .custom-social-icon {   
     width: 1.1rem;
     height: 1.1rem;
     fill: currentColor;
     vertical-align: middle;
     transition: fill var(--transition-base);
-    outline: 1px dashed rgba(255, 255, 0, 0.25); /* Jaune */
+    outline: 1px dashed rgba(255, 255, 0, 0.25);
 }
 
 /*
