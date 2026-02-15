@@ -675,58 +675,70 @@ body:has(.game-grid) .md-main__inner {
     color: var(--accent);
 }*/
 
- /* --- 9. RÉSEAUX SOCIAUX --- */ 
 
-.md-footer-social {
-    display: flex !important;
-    justify-content: flex-end !important;
-    gap: 15px !important;
-    margin-left: auto !important;
-    padding-top: 8px !important;
+
+/* ==============================
+   9. RÉSEAUX SOCIAUX - FOOTER
+   ==============================*/
+
+/* Conteneur des icônes sociales */
+[data-md-color-scheme] .md-footer-social {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-left: auto;
+   /* padding-top: 8px;*/
+
+     align-items: center;
 }
 
-.md-footer-social__link {
-    margin-left: 10px !important;
-}
+/* Lien individuel */
+ /*[data-md-color-scheme] .md-footer-social__link {
+    margin-left: 10px;
+}*/
 
-.md-footer-social__link svg { 
-   max-height: 1.1rem !important; 
-   width: 1.1rem !important; 
-   fill: #ffffff !important;
+/* SVG des icônes sociales */
+[data-md-color-scheme] .md-footer-social__link svg { 
+   max-height: 1.1rem; 
+   width: 1.1rem; 
+   fill: var(--white);
    transition: fill 0.3s ease;
 } 
 
-.md-footer-social__link:hover svg {
-    fill: #ff5722 !important;
+/* Hover global */
+[data-md-color-scheme] .md-footer-social__link:hover svg {
+    fill: var(--accent);
 }
 
-.orange-icon-svg, .custom-social-icon, .md-footer-social__icon { 
-    height: 1.1rem !important; 
-    width: 1.1rem !important;
+[data-md-color-scheme] .orange-icon-svg,
+[data-md-color-scheme] .custom-social-icon,
+[data-md-color-scheme] .md-footer-social__icon { 
+    height: 1.1rem; 
+    width: 1.1rem;
     vertical-align: middle; 
     display: inline-block; 
-    filter: brightness(0) invert(1) !important;
+    filter: brightness(0) invert(1);
     transition: filter 0.3s ease; 
     position: relative;
     filter: brightness(0) invert(var(--md-icons-invert, 1)) !important;
 }
 
-[data-md-color-scheme="default"] { --md-icons-invert: 0.2; } /* Mode Clair : sombre */
-[data-md-color-scheme="slate"] { --md-icons-invert: 1; }   /* Mode Sombre : blanc */
-
-.orange-icon-svg {
-    top: -1.5px !important;
+[data-md-color-scheme] .orange-icon-svg {
+    top: -1.5px;
 }
 
-.md-footer-social__icon {
-    top: -7px !important;
+[data-md-color-scheme] .md-footer-social__icon {
+    top: -7px;
 }
 
-.md-typeset a:hover .orange-icon-svg, 
-.md-footer-social__link:hover .md-footer-social__icon,
-.md-footer-social__link:hover .custom-social-icon { 
+[data-md-color-scheme] .md-typeset a:hover .orange-icon-svg, 
+[data-md-color-scheme] .md-footer-social__link:hover .md-footer-social__icon,
+[data-md-color-scheme] .md-footer-social__link:hover .custom-social-icon { 
     filter: invert(48%) sepia(89%) saturate(2476%) hue-rotate(346deg) brightness(101%) contrast(101%) !important; 
 } 
+
+
+
 
  /* --- 10. HUB JEUX --- */
 /* .md-header { z-index: 120 !important; }
