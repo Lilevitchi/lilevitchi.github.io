@@ -373,31 +373,6 @@ input[data-md-toggle="drawer"]:checked
 }
 
 /* ==============================
-   4. MENU LATÉRAL
-   ==============================*/
-
-/* Liens et titres du menu latéral uniquement */
-[data-md-color-scheme] .md-nav--primary .md-nav__link,
-[data-md-color-scheme] .md-nav--primary .md-nav__title {
-  text-transform: none;
-  font-weight: 400;
-  display: flex;
-  align-items: center;
-}
-
-/* Espacement des liens */
-[data-md-color-scheme] .md-nav--primary .md-nav__link {
-  padding-left: 0.8rem;
-}
-
-/* Lien actif */
-[data-md-color-scheme] .md-nav--primary .md-nav__link--active {
-  color: var(--accent);
-  font-weight: var(--font-bold);
-  background: transparent;
-}
-
-/* ==============================
    5. UI ELEMENTS (BOT & KO-FI)
    ==============================*/
 
@@ -455,28 +430,6 @@ input[data-md-toggle="drawer"]:checked
   background-color: var(--dark-1);
   box-shadow: 0 0 10px var(--accent-glow);
 }
-
-/*.bot-advice { display: flex; align-items: center; background-color: rgba(255, 87, 34, 0.08) !important; border-left: 4px solid #ff5722 !important; padding: 15px; border-radius: 4px; margin: 20px 0; }
-.bot-advice img { margin-right: 20px !important; flex-shrink: 0; }
-#lile-bot-title { color: #ff5722; font-weight: bold; }
-#lile-bot-tip { font-style: italic; opacity: 0.8; }
-
-.kofi-button { background-color: #ff5722; color: white !important; padding: 6px 12px; border-radius: 4px; font-size: 0.75rem; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s; }
-.kofi-button:hover { background-color: #1a1a1a; box-shadow: 0 0 10px #ff5722; }*/
-
-/* --- 6. ADAPTATION MOBILE --- 
-@media screen and (max-width: 45em) {
-    .hub-wrapper { z-index: 10 !important; }
-    .md-header { z-index: 100 !important; }
-    .md-header__title { display: none !important; }
-    .md-nav__title[for="__drawer"] { color: var(--md-default-fg-color) !important; font-size: 1.1rem !important; padding: 20px 16px !important; display: block !important; visibility: visible !important; } 
-    .md-nav--primary { z-index: 2000 !important; display: block !important; visibility: visible !important; } 
-    .md-overlay { z-index: 500 !important; }
-    .md-nav__title .md-logo { display: block !important; margin: 15px 0 !important; }
-    .md-nav__item .md-nav__link--active { background-color: transparent !important; }
-    .md-nav__item--nested > .md-nav__link:focus { background-color: rgba(255, 87, 34, 0.1) !important; }
-    .md-tabs { display: none !important; }
-} */
 
 /* --- 7. GRILLE DES JEUX (HUB) --- */
 /* @media screen and (min-width: 60em) {
@@ -567,6 +520,55 @@ input[data-md-toggle="drawer"]:checked
     border: none !important;
     background: rgba(0,0,0,0.3);
 }
+
+/* ==============================
+   4. MENU LATÉRAL
+   ==============================*/
+
+/* Liens et titres du menu latéral uniquement */
+[data-md-color-scheme] .md-nav--primary .md-nav__link,
+[data-md-color-scheme] .md-nav--primary .md-nav__title {
+  text-transform: none;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+
+/* Espacement des liens */
+[data-md-color-scheme] .md-nav--primary .md-nav__link {
+  padding-left: 0.8rem;
+}
+
+/* Lien actif */
+[data-md-color-scheme] .md-nav--primary .md-nav__link--active {
+  color: var(--accent);
+  font-weight: var(--font-bold);
+  background: transparent;
+}
+
+/*.bot-advice { display: flex; align-items: center; background-color: rgba(255, 87, 34, 0.08) !important; border-left: 4px solid #ff5722 !important; padding: 15px; border-radius: 4px; margin: 20px 0; }
+.bot-advice img { margin-right: 20px !important; flex-shrink: 0; }
+#lile-bot-title { color: #ff5722; font-weight: bold; }
+#lile-bot-tip { font-style: italic; opacity: 0.8; }
+
+.kofi-button { background-color: #ff5722; color: white !important; padding: 6px 12px; border-radius: 4px; font-size: 0.75rem; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s; }
+.kofi-button:hover { background-color: #1a1a1a; box-shadow: 0 0 10px #ff5722; }*/
+
+/* --- 6. ADAPTATION MOBILE --- 
+@media screen and (max-width: 45em) {
+    .hub-wrapper { z-index: 10 !important; }
+    .md-header { z-index: 100 !important; }
+    .md-header__title { display: none !important; }
+    .md-nav__title[for="__drawer"] { color: var(--md-default-fg-color) !important; font-size: 1.1rem !important; padding: 20px 16px !important; display: block !important; visibility: visible !important; } 
+    .md-nav--primary { z-index: 2000 !important; display: block !important; visibility: visible !important; } 
+    .md-overlay { z-index: 500 !important; }
+    .md-nav__title .md-logo { display: block !important; margin: 15px 0 !important; }
+    .md-nav__item .md-nav__link--active { background-color: transparent !important; }
+    .md-nav__item--nested > .md-nav__link:focus { background-color: rgba(255, 87, 34, 0.1) !important; }
+    .md-tabs { display: none !important; }
+} */
+
+
 
 /* --- 8. CURSEURS & TAILLE PC --- */
 /* @media screen and (min-width: 60em) { */
