@@ -80,6 +80,13 @@
   background-color: var(--black);
   border-bottom-left-radius: var(--radius-md);
   border-bottom-right-radius: var(--radius-md);
+  height: var(--header-height) !important;
+  min-height: var(--header-height) !important;
+  max-height: var(--header-height) !important;
+}
+
+[data-md-color-scheme] .md-header * {
+  font-size: inherit;
 }
 
 /* Contenu interne du header */
