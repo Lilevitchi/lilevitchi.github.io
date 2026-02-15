@@ -660,7 +660,7 @@ body:has(.game-grid) .md-main__inner {
     align-items: center;
     transition: filter 0.3s ease; 
     position: relative;
-    color: var(--white);
+    fill: var(--white);
 }
 
 .orange-icon-svg {
