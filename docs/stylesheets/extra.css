@@ -240,25 +240,26 @@ body {
 /* Conteneur principal */
 [data-md-color-scheme] .md-content__inner {
   display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: var(--space-lg);
+  max-width: none;
+  width: 100%;
   padding: var(--space-lg);
   background-color: var(--tab-bg-hover);
-  border-top-left-radius: var(--radius-sm);
-  border-top-right-radius: var(--radius-sm);
-  border-bottom-left-radius: var(--radius-sm);
-  border-bottom-right-radius: var(--radius-sm);
+  border-radius: var(--radius-sm);
 }
 
-/* Force Material à recalculer la grille */
+/* Force Material à recalculer la grille 
 body:has(.game-grid) .md-main__inner {
   grid-template-columns: 1fr !important;
-}
+}*/
 
-/* Page index : plus large visuellement */
+/* Page index : plus large visuellement 
 [data-md-color-scheme] body:has(.game-grid) .md-content__inner {
   max-width: 100%;
   padding-left: clamp(1rem, 4vw, 3rem);
   padding-right: clamp(1rem, 4vw, 3rem);
-}
+}*/
 
 /* --------------------------------------------------
    TITRES
@@ -321,6 +322,10 @@ body:has(.game-grid) .md-main__inner {
   transform: translateY(-2px);
 }
 
+[data-md-color-scheme] .md-typeset a.kofi-button:hover {
+   color: var(--accent);
+}
+
 /* Icônes Material dans les liens */
 [data-md-color-scheme] .md-typeset a .twemoji svg {
   fill: currentColor;
@@ -345,15 +350,24 @@ body:has(.game-grid) .md-main__inner {
    NAVIGATION SECONDAIRE (SIDEBAR DROITE)
    -------------------------------------------------- */
 
+[data-md-color-scheme] .md-nav--secondary {
+  position: sticky;
+  top: calc(var(--header-height) + var(--space-lg));
+  max-height: calc(100vh - var(--header-height));
+  overflow-y: auto;
+  background-color: var(--tab-bg-hover);
+  border-radius: var(--radius-sm);
+}
+
 [data-md-color-scheme] .md-nav--secondary .md-nav__title {
   color: var(--white);
-  opacity: 0.7;
+  opacity: 1;
   font-weight: var(--font-bold);
 }
 
 [data-md-color-scheme] .md-nav--secondary .md-nav__link {
   color: var(--white);
-  opacity: 1;
+  opacity: 0.5;
   transition: color var(--transition-base), opacity var(--transition-base), transform var(--transition-base);
 }
 
@@ -443,7 +457,6 @@ line-height: 1.4;
 .kofi-button:hover {
   background-color: var(--dark-1);
   box-shadow: 0 0 10px var(--accent-glow);
-  color: var(--accent);
 }
 
 /* ==============================
