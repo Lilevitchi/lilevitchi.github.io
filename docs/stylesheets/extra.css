@@ -681,7 +681,7 @@ body:has(.game-grid) .md-main__inner {
     opacity: 1;
     transform: translateY(-2px);
 }
-/*
+
 [data-md-color-scheme] .orange-icon-svg,
 [data-md-color-scheme] .custom-social-icon { 
     width: 1.1rem;
@@ -691,7 +691,7 @@ body:has(.game-grid) .md-main__inner {
     transition: fill var(--transition-base);
 }
 
-
+/*
 [data-md-color-scheme] .orange-icon-svg {
     top: -1.5px;
 }
