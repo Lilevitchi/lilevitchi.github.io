@@ -239,9 +239,7 @@ body {
 
 /* Conteneur principal */
 [data-md-color-scheme] .md-content__inner {
-  max-width: var(--content-max-width);
-  margin-left: auto;
-  margin-right: auto;
+  display: grid;
   padding: var(--space-lg);
   background-color: var(--tab-bg-hover);
   border-top-left-radius: var(--radius-sm);
@@ -445,6 +443,7 @@ line-height: 1.4;
 .kofi-button:hover {
   background-color: var(--dark-1);
   box-shadow: 0 0 10px var(--accent-glow);
+  color: var(--accent);
 }
 
 /* ==============================
