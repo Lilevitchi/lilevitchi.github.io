@@ -169,13 +169,10 @@ body {
 
 /* Onglet — état normal */
 [data-md-color-scheme] .md-tabs__link {
- /* min-height: var(--header-height);*/
   display: flex;
   padding: 0.4rem 0.8rem;
   color: var(--white);
   opacity: 0.75;
-  /*overflow: visible !important;
-  text-indent: 0 !important;*/
   border-bottom: 4px solid transparent;
   background: transparent;
   transition: color var(--transition-base),
@@ -475,12 +472,12 @@ body {
     .md-content:has(.game-grid) ~ .md-sidebar--primary {
         display: none !important;
     }
-} */
+} 
 
 .md-sidebar--primary:has(~ .md-content .game-grid),
 .md-content:has(.game-grid) ~ .md-sidebar--primary {
     display: none !important;
-}
+}*/
 
 .game-grid {
     display: grid;
