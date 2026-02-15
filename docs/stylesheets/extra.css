@@ -66,8 +66,8 @@
    TYPOGRAPHIE — BASE RESPONSIVE
    ==============================*/
 
-/* [data-md-color-scheme] html {
-  font-size: clamp(15px, 0.6vw + 13px, 16px);
+[data-md-color-scheme] {
+  font-size: 16px;
 }
 
 /* ==============================
