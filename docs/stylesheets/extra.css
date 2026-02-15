@@ -271,6 +271,8 @@ input[data-md-toggle="drawer"]:checked
   margin-right: auto;
   padding: var(--space-lg);
   background-color: var(--tab-bg-hover);
+  border-top-left-radius: var(--radius-sm);
+  border-top-right-radius: var(--radius-sm);
   border-bottom-left-radius: var(--radius-sm);
   border-bottom-right-radius: var(--radius-sm);
 }
@@ -608,6 +610,70 @@ body:has(.game-grid) .md-main__inner {
         cursor: url('../assets/curseur-clic.png') 7 0, pointer !important;
     }
 /* } */
+
+/* ==============================
+   3. FOOTER (PIED DE PAGE)
+   ==============================*/
+
+/* Fond du footer */
+[data-md-color-scheme] .md-footer {
+    background-color: var(--black);
+    border-top: 1px solid var(--dark-2);
+}
+
+/* Liens de navigation (Précédent / Suivant) */
+[data-md-color-scheme] .md-footer__link {
+    transition: background-color var(--transition-base);
+}
+
+[data-md-color-scheme] .md-footer__link:hover {
+    background-color: var(--tab-bg-hover);
+}
+
+/* Texte "Précédent" / "Suivant" */
+[data-md-color-scheme] .md-footer__direction {
+    color: var(--white);
+    opacity: 0.6;
+}
+
+/* Titre de la page suivante/précédente */
+[data-md-color-scheme] .md-footer__title {
+    color: var(--accent);
+    font-weight: var(--font-bold);
+}
+
+/* ==============================
+   4. RÉSEAUX SOCIAUX & COPYRIGHT
+   ==============================*/
+
+/* Barre de copyright et réseaux */
+[data-md-color-scheme] .md-footer-meta {
+    background-color: var(--dark-1);
+}
+
+/* Icônes des réseaux sociaux */
+[data-md-color-scheme] .md-social__link {
+    color: var(--white);
+    opacity: 0.7;
+    transition: color var(--transition-fast), opacity var(--transition-fast);
+}
+
+/* Survol des icônes (deviennent orange) */
+[data-md-color-scheme] .md-social__link:hover {
+    color: var(--accent);
+    opacity: 1;
+}
+
+/* Copyright texte */
+[data-md-color-scheme] .md-copyright {
+    color: var(--white);
+    opacity: 0.5;
+    font-size: 0.7rem;
+}
+
+[data-md-color-scheme] .md-copyright__highlight {
+    color: var(--accent);
+}
 
 /* ==============================
    9. RÉSEAUX SOCIAUX - FOOTER
