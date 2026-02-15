@@ -259,7 +259,8 @@ body {
     display: flex;
     max-width: none;
     width: 100%;
-    margin-top: var(--space-sm);
+    gap: var(--space-md);
+    padding: 0 var(--space-sm);
     outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu (Debug) */
 }
 
@@ -277,10 +278,24 @@ body {
     outline: 2px dashed rgba(255, 255, 0, 0.8); /* Jaune (Debug) */
 }
 
-[data-md-color-scheme] .md-sidebar {
+/* --- SIDEBAR GAUCHE (Navigation) --- */
+[data-md-color-scheme] .md-sidebar--primary {
     width: 226px;
     flex-shrink: 0;
+    background-color: var(--tab-bg-hover);
+    border-radius: var(--radius-sm);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
     outline: 2px dashed rgba(255, 0, 255, 0.5); /* Rose (Debug) */
+}
+
+/* --- SIDEBAR DROITE (Sommaire / Table des matières) --- */
+[data-md-color-scheme] .md-sidebar--secondary {
+    width: 220px;
+    flex-shrink: 0;
+    background-color: var(--tab-bg-hover);
+    border-radius: var(--radius-sm);
+    border-left: 1px solid rgba(255, 255, 255, 0.05);
+    outline: 2px dashed rgba(0, 255, 255, 0.5); /* Cyan (Debug) */
 }
 
 /*[data-md-color-scheme] .md-main__inner,
