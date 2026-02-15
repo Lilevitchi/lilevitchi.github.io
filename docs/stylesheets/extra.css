@@ -270,8 +270,6 @@ body {
 }
 
 [data-md-color-scheme] .md-content__inner {
-    max-width: none;
-    width: 100%;
     padding: var(--space-lg);
     background-color: var(--tab-bg-hover);
     border-radius: var(--radius-sm);
