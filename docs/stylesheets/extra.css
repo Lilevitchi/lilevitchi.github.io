@@ -675,41 +675,42 @@ body:has(.game-grid) .md-main__inner {
     width: 1.1rem; 
     display: block; */
     fill: currentColor;
-    outline: 1px dashed rgba(0, 255, 0, 0.25); /* Vert */
 } 
 /*
 [data-md-color-scheme] .md-footer-social__link svg path {
     fill: currentColor !important;
-}*/
+}
 
 [data-md-color-scheme] .md-footer-social__link:hover {
     fill: var(--accent);
     opacity: 1;
     transform: translateY(-2px);
-}
+}*/
 
-/* Hover global 
+/* Hover global */
 [data-md-color-scheme] .md-footer-social__link:hover svg {
     fill: var(--accent);
     opacity: 1;
     transform: translateY(-2px);
-}*/
+}
 
 [data-md-color-scheme] .md-footer-social__icon {   
-    width: 1.1rem;
+   /* width: 1.1rem;
     height: 1.1rem;
     fill: currentColor;
     vertical-align: middle;
-    transition: fill var(--transition-base);
+    transition: fill var(--transition-base);*/
+    filter: brightness(0) invert(1) opacity(0.7);
     outline: 1px dashed rgba(255, 0, 0, 0.25); /* Rouge */
 }
 
 [data-md-color-scheme] .orange-icon-svg {   
-    width: 1.1rem;
+   /*width: 1.1rem;
     height: 1.1rem;
     fill: currentColor;
     vertical-align: middle;
-    transition: fill var(--transition-base);
+    transition: fill var(--transition-base);*/
+    filter: brightness(0) invert(1);
     outline: 1px dashed rgba(0, 0, 255, 0.25); /* Bleu */
 }
 
@@ -722,13 +723,14 @@ body:has(.game-grid) .md-main__inner {
     outline: 1px dashed rgba(255, 255, 0, 0.25); /* Jaune */
 }
 
+/*
 [data-md-color-scheme] .md-typeset a:hover .orange-icon-svg, 
 [data-md-color-scheme] .md-footer-social__link:hover .md-footer-social__icon,
 [data-md-color-scheme] .md-footer-social__link:hover .custom-social-icon { 
     fill: var(--accent);
 }  
 
-/*
+
 [data-md-color-scheme] .orange-icon-svg {
     top: -1.5px;
 }
