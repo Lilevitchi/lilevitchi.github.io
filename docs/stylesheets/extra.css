@@ -250,6 +250,40 @@ body {
    STRUCTURE GLOBALE DU CONTENU
    -------------------------------------------------- */
 
+[data-md-color-scheme] .md-grid {
+    max-width: none;
+    margin: 0;
+}
+
+[data-md-color-scheme] .md-main__inner {
+    display: flex;
+    max-width: none;
+    width: 100%;
+    margin-top: var(--space-sm);
+    outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu (Debug) */
+}
+
+[data-md-color-scheme] .md-content {
+    flex: 1;
+    min-width: 0;
+    outline: 2px dashed rgba(0, 255, 0, 0.8); /* Vert (Debug) */
+}
+
+[data-md-color-scheme] .md-content__inner {
+    max-width: none; /* Le texte peut s'étaler sans limite */
+    width: 100%;
+    padding: var(--space-lg);
+    background-color: var(--tab-bg-hover);
+    border-radius: var(--radius-sm);
+    outline: 2px dashed rgba(255, 255, 0, 0.8); /* Jaune (Debug) */
+}
+
+[data-md-color-scheme] .md-sidebar {
+    width: 12.1rem; /* Taille standard des guides ModdingLinked */
+    flex-shrink: 0;  /* Empêche les colonnes de s'écraser */
+    outline: 2px dashed rgba(255, 0, 255, 0.5); /* Rose (Debug) */
+}
+
 /*[data-md-color-scheme] .md-main__inner,
 [data-md-color-scheme] .md-content {
   margin-top: var(--space-sm);
