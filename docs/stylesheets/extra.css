@@ -616,7 +616,6 @@ body:has(.game-grid) .md-main__inner {
 /* Conteneur des icônes sociales */
 [data-md-color-scheme] .md-footer-social {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     gap: 1rm;
     margin-left: auto;
@@ -626,8 +625,16 @@ body:has(.game-grid) .md-main__inner {
 [data-md-color-scheme] .md-footer-social__link {
   display: inline-flex;
   align-items: center;
+  gap: 0.35rem;
   color: var(--white);
   line-height: 1;
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+/* Hover global */
+[data-md-color-scheme] .md-footer-social__link:hover {
+  color: var(--accent);
 }
 
 /* SVG des icônes sociales */
@@ -635,12 +642,25 @@ body:has(.game-grid) .md-main__inner {
   width: 1.1rem;
   height: 1.1rem;
   fill: currentColor;
-  transition: fill var(--transition-base);
+  flex-shrink: 0;
 }
 
-[data-md-color-scheme] .md-footer-social__link:hover svg {
+[data-md-color-scheme] .nexus-icon::before {
+  content: "";
+  width: 1.1rem;
+  height: 1.1rem;
+  background-color: currentColor;
+  mask: url("../assets/icons/nexusmods.svg") no-repeat center / contain;
+  -webkit-mask: url("../assets/icons/nexusmods.svg") no-repeat center / contain;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/*[data-md-color-scheme] .md-footer-social__link:hover svg {
     fill: var(--accent);
 }
+
+
 
 [data-md-color-scheme] .orange-icon-svg,
 [data-md-color-scheme] .custom-social-icon,
