@@ -54,4 +54,4 @@ Si mes guides vous ont plu et que vous en avez envie, n'hésitez pas à me soute
 
 ## :material-link: Mes réseaux
 
-[:fontawesome-brands-youtube:{ .orange-icon } YouTube](https://www.youtube.com/@Lilevitchi){ target="_blank" } | [:fontawesome-brands-twitch:{ .orange-icon } Twitch](https://twitch.tv/lilevitchi){ target="_blank" } | [:fontawesome-brands-discord:{ .orange-icon } Discord](https://discord.gg/aFJxsPC){ target="_blank" } | <a href="https://www.nexusmods.com/profile/Lilevitchi" target="_blank" class="nexus-link"><img src="assets/icons/nexusmods.svg" class="orange-icon-svg"> Nexus Mods</a>
+[:fontawesome-brands-youtube: YouTube](https://www.youtube.com/@Lilevitchi){ .md-footer-social__link target="_blank" } | [:fontawesome-brands-twitch: Twitch](https://twitch.tv/lilevitchi){ .md-footer-social__link target="_blank" } | [:fontawesome-brands-discord: Discord](https://discord.gg/aFJxsPC){ .md-footer-social__link target="_blank" } | [Nexus Mods](https://www.nexusmods.com/profile/Lilevitchi){ .md-footer-social__link .nexus-icon target="_blank" }
