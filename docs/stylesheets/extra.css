@@ -146,6 +146,7 @@
 [data-md-color-scheme] .md-tabs {
   display: flex;
   justify-content: center;
+  font-size: 0.80rem;
   width: 100%;
   background: transparent;
   box-shadow: none;
@@ -171,7 +172,6 @@
 [data-md-color-scheme] .md-tabs__link {
   display: flex;
   padding: 0.4rem 0.8rem;
-  font-size: 0.85rem;
   color: var(--white);
   opacity: 0.75;
   border-bottom: 4px solid transparent;
