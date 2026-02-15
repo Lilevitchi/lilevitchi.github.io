@@ -278,7 +278,7 @@ body {
 }
 
 [data-md-color-scheme] .md-sidebar {
-    width: 12.1rem;
+    width: 226px;
     flex-shrink: 0;
     outline: 2px dashed rgba(255, 0, 255, 0.5); /* Rose (Debug) */
 }
