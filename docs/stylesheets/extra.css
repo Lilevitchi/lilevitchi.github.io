@@ -650,14 +650,14 @@ body:has(.game-grid) .md-main__inner {
    ==============================*/
 
 /* Conteneur des icônes sociales */
-[data-md-color-scheme] .md-social {
+[data-md-color-scheme] .md-footer-social {
     display: flex;
     gap: var(--space-sm);
     padding: 0.5rem 0;
 }
 
 /* Lien individuel */
- [data-md-color-scheme] .md-social__link {
+ [data-md-color-scheme] .md-footer-social__link {
     display: inline-flex;
     color: var(--white) !important;
     opacity: 0.7;
@@ -665,18 +665,18 @@ body:has(.game-grid) .md-main__inner {
 }
 
 /* SVG des icônes sociales */
-[data-md-color-scheme] .md-social__link svg { 
+[data-md-color-scheme] .md-footer-social__link svg { 
    max-height: 1.1rem; 
    width: 1.1rem; 
    fill: currentColor !important;
 } 
 
-[data-md-color-scheme] .md-social__link svg path {
+[data-md-color-scheme] .md-footer-social__link svg path {
     fill: currentColor !important;
 }
 
 /* Hover global */
-[data-md-color-scheme] .md-social__link:hover svg {
+[data-md-color-scheme] .md-footer-social__link:hover svg {
     fill: var(--accent);
     opacity: 1;
     transform: translateY(-2px);
