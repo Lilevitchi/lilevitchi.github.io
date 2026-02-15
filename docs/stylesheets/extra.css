@@ -237,19 +237,33 @@ body:has(.game-grid) .md-sidebar--secondary {
   display: none !important;
 }
 
-/* Page index : sidebar gauche masquée par défaut */
+/* Sidebar gauche cachée par défaut */
 body:has(.game-grid) .md-sidebar--primary {
   transform: translateX(-100%);
-  pointer-events: none;
   transition: transform 0.3s ease;
+  pointer-events: none;
+  z-index: 200;
 }
 
-/* Burger ouvert → sidebar visible */
+/* Overlay toujours actif (important !) */
+body:has(.game-grid) .md-overlay {
+  pointer-events: auto;
+}
+
+/* Burger ouvert → sidebar visible et cliquable */
 body:has(.game-grid)
 input[data-md-toggle="drawer"]:checked
 ~ .md-sidebar--primary {
   transform: translateX(0);
   pointer-events: auto;
+}
+
+/* Burger ouvert → overlay visible */
+body:has(.game-grid)
+input[data-md-toggle="drawer"]:checked
+~ .md-overlay {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Conteneur principal */
@@ -378,7 +392,6 @@ input[data-md-toggle="drawer"]:checked
 /* Bloc conseil du bot */
 .bot-advice {
   display: flex;
-  /*align-items: center;*/
   align-items: flex-start;
   background-color: var(--accent-soft);
   border-left: 4px solid var(--accent);
@@ -393,7 +406,7 @@ input[data-md-toggle="drawer"]:checked
   margin-right: var(--space-lg);
   flex-shrink: 0;
   width: auto; 
-  height: 80px;
+  height: 120px;
   align-self: center;
 }
 
@@ -605,7 +618,7 @@ input[data-md-toggle="drawer"]:checked
     justify-content: flex-end;
     gap: 15px;
     margin-left: auto;
-    padding-top: 8px;
+   /* padding-top: 8px;*/
 }
 
 /* Lien individuel */
@@ -622,8 +635,8 @@ input[data-md-toggle="drawer"]:checked
 /* SVG des icônes sociales */
 .md-footer-social__link svg {
   width: 1.1rem;
-  height: 1.1rem;
-  fill: currentColor;
+  max-height: 1.1rem;
+  /*fill: currentColor;*/
   transition: fill 0.3s ease;
 }
 
@@ -639,7 +652,7 @@ input[data-md-toggle="drawer"]:checked
     fill: var(--accent);
 }
 
-.orange-icon-svg, .custom-social-icon, .md-footer-social__icon { 
+/* .orange-icon-svg, .custom-social-icon, .md-footer-social__icon { 
     height: 1.1rem !important; 
     width: 1.1rem !important;
     vertical-align: middle; 
@@ -670,7 +683,7 @@ input[data-md-toggle="drawer"]:checked
 .md-footer-social__link:hover .md-footer-social__icon,
 .md-footer-social__link:hover .custom-social-icon { 
     filter: invert(48%) sepia(89%) saturate(2476%) hue-rotate(346deg) brightness(101%) contrast(101%) !important; 
-}
+}*/
 
 /* ==============================
    9. RÉSEAUX SOCIAUX — FOOTER
