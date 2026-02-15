@@ -718,7 +718,7 @@ body:has(.game-grid) .md-main__inner {
 
 [data-md-color-scheme] .md-typeset a:hover .orange-icon-svg, 
 [data-md-color-scheme] .md-footer-social__link:hover .md-footer-social__icon { 
-    fill: var(--accent);
+    filter: invert(48%) sepia(89%) saturate(2476%) hue-rotate(346deg) brightness(101%) contrast(101%);
 } 
 
 /*
