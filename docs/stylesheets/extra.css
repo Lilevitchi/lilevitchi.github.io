@@ -393,7 +393,12 @@ input[data-md-toggle="drawer"]:checked
   margin-right: var(--space-lg);
   flex-shrink: 0;
   width: auto; 
-  height: 60px;
+  height: 80px;
+  align-self: center;
+}
+
+.bot-advice:hover img {
+  transform: translateY(-2px);
 }
 
 /* Titre du conseil */
@@ -605,19 +610,33 @@ input[data-md-toggle="drawer"]:checked
 
 /* Lien individuel */
 .md-footer-social__link {
-    margin-left: 10px !important;
+  display: inline-flex;
+  align-items: center;
 }
 
+/* Lien individuel 
+.md-footer-social__link {
+    margin-left: 10px !important;
+}*/
+
 /* SVG des icônes sociales */
+.md-footer-social__link svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  fill: currentColor;
+  transition: fill 0.3s ease;
+}
+
+/* SVG des icônes sociales 
 .md-footer-social__link svg { 
    max-height: 1.1rem !important; 
    width: 1.1rem !important; 
    fill: #ffffff !important;
    transition: fill 0.3s ease;
-} 
+} */
 
 .md-footer-social__link:hover svg {
-    fill: #ff5722 !important;
+    fill: var(--accent);
 }
 
 .orange-icon-svg, .custom-social-icon, .md-footer-social__icon { 
@@ -657,22 +676,6 @@ input[data-md-toggle="drawer"]:checked
    9. RÉSEAUX SOCIAUX — FOOTER
    ============================== 
 
-
-.md-footer-social {
-  display: flex;
-  justify-content: flex-end;
-  gap: 15px;
-  margin-left: auto;
-  padding-top: 8px;
-}
-
-
-.md-footer-social__link {
-  display: inline-flex;
-  align-items: center;
-}
-
-
 .md-footer-social__link svg {
   width: 1.1rem;
   height: 1.1rem;
@@ -680,11 +683,9 @@ input[data-md-toggle="drawer"]:checked
   transition: fill 0.3s ease;
 }
 
-
 .md-footer {
   color: var(--white);
 }
-
 
 .md-footer-social__link:hover {
   color: var(--accent);
