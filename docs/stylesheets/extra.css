@@ -280,12 +280,12 @@ body:has(.game-grid) .md-main__inner {
   grid-template-columns: 1fr !important;
 }
 
-/* Page index : plus large visuellement 
+/* Page index : plus large visuellement */
 [data-md-color-scheme] body:has(.game-grid) .md-content__inner {
   max-width: 100%;
   padding-left: clamp(1rem, 4vw, 3rem);
   padding-right: clamp(1rem, 4vw, 3rem);
-}*/
+}
 
 /* --------------------------------------------------
    TITRES
