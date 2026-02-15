@@ -684,12 +684,13 @@ body:has(.game-grid) .md-main__inner {
 /* Conteneur des icônes sociales */
 [data-md-color-scheme] .md-footer-social {
     display: flex;
-    justify-content: flex-end;
+   /*  justify-content: flex-end;*/
     gap: 1rem;
-    margin-left: auto;
+   /* margin-left: auto;*/
    /* padding-top: 8px;*/
 
      align-items: center;
+     background-color: var(--tab-bg-hover);
 }
 
 /* Lien individuel */
