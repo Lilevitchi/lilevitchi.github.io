@@ -157,7 +157,7 @@ body {
   align-items: center;
   height: 100%;
   gap: 0;
-  padding-bot: 0.8rem;
+  padding: 0;
   margin: 0;
    outline: 1px dashed rgba(255, 255, 255, 0.25);
 }
@@ -170,7 +170,7 @@ body {
 
 /* Onglet — état normal */
 [data-md-color-scheme] .md-tabs__link {
-  min-height: var(--header-height); 
+  /*min-height: var(--header-height); */
   display: flex;
   padding: 0.4rem 0.8rem;
   color: var(--white);
@@ -183,6 +183,11 @@ body {
               background-color var(--transition-base),
               opacity var(--transition-base),
               border-color var(--transition-base);
+
+ height: var(--header-height);
+ align-items: center;
+ justify-content: center;
+ box-sizing: border-box;
 }
 
 /* Onglet — survol (hover) */
@@ -199,7 +204,9 @@ body {
   opacity: 1;
   color: var(--accent);
   background-color: var(--tab-bg-active);
-  border-bottom-color: var(--accent);
+  /*border-bottom-color: var(--accent);*/
+
+ border-bottom: 4px solid var(--accent) !important;
 }
 
 /* Texte long */
