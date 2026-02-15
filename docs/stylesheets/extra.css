@@ -257,31 +257,31 @@ body {
 
 [data-md-color-scheme] .md-main {
   max-width: none;
-}*/
+}
 
 [data-md-color-scheme] .md-main__inner {
   max-width: none;
   margin: 0;
   display: grid;
   gap: var(--space-sm);
-  outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu */
+  outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu 
 }
-
+/*
 [data-md-color-scheme] .md-content {
   max-width: none;
   width: 100%;
-  outline: 2px dashed rgba(0, 255, 0, 0.8); /* Vert */
+  outline: 2px dashed rgba(0, 255, 0, 0.8); /* Vert 
 }
+/*
 
-/* Conteneur principal */
 [data-md-color-scheme] .md-content__inner {
   max-width: var(--grid-max-width);
   width: 100%;
   padding: var(--space-lg);
   background-color: var(--tab-bg-hover);
   border-radius: var(--radius-sm);
-  outline: 2px dashed rgba(255, 255, 0, 0.8); /* Jaune */
-}
+  outline: 2px dashed rgba(255, 255, 0, 0.8); /* Jaune 
+}*/
 
 /* Force Material à recalculer la grille 
 body:has(.game-grid) .md-main__inner {
@@ -297,7 +297,7 @@ body:has(.game-grid) .md-main__inner {
 
 /* --------------------------------------------------
    TITRES
-   -------------------------------------------------- */
+   -------------------------------------------------- 
 
 [data-md-color-scheme] .md-typeset h1,
 [data-md-color-scheme] .md-typeset h2,
@@ -312,7 +312,7 @@ body:has(.game-grid) .md-main__inner {
   margin-bottom: var(--space-md);
 }
 
-/* Premier H1 (page title) */
+/* Premier H1 (page title) 
 [data-md-color-scheme] .md-typeset h1:first-child {
   margin-top: 0;
   padding-top: 0;
@@ -327,19 +327,19 @@ body:has(.game-grid) .md-main__inner {
 
 /* --------------------------------------------------
    PARAGRAPHES
-   -------------------------------------------------- */
+   -------------------------------------------------- 
 
 [data-md-color-scheme] .md-typeset p {
   text-align: left;
   max-width: 100%;
   color: var(--white);
  /* margin-left: 0;
-  margin-right: 0;*/
+  margin-right: 0;
 }
 
 /* --------------------------------------------------
    LIENS
-   -------------------------------------------------- */
+   -------------------------------------------------- 
 
 [data-md-color-scheme] .md-typeset a:not(.kofi-button) {
   color: var(--white);
@@ -360,7 +360,7 @@ body:has(.game-grid) .md-main__inner {
    color: var(--accent);
 }
 
-/* Icônes Material dans les liens */
+/* Icônes Material dans les liens 
 [data-md-color-scheme] .md-typeset a .twemoji svg {
   fill: currentColor;
 }
@@ -382,7 +382,7 @@ body:has(.game-grid) .md-main__inner {
 
 /* --------------------------------------------------
    NAVIGATION SECONDAIRE (SIDEBAR DROITE)
-   -------------------------------------------------- */
+   -------------------------------------------------- 
 
 [data-md-color-scheme] .md-nav--secondary {
   position: sticky;
@@ -391,7 +391,7 @@ body:has(.game-grid) .md-main__inner {
   overflow-y: auto;
   background-color: var(--tab-bg-hover);
   border-radius: var(--radius-sm);
- outline: 2px dashed rgba(255, 255, 255, 0.8); /* BLanc */
+ outline: 2px dashed rgba(255, 255, 255, 0.8); /* BLanc 
 }
 
 [data-md-color-scheme] .md-nav--secondary .md-nav__title {
@@ -414,7 +414,7 @@ body:has(.game-grid) .md-main__inner {
 
 /* --------------------------------------------------
    ICÔNES ORANGES DANS LES TITRES
-   -------------------------------------------------- */
+   -------------------------------------------------- 
 
 [data-md-color-scheme] .md-typeset h1 .twemoji svg,
 [data-md-color-scheme] .md-typeset h2 .twemoji svg,
@@ -424,7 +424,7 @@ body:has(.game-grid) .md-main__inner {
 
 /* --------------------------------------------------
    SUPPRESSION DES ANCRES AUTOMATIQUES
-   -------------------------------------------------- */
+   -------------------------------------------------- 
 
 [data-md-color-scheme] .headerlink {
   display: none;
@@ -434,7 +434,7 @@ body:has(.game-grid) .md-main__inner {
    5. UI ELEMENTS (BOT & KO-FI)
    ==============================*/
 
-/* Bloc conseil du bot */
+/* Bloc conseil du bot 
 .bot-advice {
   display: flex;
   align-items: center;
@@ -448,29 +448,29 @@ line-height: 1.4;
   margin: var(--space-lg) 0;
 }
 
-/* Image du bot */
+/* Image du bot 
 .bot-advice img {
   margin-right: var(--space-lg);
   flex-shrink: 0;
   width: auto; 
   height: 100px;
- /* align-self: center;*/
+ /* align-self: center;
 }
 
-/* Titre du conseil */
+/* Titre du conseil 
 #lile-bot-title {
   color: var(--accent);
   font-weight: var(--font-bold);
 }
 
-/* Texte du conseil */
+/* Texte du conseil 
 #lile-bot-tip {
   font-style: italic;
   opacity: 0.85;
   color: var(--white);
 }
 
-/* Bouton Ko-fi */
+/* Bouton Ko-fi 
 .kofi-button {
   background-color: var(--accent);
   color: var(--white);
@@ -488,7 +488,7 @@ line-height: 1.4;
     box-shadow var(--transition-base);
 }
 
-/* Hover Ko-fi */
+/* Hover Ko-fi 
 .kofi-button:hover {
   background-color: var(--dark-1);
   box-shadow: 0 0 10px var(--accent-glow);
