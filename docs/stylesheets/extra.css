@@ -37,7 +37,7 @@
   --space-xl: 1.6rem;
 
   /* ---------- Radius ---------- */
-  --radius-sm: 0.35rem;
+  --radius-sm: 0.4rem;
   --radius-md: 0.75rem;
   --radius-lg: 1.25rem;
 
@@ -79,6 +79,7 @@ body {
 [data-md-color-scheme] .md-header {
   position: stiky;
   background-color: var(--black);
+  outline: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom-left-radius: var(--radius-sm);
   border-bottom-right-radius: var(--radius-sm);
   height: var(--header-height);
@@ -240,19 +241,18 @@ body {
 
 [data-md-color-scheme] .md-main {
   max-width: none;
-  outline: 2px dashed rgba(255, 0, 0, 0.8); /* Rouge */
 }
 
 [data-md-color-scheme] .md-main__inner {
   max-width: none;
   margin: 0;
- outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu */
+  outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu */
 }
 
 [data-md-color-scheme] .md-content {
   max-width: none;
   width: 100%;
- outline: 2px dashed rgba(0, 255, 0, 0.8); /* Vert */
+  outline: 2px dashed rgba(0, 255, 0, 0.8); /* Vert */
 }
 
 /* Conteneur principal */
@@ -264,7 +264,7 @@ body {
   padding: var(--space-lg);
   background-color: var(--tab-bg-hover);
   border-radius: var(--radius-sm);
- outline: 2px dashed rgba(255, 255, 0, 0.8); /* Jaune */
+  outline: 2px dashed rgba(255, 255, 0, 0.8); /* Jaune */
 }
 
 /* Force Material à recalculer la grille 
