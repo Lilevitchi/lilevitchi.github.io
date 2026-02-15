@@ -185,8 +185,6 @@ body {
               border-color var(--transition-base);
 
  height: var(--header-height);
- align-items: center;
- justify-content: center;
  box-sizing: border-box;
 }
 
