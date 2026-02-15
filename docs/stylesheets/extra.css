@@ -240,30 +240,20 @@ body:has(.game-grid) .md-sidebar--secondary {
 /* Sidebar gauche cachée par défaut */
 body:has(.game-grid) .md-sidebar--primary {
   transform: translateX(-100%);
-  transition: transform 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
   pointer-events: none;
-  z-index: 200;
+  transition: transform 0.3s ease, opacity 0.2s ease;
 }
 
-/* Overlay toujours actif (important !) */
-body:has(.game-grid) .md-overlay {
-  pointer-events: auto;
-}
-
-/* Burger ouvert → sidebar visible et cliquable */
+/* Burger ouvert → sidebar visible */
 body:has(.game-grid)
 input[data-md-toggle="drawer"]:checked
 ~ .md-sidebar--primary {
   transform: translateX(0);
-  pointer-events: auto;
-}
-
-/* Burger ouvert → overlay visible */
-body:has(.game-grid)
-input[data-md-toggle="drawer"]:checked
-~ .md-overlay {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 
 /* Conteneur principal */
@@ -650,6 +640,29 @@ input[data-md-toggle="drawer"]:checked
 
 .md-footer-social__link:hover svg {
     fill: var(--accent);
+}
+
+.orange-icon-svg, .custom-social-icon, .md-footer-social__icon { 
+    height: 1.1rem; 
+    width: 1.1rem;
+    vertical-align: middle; 
+    display: inline-block; 
+    transition: filter 0.3s ease; 
+    position: relative;
+}
+
+.orange-icon-svg {
+    top: -1.5px !important;
+}
+
+.md-footer-social__icon {
+    top: -7px !important;
+}
+
+.md-typeset a:hover .orange-icon-svg, 
+.md-footer-social__link:hover .md-footer-social__icon,
+.md-footer-social__link:hover .custom-social-icon { 
+    filter: invert(48%) sepia(89%) saturate(2476%) hue-rotate(346deg) brightness(101%) contrast(101%) !important; 
 }
 
 /* .orange-icon-svg, .custom-social-icon, .md-footer-social__icon { 
