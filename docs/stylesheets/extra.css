@@ -387,10 +387,12 @@ body:has(.game-grid) .md-main__inner {
 /* Bloc conseil du bot */
 .bot-advice {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   background-color: var(--accent-soft);
   border-left: 4px solid var(--accent);
 
+line-height: 1.4;
+ 
   padding: var(--space-md);
   border-radius: var(--radius-sm);
   margin: var(--space-lg) 0;
@@ -401,8 +403,8 @@ body:has(.game-grid) .md-main__inner {
   margin-right: var(--space-lg);
   flex-shrink: 0;
   width: auto; 
-  height: 100px;
-  align-self: center;
+  height: 72px;
+ /* align-self: center;*/
 }
 
 /* Titre du conseil */
@@ -414,7 +416,7 @@ body:has(.game-grid) .md-main__inner {
 /* Texte du conseil */
 #lile-bot-tip {
   font-style: italic;
-  opacity: 0.8;
+  opacity: 0.85;
   color: var(--white);
 }
 
