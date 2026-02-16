@@ -99,7 +99,7 @@
 }
 
 /* ==============================
-   2. PROGRESS BAR (Leur rail gris)
+   2. PROGRESS BAR
    ==============================*/
 
 [data-md-color-scheme] .progress-container {
@@ -117,22 +117,23 @@
 [data-md-color-scheme] .progress-bar {
   height: 100%;
   background-color: var(--accent);
-  width: 0%; /* Piloté par JS */
+  width: 0%;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
+  transition: width 150ms ease-out;
 }
 
 /* ==============================
    3. HEADER & BANNIÈRE
    ==============================*/
 
+/* Header global */
 [data-md-color-scheme] .md-header {
   position: fixed;
   z-index: 3;
   width: 100%;
   height: var(--header-height) !important;
   background-color: var(--bg-header) !important;
-  
   padding: 0 1em;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
@@ -140,15 +141,37 @@
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.13);
 }
 
-/* On force le contenu interne à suivre le 5em */
+/* Contenu interne du header */
 [data-md-color-scheme] .md-header__inner {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  width: 100%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
-/* Centrage de tes Tabs (Navigation) */
+/* Logo */
+[data-md-color-scheme] .md-logo img {
+  height: 60px;
+  width: auto;
+  display: block;
+  transition: transform 187ms ease;
+}
+
+/* Logo Hover */
+[data-md-color-scheme] .md-logo img:hover {
+   transform: translateY(-2px);
+}
+
+/* Titre du site */
+[data-md-color-scheme] .md-header__title {
+  display: flex;
+  align-items: center;
+  margin-left: var(--space-xs);
+}
+
+
+
+
 [data-md-color-scheme] .md-header__tabs {
   position: absolute;
   left: 50%;
