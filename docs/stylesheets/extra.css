@@ -265,6 +265,7 @@ body {
     margin: 0;
     gap: var(--space-lg);
     outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu (Debug) */
+    outline-offset: -2px;
 }
 
 /*[data-md-color-scheme] .md-sidebar__inner {
