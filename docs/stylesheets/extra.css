@@ -305,7 +305,7 @@
 /* Sidebar */
 [data-md-color-scheme] .md-sidebar {
   position: fixed;
-  margin-top: var(--sidebar-margin-top);
+  /*margin-top: var(--sidebar-margin-top);*/
   height: calc(100vh - var(--sidebar-height-offset));
   background: #292c35 !important;
   border-radius: 4px;
