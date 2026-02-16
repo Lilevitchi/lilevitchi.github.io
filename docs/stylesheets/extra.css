@@ -31,8 +31,8 @@
   --white: #ffffff;
 
   /* ---------- Layout ---------- */
-  --header-height: 5em;
-  --progress-height: 5.2em;
+  --header-height: 72px;
+  --progress-height: 74px;
   --content-max-width: 87.5rem; /* 1400px */
   --grid-max-width: 95%;
   --sidebar-width: 15em;
