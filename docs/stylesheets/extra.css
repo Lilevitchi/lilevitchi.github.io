@@ -72,10 +72,10 @@
    TYPOGRAPHIE — BASE RESPONSIVE
    ==============================*/
 
-html,
+/*html,
 body {
   font-size: 24px !important;
-}
+}*/
 
 [data-md-color-scheme] body {
   background-color: var(--bg-page);
@@ -118,13 +118,17 @@ body {
   background-color: rgb(43, 43, 43);
   border-bottom-left-radius: var(--radius-sm);
   border-bottom-right-radius: var(--radius-sm);
-  height: 80px !important;
+  height: 48px !important;
   outline: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.13);
   border: 1px solid transparent;
 
   transition: all 187ms cubic-bezier(0, 0, 0, 1);
 }
+
+ [data-md-color-scheme] .md-header * {
+  font-size: inherit;
+} 
 
 /* Contenu interne du header */
 [data-md-color-scheme] .md-header__inner {
@@ -141,13 +145,15 @@ body {
   display: flex;
   align-items: center;
   max-width: 100%;
-  padding-right: var(--space-lg);
+  width: 100%;
 }
 
 /* Logo */
 [data-md-color-scheme] .md-logo img {
   height: 60px;
+  width: auto;
   display: block;
+  transition: transform 187ms ease;
 }
 
 /* Logo Hover */
@@ -164,6 +170,7 @@ body {
 
 /* Texte du titre */
 [data-md-color-scheme] .md-header__title .md-ellipsis {
+  font-family: Arial, Helvetica, sans-serif;
   color: var(--accent);
   font-size: var(--font-base-size);
   font-weight: normal;
