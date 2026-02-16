@@ -30,7 +30,7 @@
   --bg-card: rgb(32, 32, 32);
 
   /* ---------- Layout ---------- */
-  --header-height: 3rem;
+  --header-height: 4.5rem;
   --content-max-width: 87.5rem; /* 1400px */
   --grid-max-width: 95%;
 
@@ -118,7 +118,7 @@ body {
   background-color: rgb(43, 43, 43);
   border-bottom-left-radius: var(--radius-sm);
   border-bottom-right-radius: var(--radius-sm);
-  height: 80px !important;
+  height: var(--header-height);
   outline: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.13);
   border: 1px solid transparent;
