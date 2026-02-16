@@ -24,6 +24,7 @@ theme:
 
 extra_javascript:
   - javascripts/random_tips.js
+  - javascripts/progress.js
 
 extra_css:
   - stylesheets/extra.css
