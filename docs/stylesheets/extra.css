@@ -259,14 +259,53 @@ body {
     display: flex;
     max-width: none;
     width: 100%;
-    gap: var(--space-md);
-    padding: 0 var(--space-sm);
+    margin-top: 0;
     outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu (Debug) */
+}
+
+/* --- SIDEBAR GAUCHE (Navigation) --- */
+[data-md-color-scheme] .md-sidebar--primary {
+    position: fixed;
+    top: 7.5rem;      /* Espace sous le header */
+    left: 1rem;       /* Espace bord gauche */
+    bottom: 5rem;     /* Espace au-dessus du footer */
+    width: 260px;     /* Ta largeur personnalisée */
+    
+    background-color: var(--tab-bg-hover);
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    
+    /* Permet de scroller dans le menu s'il est trop long */
+    overflow-y: auto; 
+    z-index: 10;
+}
+
+/* --- SIDEBAR DROITE (Sommaire / Table des matières) --- */
+[data-md-color-scheme] .md-sidebar--secondary {
+    position: fixed;
+    top: 7.5rem;      /* Aligné sur la gauche */
+    right: 1rem;      /* Espace bord droit */
+    bottom: 5rem;     /* Espace au-dessus du footer */
+    width: 240px;     /* Ta largeur personnalisée */
+    
+    background-color: var(--tab-bg-hover);
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    
+    overflow-y: auto;
+    z-index: 10;
 }
 
 [data-md-color-scheme] .md-content {
     flex: 1;
+ 
+    margin-left: calc(260px + 2rem); 
+    margin-right: calc(240px + 2rem);
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    
     min-width: 0;
+ 
     outline: 2px dashed rgba(0, 255, 0, 0.8); /* Vert (Debug) */
 }
 
@@ -276,26 +315,6 @@ body {
     border-radius: var(--radius-sm);
     box-sizing: border-box;
     outline: 2px dashed rgba(255, 255, 0, 0.8); /* Jaune (Debug) */
-}
-
-/* --- SIDEBAR GAUCHE (Navigation) --- */
-[data-md-color-scheme] .md-sidebar--primary {
-    width: 226px;
-    flex-shrink: 0;
-    background-color: var(--tab-bg-hover);
-    border-radius: var(--radius-sm);
-    border-right: 1px solid rgba(255, 255, 255, 0.05);
-    outline: 2px dashed rgba(255, 0, 255, 0.5); /* Rose (Debug) */
-}
-
-/* --- SIDEBAR DROITE (Sommaire / Table des matières) --- */
-[data-md-color-scheme] .md-sidebar--secondary {
-    width: 220px;
-    flex-shrink: 0;
-    background-color: var(--tab-bg-hover);
-    border-radius: var(--radius-sm);
-    border-left: 1px solid rgba(255, 255, 255, 0.05);
-    outline: 2px dashed rgba(0, 255, 255, 0.5); /* Cyan (Debug) */
 }
 
 /*[data-md-color-scheme] .md-main__inner,
