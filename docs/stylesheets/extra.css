@@ -82,7 +82,11 @@ body {
   border-bottom-left-radius: var(--radius-sm);
   border-bottom-right-radius: var(--radius-sm);
   height: var(--header-height);
-  outline: 1px rgba(255, 0, 0, 0.1); /* Rouge (Debug) */
+  outline: 1px solid rgba(255, 0, 0, 0.5);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.13);
+  border: 1px solid transparent;
+  width: 100%;
+  display: flex;
 }
 
 [data-md-color-scheme] .md-header * {
