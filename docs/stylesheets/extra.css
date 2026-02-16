@@ -285,6 +285,7 @@ body {
 [data-md-color-scheme] .md-main {
   padding: var(--space-md);
   background-color: var(--bg-page);
+  margin-top: 48px;
 }
 
 /* Grid principal */
