@@ -331,17 +331,6 @@ body {
     outline: 2px dashed rgba(255, 255, 0, 0.8); /* Jaune (Debug) */
 }
 
-/* On force du contenu dans les sidebars pour tester le scroll */
-.md-sidebar--primary .md-sidebar__inner::after,
-.md-sidebar--secondary .md-sidebar__inner::after {
-    content: "TEST SCROLL \A \A" "Ligne de test \A". repeat(50); /* Répète le texte */
-    white-space: pre;
-    display: block;
-    color: rgba(255, 255, 255, 0.1); /* Très discret pour ne pas gêner */
-    font-size: 20px;
-    padding-top: 20px;
-}
-
 /*[data-md-color-scheme] .md-main__inner,
 [data-md-color-scheme] .md-content {
   margin-top: var(--space-sm);
@@ -474,7 +463,7 @@ body:has(.game-grid) .md-main__inner {
 
 /* --------------------------------------------------
    NAVIGATION SECONDAIRE (SIDEBAR DROITE)
-   -------------------------------------------------- 
+   -------------------------------------------------- */
 
 [data-md-color-scheme] .md-nav--secondary {
   position: sticky;
@@ -483,7 +472,7 @@ body:has(.game-grid) .md-main__inner {
   overflow-y: auto;
   background-color: var(--tab-bg-hover);
   border-radius: var(--radius-sm);
- outline: 2px dashed rgba(255, 255, 255, 0.8); /* BLanc 
+ outline: 2px dashed rgba(255, 255, 255, 0.8); /* BLanc */
 }
 
 [data-md-color-scheme] .md-nav--secondary .md-nav__title {
