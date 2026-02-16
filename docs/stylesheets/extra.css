@@ -215,14 +215,15 @@
 [data-md-color-scheme] .md-tabs__link {
   pointer-events: auto;
   color: white;
-  padding: 0.4em 0.8em;
-  font-size: 0.85em;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  border-bottom: 4px solid transparent;
+  background: transparent;
   transition: var(--transition-midnight);
 }
 
 /* Onglet — survol (hover) */
 [data-md-color-scheme] .md-tabs__link:hover {
-  opacity: 1;
   color: var(--accent);
   background-color: var(--tab-bg-hover);
 }
@@ -231,7 +232,6 @@
 [data-md-color-scheme]
 .md-tabs__item--active
 .md-tabs__link {
-  opacity: 1;
   color: var(--accent);
   background-color: var(--tab-bg-active);
   border-bottom-color: var(--accent);
