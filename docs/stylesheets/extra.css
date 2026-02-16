@@ -434,7 +434,6 @@ body:has(.game-grid) .md-main__inner {
 
 [data-md-color-scheme] .md-typeset a:hover:not(.kofi-button) {
   color: var(--accent);
-  transform: translateY(-2px);
 }
 
 [data-md-color-scheme] .md-typeset a.kofi-button:hover {
@@ -448,6 +447,7 @@ body:has(.game-grid) .md-main__inner {
 
 [data-md-color-scheme] .md-typeset a:hover .twemoji svg {
   fill: var(--accent);
+  transform: translateY(-2px);
 }
 
 [data-md-color-scheme] .orange-icon-svg {     
@@ -459,6 +459,7 @@ body:has(.game-grid) .md-main__inner {
 
 [data-md-color-scheme] .md-typeset a:hover .orange-icon-svg { 
     filter: invert(48%) sepia(89%) saturate(2476%) hue-rotate(346deg) brightness(101%) contrast(101%);
+    transform: translateY(-2px);
 } 
 
 /* --------------------------------------------------
