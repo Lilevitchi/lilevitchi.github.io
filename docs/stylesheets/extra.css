@@ -363,6 +363,9 @@
   border-radius: var(--radius-sm);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   
+  height: 100%;
+  with: 100%;
+  
   outline: 2px dashed rgba(255, 255, 0, 0.8); /* Jaune (Debug) */
   outline-offset: -2px;
 }
