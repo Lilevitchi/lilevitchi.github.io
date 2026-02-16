@@ -82,9 +82,9 @@ body {
   font-family: var(--font-main);
   font-size: var(--font-base-size);
   font-weight: var(--font-base);
-  line-height: 1.45;
+  line-height: 1.45em;
   margin: 0;
-  font-size: 0.9rem;
+  font-size: var(--font-base-size);
   color: var(--white);
 }
 
@@ -119,8 +119,8 @@ body {
   border-bottom-left-radius: var(--radius-sm);
   border-bottom-right-radius: var(--radius-sm);
   
-  font-size: 0.9em;
-  font-weight: 400;
+  font-size: var(--font-base-size);
+  font-weight: var(--font-base);
   line-height: 1.45em;
   
   height: var(--header-height);
