@@ -255,20 +255,43 @@ body {
     margin: 0;
 }*/
 
+
+/* === GRID PRINCIPALE === */
 [data-md-color-scheme] .md-main__inner {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr) 260px;
+  gap: var(--space-lg);
+  max-width: none;
+  margin: 0;
+
+  outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu (Debug) */
+  outline-offset: -2px;
+}
+
+/* === MARGES GLOBALES === */
+[data-md-color-scheme] .md-main {
+  padding: var(--space-lg) var(--space-xl) var(--space-xl);
+}
+
+/*[data-md-color-scheme] .md-main__inner {
     display: grid;
     grid-template-columns:
       260px
       minmax(0, 1fr)
       260px;
     max-width: none;
+  
     margin: 0;
+    padding:
+    var(--space-lg)
+    var(--space-xl)
+    var(--space-xl);
     gap: var(--space-lg);
-    outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu (Debug) */
-    outline-offset: -2px;
+
+
 }
 
-/*[data-md-color-scheme] .md-sidebar__inner {
+[data-md-color-scheme] .md-sidebar__inner {
     height: 100%;
     overflow-y: auto;
     scrollbar-width: none; /* Firefox 
@@ -288,7 +311,8 @@ body {
     top: calc(var(--header-height) + var(--space-lg));
     height: calc(100vh - var(--header-height) - var(--space-lg));
     overflow-y: auto;
-    
+    padding: var(--space-md);
+  
     background-color: var(--tab-bg-hover);
     border-radius: var(--radius-sm);
     
@@ -303,6 +327,7 @@ body {
     top: calc(var(--header-height) + var(--space-lg));
     height: calc(100vh - var(--header-height) - var(--space-lg));
     overflow-y: auto;
+    padding: var(--space-md);
     
     background-color: var(--tab-bg-hover);
     border-radius: var(--radius-sm);
@@ -315,14 +340,15 @@ body {
 [data-md-color-scheme] .md-content {
     min-width: 0;
     width: 100%;
- 
+    display: flex;
     outline: 2px dashed rgba(0, 255, 0, 0.8); /* Vert (Debug) */
 }
 
 [data-md-color-scheme] .md-content__inner {
-    max-width: none;
+    /*max-width: none;*/
     width: 100%;
     padding: var(--space-lg);
+    box-sizing: border-box;
 
     background-color: var(--tab-bg-hover);
     border-radius: var(--radius-sm);
@@ -464,12 +490,10 @@ body:has(.game-grid) .md-main__inner {
    -------------------------------------------------- */
 
 [data-md-color-scheme] .md-nav--secondary {
-  position: sticky;
-  top: calc(var(--header-height) + var(--space-lg));
-  max-height: calc(100vh - var(--header-height));
-  overflow-y: auto;
-  background-color: var(--tab-bg-hover);
-  border-radius: var(--radius-sm);
+  position: static;
+  max-height: none;
+  overflow: visible;
+  background: none;
  outline: 2px dashed rgba(255, 255, 255, 0.8); /* BLanc */
 }
 
