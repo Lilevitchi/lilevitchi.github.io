@@ -7,6 +7,25 @@
    ==============================*/
 
 :root {
+
+/* ---------- Midnight Variables (EM) ---------- */
+  --header-height: 5em;
+  --progress-height: 5.2em;
+  --sidebar-width: 15em;
+  --sidebar-margin-top: 5.75em;
+  
+  /* ---------- Ton Identité Visuelle ---------- */
+  --font-main: "Arial", "Helvetica", sans-serif;
+  --accent: #ff5722;
+  --bg-page: #1c212a;
+  --bg-card: rgb(32, 32, 32);
+  --bg-header: rgb(43, 43, 43);
+  
+  /* ---------- Transitions Midnight ---------- */
+  --transition: all 187ms cubic-bezier(0, 0, 0, 1);
+
+  
+
   
   /* ---------- Fonts ---------- */
   --font-main: "Arial", "Helvetica", sans-serif;
@@ -69,116 +88,97 @@
 }
 
 /* ==============================
-   TYPOGRAPHIE — BASE RESPONSIVE
+   1. TYPOGRAPHIE — BASE RESPONSIVE
    ==============================*/
 
-/*html,
-body {
-  font-size: 24px !important;
-}*/
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  transition: var(--transition);
+}
 
 [data-md-color-scheme] body {
-  background-color: var(--bg-page);
-  font-family: var(--font-main);
-  font-size: var(--font-base-size);
-  font-weight: var(--font-base);
-  line-height: 1.45em;
+  background-color: var(--bg-page) !important;
   margin: 0;
-  font-size: var(--font-base-size);
-  color: var(--white);
+  font-family: var(--font-main);
+  font-size: 0.9em;
+  font-weight: 400;
+  line-height: 1.45em;
+  color: white;
 }
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.4) transparent;
-}
-
-/* Pour Chrome/Safari */
-::-webkit-scrollbar {
-  width: 7px;
-}
-::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: 10px;
+  scrollbar-color: rgba(255, 255, 255, 0.63) transparent;
 }
 
 /* ==============================
-   1. HEADER & BANNIÈRE
+   2. PROGRESS BAR (Leur rail gris)
    ==============================*/
 
-/* Header global */
+.progress-container {
+  z-index: 2;
+  width: 100%;
+  height: var(--progress-height);
+  background-color: #6e6e6e;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  position: fixed;
+  top: 0;
+  pointer-events: none;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: var(--accent);
+  width: 0%; /* Piloté par JS */
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* ==============================
+   3. HEADER & BANNIÈRE
+   ==============================*/
+
 [data-md-color-scheme] .md-header {
   position: fixed;
-
-  top: 0;
-  left: 0;
+  z-index: 3;
   width: 100%;
-  z-index: 100;
+  height: var(--header-height) !important;
+  background-color: var(--bg-header) !important;
   
-  background-color: #292c35;
-  border-bottom-left-radius: var(--radius-sm);
-  border-bottom-right-radius: var(--radius-sm);
-  
-  font-size: var(--font-base-size);
-  font-weight: var(--font-base);
-  line-height: 1.45em;
-  
-  height: var(--header-height);
+  padding: 0 1em;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
   outline: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.13);
-  border: 1px solid transparent;
-
-  transition: all 187ms cubic-bezier(0, 0, 0, 1);
 }
 
- [data-md-color-scheme] .md-header * {
-  font-size: inherit;
-} 
-
-/* Contenu interne du header */
+/* On force le contenu interne à suivre le 5em */
 [data-md-color-scheme] .md-header__inner {
   display: flex;
-  width: 100%;
+  align-items: center;
   height: 100%;
-
-  align-items: center;
-  padding: 0 1rem;
-}
-
-/* Largeur et centrage du contenu */
-[data-md-color-scheme] .md-header .md-grid {
-  display: flex;
-  align-items: center;
-  max-width: 100%;
   width: 100%;
 }
 
-/* Logo */
-[data-md-color-scheme] .md-logo img {
-  height: 60px;
-  width: auto;
-  display: block;
-  transition: transform 187ms ease;
-}
-
-/* Logo Hover */
-[data-md-color-scheme] .md-logo img:hover {
-   transform: translateY(-2px);
-}
-
-/* Titre du site */
-[data-md-color-scheme] .md-header__title {
+/* Centrage de tes Tabs (Navigation) */
+[data-md-color-scheme] .md-header__tabs {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
   display: flex;
   align-items: center;
-  margin-left: var(--space-xs);
+  pointer-events: none;
 }
 
-/* Texte du titre */
-[data-md-color-scheme] .md-header__title .md-ellipsis {
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--accent);
-  font-size: var(--font-base-size);
-  font-weight: normal;
+[data-md-color-scheme] .md-tabs__link {
+  pointer-events: auto;
+  color: white;
+  padding: 0.4em 0.8em;
+  font-size: 0.85em;
+  transition: var(--transition);
 }
 
 /* ==============================
@@ -289,70 +289,46 @@ body {
    STRUCTURE GLOBALE DU CONTENU
    -------------------------------------------------- */
 
-/* marges globales */
 [data-md-color-scheme] .md-main {
-  padding: var(--space-md);
   background-color: var(--bg-page);
-  margin-top: var(--header-height);
+  margin-top: 0; /* Géré par les sidebars et content */
 }
 
-/* Grid principal */
 [data-md-color-scheme] .md-main__inner {
-  display: grid;
-  grid-template-columns: 260px minmax(0, 1fr) 260px;
+  display: flex; /* Passage en Flex comme Midnight */
   min-height: 100vh;
   max-width: none;
-  margin: 0;
-  width: 100%;
-  box-sizing: border-box;
-  
-  transition: all 187ms cubic-bezier(0, 0, 0, 1);
-  
-  outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu (Debug) */
-  outline-offset: -2px;
 }
 
+/* Sidebar Style Midnight (15em) */
+[data-md-color-scheme] .md-sidebar {
+  width: var(--sidebar-width);
+  position: fixed;
+  margin-top: var(--sidebar-margin-top);
+  height: calc(100vh - 6.25em);
+  background: #292c35 !important; /* Leur couleur sidebar */
+  border-radius: 4px;
+  outline: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 333ms cubic-bezier(0, 0, 0, 1);
+}
+
+[data-md-color-scheme] .md-sidebar--primary { left: 0.75em; }
+[data-md-color-scheme] .md-sidebar--secondary { right: 0.75em; }
+
+/* Zone de contenu centrale */
 [data-md-color-scheme] .md-content {
-    min-width: 0;
-    width: 100%;
-    display: flex;
-    overflow: hidden;
-  
-    outline: 2px dashed rgba(0, 255, 0, 0.8); /* Vert (Debug) */
-    outline-offset: -2px;
+  flex: 1;
+  margin-top: 70px;
+  margin-left: 16.5em; /* Largeur sidebar + marges */
+  margin-right: 16.5em;
+  padding: 2em;
 }
 
 [data-md-color-scheme] .md-content__inner {
-    width: 100%;
-    box-sizing: border-box;
-
-    background-color: var(--bg-card);
-    border-radius: var(--radius-sm);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  
-    outline: 2px dashed rgba(255, 255, 0, 0.8); /* Jaune (Debug) */
-    outline-offset: -2px;
-}
-
-/* --------------------------------------------------
-   SIDEBARS
-   -------------------------------------------------- */
-
-/* --- Sidebar globale --- */
-[data-md-color-scheme] .md-sidebar--primary,
-[data-md-color-scheme] .md-sidebar--secondary {
-    position: sticky;
-    top: calc(var(--header-height) + var(--space-lg));
-    height: calc(100vh - var(--header-height) - var(--space-lg));
-    overflow-y: auto;
-    /*padding: var(--space-md);*/
-    margin: 0;
-  
-    background-color: var(--tab-bg-hover);
-    border-radius: var(--radius-sm);
-
-    outline: 2px dashed rgba(255, 0, 0, 0.8); /* Rouge (Debug) */
-    outline-offset: -2px;
+  background-color: var(--bg-card);
+  border-radius: 4px;
+  padding: 2em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 /*
 [data-md-color-scheme] .md-nav--secondary {
