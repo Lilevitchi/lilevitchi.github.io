@@ -139,12 +139,15 @@
   width: 100%;
   height: var(--header-height) !important;
   background-color: var(--black) !important;
-  padding: 0 1em;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   outline: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.13);
   border: 1px solid transparent;
+}
+
+[data-md-color-scheme] .md-header * {
+  font-size: inherit;
 }
 
 /* Contenu interne du header */
