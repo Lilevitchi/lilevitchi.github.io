@@ -255,8 +255,7 @@ body {
     margin: 0;
 }*/
 
-
-/* === GRID PRINCIPALE === */
+/* Grid principal */
 [data-md-color-scheme] .md-main__inner {
   display: grid;
   grid-template-columns: 260px minmax(0, 1fr) 260px;
@@ -268,7 +267,7 @@ body {
   outline-offset: -2px;
 }
 
-/* === MARGES GLOBALES === */
+/* marges globales */
 [data-md-color-scheme] .md-main {
   padding: var(--space-lg) var(--space-xl) var(--space-xl);
 }
@@ -487,14 +486,14 @@ body:has(.game-grid) .md-main__inner {
 
 /* --------------------------------------------------
    NAVIGATION SECONDAIRE (SIDEBAR DROITE)
-   -------------------------------------------------- */
+   -------------------------------------------------- 
 
 [data-md-color-scheme] .md-nav--secondary {
   position: static;
   max-height: none;
   overflow: visible;
   background: none;
- outline: 2px dashed rgba(255, 255, 255, 0.8); /* BLanc */
+ outline: 2px dashed rgba(255, 255, 255, 0.8); /* BLanc
 }
 
 [data-md-color-scheme] .md-nav--secondary .md-nav__title {
