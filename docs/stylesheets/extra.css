@@ -211,7 +211,7 @@
 
 /* Barre des tabs */
 [data-md-color-scheme] .md-tabs {
-  /*position: stiky;*/
+  position: stiky;
   display: flex;
   justify-content: center;
   width: 100%;
