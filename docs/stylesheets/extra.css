@@ -182,16 +182,13 @@ body {
 
 /* Conteneur général */
 [data-md-color-scheme] .md-header__tabs {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0;
-  width: 100%;
-  max-width: var(--grid-max-width);
+  position: static; /* On sort de l'absolute pour ne plus chevaucher le logo */
+  transform: none;
+  left: auto;
+  margin-left: 2rem; /* Espace après le logo */
+  height: 100%;
   display: flex;
-  justify-content: center;
-  height: var(--header-height);
-  background: transparent;
+  align-items: center;
 }
 
 /* Barre des tabs */
@@ -208,11 +205,11 @@ body {
 /* Liste des onglets */
 [data-md-color-scheme] .md-tabs__list {
   display: flex;
-  align-items: center;
+ /* align-items: center;
   height: 100%;
   gap: 0;
   padding: 0;
-  margin: 0;
+  margin: 0;*/
 }
 
 /* Item = Source de l'espace */
