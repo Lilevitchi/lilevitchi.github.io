@@ -263,9 +263,24 @@ body {
     outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu (Debug) */
 }
 
+/* 4. On s'assure que le contenu interne défile bien sans barre moche */
+[data-md-color-scheme] .md-sidebar__inner {
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+}
+[data-md-color-scheme] .md-sidebar__inner::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+[data-md-color-scheme] .md-sidebar, 
+[data-md-color-scheme] .md-sidebar__scrollwrap {
+    height: 100%; /* Permet aux enfants d'utiliser top/bottom correctement */
+}
+
 /* --- SIDEBAR GAUCHE (Navigation) --- */
 [data-md-color-scheme] .md-sidebar--primary {
-    position: fixed;
+    position: fixed !important;
     top: 7.5rem;      /* Espace sous le header */
     left: 1rem;       /* Espace bord gauche */
     bottom: 5rem;     /* Espace au-dessus du footer */
@@ -282,7 +297,7 @@ body {
 
 /* --- SIDEBAR DROITE (Sommaire / Table des matières) --- */
 [data-md-color-scheme] .md-sidebar--secondary {
-    position: fixed;
+    position: fixed !important;
     top: 7.5rem;      /* Aligné sur la gauche */
     right: 1rem;      /* Espace bord droit */
     bottom: 5rem;     /* Espace au-dessus du footer */
