@@ -88,7 +88,7 @@ body, input, .md-header, .md-nav, .md-content, .md-footer {
   background-color: var(--black);
   border-bottom-left-radius: var(--radius-sm);
   border-bottom-right-radius: var(--radius-sm);
-  height: var(--header-height);
+  height: var(--header-height) !important;
   outline: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.13);
   border: 1px solid transparent;
