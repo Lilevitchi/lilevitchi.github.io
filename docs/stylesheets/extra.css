@@ -299,9 +299,6 @@
   display: flex;
   min-height: 100vh;
   max-width: none;
-
-  outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu (Debug) */
-  outline-offset: -2px;
 }
 
 /* Sidebar */
