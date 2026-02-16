@@ -243,7 +243,7 @@ body {
 }
 
 /* ==============================
-   3. CONTENU & TYPOGRAPHIE
+   3. CONTENU & TYPOGRAPHIE (INDEX)
    ==============================*/
 
 /* --------------------------------------------------
@@ -257,7 +257,9 @@ body {
   gap: var(--space-lg);
   max-width: none;
   margin: 0;
-
+  width: 100%;
+  box-sizing: border-box;
+  
   outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu (Debug) */
   outline-offset: -2px;
 }
@@ -271,6 +273,8 @@ body {
     min-width: 0;
     width: 100%;
     display: flex;
+    overflow: hidden;
+  
     outline: 2px dashed rgba(0, 255, 0, 0.8); /* Vert (Debug) */
 }
 
@@ -282,6 +286,7 @@ body {
 
     background-color: var(--tab-bg-hover);
     border-radius: var(--radius-sm);
+  
     outline: 2px dashed rgba(255, 255, 0, 0.8); /* Jaune (Debug) */
 }
 
@@ -289,26 +294,16 @@ body {
    SIDEBARS
    -------------------------------------------------- */
 
-/* --- Sidebar gauche (Navigation) --- */
-[data-md-color-scheme] .md-sidebar--primary {
-    position: sticky;
-    top: calc(var(--header-height) + var(--space-lg));
-    height: calc(100vh - var(--header-height) - var(--space-lg));
-    overflow-y: auto;
-    padding: var(--space-md);
-  
-    background-color: var(--tab-bg-hover);
-    border-radius: var(--radius-sm);
-}
-
-/* --- Sidebar droite (Sommaire / Table des matières) --- */
+/* --- Sidebar globale --- */
+[data-md-color-scheme] .md-sidebar--primary,
 [data-md-color-scheme] .md-sidebar--secondary {
     position: sticky;
     top: calc(var(--header-height) + var(--space-lg));
     height: calc(100vh - var(--header-height) - var(--space-lg));
     overflow-y: auto;
     padding: var(--space-md);
-    
+    margin: 0;
+  
     background-color: var(--tab-bg-hover);
     border-radius: var(--radius-sm);
 }
@@ -317,7 +312,7 @@ body {
   position: static;
   max-height: none;
   overflow: visible;
-  background: none;
+  max-height: none;
   outline: 2px dashed rgba(255, 255, 255, 0.8); /* BLanc*/
 }
 
@@ -442,70 +437,9 @@ body {
   display: none;
 }
 
-/*
-[data-md-color-scheme] .md-sidebar__inner {
-    height: 100%;
-    overflow-y: auto;
-    scrollbar-width: none; /* Firefox 
-}
-
-[data-md-color-scheme] .md-sidebar__inner::-webkit-scrollbar {
-    display: none;  Chrome/Safari 
-}
-
-[data-md-color-scheme] .md-sidebar, 
-[data-md-color-scheme] .md-sidebar__scrollwrap {
-    height: 100%;
-}*/
-  
-/*[data-md-color-scheme] .md-main__inner,
-[data-md-color-scheme] .md-content {
-  margin-top: var(--space-sm);
-}
-
-[data-md-color-scheme] .md-main {
-  max-width: none;
-}
-
-[data-md-color-scheme] .md-main__inner {
-  max-width: none;
-  margin: 0;
-  display: grid;
-  gap: var(--space-sm);
-  outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu 
-}
-/*
-[data-md-color-scheme] .md-content {
-  max-width: none;
-  width: 100%;
-  outline: 2px dashed rgba(0, 255, 0, 0.8); /* Vert 
-}
-/*
-
-[data-md-color-scheme] .md-content__inner {
-  max-width: var(--grid-max-width);
-  width: 100%;
-  padding: var(--space-lg);
-  background-color: var(--tab-bg-hover);
-  border-radius: var(--radius-sm);
-  outline: 2px dashed rgba(255, 255, 0, 0.8); /* Jaune 
-}*/
-
-/* Force Material à recalculer la grille 
-body:has(.game-grid) .md-main__inner {
-  grid-template-columns: 1fr !important;
-}*/
-
-/* Page index : plus large visuellement 
-[data-md-color-scheme] body:has(.game-grid) .md-content__inner {
-  max-width: 100%;
-  padding-left: clamp(1rem, 4vw, 3rem);
-  padding-right: clamp(1rem, 4vw, 3rem);
-}*/
-
-/* ==============================
-   5. UI ELEMENTS (BOT & KO-FI)
-   ==============================*/
+/* --------------------------------------------------
+   UI ELEMENTS (BOT & KO-FI)
+   -------------------------------------------------- */
 
 /* Bloc conseil du bot */
 .bot-advice {
@@ -567,9 +501,9 @@ line-height: 1.4;
   box-shadow: 0 0 10px var(--accent-glow);
 }
 
-/* ==============================
+/* --------------------------------------------------
    HUB — GRILLE DES JEUX
-   ============================== */
+   -------------------------------------------------- */
 
 /* @media screen and (min-width: 60em) {
     .md-sidebar--primary:has(~ .md-content .game-grid),
@@ -660,6 +594,67 @@ line-height: 1.4;
     background: rgba(0,0,0,0.3);
 }
 
+/*
+[data-md-color-scheme] .md-sidebar__inner {
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox 
+}
+
+[data-md-color-scheme] .md-sidebar__inner::-webkit-scrollbar {
+    display: none;  Chrome/Safari 
+}
+
+[data-md-color-scheme] .md-sidebar, 
+[data-md-color-scheme] .md-sidebar__scrollwrap {
+    height: 100%;
+}*/
+  
+/*[data-md-color-scheme] .md-main__inner,
+[data-md-color-scheme] .md-content {
+  margin-top: var(--space-sm);
+}
+
+[data-md-color-scheme] .md-main {
+  max-width: none;
+}
+
+[data-md-color-scheme] .md-main__inner {
+  max-width: none;
+  margin: 0;
+  display: grid;
+  gap: var(--space-sm);
+  outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu 
+}
+/*
+[data-md-color-scheme] .md-content {
+  max-width: none;
+  width: 100%;
+  outline: 2px dashed rgba(0, 255, 0, 0.8); /* Vert 
+}
+/*
+
+[data-md-color-scheme] .md-content__inner {
+  max-width: var(--grid-max-width);
+  width: 100%;
+  padding: var(--space-lg);
+  background-color: var(--tab-bg-hover);
+  border-radius: var(--radius-sm);
+  outline: 2px dashed rgba(255, 255, 0, 0.8); /* Jaune 
+}*/
+
+/* Force Material à recalculer la grille 
+body:has(.game-grid) .md-main__inner {
+  grid-template-columns: 1fr !important;
+}*/
+
+/* Page index : plus large visuellement 
+[data-md-color-scheme] body:has(.game-grid) .md-content__inner {
+  max-width: 100%;
+  padding-left: clamp(1rem, 4vw, 3rem);
+  padding-right: clamp(1rem, 4vw, 3rem);
+}*/
+
 /* ==============================
    4. MENU LATÉRAL
    ==============================*/
@@ -709,7 +704,7 @@ line-height: 1.4;
 
 
 /* ==============================
-   8. CURSEURS & TAILLE PC
+   4. CURSEURS & TAILLE PC
    ==============================*/
 
 /* @media screen and (min-width: 60em) { */
@@ -727,7 +722,7 @@ line-height: 1.4;
 /* } */
 
 /* ==============================
-   9. RÉSEAUX SOCIAUX - FOOTER
+   5. RÉSEAUX SOCIAUX - FOOTER
    ==============================*/
 
 /* Conteneur des icônes sociales */
@@ -775,7 +770,7 @@ line-height: 1.4;
 } 
 
 
- /* --- 10. HUB JEUX --- */
+ /* --- 6. HUB JEUX --- */
 /* .md-header { z-index: 120 !important; }
 .md-tabs { z-index: 110 !important; } */
 
