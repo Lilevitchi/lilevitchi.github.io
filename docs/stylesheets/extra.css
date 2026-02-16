@@ -281,8 +281,8 @@ body {
 /* --- SIDEBAR GAUCHE (Navigation) --- */
 [data-md-color-scheme] .md-sidebar--primary {
     position: fixed !important;
-    top: 7.5rem;      /* Espace sous le header */
-    left: 1rem;       /* Espace bord gauche */
+    top: 10rem;      /* Espace sous le header */
+    left: 0.2rem;       /* Espace bord gauche */
     bottom: 5rem;     /* Espace au-dessus du footer */
     width: 260px;     /* Ta largeur personnalisée */
     
