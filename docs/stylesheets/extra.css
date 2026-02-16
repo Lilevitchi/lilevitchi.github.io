@@ -47,9 +47,10 @@
   --radius-lg: 1.25rem;
 
   /* ---------- Typography ---------- */
-  --font-base-size: 1rem;
+  --font-base-size: 0.9rem;
   --font-h1-size: 1.8rem;
   --font-hub-title: 2.2rem;
+  --font-base: 400;
   --font-heavy: 800;
   --font-bold: 700;
 
@@ -79,8 +80,8 @@ body {
 [data-md-color-scheme] body {
   background-color: var(--bg-page);
   font-family: var(--font-main);
-  font-size: 0.9rem;
-  font-weight: 400;
+  font-size: var(--font-base-size);
+  font-weight: var(--font-base);
   line-height: 1.45;
   margin: 0;
   font-size: 0.9rem;
@@ -108,10 +109,10 @@ body {
 /* Header global */
 [data-md-color-scheme] .md-header {
   position: fixed;
-  background-color: var(--black);
+  background-color: var(--bg-card);
   border-bottom-left-radius: var(--radius-sm);
   border-bottom-right-radius: var(--radius-sm);
-  height: var(--header-height) !important;
+  height: var(--header-height);
   outline: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.13);
   border: 1px solid transparent;
@@ -268,7 +269,7 @@ body {
 
 /* marges globales */
 [data-md-color-scheme] .md-main {
-  padding: var(--space-xs);
+  padding: var(--space-md);
   background-color: var(--bg-page);
 }
 
@@ -281,6 +282,8 @@ body {
   margin: 0;
   width: 100%;
   box-sizing: border-box;
+  
+  transition: all 187ms cubic-bezier(0, 0, 0, 1);
   
   outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu (Debug) */
   outline-offset: -2px;
@@ -297,13 +300,12 @@ body {
 }
 
 [data-md-color-scheme] .md-content__inner {
-    /*max-width: none;*/
     width: 100%;
-    /*padding: var(--space-lg);*/
     box-sizing: border-box;
 
-    background-color: var(--tab-bg-hover);
+    background-color: var(--bg-card);
     border-radius: var(--radius-sm);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   
     outline: 2px dashed rgba(255, 255, 0, 0.8); /* Jaune (Debug) */
     outline-offset: -2px;
