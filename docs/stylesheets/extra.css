@@ -69,9 +69,9 @@
    TYPOGRAPHIE — BASE RESPONSIVE
    ==============================*/
 
+html,
 body {
   font-size: 24px !important;
-  background: rgb(32, 32, 32);
 }
 
 body, input, .md-header, .md-nav, .md-content, .md-footer {
