@@ -1,8 +1,6 @@
 site_name: Lilevitchi | Modding
 site_url: https://lilevitchi.github.io/
 
-copyright: "Copyright &copy; 2026 Lilevitchi"
-
 theme:
   name: material
   custom_dir: overrides
