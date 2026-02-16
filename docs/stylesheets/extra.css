@@ -199,24 +199,25 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  bottom: 0;
   height: 100%;
   display: flex;
   align-items: center;
   pointer-events: none;
+
+  justify-content: center;
+  width: auto;
+  max-width: none;
+  background: transparent;
 }
 
 /* Onglet — état normal */
 [data-md-color-scheme] .md-tabs__link {
-  display: flex;
-  padding: 0.4rem 0.8rem;
-  color: var(--white);
-  opacity: 1;
-  border-bottom: 4px solid transparent;
-  background: transparent;
-  transition: color var(--transition-base),
-              background-color var(--transition-base),
-              opacity var(--transition-base),
-              border-color var(--transition-base);
+  pointer-events: auto;
+  color: white;
+  padding: 0.4em 0.8em;
+  font-size: 0.85em;
+  transition: var(--transition-midnight);
 }
 
 /* Onglet — survol (hover) */
