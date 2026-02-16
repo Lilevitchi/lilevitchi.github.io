@@ -206,7 +206,7 @@
   pointer-events: none;
 }
 
-/* Barre des tabs */
+/* Barre des tabs 
 [data-md-color-scheme] .md-tabs {
   position: stiky;
   display: flex;
@@ -215,7 +215,7 @@
   width: 100%;
   background: transparent;
   box-shadow: none;
-}
+}*/
 
 /* Liste des onglets */
 [data-md-color-scheme] .md-tabs__list {
