@@ -186,7 +186,7 @@
 [data-md-color-scheme] .md-header__title .md-ellipsis {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--accent);
-  font-size: var(--font-base-size);
+  font-size: var(--font-h1-size);
   font-weight: normal;
 }
 
