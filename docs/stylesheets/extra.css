@@ -299,43 +299,46 @@
 /* Grid principal */
 [data-md-color-scheme] .md-main__inner {
   display: flex;
-  align-items: flex-start;
   min-height: 100vh;
   max-width: none;
-  padding-top: var(--header-height);
+
+  outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu (Debug) */
+  outline-offset: -2px;
 }
 
-/* Sidebar */
+/* Sidebars */
 [data-md-color-scheme] .md-sidebar {
-  position: sticky;
+  position: fixed;
   top: calc(var(--header-height) + 10px);
   height: calc(100vh - var(--header-height) - 20px);
-  background: #292c35 !important;
+  background: #292c35;
   border-radius: 4px;
   outline: 1px solid rgba(0, 0, 0, 0.1);
   transition: all 333ms cubic-bezier(0, 0, 0, 1);
   overflow-y: auto;
+  scrollbar-width: thin;
 }
 
+/* Sidebar Gauche */
 [data-md-color-scheme] .md-sidebar--primary { 
-  left: 0;
-  margin-left: var(--sidebar-margin);
+  left: var(--sidebar-margin);
   width: var(--sidebar-width-primary);
-  flex-shrink: 0;
 }
+
+/* Sidebar Droite */
 [data-md-color-scheme] .md-sidebar--secondary { 
-  right: 0;
-  margin-right: var(--sidebar-margin);
+  right: var(--sidebar-margin);
   width: var(--sidebar-width-secondary):
-  flex-shrink: 0;
 }
 
 /* Zone de contenu centrale */
 [data-md-color-scheme] .md-content {
   flex: 1;
-  min-width: 0;
-  margin: 0 1rem; 
-  padding: 2em;
+  margin-left: calc(var(--sidebar-margin) + var(--sidebar-width-primary) + 1rem);
+  margin-right: calc(var(--sidebar-margin) + var(--sidebar-width-secondary) + 1rem);
+  margin-top: calc(var(--header-height) + 20px);
+  margin-bottom: 2rem;
+  padding: 0;
 
   outline: 2px dashed rgba(0, 255, 0, 0.8); /* Vert (Debug) */
   outline-offset: -2px;
