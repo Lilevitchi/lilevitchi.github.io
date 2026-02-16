@@ -240,6 +240,7 @@
   padding: 0.4rem 0.8rem;
   font-size: 0.75rem;
   opacity: 1;
+  box-sizing: border-box;
   border-bottom: 4px solid transparent;
   transition: var(--transition);
 }
