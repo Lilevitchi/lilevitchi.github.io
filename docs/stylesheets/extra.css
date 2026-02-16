@@ -169,27 +169,6 @@
   margin-left: var(--space-xs);
 }
 
-
-
-
-[data-md-color-scheme] .md-header__tabs {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 100%;
-  display: flex;
-  align-items: center;
-  pointer-events: none;
-}
-
-[data-md-color-scheme] .md-tabs__link {
-  pointer-events: auto;
-  color: white;
-  padding: 0.4em 0.8em;
-  font-size: 0.85em;
-  transition: var(--transition);
-}
-
 /* ==============================
    2. NAVIGATION
    ==============================*/
@@ -199,43 +178,10 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 0;
-  
-  height: var(--header-height);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  width: auto;
-  max-width: none;
-  background: transparent;
-} 
-
-/* Barre des tabs */
-[data-md-color-scheme] .md-tabs {
-  position: stiky;
-  display: flex;
-  justify-content: center;
-  font-size: 0.75rem;
-  width: 100%;
-  background: transparent;
-  box-shadow: none;
-}
-
-/* Liste des onglets */
-[data-md-color-scheme] .md-tabs__list {
-  display: flex;
-  align-items: center;
   height: 100%;
-  gap: 0;
-  padding: 0;
-  margin: 0;
-}
-
-/* Item = Source de l'espace */
-[data-md-color-scheme] .md-tabs__item {
-  margin: 0;
-  padding: 0;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
 }
 
 /* Onglet — état normal */
@@ -291,7 +237,7 @@
 }
 
 /* ==============================
-   3. CONTENU & TYPOGRAPHIE (INDEX)
+   3. STRUCTURE MAIN
    ==============================*/
 
 /* --------------------------------------------------
