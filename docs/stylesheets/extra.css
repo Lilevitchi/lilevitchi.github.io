@@ -1,10 +1,10 @@
- /* ============================================================
-   Lilevitchi | Modding - Custom CSS
-   ============================================================ */
-   
+/* ============================================================
+  Lilevitchi | Modding - Custom CSS
+   ============================================================*/
+
 /* ==============================
    GLOBAL THEME VARIABLES
-================================*/
+   ==============================*/
 
 :root {
 
@@ -246,9 +246,9 @@ body {
    3. CONTENU & TYPOGRAPHIE
    ==============================*/
 
-/* --------------------------------------------------
+/* ------------------------------
    STRUCTURE GLOBALE DU CONTENU
-   -------------------------------------------------- */
+   ------------------------------*/
 
 [data-md-color-scheme] .md-grid {
     max-width: none;
@@ -263,7 +263,6 @@ body {
     outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu (Debug) */
 }
 
-/* 4. On s'assure que le contenu interne défile bien sans barre moche */
 [data-md-color-scheme] .md-sidebar__inner {
     height: 100%;
     overflow-y: auto;
@@ -275,16 +274,16 @@ body {
 
 [data-md-color-scheme] .md-sidebar, 
 [data-md-color-scheme] .md-sidebar__scrollwrap {
-    height: 100%; /* Permet aux enfants d'utiliser top/bottom correctement */
+    height: 100%;
 }
 
 /* --- SIDEBAR GAUCHE (Navigation) --- */
 [data-md-color-scheme] .md-sidebar--primary {
     position: fixed !important;
-    top: 10rem;      /* Espace sous le header */
-    left: 0.2rem;       /* Espace bord gauche */
-    bottom: 5rem;     /* Espace au-dessus du footer */
-    width: 260px;     /* Ta largeur personnalisée */
+    top: 10rem;
+    left: 0.2rem;
+    bottom: 5rem;
+    width: 260px;
     
     background-color: var(--tab-bg-hover);
     border-radius: var(--radius-sm);
@@ -298,10 +297,10 @@ body {
 /* --- SIDEBAR DROITE (Sommaire / Table des matières) --- */
 [data-md-color-scheme] .md-sidebar--secondary {
     position: fixed !important;
-    top: 7.5rem;      /* Aligné sur la gauche */
-    right: 1rem;      /* Espace bord droit */
-    bottom: 5rem;     /* Espace au-dessus du footer */
-    width: 240px;     /* Ta largeur personnalisée */
+    top: 7.5rem;
+    right: 1rem;
+    bottom: 5rem;
+    width: 240px;
     
     background-color: var(--tab-bg-hover);
     border-radius: var(--radius-sm);
@@ -330,6 +329,17 @@ body {
     border-radius: var(--radius-sm);
     box-sizing: border-box;
     outline: 2px dashed rgba(255, 255, 0, 0.8); /* Jaune (Debug) */
+}
+
+/* On force du contenu dans les sidebars pour tester le scroll */
+.md-sidebar--primary .md-sidebar__inner::after,
+.md-sidebar--secondary .md-sidebar__inner::after {
+    content: "TEST SCROLL \A \A" "Ligne de test \A". repeat(50); /* Répète le texte */
+    white-space: pre;
+    display: block;
+    color: rgba(255, 255, 255, 0.1); /* Très discret pour ne pas gêner */
+    font-size: 20px;
+    padding-top: 20px;
 }
 
 /*[data-md-color-scheme] .md-main__inner,
@@ -379,7 +389,7 @@ body:has(.game-grid) .md-main__inner {
 
 /* --------------------------------------------------
    TITRES
-   -------------------------------------------------- 
+   -------------------------------------------------- */
 
 [data-md-color-scheme] .md-typeset h1,
 [data-md-color-scheme] .md-typeset h2,
@@ -394,7 +404,7 @@ body:has(.game-grid) .md-main__inner {
   margin-bottom: var(--space-md);
 }
 
-/* Premier H1 (page title) 
+/* Premier H1 (page title) */
 [data-md-color-scheme] .md-typeset h1:first-child {
   margin-top: 0;
   padding-top: 0;
@@ -409,19 +419,19 @@ body:has(.game-grid) .md-main__inner {
 
 /* --------------------------------------------------
    PARAGRAPHES
-   -------------------------------------------------- 
+   -------------------------------------------------- */
 
 [data-md-color-scheme] .md-typeset p {
   text-align: left;
   max-width: 100%;
   color: var(--white);
  /* margin-left: 0;
-  margin-right: 0;
+  margin-right: 0; */
 }
 
 /* --------------------------------------------------
    LIENS
-   -------------------------------------------------- 
+   -------------------------------------------------- */
 
 [data-md-color-scheme] .md-typeset a:not(.kofi-button) {
   color: var(--white);
@@ -442,7 +452,7 @@ body:has(.game-grid) .md-main__inner {
    color: var(--accent);
 }
 
-/* Icônes Material dans les liens 
+/* Icônes Material dans les liens */
 [data-md-color-scheme] .md-typeset a .twemoji svg {
   fill: currentColor;
 }
@@ -496,7 +506,7 @@ body:has(.game-grid) .md-main__inner {
 
 /* --------------------------------------------------
    ICÔNES ORANGES DANS LES TITRES
-   -------------------------------------------------- 
+   -------------------------------------------------- */
 
 [data-md-color-scheme] .md-typeset h1 .twemoji svg,
 [data-md-color-scheme] .md-typeset h2 .twemoji svg,
@@ -506,7 +516,7 @@ body:has(.game-grid) .md-main__inner {
 
 /* --------------------------------------------------
    SUPPRESSION DES ANCRES AUTOMATIQUES
-   -------------------------------------------------- 
+   -------------------------------------------------- */
 
 [data-md-color-scheme] .headerlink {
   display: none;
@@ -516,7 +526,7 @@ body:has(.game-grid) .md-main__inner {
    5. UI ELEMENTS (BOT & KO-FI)
    ==============================*/
 
-/* Bloc conseil du bot 
+/* Bloc conseil du bot */
 .bot-advice {
   display: flex;
   align-items: center;
@@ -530,29 +540,29 @@ line-height: 1.4;
   margin: var(--space-lg) 0;
 }
 
-/* Image du bot 
+/* Image du bot */
 .bot-advice img {
   margin-right: var(--space-lg);
   flex-shrink: 0;
   width: auto; 
   height: 100px;
- /* align-self: center;
+ /* align-self: center;*/
 }
 
-/* Titre du conseil 
+/* Titre du conseil */
 #lile-bot-title {
   color: var(--accent);
   font-weight: var(--font-bold);
 }
 
-/* Texte du conseil 
+/* Texte du conseil */
 #lile-bot-tip {
   font-style: italic;
   opacity: 0.85;
   color: var(--white);
 }
 
-/* Bouton Ko-fi 
+/* Bouton Ko-fi */
 .kofi-button {
   background-color: var(--accent);
   color: var(--white);
@@ -570,7 +580,7 @@ line-height: 1.4;
     box-shadow var(--transition-base);
 }
 
-/* Hover Ko-fi 
+/* Hover Ko-fi */
 .kofi-button:hover {
   background-color: var(--dark-1);
   box-shadow: 0 0 10px var(--accent-glow);
