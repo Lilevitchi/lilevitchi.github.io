@@ -250,84 +250,81 @@ body {
    STRUCTURE GLOBALE DU CONTENU
    ------------------------------*/
 
-[data-md-color-scheme] .md-grid {
+/*[data-md-color-scheme] .md-grid {
     max-width: none;
     margin: 0;
-}
+}*/
 
 [data-md-color-scheme] .md-main__inner {
-    display: flex;
+    display: grid;
+    grid-template-columns:
+      260px
+      minmax(0, 1fr)
+      260px;
     max-width: none;
-    width: 100%;
-    margin-top: 0;
+    margin: 0;
+    gap: var(--space-lg);
     outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu (Debug) */
 }
 
-[data-md-color-scheme] .md-sidebar__inner {
+/*[data-md-color-scheme] .md-sidebar__inner {
     height: 100%;
     overflow-y: auto;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none; /* Firefox 
 }
 [data-md-color-scheme] .md-sidebar__inner::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
+    display: none; /* Chrome/Safari 
 }
 
 [data-md-color-scheme] .md-sidebar, 
 [data-md-color-scheme] .md-sidebar__scrollwrap {
     height: 100%;
-}
+}*/
 
 /* --- SIDEBAR GAUCHE (Navigation) --- */
 [data-md-color-scheme] .md-sidebar--primary {
-    position: fixed !important;
-    top: 10rem;
-    left: 0.2rem;
-    bottom: 5rem;
-    width: 260px;
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-lg));
+    height: calc(100vh - var(--header-height) - var(--space-lg));
+    overflow-y: auto;
     
     background-color: var(--tab-bg-hover);
     border-radius: var(--radius-sm);
-    border: 1px solid rgba(255, 255, 255, 0.05);
     
-    /* Permet de scroller dans le menu s'il est trop long */
+    /* Permet de scroller dans le menu s'il est trop long
     overflow-y: auto; 
-    z-index: 10;
+    z-index: 10; */
 }
 
 /* --- SIDEBAR DROITE (Sommaire / Table des matières) --- */
 [data-md-color-scheme] .md-sidebar--secondary {
-    position: fixed !important;
-    top: 7.5rem;
-    right: 1rem;
-    bottom: 5rem;
-    width: 240px;
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-lg));
+    height: calc(100vh - var(--header-height) - var(--space-lg));
+    overflow-y: auto;
     
     background-color: var(--tab-bg-hover);
     border-radius: var(--radius-sm);
-    border: 1px solid rgba(255, 255, 255, 0.05);
     
-    overflow-y: auto;
-    z-index: 10;
+    /* Permet de scroller dans le menu s'il est trop long
+    overflow-y: auto; 
+    z-index: 10; */
 }
 
 [data-md-color-scheme] .md-content {
-    flex: 1;
- 
-    margin-left: calc(260px + 2rem); 
-    margin-right: calc(240px + 2rem);
-    margin-top: 1.5rem;
-    margin-bottom: 2rem;
-    
     min-width: 0;
+    width: 100%;
  
     outline: 2px dashed rgba(0, 255, 0, 0.8); /* Vert (Debug) */
 }
 
 [data-md-color-scheme] .md-content__inner {
+    max-width: none;
+    width: 100%;
     padding: var(--space-lg);
+
     background-color: var(--tab-bg-hover);
     border-radius: var(--radius-sm);
-    box-sizing: border-box;
     outline: 2px dashed rgba(255, 255, 0, 0.8); /* Jaune (Debug) */
 }
 
@@ -459,7 +456,6 @@ body:has(.game-grid) .md-main__inner {
 
 [data-md-color-scheme] .md-typeset a:hover .orange-icon-svg { 
     filter: invert(48%) sepia(89%) saturate(2476%) hue-rotate(346deg) brightness(101%) contrast(101%);
-    transform: translateY(-2px);
 } 
 
 /* --------------------------------------------------
