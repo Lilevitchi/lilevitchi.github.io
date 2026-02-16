@@ -200,15 +200,10 @@
   left: 50%;
   transform: translateX(-50%);
   bottom: 0;
-  height: var(--header-height);
+  height: 100%;
   display: flex;
   align-items: center;
   pointer-events: none;
-
-  justify-content: center;
-  width: auto;
-  max-width: none;
-  background: transparent;
 }
 
 /* Barre des tabs */
