@@ -276,6 +276,7 @@ body {
     overflow: hidden;
   
     outline: 2px dashed rgba(0, 255, 0, 0.8); /* Vert (Debug) */
+    outline-offset: -2px;
 }
 
 [data-md-color-scheme] .md-content__inner {
@@ -288,6 +289,7 @@ body {
     border-radius: var(--radius-sm);
   
     outline: 2px dashed rgba(255, 255, 0, 0.8); /* Jaune (Debug) */
+    outline-offset: -2px;
 }
 
 /* --------------------------------------------------
@@ -306,6 +308,9 @@ body {
   
     background-color: var(--tab-bg-hover);
     border-radius: var(--radius-sm);
+
+    outline: 2px dashed rgba(255, 0, 0, 0.8); /* Rouge (Debug) */
+    outline-offset: -2px;
 }
 
 [data-md-color-scheme] .md-nav--secondary {
