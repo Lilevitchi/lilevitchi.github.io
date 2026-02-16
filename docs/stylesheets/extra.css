@@ -77,11 +77,25 @@ body {
 }
 
 [data-md-color-scheme] body {
-  background-color: var(--bg-page)
+  background-color: var(--bg-page);
   font-family: var(--font-main);
   margin: 0;
   font-size: 0.9rem;
-  color: white;
+  color: var(--white);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.4) transparent;
+}
+
+/* Pour Chrome/Safari */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
 }
 
 /* ==============================
@@ -248,9 +262,11 @@ body {
 /* --------------------------------------------------
    STRUCTURE GLOBALE DU CONTENU
    -------------------------------------------------- */
+
 /* marges globales */
 [data-md-color-scheme] .md-main {
-  padding: var(--space-xs) var(--space-xs) var(--space-xs);
+  padding: var(--space-xs);
+  background-color: #1c212a;
 }
 
 /* Grid principal */
