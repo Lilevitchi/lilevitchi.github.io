@@ -40,7 +40,9 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 nav:
-  - Accueil: index.md
+  - Accueil:
+         - Bienvenue: index.md
+         - Page 1: accueil/page1.md
   - Fallout 4: fallout4/index.md
   - Fallout London: fallout-london/index.md
   - Fallout New Vegas: fnv/index.md
