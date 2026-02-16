@@ -246,6 +246,7 @@
 /* Onglet — survol (hover) */
 [data-md-color-scheme] .md-tabs__link:hover {
   color: var(--accent);
+  opacity: 1;
   background-color: var(--tab-bg-hover);
 }
 
@@ -254,6 +255,7 @@
 .md-tabs__item--active
 .md-tabs__link {
   color: var(--accent);
+  opacity: 1;
   background-color: var(--tab-bg-active);
   border-bottom-color: var(--accent);
 }
