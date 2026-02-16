@@ -95,7 +95,7 @@
   font-size: 0.9em;
   font-weight: 400;
   line-height: 1.45em;
-  color: white;
+  color: var(--white);
 }
 
 * {
@@ -138,7 +138,7 @@
   z-index: 3;
   width: 100%;
   height: var(--header-height) !important;
-  background-color: var(--bg-header) !important;
+  background-color: var(--black) !important;
   padding: 0 1em;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
@@ -227,16 +227,16 @@
   margin: 0;
 }
 
-/* Item = Source de l'espace */
+/* Item = Source de l'espace 
 [data-md-color-scheme] .md-tabs__item {
   margin: 0;
   padding: 0;
-}
+}*/
 
 /* Onglet — état normal */
 [data-md-color-scheme] .md-tabs__link {
   pointer-events: auto;
-  color: white;
+  color: var(--white);
   padding: 0.4rem 0.8rem;
   font-size: 0.75rem;
   opacity: 1;
@@ -718,7 +718,7 @@ body:has(.game-grid) .md-main__inner {
 #lile-bot-title { color: #ff5722; font-weight: bold; }
 #lile-bot-tip { font-style: italic; opacity: 0.8; }
 
-.kofi-button { background-color: #ff5722; color: white !important; padding: 6px 12px; border-radius: 4px; font-size: 0.75rem; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s; }
+.kofi-button { background-color: #ff5722; color: var(--white); !important; padding: 6px 12px; border-radius: 4px; font-size: 0.75rem; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s; }
 .kofi-button:hover { background-color: #1a1a1a; box-shadow: 0 0 10px #ff5722; }*/
 
 /* --- 6. ADAPTATION MOBILE --- 
