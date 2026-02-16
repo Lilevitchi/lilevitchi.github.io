@@ -244,24 +244,29 @@
    STRUCTURE GLOBALE DU CONTENU
    -------------------------------------------------- */
 
+/* Main */
 [data-md-color-scheme] .md-main {
   background-color: var(--bg-page);
-  margin-top: 0; /* Géré par les sidebars et content */
+  margin-top: 0;
 }
 
+/* Grid principal */
 [data-md-color-scheme] .md-main__inner {
-  display: flex; /* Passage en Flex comme Midnight */
+  display: flex;
   min-height: 100vh;
   max-width: none;
+
+  outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu (Debug) */
+  outline-offset: -2px;
 }
 
-/* Sidebar Style Midnight (15em) */
+/* Sidebar */
 [data-md-color-scheme] .md-sidebar {
   width: var(--sidebar-width);
   position: fixed;
   margin-top: var(--sidebar-margin-top);
   height: calc(100vh - 6.25em);
-  background: #292c35 !important; /* Leur couleur sidebar */
+  background: #292c35 !important;
   border-radius: 4px;
   outline: 1px solid rgba(0, 0, 0, 0.1);
   transition: all 333ms cubic-bezier(0, 0, 0, 1);
@@ -277,6 +282,9 @@
   margin-left: 16.5em; /* Largeur sidebar + marges */
   margin-right: 16.5em;
   padding: 2em;
+
+  outline: 2px dashed rgba(0, 255, 0, 0.8); /* Vert (Debug) */
+  outline-offset: -2px;
 }
 
 [data-md-color-scheme] .md-content__inner {
@@ -284,6 +292,8 @@
   border-radius: 4px;
   padding: 2em;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  outline: 2px dashed rgba(255, 255, 0, 0.8); /* Jaune (Debug) */
+  outline-offset: -2px;
 }
 /*
 [data-md-color-scheme] .md-nav--secondary {
