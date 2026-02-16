@@ -32,11 +32,11 @@
 
   /* ---------- Layout ---------- */
   --header-height: 72px;
-  --progress-height: 4.68rem;       /* 75px */
-  --sidebar-width-primary: 216px;
-  --sidebar-width-secondary: 226px;
-  --sidebar-margin-top: 5.18rem;    /* 83px */
-  --sidebar-height-offset: 90px; /* 90px */
+  --progress-height: 4.68rem;          /* 75px */
+  --sidebar-width-primary: 13.5rem;    /* 216px */
+  --sidebar-width-secondary: 14.12rem; /* 226px */
+  --sidebar-margin: 0.63rem;           /* 10px */
+  --sidebar-height-offset: 5.62rem;    /* 90px */
   
   --content-max-width: 87.5rem;     /* 1400px */
   --grid-max-width: 95%;
@@ -204,6 +204,8 @@
   display: flex;
   align-items: center;
   pointer-events: none;
+  outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu (Debug) */
+  outline-offset: -2px;
 }
 
 /* Barre des tabs */
@@ -214,6 +216,8 @@
   width: 100%;
   background: transparent;
   box-shadow: none;
+  outline: 2px dashed rgba(255, 255, 255, 0.8); /* Blanc (Debug) */
+  outline-offset: -2px;
 }
 
 /* Liste des onglets */
@@ -305,7 +309,7 @@
 /* Sidebar */
 [data-md-color-scheme] .md-sidebar {
   position: fixed;
-  /*margin-top: var(--sidebar-margin-top);*/
+  margin-top: var(--sidebar-margin);
   height: calc(100vh - var(--sidebar-height-offset));
   background: #292c35 !important;
   border-radius: 4px;
@@ -314,11 +318,11 @@
 }
 
 [data-md-color-scheme] .md-sidebar--primary { 
-  left: 0.7rem;
+  left: var(--sidebar-margin);
   width: var(--sidebar-width-primary);
 }
 [data-md-color-scheme] .md-sidebar--secondary { 
-  right: 0.7rem; 
+  right: var(--sidebar-margin); 
   width: var(--sidebar-width-secondary)
 }
 
