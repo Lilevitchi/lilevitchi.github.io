@@ -66,10 +66,10 @@
    TYPOGRAPHIE — BASE RESPONSIVE
    ==============================*/
 
-/*html,
+html,
 body {
   font-size: 24px !important;
-}*/
+}
 
 /* ==============================
    1. HEADER & BANNIÈRE
@@ -82,6 +82,7 @@ body {
   border-bottom-left-radius: var(--radius-sm);
   border-bottom-right-radius: var(--radius-sm);
   height: var(--header-height);
+  outline: 1px rgba(255, 0, 0, 0.1); /* Rouge (Debug) */
 }
 
 [data-md-color-scheme] .md-header * {
