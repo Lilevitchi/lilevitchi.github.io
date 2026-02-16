@@ -245,7 +245,11 @@ body {
 /* ==============================
    3. CONTENU & TYPOGRAPHIE (INDEX)
    ==============================*/
-
+/* Corrige le layout Material */
+[data-md-color-scheme] .md-sidebar__scrollwrap {
+  margin: 0 !important;
+  padding: 0;
+}
 /* --------------------------------------------------
    STRUCTURE GLOBALE DU CONTENU
    -------------------------------------------------- */
