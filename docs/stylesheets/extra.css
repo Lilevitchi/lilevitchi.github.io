@@ -69,9 +69,9 @@
    TYPOGRAPHIE — BASE RESPONSIVE
    ==============================*/
 
-html,
 body {
   font-size: 24px !important;
+  background: rgb(32, 32, 32);
 }
 
 body, input, .md-header, .md-nav, .md-content, .md-footer {
@@ -238,14 +238,14 @@ body, input, .md-header, .md-nav, .md-content, .md-footer {
 /* ==============================
    3. CONTENU & TYPOGRAPHIE (INDEX)
    ==============================*/
-/* Corrige le layout Material */
-[data-md-color-scheme] .md-sidebar__scrollwrap {
-  margin: 0 !important;
-  padding: 0;
-}
+
 /* --------------------------------------------------
    STRUCTURE GLOBALE DU CONTENU
    -------------------------------------------------- */
+/* marges globales */
+[data-md-color-scheme] .md-main {
+  padding: var(--space-xs) var(--space-xs) var(--space-xs);
+}
 
 /* Grid principal */
 [data-md-color-scheme] .md-main__inner {
@@ -259,11 +259,6 @@ body, input, .md-header, .md-nav, .md-content, .md-footer {
   
   outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu (Debug) */
   outline-offset: -2px;
-}
-
-/* marges globales */
-[data-md-color-scheme] .md-main {
-  padding: var(--space-xs) var(--space-xs) var(--space-xs);
 }
 
 [data-md-color-scheme] .md-content {
