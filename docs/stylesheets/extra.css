@@ -79,6 +79,9 @@ body {
 [data-md-color-scheme] body {
   background-color: var(--bg-page);
   font-family: var(--font-main);
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.45;
   margin: 0;
   font-size: 0.9rem;
   color: var(--white);
@@ -266,14 +269,14 @@ body {
 /* marges globales */
 [data-md-color-scheme] .md-main {
   padding: var(--space-xs);
-  background-color: #1c212a;
+  background-color: var(--bg-page);
 }
 
 /* Grid principal */
 [data-md-color-scheme] .md-main__inner {
   display: grid;
   grid-template-columns: 260px minmax(0, 1fr) 260px;
- /* gap: var(--space-lg);*/
+  min-height: 100vh;
   max-width: none;
   margin: 0;
   width: 100%;
