@@ -76,6 +76,10 @@ body {
 
 body, input, .md-header, .md-nav, .md-content, .md-footer {
     font-family: var(--font-main) !important;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.45;
+    -webkit-font-smoothing: antialiased;
 }
 
 /* ==============================
