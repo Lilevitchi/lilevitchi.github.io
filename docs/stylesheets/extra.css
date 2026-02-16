@@ -217,7 +217,7 @@
   box-shadow: none;
 }
 
-/* Liste des onglets 
+/* Liste des onglets */
 [data-md-color-scheme] .md-tabs__list {
   display: flex;
   align-items: center;
@@ -225,7 +225,7 @@
   gap: 0;
   padding: 0;
   margin: 0;
-}*/
+}
 
 /* Item = Source de l'espace */
 [data-md-color-scheme] .md-tabs__item {
