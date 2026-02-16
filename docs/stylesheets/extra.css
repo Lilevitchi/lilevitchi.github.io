@@ -30,7 +30,7 @@
   --bg-card: rgb(32, 32, 32);
 
   /* ---------- Layout ---------- */
-  --header-height: 4.5rem;
+  --header-height: 72px;
   --content-max-width: 87.5rem; /* 1400px */
   --grid-max-width: 95%;
 
@@ -285,7 +285,7 @@ body {
 [data-md-color-scheme] .md-main {
   padding: var(--space-md);
   background-color: var(--bg-page);
-  margin-top: 80px;
+  margin-top: var(--header-height);
 }
 
 /* Grid principal */
