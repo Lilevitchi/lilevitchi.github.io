@@ -31,29 +31,31 @@
   --white: #ffffff;
 
   /* ---------- Layout ---------- */
-  --header-height: 72px;
-  --progress-height: 74px;
-  --content-max-width: 87.5rem; /* 1400px */
+  --header-height: 4.5rem;          /* 72px */
+  --progress-height: 4.68rem;       /* 75px */
+  --sidebar-width: 13.5rem;         /* 216px */
+  --sidebar-margin-top: 5.18rem;    /* 83px */
+  --sidebar-height-offset: 5.62rem; /* 90px */
+  
+  --content-max-width: 87.5rem;     /* 1400px */
   --grid-max-width: 95%;
-  --sidebar-width: 15em;
-  --sidebar-margin-top: 5.75em;
 
   /* ---------- Spacing ---------- */
-  --space-xs: 0.4rem;
-  --space-sm: 0.6rem;
-  --space-md: 1rem;
-  --space-lg: 1.25rem;
-  --space-xl: 1.6rem;
+  --space-xs: 0.36rem;  /* ~6px */
+  --space-sm: 0.54rem;  /* ~9px */
+  --space-md: 0.9rem;   /* ~14px */
+  --space-lg: 1.12rem;  /* ~18px */
+  --space-xl: 1.44rem;  /* ~23px */
 
   /* ---------- Radius ---------- */
-  --radius-sm: 0.4rem;
-  --radius-md: 0.75rem;
-  --radius-lg: 1.25rem;
+  --radius-sm: 0.25rem; /* 4px (Leur standard sidebar) */
+  --radius-md: 0.5rem;  /* 8px (Leur standard header) */
+  --radius-lg: 1rem;    /* 16px */
 
   /* ---------- Typography ---------- */
   --font-base-size: 0.9rem;
-  --font-h1-size: 1.8rem;
-  --font-hub-title: 2.2rem;
+  --font-h1-size: 1.62rem;
+  --font-hub-title: 1.98rem;
   --font-base: 400;
   --font-heavy: 800;
   --font-bold: 700;
@@ -63,6 +65,8 @@
   --transition-base: 0.3s ease;
   --transition-slow: 0.4s ease;
   --transition: all 187ms cubic-bezier(0, 0, 0, 1);
+  --transition-base: 187ms cubic-bezier(0, 0, 0, 1);
+  --transition-slow: 333ms cubic-bezier(0, 0, 0, 1);
 
   /* ---------- Effects ---------- */
   --blur-soft: blur(5px);
