@@ -115,9 +115,14 @@ body {
   width: 100%;
   z-index: 100;
   
-  background-color: rgb(43, 43, 43);
+  background-color: #292c35;
   border-bottom-left-radius: var(--radius-sm);
   border-bottom-right-radius: var(--radius-sm);
+  
+  font-size: 0.9em;
+  font-weight: 400;
+  line-height: 1.45em;
+  
   height: var(--header-height);
   outline: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.13);
