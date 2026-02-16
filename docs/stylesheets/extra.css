@@ -31,9 +31,9 @@
   --white: #ffffff;
 
   /* ---------- Layout ---------- */
-  --header-height: 4.5rem;          /* 72px */
+  --header-height: 72px;
   --progress-height: 4.68rem;       /* 75px */
-  --sidebar-width: 13.5rem;         /* 216px */
+  --sidebar-width: 216px;         /* 216px */
   --sidebar-margin-top: 5.18rem;    /* 83px */
   --sidebar-height-offset: 5.62rem; /* 90px */
   
