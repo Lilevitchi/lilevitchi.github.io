@@ -3,7 +3,7 @@
    ============================================================*/
 
 /* ==============================
-   GLOBAL THEME VARIABLES
+   0. VARIABLES
    ==============================*/
 
 :root {
@@ -143,6 +143,7 @@
   border-bottom-right-radius: 8px;
   outline: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.13);
+  border: 1px solid transparent;
 }
 
 /* Contenu interne du header */
@@ -151,6 +152,14 @@
     align-items: center;
     height: 100%;
     width: 100%;
+}
+
+/* Largeur et centrage du contenu */
+[data-md-color-scheme] .md-header .md-grid {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  width: 100%;
 }
 
 /* Logo */
