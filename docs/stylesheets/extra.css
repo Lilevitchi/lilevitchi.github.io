@@ -145,13 +145,10 @@
   background-color: var(--black) !important;
   border-bottom-left-radius: var(--radius-md);
   border-bottom-right-radius: var(--radius-md);
+  padding: 0 1em;
   outline: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.13);
   border: 1px solid transparent;
-
-  top: 0;
-  left: 0;
-  right: 0;
 }
 
 [data-md-color-scheme] .md-header * {
@@ -346,7 +343,7 @@
 
 /* Zone de contenu centrale */
 [data-md-color-scheme] .md-content {
-  position: fixed;
+  position: sticky;
   top: calc(var(--header-height) + 10px);
   bottom: 10px;
   left: calc(10px + var(--sidebar-width-primary) + 10px);
