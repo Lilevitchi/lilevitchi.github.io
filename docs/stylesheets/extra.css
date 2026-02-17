@@ -296,9 +296,14 @@ html {
   max-width: none;
   width: auto;
   
+ /* margin-left: calc(var(--sidebar-width-primary) + (var(--sidebar-gap) * 2));
+  margin-right: calc(var(--sidebar-width-secondary) + (var(--sidebar-gap) * 2));
+  margin-bottom: var(--sidebar-footer-offset);*/
+
   margin-left: calc(var(--sidebar-width-primary) + (var(--sidebar-gap) * 2));
   margin-right: calc(var(--sidebar-width-secondary) + (var(--sidebar-gap) * 2));
-  margin-bottom: var(--sidebar-footer-offset);
+  top: calc(var(--header-height) + var(--sidebar-gap));
+  bottom: calc(var(--sidebar-gap) + var(--sidebar-footer-offset));
 
   outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu (Debug) */
   outline-offset: -2px;
@@ -354,9 +359,6 @@ html {
   min-height: 100%;
   min-width: 100%;
   padding: 1.2rem;
-
-  align-items: center;
-  justify-content: center;
 
   background: var(--bg-surface);
   border-radius: var(--radius-sm);
