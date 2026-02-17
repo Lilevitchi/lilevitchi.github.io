@@ -19,13 +19,11 @@
   /* Layout */
   --header-height: 72px;
   --footer-height: 30px;
-  --progress-height: 75px;
 
   --sidebar-width-primary: 216px;
   --sidebar-width-secondary: 226px;
   --sidebar-gap: 10px;
   --sidebar-footer-offset: 0px;
-
   --content-max-width: 87.5rem;     /* 1400px */
   --grid-max-width: 95%;
 
@@ -38,7 +36,6 @@
 
   /* Typography */
   --font-main: Arial, Helvetica, sans-serif;
-
   --font-base-size: 10px;
   --font-h1-size: 21px;
   --font-h2-size: 16px;
@@ -96,32 +93,7 @@ html {
 }
 
 /* ============================================================
-   2. PROGRESS BAR
-   ============================================================*/
-
-[data-md-color-scheme] .progress-container {
-  z-index: 90;
-  width: 100%;
-  height: var(--progress-height);
-  background-color: #6e6e6e;
-  border-bottom-left-radius: var(--radius-md);
-  border-bottom-right-radius: var(--radius-md);
-  position: fixed;
-  top: 0;
-  pointer-events: none;
-}
-
-[data-md-color-scheme] .progress-bar {
-  height: 100%;
-  background-color: var(--accent);
-  width: 0%;
-  border-bottom-left-radius: var(--radius-md);
-  border-bottom-right-radius: var(--radius-md);
-  transition: width 150ms ease-out;
-}
-
-/* ============================================================
-   3. HEADER & BANNIÈRE
+   2. HEADER & BANNIÈRE
    ============================================================*/
 
 /* Header global */
@@ -191,7 +163,7 @@ html {
 }
 
 /* ============================================================
-   4. NAVIGATION
+   3. NAVIGATION
    ============================================================*/
 
 /* Conteneur général */
@@ -282,7 +254,7 @@ html {
 }
 
 /* ============================================================
-   5. STRUCTURE MAIN
+   4. STRUCTURE MAIN
    ============================================================*/
 
 /* Main container */
@@ -299,13 +271,10 @@ html {
   margin: 0 auto;
   padding: var(--sidebar-gap);
   align-items: flex-start;
-
-  outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu (Debug) */
-  outline-offset: -2px;
 }
 
 /* ============================================================
-   6. CONTENU CENTRAL
+   5. CONTENU CENTRAL
    ============================================================*/
 
 /* Zone de contenu centrale */
@@ -360,7 +329,7 @@ html {
 }
 
 /* ============================================================
-   7. SIDEBARS FIXES
+   6. SIDEBARS FIXES
    ============================================================*/
 
 /* Sidebars */
@@ -391,7 +360,7 @@ html {
 }
 
 /* ============================================================
-   8. TYPOGRAPHIE & CONTENU
+   7. TYPOGRAPHIE & CONTENU
    ============================================================*/
 
 [data-md-color-scheme] .md-typeset h1,
@@ -437,7 +406,7 @@ html {
 }
 
 /* ============================================================
-   9. UI ELEMENTS (BOT & KO-FI)
+   8. UI ELEMENTS (BOT & KO-FI)
    ============================================================*/
 
 /* Bloc conseil du bot */
@@ -506,7 +475,7 @@ html {
 }
 
 /* ============================================================
-   10. FOOTER
+   9. FOOTER
    ============================================================*/
 
 [data-md-color-scheme] .md-footer {
@@ -526,7 +495,7 @@ html {
 }
 
 /* ============================================================
-   11. RESPONSIVE
+   10. RESPONSIVE
    ============================================================*/
 
 @media (max-width: 1220px) {
@@ -550,7 +519,7 @@ html {
 }
 
 /* ============================================================
-   12. HUB — GRILLE DES JEUX
+   11. HUB — GRILLE DES JEUX
    ============================================================*/
 
 /* @media screen and (min-width: 60em) {
@@ -643,7 +612,7 @@ html {
 }
 
 /* ============================================================
-   13. CURSEURS
+   12. CURSEURS
    ============================================================*/
 
     /* Curseur normal */
