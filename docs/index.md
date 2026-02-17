@@ -11,12 +11,13 @@ Vous trouverez des **guides précis et complets** pour plonger dans le monde du 
 <div class="custom-card">
 
 ## Liste des jeux
+
 <div class="game-grid">
     <a href="fallout4/" class="game-card">
         <div class="game-card-bg" style="background-image: url('assets/fo4.jpg');"></div>
         <div class="game-card-overlay"><h2>Fallout 4</h2></div>
     </a>
-    </div>
+</div>
 
 </div>
 
