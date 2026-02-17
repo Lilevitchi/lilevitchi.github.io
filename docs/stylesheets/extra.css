@@ -789,7 +789,6 @@ body:has(.game-grid) .md-main__inner {
 
 /* Le conteneur principal du footer */
 [data-md-color-scheme] .md-footer {
-    position: fixed;
     left: 50%;
     transform: translateX(-50%);
     max-width: 100%;
@@ -870,6 +869,7 @@ body:has(.game-grid) .md-main__inner {
 
 /* @media screen and (min-width: 45.01em) { */
     .hub-wrapper {
+        position: fixed;
         top: 0;
         left: 0;
         width: 100vw;
