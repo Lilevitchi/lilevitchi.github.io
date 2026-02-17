@@ -78,9 +78,13 @@ html {
 
 [data-md-color-scheme] body {
   margin: 0;
-  font-family: var(--font-main);
   background-color: var(--bg-page);
   color: #fff;
+  font-family: var(--font-main);
+  font-size: var(--font-base-size);
+  font-weight: 400;
+  height: 100%;
+  overflow: hidden;
 }
 
 * {
@@ -93,7 +97,7 @@ html {
    ==============================*/
 
 [data-md-color-scheme] .progress-container {
-  z-index: 2;
+  z-index: 90;
   width: 100%;
   height: var(--progress-height);
   background-color: #6e6e6e;
@@ -124,6 +128,7 @@ html {
   left: 0;
   right: 0;
 
+  width: 100%;
   height: var(--header-height);
   background: var(--bg-surface);
   z-index: 100;
