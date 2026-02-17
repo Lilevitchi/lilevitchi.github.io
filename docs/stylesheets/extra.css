@@ -307,15 +307,15 @@ html {
   outline: 2px dashed rgba(255, 255, 0, 0.8); /* Jaune (Debug) */
   outline-offset: -2px;
 }
-
+/*
 [data-md-color-scheme] .md-typeset {
   max-width: none;
   margin: 0;
   padding: 0;
   
-  outline: 2px dashed rgba(255, 0, 0, 0.8); /* Rouge (Debug) */
+  outline: 2px dashed rgba(255, 0, 0, 0.8);
   outline-offset: -2px;
-}
+}*/
 
 [data-md-color-scheme] .custom-card {
     background-color: var(--bg-surface);
