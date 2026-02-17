@@ -790,10 +790,8 @@ body:has(.game-grid) .md-main__inner {
 /* Le conteneur principal du footer */
 [data-md-color-scheme] .md-footer {
     position: fixed;
-    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    width: calc(100% - 20px);
     max-width: 100%;
     z-index: 50;
 
@@ -801,10 +799,10 @@ body:has(.game-grid) .md-main__inner {
     color: var(--white);
 }
 
-/* Modifier la taille de la police dans le footer */
+/* Modifier la taille de la police dans le footer 
 [data-md-color-scheme] .md-footer__inner {
     font-size: 0.75rem;
-}
+}*/
 
 /* Si tu veux modifier la couleur des liens du footer
 [data-md-color-scheme] .md-footer__link {
@@ -816,10 +814,10 @@ body:has(.game-grid) .md-main__inner {
     color: var(--accent) !important;
 }*/
 
-/* Optionnel : Masquer la partie "Made with MkDocs" si tu veux épurer */
+/* Optionnel : Masquer la partie "Made with MkDocs" si tu veux épurer 
 [data-md-color-scheme] .md-footer-meta {
-    background-color: rgba(0, 0, 0, 0.2); /* Fond légèrement différent pour la base */
-}
+    background-color: rgba(0, 0, 0, 0.2);
+}*/
 
 /* Conteneur des icônes sociales */
 [data-md-color-scheme] .md-footer-social {
