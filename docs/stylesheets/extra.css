@@ -293,17 +293,27 @@ html {
 
 /* Zone centrale */
 [data-md-color-scheme] .md-main__inner {
+
+  display: flex;                  /* Aligne Sidebar - Contenu - Sidebar */
+  gap: var(--sidebar-gap);        /* Crée l'espace de 10px automatiquement */
+  max-width: var(--content-max-width);
+  margin: 0 auto;                 /* Centre tout le bloc bleu dans la page */
+  padding-top: var(--sidebar-gap);    /* Marge TOP de 10px sous le header */
+  padding-bottom: var(--sidebar-gap); /* Marge BOT de 10px au-dessus du footer */
+  align-items: flex-start;
+  
+  /*
   max-width: none;
   width: auto;
   
  /* margin-left: calc(var(--sidebar-width-primary) + (var(--sidebar-gap) * 2));
   margin-right: calc(var(--sidebar-width-secondary) + (var(--sidebar-gap) * 2));
-  margin-bottom: var(--sidebar-footer-offset);*/
+  margin-bottom: var(--sidebar-footer-offset);
 
   margin-left: calc(var(--sidebar-width-primary) + (var(--sidebar-gap) * 2));
   margin-right: calc(var(--sidebar-width-secondary) + (var(--sidebar-gap) * 2));
   top: calc(var(--header-height) + var(--sidebar-gap));
-  bottom: calc(var(--sidebar-gap) + var(--sidebar-footer-offset));
+  bottom: calc(var(--sidebar-gap) + var(--sidebar-footer-offset));*/
 
   outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu (Debug) */
   outline-offset: -2px;
@@ -356,9 +366,10 @@ html {
 
 /* Zone scrollable réelle */
 [data-md-color-scheme] .md-content__inner {
-  min-height: 100%;
-  min-width: 100%;
+  flex: 1;
+  min-width: 0;
   padding: 1.2rem;
+  margin: 0;
 
   background: var(--bg-surface);
   border-radius: var(--radius-sm);
