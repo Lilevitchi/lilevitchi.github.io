@@ -337,6 +337,7 @@ html {
 }
 
 [data-md-color-scheme] .md-content__inner .md-typeset {
+  flex: 1;
   max-width: 100%;
   margin: 0;
   padding: 0;
@@ -446,14 +447,19 @@ html {
 .bot-advice {
   display: flex;
   align-items: center;
-  background-color: var(--accent-soft);
+  background-color: #3d2b26;
+  border: 1px solid var(--accent);
   border-left: 4px solid var(--accent);
 
   line-height: 1.4;
  
   padding: var(--space-md);
   border-radius: var(--radius-sm);
-  margin: var(--space-lg) 0;
+
+  max-width: 600px;      /* Limite la largeur comme sur ton site de référence */
+  margin: 2rem auto;     /* Le 'auto' centre le bloc horizontalement */
+    
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
 /* Image du bot */
