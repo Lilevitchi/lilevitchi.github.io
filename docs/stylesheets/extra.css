@@ -413,6 +413,12 @@ html {
   font-weight: 700;
 }
 
+[data-md-color-scheme] .md-typeset p {
+  text-align: left;
+  max-width: 100%;
+  color: var(--white);
+}
+
 [data-md-color-scheme] .md-typeset a:not(.kofi-button) {
   color: #fff;
   transition: color var(--transition), transform var(--transition);
