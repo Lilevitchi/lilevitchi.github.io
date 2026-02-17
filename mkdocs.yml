@@ -25,6 +25,7 @@ plugins: []
 extra_javascript:
   - javascripts/random_tips.js
   - javascripts/progress.js
+  - javascripts/sidebar-footer-offset.js
 
 extra_css:
   - stylesheets/extra.css
