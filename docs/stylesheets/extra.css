@@ -101,6 +101,7 @@
   color: var(--white);
   
   height: 100%;
+  overflow: hidden;
 }
 
 * {
