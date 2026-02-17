@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const footerHeight = footer.offsetHeight;
 
       document.documentElement.style.setProperty(
-        "--sidebar-gap",
+        "--sidebar-footer-offset",
         entry.isIntersecting
           ? `${footerHeight + 10}px`
           : "10px"
