@@ -336,7 +336,7 @@ html, body {
     + var(--header-visual-offset)
   ) !important;
   
-  bottom: var(--sidebar-footer-offset);
+  bottom: 10px;
 
   height: calc(100vh - var(--header-height) - var(--sidebar-footer-offset) - var(--header-visual-offset)) !important;
 
@@ -377,7 +377,7 @@ html, body {
 }
 
 [data-md-color-scheme] .md-sidebar__inner {
-  height: 100%;
+  height: calc(100% - var(--sidebar-footer-offset));
   overflow-y: auto;
 }
 
