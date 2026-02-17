@@ -13,8 +13,8 @@
 
   /* Backgrounds */
   --bg-page: #1c212a;
-  --bg-surface: #292c35;
-  --bg-card: #202020;
+  --bg-surface: rgba(41, 44, 53, 0.85);
+  --bg-card: rgba(32, 32, 32, 0.9);
 
   /* Layout */
   --header-height: 72px;
@@ -302,8 +302,7 @@ html, body {
   margin: 0;
   padding: var(--sidebar-gap);
   
-  outline: 2px dashed rgba(255, 255, 0, 0.8); /* Jaune (Debug) */
-  outline-offset: -2px;
+  border: 2px dashed yellow;/* Jaune (Debug) */
 }
 
 [data-md-color-scheme] .md-content__inner > .md-typeset {
@@ -338,9 +337,9 @@ html, body {
   
   bottom: 10px;
 
-  height: calc(100vh - var(--header-height) - var(--sidebar-footer-offset) - var(--header-visual-offset)) !important;
+  /*height: calc(100vh - var(--header-height) - var(--sidebar-footer-offset) - var(--header-visual-offset)) !important;
 
-  height: auto;
+  height: auto;*/
   display: flex;
   flex-direction: column;
 
