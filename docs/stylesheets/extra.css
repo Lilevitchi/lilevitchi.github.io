@@ -32,6 +32,7 @@
 
   /* ---------- Layout ---------- */
   --header-height: 72px;
+  --header-offset: calc(var(--header-height) + 10px);
   --progress-height: 75px;
   --sidebar-width-primary: 216px;
   --sidebar-width-secondary: 226px;
@@ -317,7 +318,7 @@
 /* Sidebars */
 [data-md-color-scheme] .md-sidebar {
   position: fixed;
-  top: calc(var(--header-height) + 10px);
+  top: var(--header-offset);
  /* height: calc(100vh - var(--header-height) - 20px);*/
   background: #292c35;
   border-radius: var(--radius-sm);
@@ -343,8 +344,9 @@
 
 /* Zone de contenu centrale */
 [data-md-color-scheme] .md-content {
-  position: sticky;
-  top: calc(var(--header-height) + 10px);
+  position: fixed;
+  flex: 1;
+  top: var(--header-offset);
   bottom: 10px;
   left: calc(10px + var(--sidebar-width-primary) + 10px);
   right: calc(10px + var(--sidebar-width-secondary) + 10px);
@@ -780,6 +782,36 @@ body:has(.game-grid) .md-main__inner {
 /* ==============================
    5. RÉSEAUX SOCIAUX - FOOTER
    ==============================*/
+
+/* Le conteneur principal du footer */
+[data-md-color-scheme] .md-footer {
+    background-color: var(--bg-header) !important;
+    color: var(--white);
+    border-top: 1px solid var(--accent-border);
+    
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* Modifier la taille de la police dans le footer */
+[data-md-color-scheme] .md-footer__inner {
+    font-size: 0.75rem;
+}
+
+/* Si tu veux modifier la couleur des liens du footer
+[data-md-color-scheme] .md-footer__link {
+    color: var(--white) !important;
+    transition: color var(--transition);
+} 
+
+[data-md-color-scheme] .md-footer__link:hover {
+    color: var(--accent) !important;
+}*/
+
+/* Optionnel : Masquer la partie "Made with MkDocs" si tu veux épurer */
+[data-md-color-scheme] .md-footer-meta {
+    background-color: rgba(0, 0, 0, 0.2); /* Fond légèrement différent pour la base */
+}
 
 /* Conteneur des icônes sociales */
 [data-md-color-scheme] .md-footer-social {
