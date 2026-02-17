@@ -1,78 +1,56 @@
-# Introduction
+---
+title: Fallout 4
+hide:
+  - navigation
+  - toc
+  - footer
+---
 
-<div class="custom-card">
-⚠️ **À lire impérativement**
+<div class="hub-wrapper">
 
-Tout ce qui est écrit dans ce guide l’est pour une raison précise.  
-Sauter des étapes, ignorer des paragraphes ou improviser peut rendre votre jeu instable, provoquer des crashs ou invalider complètement le guide.
+  <!-- Background -->
+  <div class="hub-bg"
+       style="background-image: url('/assets/fo4.png');">
+  </div>
+
+  <!-- Contenu central -->
+  <div class="hub-main-container">
+
+    <!-- Robot -->
+    <img
+      src="/assets/lile-bot-fo4.png"
+      alt="Lile Bot Fallout 4"
+      class="hub-bot"
+    >
+
+    <div class="hub-content">
+
+      <!-- Titre -->
+      <h1 class="hub-title">
+        Bienvenue au Commonwealth
+      </h1>
+
+      <!-- Boutons -->
+      <div class="hub-buttons-gap">
+
+        <a
+          href="/fallout4/intro/"
+          class="btn-hub-large btn-orange"
+        >
+          📘 Guide texte
+        </a>
+
+        <a
+          href="https://www.youtube.com/watch?v=TON_ID_VIDEO"
+          target="_blank"
+          rel="noopener"
+          class="btn-hub-large btn-red"
+        >
+          ▶️ Guide vidéo
+        </a>
+
+      </div>
+
+    </div>
+  </div>
 </div>
-
----
-
-## Présentation
-
-**The Midnight Ride** est un guide de modding complet pour **Fallout 4**, conçu pour offrir une expérience :
-
-- stable
-- performante
-- cohérente
-- facile à maintenir dans le temps
-
-Ce guide s’adresse aussi bien aux débutants qu’aux utilisateurs expérimentés.  
-Même si vous avez déjà moddé Fallout 4 auparavant, **ne sautez aucune étape**.
-
-<div class="bot-advice">
-💡 Le modding moderne de Fallout 4 a beaucoup évolué.  
-Des pratiques considérées comme “standards” il y a quelques années sont aujourd’hui déconseillées ou obsolètes.
-</div>
-
----
-
-## Objectifs du guide
-
-- **Stabilité avant tout**  
-  Aucun mod dangereux ou expérimental n’est inclus.
-
-- **Optimisation des performances**  
-  Chaque outil, paramètre et mod est testé et validé.
-
-- **Structure claire**  
-  - Partie principale : indispensable pour un jeu propre et stable  
-  - Partie étendue : contenu optionnel et personnalisable
-
-- **Respect du jeu original**  
-  Les améliorations ne dénaturent pas l’expérience vanilla.
-
----
-
-## Prérequis
-
-<div class="custom-card">
-📦 **Configuration et logiciels requis**
-</div>
-
-- Une version **anglaise** de Fallout 4
-- Tous les DLC **sauf le HD Texture Pack**
-- **52 Go d’espace disque libre minimum**
-- Windows 10 ou supérieur (64 bits)
-- Un éditeur de texte (Notepad++ recommandé)
-- Un outil d’archivage (7-Zip / NanaZip recommandé)
-- Pilotes GPU à jour
-- Un compte Nexus Mods  
-  (Premium fortement recommandé pour éviter les limitations)
-
-<div class="bot-advice">
-💡 Le HD Texture Pack est volontairement exclu :  
-il dégrade les performances et complique inutilement le modding.
-</div>
-
----
-
-## Configuration matérielle recommandée
-
-- **CPU** : équivalent ou supérieur à un Ryzen 5 1600 (performance mono-cœur)
-- **RAM** : 8 Go minimum
-- **GPU** : GTX 960 / R9 290 ou équivalent (4 Go de VRAM)
-- **Stockage** : SSD fortement recommandé
-
----
