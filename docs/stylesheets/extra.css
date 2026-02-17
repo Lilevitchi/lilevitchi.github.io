@@ -739,11 +739,8 @@ body:has(.game-grid) .md-main__inner {
 
 
 /* ==============================
-   4. CURSEURS & TAILLE PC
+   4. CURSEURS
    ==============================*/
-
-@media screen and (min-width: 60em) { 
-    .game-card { height: 200px !important; } */
 
     /* Curseur normal */
     .game-card, .md-logo, .md-header__button, .md-tabs__link, .md-nav__link, .md-typeset a, .kofi-button {
@@ -754,7 +751,6 @@ body:has(.game-grid) .md-main__inner {
     .game-card:active, .md-logo:active, .md-header__button:active, .md-tabs__link:active, .md-nav__link:active, .md-typeset a:active, .kofi-button:active  {
         cursor: url('../assets/curseur-clic.png') 7 0, pointer !important;
     }
-}
 
  /* --- 6. HUB JEUX --- */
 /* .md-header { z-index: 120 !important; }
