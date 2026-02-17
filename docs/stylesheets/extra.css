@@ -793,6 +793,7 @@ body:has(.game-grid) .md-main__inner {
     color: var(--white);
     outline: 1px solid rgba(0, 0, 0, 0.1);
     border: 1px solid transparent;
+  transition: none;
 }
 
 /* Modifier la taille de la police dans le footer 
