@@ -291,7 +291,7 @@ html {
   margin-top: calc(var(--header-height) + var(--sidebar-gap));
 }
 
-/* Zone centrale (sidebars + contenu) */
+/* Zone centrale */
 [data-md-color-scheme] .md-main__inner {
   max-width: none;
   width: auto;
@@ -313,7 +313,6 @@ html {
   height: auto;
   top: calc(var(--header-height) + var(--sidebar-gap));
   bottom: calc(var(--sidebar-gap) + var(--sidebar-footer-offset));
-  padding: var(--sidebar-gap);
 
   background: var(--bg-surface);
   border-radius: var(--radius-sm);
@@ -337,6 +336,10 @@ html {
   width: var(--sidebar-width-secondary);
 }
 
+[data-md-color-scheme] .md-sidebar__inner {
+  padding: var(--sidebar-gap);
+}
+
 /* ==============================
    7. CONTENU CENTRAL
    ==============================*/
@@ -352,7 +355,6 @@ html {
 /* Zone scrollable réelle */
 [data-md-color-scheme] .md-content__inner {
   min-height: 100%;
-  padding: 1.2rem;
 
   background: var(--bg-surface);
   border-radius: var(--radius-sm);
