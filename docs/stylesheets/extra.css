@@ -293,7 +293,7 @@ html {
 /* Zone centrale (sidebars + contenu) */
 [data-md-color-scheme] .md-main__inner {
   margin-left: calc(var(--sidebar-width-primary) + (var(--sidebar-gap) * 2));
-  margin-right: var(--sidebar-width-secondary) + (var(--sidebar-gap) * 2));
+  margin-right: calc(var(--sidebar-width-secondary) + (var(--sidebar-gap) * 2));
 
   outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu (Debug) */
   outline-offset: -2px;
