@@ -93,6 +93,10 @@ html, body {
   font-size: var(--font-base-size);
   font-weight: 400;
   min-height: 100svh;
+
+  /* AJOUTEZ CES LIGNES */
+  display: flex;
+  flex-direction: column;
 }
 
 * {
@@ -266,6 +270,11 @@ html, body {
   
   /*margin-top: var(--header-height);
   min-height: calc(100vh - var(--header-height));*/
+
+  /* MODIFIEZ OU AJOUTEZ CECI */
+  flex: 1 0 auto; /* Force le contenu à s'étendre et pousser le footer */
+  display: flex;
+  flex-direction: column;
 }
 
 /* Zone centrale */
@@ -505,11 +514,14 @@ html, body {
   background: var(--bg-surface);
 
   border-top: 1px solid rgba(255,255,255,0.1);
-  /*text-align: center;
-
+  text-align: center;
   display: flex;
   align-items: center;
-  justify-content: center;*/
+  justify-content: center;
+
+  /* AJOUTEZ CECI POUR PLUS DE SÉCURITÉ */
+  flex-shrink: 0; /* Empêche le footer de s'écraser */
+  margin-top: auto;
 }
 
 [data-md-color-scheme] .md-footer-meta {
