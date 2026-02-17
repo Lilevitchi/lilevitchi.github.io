@@ -531,12 +531,12 @@ html, body {
    10. RESPONSIVE
    ============================================================*/
 
-@media (max-width: 1220px) {
+/*@media (max-width: 1220px) {
   [data-md-color-scheme] .md-sidebar--secondary {
     display: none;
   }
 
-/*  [data-md-color-scheme] .md-content {
+  [data-md-color-scheme] .md-content {
     margin-right: var(--sidebar-gap);
   }
 }
