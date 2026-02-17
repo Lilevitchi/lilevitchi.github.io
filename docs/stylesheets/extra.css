@@ -785,6 +785,14 @@ body:has(.game-grid) .md-main__inner {
 
 /* Le conteneur principal du footer */
 [data-md-color-scheme] .md-footer {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 20px);
+    max-width: 100%;
+    z-index: 50;
+
     background-color: var(--bg-header) !important;
     color: var(--white);
     border-top: 1px solid var(--accent-border);
