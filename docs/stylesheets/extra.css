@@ -38,9 +38,10 @@
   /* Typography */
   --font-main: Arial, Helvetica, sans-serif;
 
-  --font-base-size: 0.75rem;
-  --font-h1-size: 1.3rem;
-  --font-h2-size: 1rem;
+  --font-base-size: 10px;
+  --font-h1-size: 21px;
+  --font-h2-size: 16px;
+  --font-h3-size: 12px;
 
   /* ---------- Effects ---------- */
   --blur-soft: blur(5px);
@@ -229,7 +230,7 @@ html {
   pointer-events: auto;
   color: #fff;
   padding: 0.4rem 0.8rem;
-  font-size: var(--font-base-size);
+  font-size: var(--font-h3-size);
   opacity: 1;
   border-bottom: 4px solid transparent;
   transition: var(--transition);
@@ -289,10 +290,10 @@ html {
   display: flex;
   flex: 1;
   
-  min-height: 100vh;
+  min-height: none;
   max-width: none;
 
-  padding-top: var(--header-height);
+  top: var(--header-height);
 
   outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu (Debug) */
   outline-offset: -2px;
