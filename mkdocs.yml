@@ -20,8 +20,6 @@ theme:
     - navigation.expand
     - footer.hide.generator
 
-plugins:
-
 extra_javascript:
   - javascripts/random_tips.js
   - javascripts/progress.js
