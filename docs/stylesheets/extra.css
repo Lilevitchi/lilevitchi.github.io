@@ -334,18 +334,16 @@ html {
    BURGER MENU — SYNCHRONISATION AVEC SIDEBAR
    ============================================================ */
 
-/* Par défaut : cacher le burger */
-.md-header__button.md-icon[aria-label="Search"],
-.md-header__button.md-icon[aria-label="Menu"] {
-  display: none;
-}
-
+@media screen and (min-width: 900px) {
+  .md-header__button[for="__drawer"] {
+    display: none !important;
+  }
+  
 /* Quand la sidebar primary est cachée */
-@media (max-width: 900px) {
+@media (max-width: 899px) {
 
-  /* Affiche le burger */
-  .md-header__button.md-icon[aria-label="Menu"] {
-    display: inline-flex;
+.md-header__button[for="__drawer"] {
+    display: block !important; /* Affiche le burger */
   }
 }
 
