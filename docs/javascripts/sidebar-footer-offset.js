@@ -6,8 +6,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const observer = new IntersectionObserver(
     ([entry]) => {
-      sidebars.forEach(sidebar => {
-        sidebar.style.bottom = entry.isIntersecting ? "40px" : "10px";
+      const offset = entry.isIntersecting ? footer.offsetHeight + 10 : 10;
+      sidebars.forEach(sb => {
+        sb.style.bottom = offset + "px";
       });
     },
     { threshold: 0 }
