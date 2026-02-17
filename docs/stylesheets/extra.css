@@ -284,7 +284,7 @@ html {
 [data-md-color-scheme] .md-main {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: calc(100vh - var(--header-height))
 }
 
 /* Zone centrale (sidebars + contenu) */
@@ -292,7 +292,7 @@ html {
   display: flex;
   flex: 1;
   max-width: none;
-  top: calc(var(--header-height) + 10px);
+  top: calc(var(--header-height) + var(--sidebar-gap);
 
   outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu (Debug) */
   outline-offset: -2px;
@@ -306,7 +306,7 @@ html {
 [data-md-color-scheme] .md-sidebar {
   position: fixed;
   height: 100vh;
-  top: calc(var(--header-height) + 10px);
+  top: calc(var(--header-height) + var(--sidebar-gap));
   bottom: var(--sidebar-gap);
 
   background: var(--bg-surface);
