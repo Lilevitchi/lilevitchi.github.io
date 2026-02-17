@@ -267,7 +267,8 @@ html {
 
 /* Zone centrale */
 [data-md-color-scheme] .md-main__inner {
-  height: 100%;
+  display: block;
+  max-width: none;
   margin: 0;
   padding: 0;
 
