@@ -7,70 +7,45 @@
    ==============================*/
 
 :root {
-  
-  /* ---------- Fonts ---------- */
-  --font-main: "Arial", "Helvetica", sans-serif;
-
-  /* ---------- Brand / Accent ---------- */
+  /* Brand */
   --accent: #ff5722;
   --accent-soft: rgba(255, 87, 34, 0.08);
-  --accent-border: rgba(255, 87, 34, 0.5);
-  --accent-glow: rgba(255, 87, 34, 0.6);
+
+  /* Backgrounds */
   --bg-page: #1c212a;
-  --bg-card: rgb(32, 32, 32);
-  --bg-header: rgb(41, 44, 53);
+  --bg-surface: #292c35;
+  --bg-card: #202020;
 
-   /* ---------- Tabs / Navigation ---------- */
-  --tab-bg-hover: rgba(255, 255, 255, 0.08);
-  --tab-bg-active: rgba(255, 87, 34, 0.12);
-
-  /* ---------- Base Colors ---------- */
-  --black: #000000;
-  --dark-1: #1a1a1a;
-  --dark-2: #2c2c2c;
-  --white: #ffffff;
-
-  /* ---------- Layout ---------- */
+  /* Layout */
   --header-height: 72px;
-  --header-offset: calc(var(--header-height) + 10px);
+  --footer-height: 32px;
   --progress-height: 75px;
+
   --sidebar-width-primary: 216px;
   --sidebar-width-secondary: 226px;
-  --sidebar-margin: 0.63rem;           /* 10px */
-  --sidebar-height-offset: 5.62rem;    /* 90px */
-  
+  --sidebar-gap: 16px;
+
   --content-max-width: 87.5rem;     /* 1400px */
   --grid-max-width: 95%;
 
-  --footer-height: 30px;
+  --header-offset: calc(var(--header-height) + 10px);
 
-  /* ---------- Spacing ---------- */
-  --space-xs: 0.36rem;  /* ~6px */
-  --space-sm: 0.54rem;  /* ~9px */
-  --space-md: 0.9rem;   /* ~14px */
-  --space-lg: 1.12rem;  /* ~18px */
-  --space-xl: 1.44rem;  /* ~23px */
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
 
-  /* ---------- Radius ---------- */
-  --radius-sm: 0.25rem; /* 4px (Leur standard sidebar) */
-  --radius-md: 0.5rem;  /* 8px (Leur standard header) */
-  --radius-lg: 1rem;    /* 16px */
+  /* Motion */
+  --transition: 187ms cubic-bezier(0, 0, 0, 1);
 
-  /* ---------- Typography ---------- */
+  /* Typography */
+  --font-main: Arial, Helvetica, sans-serif;
+
   --font-base-size: 0.8rem;
   --font-h1-size: 1.2rem;
   --font-hub-title: 1.98rem;
   --font-base: 400;
   --font-heavy: 800;
   --font-bold: 700;
-
-  /* ---------- Motion ---------- */
-  --transition-fast: 0.25s ease;
-  --transition-base: 0.3s ease;
-  --transition-slow: 0.4s ease;
-  --transition: all 187ms cubic-bezier(0, 0, 0, 1);
-  --transition-base: 187ms cubic-bezier(0, 0, 0, 1);
-  --transition-slow: 333ms cubic-bezier(0, 0, 0, 1);
 
   /* ---------- Effects ---------- */
   --blur-soft: blur(5px);
@@ -79,6 +54,17 @@
   /* ---------- Cursor ---------- */
   --cursor-default: url('../assets/curseur.png') 7 0, pointer;
   --cursor-click: url('../assets/curseur-clic.png') 7 0, pointer;
+
+  /* ---------- Tabs / Navigation ---------- */
+  --tab-bg-hover: rgba(255, 255, 255, 0.08);
+  --tab-bg-active: rgba(255, 87, 34, 0.12);
+
+  /* ---------- Spacing ---------- */
+  --space-xs: 0.36rem;  /* ~6px */
+  --space-sm: 0.54rem;  /* ~9px */
+  --space-md: 0.9rem;   /* ~14px */
+  --space-lg: 1.12rem;  /* ~18px */
+  --space-xl: 1.44rem;  /* ~23px */
 }
 
 /* ==============================
@@ -87,26 +73,24 @@
 
 * {
   box-sizing: border-box;
+}
+
+html {
   scroll-behavior: smooth;
-  transition: var(--transition);
 }
 
 [data-md-color-scheme] body {
-  background-color: var(--bg-page) !important;
   margin: 0;
   font-family: var(--font-main);
-  font-size: var(--font-base-size);
-  font-weight: var(--font-base);
-  line-height: 1.45em;
-  color: var(--white);
+  background-color: var(--bg-page);
+  color: #fff;
   
-  height: 100%;
   overflow: hidden;
 }
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.63) transparent;
+  scrollbar-color: rgba(255,255,255,0.5) transparent;
 }
 
 /* ==============================
@@ -142,16 +126,18 @@
 /* Header global */
 [data-md-color-scheme] .md-header {
   position: fixed;
-  z-index: 3;
-  width: 100%;
-  height: var(--header-height) !important;
-  background-color: var(--black) !important;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: var(--header-height);
+  background: #000;
+  z-index: 100;
+
   border-bottom-left-radius: var(--radius-md);
   border-bottom-right-radius: var(--radius-md);
-  padding: 0 1em;
-  outline: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.13);
-  border: 1px solid transparent;
+
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 [data-md-color-scheme] .md-header * {
@@ -160,19 +146,18 @@
 
 /* Contenu interne du header */
 [data-md-color-scheme] .md-header__inner {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
-/* Largeur et centrage du contenu */
+/* Largeur et centrage du contenu 
 [data-md-color-scheme] .md-header .md-grid {
   display: flex;
   align-items: center;
   max-width: 100%;
   width: 100%;
-}
+}*/
 
 /* Logo */
 [data-md-color-scheme] .md-logo img {
@@ -247,7 +232,7 @@
 /* Onglet — état normal */
 [data-md-color-scheme] .md-tabs__link {
   pointer-events: auto;
-  color: var(--white);
+  color: #fff;
   padding: 0.4rem 0.8rem;
   font-size: 0.75rem;
   opacity: 1;
@@ -297,81 +282,102 @@
    5. STRUCTURE MAIN
    ==============================*/
 
-/* --------------------------------------------------
-   STRUCTURE GLOBALE DU CONTENU
-   -------------------------------------------------- */
-
-/* Main */
+/* Main container */
 [data-md-color-scheme] .md-main {
-  background-color: var(--bg-page);
-  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-/* Grid principal */
+/* Zone centrale (sidebars + contenu) */
 [data-md-color-scheme] .md-main__inner {
   display: flex;
-  min-height: 100vh;
-  max-width: none;
+  flex: 1;
+
+  padding-top: var(--header-height);
 
   outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu (Debug) */
   outline-offset: -2px;
 }
 
+/* ==============================
+   6. SIDEBARS FIXES
+   ==============================*/
+
 /* Sidebars */
 [data-md-color-scheme] .md-sidebar {
   position: fixed;
-  top: var(--header-offset);
-  height: calc(100vh - var(--header-height) - 20px);
-  background: #292c35;
-  border-radius: var(--radius-sm);
-  outline: 1px solid rgba(0, 0, 0, 0.1);
-  transition: all 333ms cubic-bezier(0, 0, 0, 1);
-  overflow-y: auto;
-  scrollbar-width: thin;
-  
+  top: var(--header-height);
   bottom: 10px;
+
+  background: var(--bg-surface);
+  border-radius: var(--radius-sm);
+  outline: 1px solid rgba(0,0,0,0.2);
+
+  overflow-y: auto;
+  transition: transform 333ms cubic-bezier(0, 0, 0, 1);
 }
 
-/* Sidebar Gauche */
-[data-md-color-scheme] .md-sidebar--primary { 
-  left: var(--sidebar-margin);
+/* Sidebar gauche */
+[data-md-color-scheme] .md-sidebar--primary {
+  left: var(--sidebar-gap);
   width: var(--sidebar-width-primary);
 }
 
-/* Sidebar Droite */
-[data-md-color-scheme] .md-sidebar--secondary { 
-  right: var(--sidebar-margin);
+/* Sidebar droite */
+[data-md-color-scheme] .md-sidebar--secondary {
+  right: var(--sidebar-gap);
   width: var(--sidebar-width-secondary);
 }
 
+/* ==============================
+   7. CONTENU CENTRAL
+   ==============================*/
+
 /* Zone de contenu centrale */
 [data-md-color-scheme] .md-content {
-  position: fixed;
   flex: 1;
-  top: var(--header-offset);
-  bottom: 10px;
-  left: calc(10px + var(--sidebar-width-primary) + 10px);
-  right: calc(10px + var(--sidebar-width-secondary) + 10px);
 
-  overflow-y: auto;
+  margin-left: calc(var(--sidebar-width-primary) + var(--sidebar-gap) * 2);
+  margin-right: calc(var(--sidebar-width-secondary) + var(--sidebar-gap) * 2);
 
-  bottom: calc(10px + var(--footer-height));
+  padding: 0 1rem;
 
   outline: 2px dashed rgba(0, 255, 0, 0.8); /* Vert (Debug) */
   outline-offset: -2px;
 }
 
+/* Zone scrollable réelle */
 [data-md-color-scheme] .md-content__inner {
-  background-color: var(--bg-header);
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  padding: 1.2rem;
+
+  background: var(--bg-surface);
   border-radius: var(--radius-sm);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  
-  height: 100%;
-  with: 100%;
-  
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+
+  overflow-y: auto;
+
   outline: 2px dashed rgba(255, 255, 0, 0.8); /* Jaune (Debug) */
   outline-offset: -2px;
 }
+
+/* ==============================
+   8. FOOTER
+   ==============================*/
+
+[data-md-color-scheme] .md-footer {
+  height: var(--footer-height);
+  background: var(--bg-surface);
+
+  border-top: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /*
 [data-md-color-scheme] .md-nav--secondary {
   position: static;
@@ -399,57 +405,24 @@
   transform: translateY(-2px);
 }
 
-/* --------------------------------------------------
-   TITRES
-   --------------------------------------------------*/
+/* ==============================
+   9. TYPOGRAPHIE & CONTENU
+   ==============================*/
 
 [data-md-color-scheme] .md-typeset h1,
 [data-md-color-scheme] .md-typeset h2,
 [data-md-color-scheme] .md-typeset h3 {
-  color: var(--white);
-  opacity: 1;
-  font-weight: var(--font-bold);
+  color: #fff;
+  font-weight: 700;
 }
-
-[data-md-color-scheme] .md-typeset h1 {
-  font-size: var(--font-h1-size);
-  margin-bottom: var(--space-md);
-}
-
-/* Premier H1 (page title) */
-[data-md-color-scheme] .md-typeset h1:first-child {
-  margin-top: 0;
-  padding-top: 0;
-
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
-
-  text-align: left;
-  width: 100%;
-}
-
-/* --------------------------------------------------
-   PARAGRAPHES
-   -------------------------------------------------- */
-
-[data-md-color-scheme] .md-typeset p {
-  text-align: left;
-  max-width: 100%;
-  color: var(--white);
-}
-
-/* --------------------------------------------------
-   LIENS
-   -------------------------------------------------- */
 
 [data-md-color-scheme] .md-typeset a:not(.kofi-button) {
-  color: var(--white);
-  transition: color var(--transition-base), transform var(--transition-base);
+  color: #fff;
+  transition: color var(--transition), transform var(--transition);
 }
 
 [data-md-color-scheme] .md-typeset a.kofi-button {
-    color: var(--white);
+    color: #fff;
     display: inline-block;
 }
 
@@ -461,48 +434,19 @@
    color: var(--accent);
 }
 
-/* Icônes Material dans les liens */
-[data-md-color-scheme] .md-typeset a .twemoji svg {
-  fill: currentColor;
-}
-
-[data-md-color-scheme] .md-typeset a:hover .twemoji svg {
-  fill: var(--accent);
-  transform: translateY(-2px);
-}
-
-[data-md-color-scheme] .orange-icon-svg {     
-    width: 1.1rem;
-    height: 1.1rem;
-    transition: color var(--transition-base), transform var(--transition-base);
-    transform: translateY(7px);
-}
-
-[data-md-color-scheme] .md-typeset a:hover .orange-icon-svg { 
-    filter: invert(48%) sepia(89%) saturate(2476%) hue-rotate(346deg) brightness(101%) contrast(101%);
-} 
-
-/* --------------------------------------------------
-   ICÔNES ORANGES DANS LES TITRES
-   -------------------------------------------------- */
-
 [data-md-color-scheme] .md-typeset h1 .twemoji svg,
 [data-md-color-scheme] .md-typeset h2 .twemoji svg,
 [data-md-color-scheme] .md-typeset h3 .twemoji svg {
   fill: var(--accent);
 }
 
-/* --------------------------------------------------
-   SUPPRESSION DES ANCRES AUTOMATIQUES
-   -------------------------------------------------- */
-
 [data-md-color-scheme] .headerlink {
   display: none;
 }
 
-/* --------------------------------------------------
-   UI ELEMENTS (BOT & KO-FI)
-   -------------------------------------------------- */
+/* ==============================
+   10. UI ELEMENTS (BOT & KO-FI)
+   ==============================*/
 
 /* Bloc conseil du bot */
 .bot-advice {
@@ -561,6 +505,30 @@
 .kofi-button:hover {
   background-color: var(--dark-1);
   box-shadow: 0 0 10px var(--accent-glow);
+}
+
+/* ==============================
+   11. RESPONSIVE
+   ==============================*/
+
+@media (max-width: 1220px) {
+  [data-md-color-scheme] .md-sidebar--secondary {
+    display: none;
+  }
+
+  [data-md-color-scheme] .md-content {
+    margin-right: var(--sidebar-gap);
+  }
+}
+
+@media (max-width: 900px) {
+  [data-md-color-scheme] .md-sidebar--primary {
+    transform: translateX(-110%);
+  }
+
+  [data-md-color-scheme] .md-content {
+    margin-left: var(--sidebar-gap);
+  }
 }
 
 /* --------------------------------------------------
