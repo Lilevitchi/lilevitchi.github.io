@@ -306,38 +306,7 @@ html {
 }
 
 /* ============================================================
-   6. SIDEBARS FIXES
-   ============================================================*/
-
-/* Sidebars */
-[data-md-color-scheme] .md-sidebar {
-  position: sticky;
-  top: calc(var(--header-height) + var(--sidebar-gap)); 
-  height: calc(100vh - var(--header-height) - (var(--sidebar-gap) * 2)) !important;
-  
-  flex-shrink: 0;
-  background: var(--bg-surface);
-  border-radius: var(--radius-sm);
-  outline: 1px solid rgba(0,0,0,0.2);
-  
-  overflow-y: auto;
-  transition: 
-        bottom 200ms ease,
-        transform 333ms cubic-bezier(0, 0, 0, 1);*/
-}
-
-/* Sidebar gauche */
-[data-md-color-scheme] .md-sidebar--primary {
-  width: var(--sidebar-width-primary);
-}
-
-/* Sidebar droite */
-[data-md-color-scheme] .md-sidebar--secondary {
-  width: var(--sidebar-width-secondary);
-}
-
-/* ============================================================
-   7. CONTENU CENTRAL
+   6. CONTENU CENTRAL
    ============================================================*/
 
 /* Zone de contenu centrale */
@@ -389,27 +358,38 @@ html {
 }
 
 /* ============================================================
-   8. FOOTER
+   7. SIDEBARS FIXES
    ============================================================*/
 
-[data-md-color-scheme] .md-footer {
-  height: var(--footer-height);
+/* Sidebars */
+[data-md-color-scheme] .md-sidebar {
+  position: sticky;
+  top: calc(var(--header-height) + var(--sidebar-gap)); 
+  height: calc(100vh - var(--header-height) - (var(--sidebar-gap) * 2)) !important;
+  
+  flex-shrink: 0;
   background: var(--bg-surface);
-
-  border-top: 1px solid rgba(255,255,255,0.1);
-  text-align: center;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border-radius: var(--radius-sm);
+  outline: 1px solid rgba(0,0,0,0.2);
+  
+  overflow-y: auto;
+  transition: 
+        bottom 200ms ease,
+        transform 333ms cubic-bezier(0, 0, 0, 1);*/
 }
 
-[data-md-color-scheme] .md-footer-meta {
-  background: transparent;
+/* Sidebar gauche */
+[data-md-color-scheme] .md-sidebar--primary {
+  width: var(--sidebar-width-primary);
+}
+
+/* Sidebar droite */
+[data-md-color-scheme] .md-sidebar--secondary {
+  width: var(--sidebar-width-secondary);
 }
 
 /* ============================================================
-   9. TYPOGRAPHIE & CONTENU
+   8. TYPOGRAPHIE & CONTENU
    ============================================================*/
 
 [data-md-color-scheme] .md-typeset h1,
@@ -454,7 +434,7 @@ html {
 }
 
 /* ============================================================
-   10. UI ELEMENTS (BOT & KO-FI)
+   9. UI ELEMENTS (BOT & KO-FI)
    ============================================================*/
 
 /* Bloc conseil du bot */
@@ -514,6 +494,26 @@ html {
 .kofi-button:hover {
   background-color: var(--dark-1);
   box-shadow: 0 0 10px var(--accent-glow);
+}
+
+/* ============================================================
+   10. FOOTER
+   ============================================================*/
+
+[data-md-color-scheme] .md-footer {
+  height: var(--footer-height);
+  background: var(--bg-surface);
+
+  border-top: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+[data-md-color-scheme] .md-footer-meta {
+  background: transparent;
 }
 
 /* ============================================================
