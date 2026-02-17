@@ -130,7 +130,8 @@ html {
   right: 0;
 
   height: var(--header-height);
-  background: var(--bg-surface);
+  background: rgba(0,0,0,0.97);
+  /* background: var(--bg-surface);*/
   z-index: 100;
 
   border-bottom-left-radius: var(--radius-md);
