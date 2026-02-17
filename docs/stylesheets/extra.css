@@ -290,6 +290,7 @@ html {
   background: transparent;
   box-shadow: none;
   margin: 0;
+  padding: var(--sidebar-gap) !important;
   
   outline: 2px dashed rgba(255, 255, 0, 0.8); /* Jaune (Debug) */
   outline-offset: -2px;
@@ -321,7 +322,7 @@ html {
   
   bottom: var(--sidebar-footer-offset);
 
-  height: calc(100vh - var(--header-height)) !important;
+  height: calc(100vh - var(--header-height) - var(--sidebar-footer-offset)) !important;
 
   display: flex;
   flex-direction: column;
