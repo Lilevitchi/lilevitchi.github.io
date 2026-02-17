@@ -337,9 +337,9 @@ html, body {
   
   bottom: 10px;
 
-  /*height: calc(100vh - var(--header-height) - var(--sidebar-footer-offset) - var(--header-visual-offset)) !important;
+  height: calc(100vh - var(--header-height) - var(--sidebar-footer-offset) - var(--header-visual-offset)) !important;
 
-  height: auto;*/
+  /*height: auto;*/
   display: flex;
   flex-direction: column;
 
@@ -529,14 +529,14 @@ html, body {
 
 /* ============================================================
    10. RESPONSIVE
-   ============================================================
+   ============================================================*/
 
 @media (max-width: 1220px) {
   [data-md-color-scheme] .md-sidebar--secondary {
     display: none;
   }
 
-  [data-md-color-scheme] .md-content {
+/*  [data-md-color-scheme] .md-content {
     margin-right: var(--sidebar-gap);
   }
 }
