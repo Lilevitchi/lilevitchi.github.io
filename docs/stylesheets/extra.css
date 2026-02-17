@@ -78,7 +78,6 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  height: 100%;
 }
 
 [data-md-color-scheme] body {
@@ -88,7 +87,6 @@ html {
   font-family: var(--font-main);
   font-size: var(--font-base-size);
   font-weight: 400;
-  height: 100%;
 }
 
 * {
@@ -264,7 +262,7 @@ html {
 [data-md-color-scheme] .md-main {
   /*position: relative;*/
   margin-top: var(--header-height);
-  /*height: calc(100vh - var(--header-height));*/
+  min-height: calc(100vh - var(--header-height));
 }
 
 /* Zone centrale */
@@ -300,8 +298,6 @@ html {
 
 /* Zone scrollable réelle */
 [data-md-color-scheme] .md-content__inner {
-  height: 100%;
-
   background: transparent;
   box-shadow: none;
 
@@ -345,7 +341,10 @@ html {
   position: fixed;
 
   top: calc(var(--header-height) + var(--sidebar-gap));
-  bottom: var(--sidebar-footer-offset, 10px);
+  bottom: var(--sidebar-footer-offset);
+
+  display: flex;
+  flex-direction: column;
 
   background: var(--bg-surface);
   border-radius: var(--radius-sm);
@@ -372,7 +371,8 @@ html {
 }
 
 [data-md-color-scheme] .md-sidebar__scrollwrap {
-  height: 100%;
+  flex: 1;
+  min-height: 0;
 }
 
 [data-md-color-scheme] .md-sidebar__inner {
