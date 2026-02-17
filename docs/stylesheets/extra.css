@@ -305,7 +305,8 @@ html {
 /* Sidebars */
 [data-md-color-scheme] .md-sidebar {
   position: fixed;
-  top: calc(100vh - var(--header-height) + 10px);
+  height: 100vh
+  top: calc(var(--header-height) + 10px);
   bottom: var(--sidebar-gap);
 
   background: var(--bg-surface);
@@ -338,8 +339,8 @@ html {
 [data-md-color-scheme] .md-content {
   flex: 1;
 
-  margin-left: calc(var(--sidebar-width-primary) + var(--sidebar-gap) * 2);
-  margin-right: calc(var(--sidebar-width-secondary) + var(--sidebar-gap) * 2);
+  margin-left: calc(var(--sidebar-width-primary) + var(--sidebar-gap));
+  margin-right: calc(var(--sidebar-width-secondary) + var(--sidebar-gap));
 
   padding: 0 1rem;
 
