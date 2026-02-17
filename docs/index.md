@@ -6,9 +6,11 @@
     </div>
 </div>
 
-# :material-tools: <span class="floating-title">Bienvenue Moddeur</span>
+# Accueil
 
 <div class="custom-card">
+
+## Bienvenue
 
 Que vous soyez novice ou expérimenté, vous êtes au bon endroit !
 
@@ -19,6 +21,7 @@ Vous trouverez des **guides précis et complets** pour plonger dans le monde du 
 <div class="custom-card">
 
 ## Liste des jeux
+
 <div class="game-grid">
  <a href="fallout4/" class="game-card">
         <div class="game-card-bg" style="background-image: url('assets/fo4.jpg');"></div>
@@ -47,6 +50,7 @@ Vous trouverez des **guides précis et complets** pour plonger dans le monde du 
 <div class="custom-card">
 
 ## :material-coffee: Me soutenir
+
 Si mes guides vous ont plu et que vous en avez envie, n'hésitez pas à me soutenir.
 
 <a href="https://ko-fi.com/lilevitchi" target="_blank" class="kofi-button">
