@@ -336,11 +336,13 @@ html {
   outline-offset: -2px;
 }
 
-[data-md-color-scheme] .md-content__inner > .md-typeset {
+[data-md-color-scheme] .md-content__inner .md-typeset {
   max-width: 100%;
   margin: 0;
   padding: 0;
+}
 
+[data-md-color-scheme] .md-typeset {
   outline: 2px dashed rgba(255, 0, 0, 0.8); /* Rouge (Debug) */
   outline-offset: -2px;
 }
