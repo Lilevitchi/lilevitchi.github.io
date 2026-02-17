@@ -769,8 +769,8 @@ body:has(.game-grid) .md-main__inner {
    4. CURSEURS & TAILLE PC
    ==============================*/
 
-/* @media screen and (min-width: 60em) { */
-    .game-card { height: 200px !important; } /* Réduit de 250px à 200px */
+/* @media screen and (min-width: 60em) { 
+    .game-card { height: 200px !important; } /*
 
     /* Curseur normal */
     .game-card, .md-logo, .md-header__button, .md-tabs__link, .md-nav__link, .md-typeset a, .kofi-button {
@@ -782,39 +782,6 @@ body:has(.game-grid) .md-main__inner {
         cursor: url('../assets/curseur-clic.png') 7 0, pointer !important;
     }
 /* } */
-
-/* ==============================
-   5. RÉSEAUX SOCIAUX - FOOTER
-   ==============================*/
-
-/* Le conteneur principal du footer */
-[data-md-color-scheme] .md-footer {
-    background-color: var(--bg-header) !important;
-    color: var(--white);
-    outline: 1px solid rgba(0, 0, 0, 0.1);
-    border: 1px solid transparent;
-  transition: none;
-}
-
-/* Modifier la taille de la police dans le footer 
-[data-md-color-scheme] .md-footer__inner {
-    font-size: 0.75rem;
-}*/
-
-/* Si tu veux modifier la couleur des liens du footer
-[data-md-color-scheme] .md-footer__link {
-    color: var(--white) !important;
-    transition: color var(--transition);
-} 
-
-[data-md-color-scheme] .md-footer__link:hover {
-    color: var(--accent) !important;
-}*/
-
-/* Optionnel : Masquer la partie "Made with MkDocs" si tu veux épurer 
-[data-md-color-scheme] .md-footer-meta {
-    background-color: rgba(0, 0, 0, 0.2);
-}*/
 
  /* --- 6. HUB JEUX --- */
 /* .md-header { z-index: 120 !important; }
