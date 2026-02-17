@@ -151,13 +151,13 @@ html {
   align-items: center;
 }
 
-/* Largeur et centrage du contenu 
+/* Largeur et centrage du contenu */
 [data-md-color-scheme] .md-header .md-grid {
   display: flex;
   align-items: center;
   max-width: 100%;
   width: 100%;
-}*/
+}
 
 /* Logo */
 [data-md-color-scheme] .md-logo img {
