@@ -42,6 +42,8 @@
   --content-max-width: 87.5rem;     /* 1400px */
   --grid-max-width: 95%;
 
+  --footer-height: 48px;
+
   /* ---------- Spacing ---------- */
   --space-xs: 0.36rem;  /* ~6px */
   --space-sm: 0.54rem;  /* ~9px */
@@ -352,6 +354,8 @@
   right: calc(10px + var(--sidebar-width-secondary) + 10px);
 
   overflow-y: auto;
+
+  bottom: calc(10px + var(--footer-height));
 
   outline: 2px dashed rgba(0, 255, 0, 0.8); /* Vert (Debug) */
   outline-offset: -2px;
