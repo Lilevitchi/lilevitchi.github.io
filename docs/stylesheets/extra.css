@@ -264,7 +264,7 @@ html {
 [data-md-color-scheme] .md-main {
   /*position: relative;*/
   margin-top: var(--header-height);
-  height: calc(100vh - var(--header-height));
+  /*height: calc(100vh - var(--header-height));*/
 }
 
 /* Zone centrale */
@@ -369,6 +369,15 @@ html {
 [data-md-color-scheme] .md-sidebar--secondary {
   right: var(--sidebar-gap);
   width: var(--sidebar-width-secondary);
+}
+
+[data-md-color-scheme] .md-sidebar__scrollwrap {
+  height: 100%;
+}
+
+[data-md-color-scheme] .md-sidebar__inner {
+  height: 100%;
+  overflow-y: auto;
 }
 
 /* Never allow double scroll */
