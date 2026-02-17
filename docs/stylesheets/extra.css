@@ -59,6 +59,10 @@
   --space-md: 0.9rem;   /* ~14px */
   --space-lg: 1.12rem;  /* ~18px */
   --space-xl: 1.44rem;  /* ~23px */
+
+  /* Z-index map */
+  --z-header: 100;
+  --z-sidebar: 90;
 }
 
 /* ============================================================
@@ -85,7 +89,6 @@ html {
   font-size: var(--font-base-size);
   font-weight: 400;
   height: 100%;
-  overflow: hidden;
 }
 
 * {
@@ -101,12 +104,11 @@ html {
 [data-md-color-scheme] .md-header {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
+  inset-inline: 0;
 
   height: var(--header-height);
   background: var(--bg-surface);
-  z-index: 100;
+  z-index: var(--z-header);
 
   border-bottom-left-radius: var(--radius-md);
   border-bottom-right-radius: var(--radius-md);
@@ -260,9 +262,9 @@ html {
 
 /* Main container */
 [data-md-color-scheme] .md-main {
-  position: relative;
+  /*position: relative;*/
   margin-top: var(--header-height);
-  height: calc(100vh - var(--header-height));
+  /*height: calc(100vh - var(--header-height));*/
 }
 
 /* Zone centrale */
@@ -270,7 +272,7 @@ html {
   display: block;
   max-width: none;
   margin: 0;
-  padding: 0;
+  /*padding: 0;*/
 
   outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu (Debug) */
   outline-offset: -2px;
@@ -282,13 +284,13 @@ html {
 
 /* Zone de contenu centrale */
 [data-md-color-scheme] .md-content {
-  position: relative;
+ /*position: relative; */
   
   margin-left: calc(var(--sidebar-width-primary) + (var(--sidebar-gap) * 2));
   margin-right: calc(var(--sidebar-width-secondary) + (var(--sidebar-gap) * 2));
 
-  height: 100%;
-  padding: var(--sidebar-gap);
+  /*height: 100%;
+  padding: var(--sidebar-gap); */
 
   min-width: 0;
 
@@ -299,7 +301,6 @@ html {
 /* Zone scrollable réelle */
 [data-md-color-scheme] .md-content__inner {
   height: 100%;
-  overflow-y: auto;
 
   background: transparent;
   box-shadow: none;
@@ -350,13 +351,12 @@ html {
   border-radius: var(--radius-sm);
   outline: 1px solid rgba(0,0,0,0.2);
 
-  overflow-y: auto;
+  overflow: hidden;
+  z-index: var(--z-sidebar);
 
   transition:
     bottom 200ms ease,
     transform 333ms cubic-bezier(0, 0, 0, 1);
-
-  will-change: bottom;
 }
 
 /* Sidebar gauche */
@@ -369,6 +369,18 @@ html {
 [data-md-color-scheme] .md-sidebar--secondary {
   right: var(--sidebar-gap);
   width: var(--sidebar-width-secondary);
+}
+
+/* Never allow double scroll */
+[data-md-color-scheme] .md-main,
+[data-md-color-scheme] .md-content,
+[data-md-color-scheme] .md-main__inner {
+  overflow: visible;
+}
+
+/* Sidebars must never scroll independently */
+[data-md-color-scheme] .md-sidebar {
+  overscroll-behavior: none;
 }
 
 /* ============================================================
@@ -554,7 +566,7 @@ html {
     max-width: var( --content-max-width); /* Limite la largeur totale pour ne pas s'étaler trop sur ultra-wide */
     margin: 20px auto 0 auto !important; /* Centre la grille si l'écran est trop large */
     height: auto !important;
-    overflow: visible !important;
+    /*overflow: visible !important;*/
     padding-left: 25px !important;
     padding-right: 0 !important;
 }
