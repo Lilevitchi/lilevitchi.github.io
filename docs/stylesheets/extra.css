@@ -309,19 +309,18 @@ html {
   outline-offset: -2px;
 }
 
-[data-md-color-scheme] .md-typeset {
+/*[data-md-color-scheme] .md-typeset {
   max-width: none;
   margin: 0;
   padding: 0;
   
-  outline: 2px dashed rgba(255, 0, 0, 0.8); /* Rouge (Debug) */
+  outline: 2px dashed rgba(255, 0, 0, 0.8);  Rouge (Debug) 
   outline-offset: -2px;
-}
+}*/
 
 [data-md-color-scheme] .custom-card {
     background-color: var(--bg-surface);
     border-radius: var(--radius-md);
-    padding: 1rem;
     margin-bottom: 1.5rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -344,11 +343,12 @@ html {
   top: calc(var(--header-height) + var(--header-visual-offset));
   bottom: var(--sidebar-footer-offset);
 
-  left: auto;
-  right: auto;
-
-  height: auto !important;
-  max-height: none !important;
+  height: calc(
+  100vh
+  - var(--header-height)
+  - var(--header-visual-offset)
+  - var(--sidebar-footer-offset)
+  ) !important;
 
   display: flex;
   flex-direction: column;
@@ -378,12 +378,6 @@ html {
   right: var(--sidebar-gap);
   width: var(--sidebar-width-secondary);
   display: block !important;
-}
-
-[data-md-color-scheme] .md-sidebar--secondary::before {
-  content: " ";
-  display: block;
-  min-height: 1px;
 }
 
 [data-md-color-scheme] .md-sidebar__scrollwrap {
