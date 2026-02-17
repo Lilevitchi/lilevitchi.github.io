@@ -446,14 +446,13 @@ html {
   align-items: center;
   background-color: #3d2b26;
   border: 1px solid var(--accent);
-  border-left: 4px solid var(--accent);
 
   line-height: 1.4;
  
-  padding: var(--space-md);
-  border-radius: var(--radius-sm);
+  padding: var(--space-xs);
+  border-radius: var(--radius-xs);
 
-  max-width: 600px;      /* Limite la largeur comme sur ton site de référence */
+  max-width: 720px;
   margin: 2rem auto;     /* Le 'auto' centre le bloc horizontalement */
     
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
@@ -461,7 +460,7 @@ html {
 
 /* Image du bot */
 .bot-advice img {
-  margin-right: var(--space-lg);
+  margin-right: var(--space-md);
   flex-shrink: 0;
   width: auto; 
   height: 100px;
@@ -471,12 +470,12 @@ html {
 #lile-bot-title {
   color: var(--accent);
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 /* Texte du conseil */
 #lile-bot-tip {
   font-style: italic;
-  opacity: 0.85;
   color: var(--white);
 }
 
