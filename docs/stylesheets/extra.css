@@ -284,7 +284,7 @@ html {
 [data-md-color-scheme] .md-main {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - var(--header-height))
+  min-height: 100vh;
 }
 
 /* Zone centrale (sidebars + contenu) */
