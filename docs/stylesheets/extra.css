@@ -75,7 +75,7 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 16px
+  font-size: 16px;
 }
 
 [data-md-color-scheme] body {
@@ -181,7 +181,7 @@ html {
 [data-md-color-scheme] .md-header__title .md-ellipsis {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--accent);
-  font-size: 21px;
+  font-size: 1em;
   font-weight: 400;
 }
 
@@ -202,7 +202,7 @@ html {
 
 /* Barre des tabs */
 [data-md-color-scheme] .md-tabs {
-  position: stiky;
+  position: sticky;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -232,7 +232,7 @@ html {
   pointer-events: auto;
   color: #fff;
   padding: 0.4rem 0.8rem;
-  font-size: 12px;
+  font-size: 0.8em;
   opacity: 1;
   border-bottom: 4px solid transparent;
   transition: var(--transition);
@@ -291,8 +291,11 @@ html {
 [data-md-color-scheme] .md-main__inner {
   display: flex;
   flex: 1;
+  
+  min-height: 100vh;
   max-width: none;
-  top: calc(var(--header-height) + var(--sidebar-gap);
+
+  padding-top: var(--header-height);
 
   outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu (Debug) */
   outline-offset: -2px;
@@ -742,8 +745,8 @@ body:has(.game-grid) .md-main__inner {
    4. CURSEURS & TAILLE PC
    ==============================*/
 
-/* @media screen and (min-width: 60em) { 
-    .game-card { height: 200px !important; } /*
+@media screen and (min-width: 60em) { 
+    .game-card { height: 200px !important; } */
 
     /* Curseur normal */
     .game-card, .md-logo, .md-header__button, .md-tabs__link, .md-nav__link, .md-typeset a, .kofi-button {
@@ -754,7 +757,7 @@ body:has(.game-grid) .md-main__inner {
     .game-card:active, .md-logo:active, .md-header__button:active, .md-tabs__link:active, .md-nav__link:active, .md-typeset a:active, .kofi-button:active  {
         cursor: url('../assets/curseur-clic.png') 7 0, pointer !important;
     }
-/* } */
+}
 
  /* --- 6. HUB JEUX --- */
 /* .md-header { z-index: 120 !important; }
