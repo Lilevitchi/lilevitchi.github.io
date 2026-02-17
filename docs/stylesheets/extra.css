@@ -2,9 +2,9 @@
   Lilevitchi | Modding - Custom CSS
    ============================================================*/
 
-/* ==============================
+/* ============================================================
    0. VARIABLES
-   ==============================*/
+   ============================================================*/
 
 :root {
   /* Brand */
@@ -64,9 +64,9 @@
   --space-xl: 1.44rem;  /* ~23px */
 }
 
-/* ==============================
+/* ============================================================
    1. GLOBAL
-   ==============================*/
+   ============================================================*/
 
 *,
 *::before,
@@ -96,9 +96,9 @@ html {
   scrollbar-color: rgba(255,255,255,0.5) transparent;
 }
 
-/* ==============================
+/* ============================================================
    2. PROGRESS BAR
-   ==============================*/
+   ============================================================*/
 
 [data-md-color-scheme] .progress-container {
   z-index: 90;
@@ -121,9 +121,9 @@ html {
   transition: width 150ms ease-out;
 }
 
-/* ==============================
+/* ============================================================
    3. HEADER & BANNIÈRE
-   ==============================*/
+   ============================================================*/
 
 /* Header global */
 [data-md-color-scheme] .md-header {
@@ -191,9 +191,9 @@ html {
   font-weight: 400;
 }
 
-/* ==============================
+/* ============================================================
    4. NAVIGATION
-   ==============================*/
+   ============================================================*/
 
 /* Conteneur général */
 [data-md-color-scheme] .md-header__tabs {
@@ -282,9 +282,9 @@ html {
   }
 }
 
-/* ==============================
+/* ============================================================
    5. STRUCTURE MAIN
-   ==============================*/
+   ============================================================*/
 
 /* Main container */
 [data-md-color-scheme] .md-main {
@@ -300,27 +300,14 @@ html {
   margin: 0 auto;
   padding: var(--sidebar-gap);
   align-items: flex-start;
-  
-  /*
-  max-width: none;
-  width: auto;
-  
- /* margin-left: calc(var(--sidebar-width-primary) + (var(--sidebar-gap) * 2));
-  margin-right: calc(var(--sidebar-width-secondary) + (var(--sidebar-gap) * 2));
-  margin-bottom: var(--sidebar-footer-offset);
-
-  margin-left: calc(var(--sidebar-width-primary) + (var(--sidebar-gap) * 2));
-  margin-right: calc(var(--sidebar-width-secondary) + (var(--sidebar-gap) * 2));
-  top: calc(var(--header-height) + var(--sidebar-gap));
-  bottom: calc(var(--sidebar-gap) + var(--sidebar-footer-offset));*/
 
   outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu (Debug) */
   outline-offset: -2px;
 }
 
-/* ==============================
+/* ============================================================
    6. SIDEBARS FIXES
-   ==============================*/
+   ============================================================*/
 
 /* Sidebars */
 [data-md-color-scheme] .md-sidebar {
@@ -337,11 +324,6 @@ html {
   transition: 
         bottom 200ms ease,
         transform 333ms cubic-bezier(0, 0, 0, 1);*/
-  
-  /*position: fixed;
-  height: auto;
-  top: calc(var(--header-height) + var(--sidebar-gap));
-  bottom: calc(var(--sidebar-gap) + var(--sidebar-footer-offset));*/
 }
 
 /* Sidebar gauche */
@@ -354,9 +336,9 @@ html {
   width: var(--sidebar-width-secondary);
 }
 
-/* ==============================
+/* ============================================================
    7. CONTENU CENTRAL
-   ==============================*/
+   ============================================================*/
 
 /* Zone de contenu centrale */
 [data-md-color-scheme] .md-content {
@@ -366,8 +348,6 @@ html {
   min-width: 0;
   margin: 0;
   align-self: stretch;
-  
-  /*min-height: calc(100vh - var(--header-height) - var(--sidebar-gap));*/
 
   outline: 2px dashed rgba(0, 255, 0, 0.8); /* Vert (Debug) */
   outline-offset: -2px;
@@ -378,9 +358,6 @@ html {
   flex: 1;
   width: 100%;
   margin: 0;
-  /* flex: 1;
-  min-width: 0;
-  margin: 0;*/
   padding: 1.2rem;
 
   background: var(--bg-surface);
@@ -391,9 +368,9 @@ html {
   outline-offset: -2px;
 }
 
-/* ==============================
+/* ============================================================
    8. FOOTER
-   ==============================*/
+   ============================================================*/
 
 [data-md-color-scheme] .md-footer {
   height: var(--footer-height);
@@ -411,36 +388,9 @@ html {
   background: transparent;
 }
 
-/*
-[data-md-color-scheme] .md-nav--secondary {
-  position: static;
-  max-height: none;
-  overflow: visible;
-  max-height: none;
-  outline: 2px dashed rgba(255, 255, 255, 0.8); /* BLanc
-}
-
-[data-md-color-scheme] .md-nav--secondary .md-nav__title {
-  color: var(--white);
-  opacity: 1;
-  font-weight: 700;
-}
-
-[data-md-color-scheme] .md-nav--secondary .md-nav__link {
-  color: var(--white);
-  opacity: 0.5;
-  transition: color var(--transition-base), opacity var(--transition-base), transform var(--transition-base);
-}
-
-[data-md-color-scheme] .md-nav--secondary .md-nav__link:hover {
-  color: var(--accent);
-  opacity: 1;
-  transform: translateY(-2px);
-}
-
-/* ==============================
+/* ============================================================
    9. TYPOGRAPHIE & CONTENU
-   ==============================*/
+   ============================================================*/
 
 [data-md-color-scheme] .md-typeset h1,
 [data-md-color-scheme] .md-typeset h2,
@@ -477,9 +427,9 @@ html {
   display: none;
 }
 
-/* ==============================
+/* ============================================================
    10. UI ELEMENTS (BOT & KO-FI)
-   ==============================*/
+   ============================================================*/
 
 /* Bloc conseil du bot */
 .bot-advice {
@@ -540,9 +490,9 @@ html {
   box-shadow: 0 0 10px var(--accent-glow);
 }
 
-/* ==============================
+/* ============================================================
    11. RESPONSIVE
-   ==============================*/
+   ============================================================*/
 
 @media (max-width: 1220px) {
   [data-md-color-scheme] .md-sidebar--secondary {
@@ -564,9 +514,9 @@ html {
   }
 }
 
-/* --------------------------------------------------
-   HUB — GRILLE DES JEUX
-   -------------------------------------------------- */
+/* ============================================================
+   12. HUB — GRILLE DES JEUX
+   ============================================================*/
 
 /* @media screen and (min-width: 60em) {
     .md-sidebar--primary:has(~ .md-content .game-grid),
@@ -657,118 +607,9 @@ html {
     background: rgba(0,0,0,0.3);
 }
 
-/*
-[data-md-color-scheme] .md-sidebar__inner {
-    height: 100%;
-    overflow-y: auto;
-    scrollbar-width: none; /* Firefox 
-}
-
-[data-md-color-scheme] .md-sidebar__inner::-webkit-scrollbar {
-    display: none;  Chrome/Safari 
-}
-
-[data-md-color-scheme] .md-sidebar, 
-[data-md-color-scheme] .md-sidebar__scrollwrap {
-    height: 100%;
-}*/
-  
-/*[data-md-color-scheme] .md-main__inner,
-[data-md-color-scheme] .md-content {
-  margin-top: var(--space-sm);
-}
-
-[data-md-color-scheme] .md-main {
-  max-width: none;
-}
-
-[data-md-color-scheme] .md-main__inner {
-  max-width: none;
-  margin: 0;
-  display: grid;
-  gap: var(--space-sm);
-  outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu 
-}
-/*
-[data-md-color-scheme] .md-content {
-  max-width: none;
-  width: 100%;
-  outline: 2px dashed rgba(0, 255, 0, 0.8); /* Vert 
-}
-/*
-
-[data-md-color-scheme] .md-content__inner {
-  max-width: var(--grid-max-width);
-  width: 100%;
-  padding: var(--space-lg);
-  background-color: var(--tab-bg-hover);
-  border-radius: var(--radius-sm);
-  outline: 2px dashed rgba(255, 255, 0, 0.8); /* Jaune 
-}*/
-
-/* Force Material à recalculer la grille 
-body:has(.game-grid) .md-main__inner {
-  grid-template-columns: 1fr !important;
-}*/
-
-/* Page index : plus large visuellement 
-[data-md-color-scheme] body:has(.game-grid) .md-content__inner {
-  max-width: 100%;
-  padding-left: clamp(1rem, 4vw, 3rem);
-  padding-right: clamp(1rem, 4vw, 3rem);
-}*/
-
-/* ==============================
-   4. MENU LATÉRAL
-   ==============================*/
-
-/* Liens et titres du menu latéral uniquement */
-/*[data-md-color-scheme] .md-nav--primary .md-nav__link,
-[data-md-color-scheme] .md-nav--primary .md-nav__title {
-  text-transform: none;
-  font-weight: 400;
-  display: flex;
-  align-items: center;
-}
-
-/* Espacement des liens */
-/*[data-md-color-scheme] .md-nav--primary .md-nav__link {
-  padding-left: 0.8rem;
-}
-
-/* Lien actif */
-/*[data-md-color-scheme] .md-nav--primary .md-nav__link--active {
-  color: var(--accent);
-  font-weight: 700;
-  background: transparent;
-}
-
-/*.bot-advice { display: flex; align-items: center; background-color: rgba(255, 87, 34, 0.08) !important; border-left: 4px solid #ff5722 !important; padding: 15px; border-radius: 4px; margin: 20px 0; }
-.bot-advice img { margin-right: 20px !important; flex-shrink: 0; }
-#lile-bot-title { color: #ff5722; font-weight: bold; }
-#lile-bot-tip { font-style: italic; opacity: 0.8; }
-
-.kofi-button { background-color: #ff5722; color: var(--white); !important; padding: 6px 12px; border-radius: 4px; font-size: 0.75rem; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s; }
-.kofi-button:hover { background-color: #1a1a1a; box-shadow: 0 0 10px #ff5722; }*/
-
-/* --- 6. ADAPTATION MOBILE --- 
-@media screen and (max-width: 45em) {
-    .hub-wrapper { z-index: 10 !important; }
-    .md-header { z-index: 100 !important; }
-    .md-header__title { display: none !important; }
-    .md-nav__title[for="__drawer"] { color: var(--md-default-fg-color) !important; font-size: 1.1rem !important; padding: 20px 16px !important; display: block !important; visibility: visible !important; } 
-    .md-nav--primary { z-index: 2000 !important; display: block !important; visibility: visible !important; } 
-    .md-overlay { z-index: 500 !important; }
-    .md-nav__title .md-logo { display: block !important; margin: 15px 0 !important; }
-    .md-nav__item .md-nav__link--active { background-color: transparent !important; }
-    .md-nav__item--nested > .md-nav__link:focus { background-color: rgba(255, 87, 34, 0.1) !important; }
-    .md-tabs { display: none !important; }
-} */
-
-
-/* ==============================
-   4. CURSEURS
-   ==============================*/
+/* ============================================================
+   13. CURSEURS
+   ============================================================*/
 
     /* Curseur normal */
     .game-card, .md-logo, .md-header__button, .md-tabs__link, .md-nav__link, .md-typeset a, .kofi-button {
@@ -780,7 +621,11 @@ body:has(.game-grid) .md-main__inner {
         cursor: url('../assets/curseur-clic.png') 7 0, pointer !important;
     }
 
- /* --- 6. HUB JEUX --- */
+
+/* ============================================================
+   14. HUB JEUX
+   ============================================================*/
+
 /* .md-header { z-index: 120 !important; }
 .md-tabs { z-index: 110 !important; } */
 
@@ -927,3 +772,143 @@ body:has(.hub-wrapper) .md-header__topic:last-child {
     transform: translateY(0) !important;
     pointer-events: auto !important;
 } 
+
+
+/*
+[data-md-color-scheme] .md-nav--secondary {
+  position: static;
+  max-height: none;
+  overflow: visible;
+  max-height: none;
+  outline: 2px dashed rgba(255, 255, 255, 0.8); /* BLanc
+}
+
+[data-md-color-scheme] .md-nav--secondary .md-nav__title {
+  color: var(--white);
+  opacity: 1;
+  font-weight: 700;
+}
+
+[data-md-color-scheme] .md-nav--secondary .md-nav__link {
+  color: var(--white);
+  opacity: 0.5;
+  transition: color var(--transition-base), opacity var(--transition-base), transform var(--transition-base);
+}
+
+[data-md-color-scheme] .md-nav--secondary .md-nav__link:hover {
+  color: var(--accent);
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+
+
+/*
+[data-md-color-scheme] .md-sidebar__inner {
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox 
+}
+
+[data-md-color-scheme] .md-sidebar__inner::-webkit-scrollbar {
+    display: none;  Chrome/Safari 
+}
+
+[data-md-color-scheme] .md-sidebar, 
+[data-md-color-scheme] .md-sidebar__scrollwrap {
+    height: 100%;
+}*/
+  
+/*[data-md-color-scheme] .md-main__inner,
+[data-md-color-scheme] .md-content {
+  margin-top: var(--space-sm);
+}
+
+[data-md-color-scheme] .md-main {
+  max-width: none;
+}
+
+[data-md-color-scheme] .md-main__inner {
+  max-width: none;
+  margin: 0;
+  display: grid;
+  gap: var(--space-sm);
+  outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu 
+}
+/*
+[data-md-color-scheme] .md-content {
+  max-width: none;
+  width: 100%;
+  outline: 2px dashed rgba(0, 255, 0, 0.8); /* Vert 
+}
+/*
+
+[data-md-color-scheme] .md-content__inner {
+  max-width: var(--grid-max-width);
+  width: 100%;
+  padding: var(--space-lg);
+  background-color: var(--tab-bg-hover);
+  border-radius: var(--radius-sm);
+  outline: 2px dashed rgba(255, 255, 0, 0.8); /* Jaune 
+}*/
+
+/* Force Material à recalculer la grille 
+body:has(.game-grid) .md-main__inner {
+  grid-template-columns: 1fr !important;
+}*/
+
+/* Page index : plus large visuellement 
+[data-md-color-scheme] body:has(.game-grid) .md-content__inner {
+  max-width: 100%;
+  padding-left: clamp(1rem, 4vw, 3rem);
+  padding-right: clamp(1rem, 4vw, 3rem);
+}*/
+
+/* ==============================
+   4. MENU LATÉRAL
+   ==============================*/
+
+/* Liens et titres du menu latéral uniquement */
+/*[data-md-color-scheme] .md-nav--primary .md-nav__link,
+[data-md-color-scheme] .md-nav--primary .md-nav__title {
+  text-transform: none;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+
+/* Espacement des liens */
+/*[data-md-color-scheme] .md-nav--primary .md-nav__link {
+  padding-left: 0.8rem;
+}
+
+/* Lien actif */
+/*[data-md-color-scheme] .md-nav--primary .md-nav__link--active {
+  color: var(--accent);
+  font-weight: 700;
+  background: transparent;
+}
+
+/*.bot-advice { display: flex; align-items: center; background-color: rgba(255, 87, 34, 0.08) !important; border-left: 4px solid #ff5722 !important; padding: 15px; border-radius: 4px; margin: 20px 0; }
+.bot-advice img { margin-right: 20px !important; flex-shrink: 0; }
+#lile-bot-title { color: #ff5722; font-weight: bold; }
+#lile-bot-tip { font-style: italic; opacity: 0.8; }
+
+.kofi-button { background-color: #ff5722; color: var(--white); !important; padding: 6px 12px; border-radius: 4px; font-size: 0.75rem; display: inline-flex; align-items: center; gap: 8px; transition: 0.3s; }
+.kofi-button:hover { background-color: #1a1a1a; box-shadow: 0 0 10px #ff5722; }*/
+
+/* --- 6. ADAPTATION MOBILE --- 
+@media screen and (max-width: 45em) {
+    .hub-wrapper { z-index: 10 !important; }
+    .md-header { z-index: 100 !important; }
+    .md-header__title { display: none !important; }
+    .md-nav__title[for="__drawer"] { color: var(--md-default-fg-color) !important; font-size: 1.1rem !important; padding: 20px 16px !important; display: block !important; visibility: visible !important; } 
+    .md-nav--primary { z-index: 2000 !important; display: block !important; visibility: visible !important; } 
+    .md-overlay { z-index: 500 !important; }
+    .md-nav__title .md-logo { display: block !important; margin: 15px 0 !important; }
+    .md-nav__item .md-nav__link--active { background-color: transparent !important; }
+    .md-nav__item--nested > .md-nav__link:focus { background-color: rgba(255, 87, 34, 0.1) !important; }
+    .md-tabs { display: none !important; }
+} */
+
+
