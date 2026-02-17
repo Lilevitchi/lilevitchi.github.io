@@ -505,11 +505,11 @@ html, body {
   background: var(--bg-surface);
 
   border-top: 1px solid rgba(255,255,255,0.1);
-  text-align: center;
+  /*text-align: center;
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center;*/
 }
 
 [data-md-color-scheme] .md-footer-meta {
