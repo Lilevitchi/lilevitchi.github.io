@@ -1,35 +1,26 @@
-# :material-tools: Bienvenue Moddeur
+# :material-tools: <span class="floating-title">Bienvenue Moddeur</span>
+
+<div class="custom-card">
 
 Que vous soyez novice ou expérimenté, vous êtes au bon endroit !
 
 Vous trouverez des **guides précis et complets** pour plonger dans le monde du **modding**.
 
----
+</div>
 
+<div class="custom-card">
+
+## Liste des jeux
 <div class="game-grid">
     <a href="fallout4/" class="game-card">
         <div class="game-card-bg" style="background-image: url('assets/fo4.jpg');"></div>
         <div class="game-card-overlay"><h2>Fallout 4</h2></div>
     </a>
-    <a href="fallout-london/" class="game-card">
-        <div class="game-card-bg" style="background-image: url('assets/london.jpg');"></div>
-        <div class="game-card-overlay"><h2>Fallout London</h2></div>
-    </a>
-    <a href="fnv/" class="game-card">
-        <div class="game-card-bg" style="background-image: url('assets/fnv.jpg');"></div>
-        <div class="game-card-overlay"><h2>New Vegas</h2></div>
-    </a>
-    <a href="ttw/" class="game-card">
-        <div class="game-card-bg" style="background-image: url('assets/ttw.jpg');"></div>
-        <div class="game-card-overlay"><h2>TTW</h2></div>
-    </a>
-    <a href="cyberpunk/" class="game-card">
-        <div class="game-card-bg" style="background-image: url('assets/cyberpunk.jpg');"></div>
-        <div class="game-card-overlay"><h2>Cyberpunk 2077</h2></div>
-    </a>
+    </div>
+
 </div>
 
----
+<div class="custom-card">
 
 ## :material-lightbulb-outline: Les conseils de Patch
 
@@ -41,7 +32,9 @@ Vous trouverez des **guides précis et complets** pour plonger dans le monde du 
     </div>
 </div>
 
----
+</div>
+
+<div class="custom-card">
 
 ## :material-coffee: Me soutenir
 Si mes guides vous ont plu et que vous en avez envie, n'hésitez pas à me soutenir.
@@ -49,3 +42,5 @@ Si mes guides vous ont plu et que vous en avez envie, n'hésitez pas à me soute
 <a href="https://ko-fi.com/lilevitchi" target="_blank" class="kofi-button">
     :simple-kofi: Buy me a coffee
 </a>
+
+</div>
