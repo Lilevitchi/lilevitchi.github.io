@@ -181,7 +181,7 @@ html {
 [data-md-color-scheme] .md-header__title .md-ellipsis {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--accent);
-  font-size: var(--font-h1-size);
+  font-size: 21px;
   font-weight: 400;
 }
 
@@ -232,7 +232,7 @@ html {
   pointer-events: auto;
   color: #fff;
   padding: 0.4rem 0.8rem;
-  font-size: 0.75rem;
+  font-size: 12px;
   opacity: 1;
   border-bottom: 4px solid transparent;
   transition: var(--transition);
@@ -306,7 +306,6 @@ html {
 [data-md-color-scheme] .md-sidebar {
   position: fixed;
   height: 100vh
-  top: calc(var(--header-height) + 10px);
   bottom: var(--sidebar-gap);
 
   background: var(--bg-surface);
@@ -321,12 +320,14 @@ html {
 
 /* Sidebar gauche */
 [data-md-color-scheme] .md-sidebar--primary {
+  top: calc(var(--header-height) + 10px);
   left: var(--sidebar-gap);
   width: var(--sidebar-width-primary);
 }
 
 /* Sidebar droite */
 [data-md-color-scheme] .md-sidebar--secondary {
+  top: calc(var(--header-height) + 10px);
   right: var(--sidebar-gap);
   width: var(--sidebar-width-secondary);
 }
