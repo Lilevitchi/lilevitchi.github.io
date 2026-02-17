@@ -67,6 +67,12 @@
    1. GLOBAL
    ==============================*/
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 16px;
