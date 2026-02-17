@@ -348,7 +348,7 @@ html {
 [data-md-color-scheme] .custom-card {
     background-color: var(--bg-surface);
     border-radius: var(--radius-md);
-    padding: 1.5rem;
+    padding: 1rem;
     margin-bottom: 1.5rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -405,6 +405,7 @@ html {
 [data-md-color-scheme] .md-typeset p {
   text-align: left;
   max-width: 100%;
+  opacity: 1;
   color: var(--white);
 }
 
@@ -469,6 +470,7 @@ html {
 /* Titre du conseil */
 #lile-bot-title {
   color: var(--accent);
+  opacity: 1;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -476,6 +478,7 @@ html {
 /* Texte du conseil */
 #lile-bot-tip {
   font-style: italic;
+  opacity: 1;
   color: var(--white);
 }
 
