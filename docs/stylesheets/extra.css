@@ -358,8 +358,6 @@
 
   outline: 2px dashed rgba(0, 255, 0, 0.8); /* Vert (Debug) */
   outline-offset: -2px;
-
-  min-width: 0;
 }
 
 [data-md-color-scheme] .md-content__inner {
