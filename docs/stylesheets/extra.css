@@ -109,14 +109,14 @@ html {
   pointer-events: none;
 }
 
-/*[data-md-color-scheme] .progress-bar {
+[data-md-color-scheme] .progress-bar {
   height: 100%;
   background-color: var(--accent);
   width: 0%;
   border-bottom-left-radius: var(--radius-md);
   border-bottom-right-radius: var(--radius-md);
   transition: width 150ms ease-out;
-}*/
+}
 
 /* ==============================
    3. HEADER & BANNIÈRE
@@ -309,7 +309,7 @@ html {
 /* Sidebars */
 [data-md-color-scheme] .md-sidebar {
   position: fixed;
-  top: var(--header-height);
+  top: calc(var(--header-height) - 10px);
   bottom: 10px;
 
   background: var(--bg-surface);
@@ -380,7 +380,7 @@ html {
   justify-content: center;
 }
 
-[data-md-color-scheme] .md-footer__inner {
+[data-md-color-scheme] .md-footer-meta {
   background: transparent;
 }
 
@@ -529,7 +529,7 @@ html {
 
 @media (max-width: 900px) {
   [data-md-color-scheme] .md-sidebar--primary {
-    transform: translateX(-110%);
+    display: none;
   }
 
   [data-md-color-scheme] .md-content {
