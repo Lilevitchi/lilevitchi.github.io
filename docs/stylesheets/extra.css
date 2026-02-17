@@ -284,11 +284,11 @@ html {
 [data-md-color-scheme] .md-content {
  /*position: relative; */
   
-  margin-left: calc(var(--sidebar-width-primary) + (var(--sidebar-gap) * 2));
-  margin-right: calc(var(--sidebar-width-secondary) + (var(--sidebar-gap) * 2));
+  margin-left: var(--sidebar-width-primary);
+  margin-right: var(--sidebar-width-secondary);
 
-  /*height: 100%;
-  padding: var(--sidebar-gap); */
+  /*height: 100%; */
+  padding: var(--sidebar-gap);
 
   min-width: 0;
 
