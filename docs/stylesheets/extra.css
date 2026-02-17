@@ -816,51 +816,6 @@ body:has(.game-grid) .md-main__inner {
     background-color: rgba(0, 0, 0, 0.2);
 }*/
 
-/* Conteneur des icônes sociales */
-[data-md-color-scheme] .md-footer-social {
-    display: flex;
-    gap: var(--space-sm);
-    padding: 0.5rem 0;
-}
-
-/* Lien individuel */
- [data-md-color-scheme] .md-footer-social__link {
-    display: inline-flex;
-    align-items: center;
-    color: var(--white);
-    opacity: 0.7;
-    transition: color var(--transition-base), transform var(--transition-base);
-}
-
-/* SVG des icônes sociales */
-[data-md-color-scheme] .md-footer-social__link svg,
-[data-md-color-scheme] .md-footer-social__link img {
-  width: 1.1rem;
-  height: 1.1rem;
-  fill: currentColor;
-}
-
-/* Hover global */
-[data-md-color-scheme] .md-footer-social__link:hover {
-    transform: translateY(-2px);
-}
-
-/* Hover des icônes sociales  */
-[data-md-color-scheme] .md-footer-social__link:hover svg {
-    color: var(--accent);
-    opacity: 1;
-}
-
-/* SVG de Nexusmod */
-[data-md-color-scheme] .md-footer-social__icon {   
-    filter: opacity(0.7);
-}
-
-[data-md-color-scheme] .md-footer-social__link:hover .md-footer-social__icon { 
-    filter: invert(48%) sepia(89%) saturate(2476%) hue-rotate(346deg) brightness(101%) contrast(101%);
-} 
-
-
  /* --- 6. HUB JEUX --- */
 /* .md-header { z-index: 120 !important; }
 .md-tabs { z-index: 110 !important; } */
