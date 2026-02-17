@@ -266,9 +266,9 @@ html, body {
 /* Main container */
 [data-md-color-scheme] .md-main {
   margin-top: var(--header-height);
-  min-height: 100%;
+  /*min-height: 100%;
   
-  /*margin-top: var(--header-height);
+  margin-top: var(--header-height);
   min-height: calc(100vh - var(--header-height));*/
 
   /* MODIFIEZ OU AJOUTEZ CECI */
@@ -514,7 +514,7 @@ html, body {
   background: var(--bg-surface);
 
   border-top: 1px solid rgba(255,255,255,0.1);
-  text-align: center;
+
   display: flex;
   align-items: center;
   justify-content: center;
