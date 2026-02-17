@@ -1,25 +1,17 @@
-<script>
 document.addEventListener("DOMContentLoaded", () => {
   const footer = document.querySelector(".md-footer");
-  if (!footer) return;
+  const sidebars = document.querySelectorAll(".md-sidebar");
+
+  if (!footer || !sidebars.length) return;
 
   const observer = new IntersectionObserver(
     ([entry]) => {
-      const footerHeight = footer.offsetHeight;
-
-      document.documentElement.style.setProperty(
-        "--sidebar-footer-offset",
-        entry.isIntersecting
-          ? `${footerHeight + 10}px`
-          : "10px"
-      );
+      sidebars.forEach(sidebar => {
+        sidebar.style.bottom = entry.isIntersecting ? "40px" : "10px";
+      });
     },
-    {
-      root: null,
-      threshold: 0
-    }
+    { threshold: 0 }
   );
 
   observer.observe(footer);
 });
-</script>
