@@ -348,7 +348,6 @@ html, body {
 
   transform: none !important;
   overflow: hidden;
-  z-index: var(--z-sidebar);
 
   transition:
     bottom 200ms ease,
