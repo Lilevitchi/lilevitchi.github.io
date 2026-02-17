@@ -21,7 +21,6 @@ theme:
     - footer.hide.generator
 
 plugins:
-  - search: false
 
 extra_javascript:
   - javascripts/random_tips.js
