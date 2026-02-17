@@ -34,14 +34,3 @@ Vous trouverez des **guides précis et complets** pour plonger dans le monde du 
 </div>
 
 </div>
-
-<div class="custom-card">
-
-## :material-coffee: Me soutenir
-Si mes guides vous ont plu et que vous en avez envie, n'hésitez pas à me soutenir.
-
-<a href="https://ko-fi.com/lilevitchi" target="_blank" class="kofi-button">
-    :simple-kofi: Buy me a coffee
-</a>
-
-</div>
