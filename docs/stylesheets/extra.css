@@ -291,8 +291,8 @@ html {
 [data-md-color-scheme] .md-main__inner {
   display: flex;
   flex: 1;
-
-  padding-top: var(--header-height);
+  max-width: none;
+  top: calc(var(--header-height) + 10px);
 
   outline: 2px dashed rgba(0, 0, 255, 0.8); /* Bleu (Debug) */
   outline-offset: -2px;
@@ -305,7 +305,8 @@ html {
 /* Sidebars */
 [data-md-color-scheme] .md-sidebar {
   position: fixed;
-  height: 100vh
+  height: 100vh;
+  top: calc(var(--header-height) + 10px);
   bottom: var(--sidebar-gap);
 
   background: var(--bg-surface);
@@ -320,14 +321,12 @@ html {
 
 /* Sidebar gauche */
 [data-md-color-scheme] .md-sidebar--primary {
-  top: calc(var(--header-height) + 10px);
   left: var(--sidebar-gap);
   width: var(--sidebar-width-primary);
 }
 
 /* Sidebar droite */
 [data-md-color-scheme] .md-sidebar--secondary {
-  top: calc(var(--header-height) + 10px);
   right: var(--sidebar-gap);
   width: var(--sidebar-width-secondary);
 }
