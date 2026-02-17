@@ -262,7 +262,10 @@ html, body {
 /* Main container */
 [data-md-color-scheme] .md-main {
   margin-top: var(--header-height);
-  min-height: calc(100vh - var(--header-height));
+  min-height: 100%;
+  
+  /*margin-top: var(--header-height);
+  min-height: calc(100vh - var(--header-height));*/
 }
 
 /* Zone centrale */
@@ -326,7 +329,7 @@ html, body {
   
   bottom: var(--sidebar-footer-offset);
 
-  height: calc(100vh - var(--header-height) - var(--sidebar-footer-offset)) !important;
+  height: calc(100vh - var(--header-height) - var(--sidebar-footer-offset) - var(--header-visual-offset)) !important;
 
   height: auto;
   display: flex;
