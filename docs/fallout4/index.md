@@ -2,23 +2,24 @@
 hide:
   - navigation
   - toc
+  - footer
 ---
 
 <div class="hub-wrapper">
     <div class="hub-bg" style="background-image: url('../assets/fo4.jpg');"></div>
 
-  <img src="../assets/lile-bot-fo4.png" class="hub-bot">
-
    <div class="hub-content">
-        <h1 class="hub-title">Bienvenue dans le Commonwealth Moddé</h1>
+        <img src="../assets/lile-bot-fo4.png" class="hub-bot">
+
+   <h1 class="hub-title">Bienvenue dans le Commonwealth Moddé</h1>
 
   <div class="hub-buttons-gap">
             <a href="guide-ecrit/" class="btn-hub-large btn-orange">
                 <i class="fas fa-book"></i> Guide Écrit
             </a>
-            <a href="https://youtu.be/m_CawhgGBGk?si=V8ovH2IEi1shkF6d" class="btn-hub-large btn-red">
+            <a href="https://youtu.be/m_CawhgGBGk?si=V8ovH2IEi1shkF6d" target="_blank" class="btn-hub-large btn-red">
                 <i class="fab fa-youtube"></i> Guide Vidéo
             </a>
         </div>
     </div>
-</div>  
+</div>
