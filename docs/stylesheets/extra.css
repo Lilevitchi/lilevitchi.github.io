@@ -24,6 +24,7 @@
   --sidebar-width-primary: 216px;
   --sidebar-width-secondary: 226px;
   --sidebar-gap: 10px;
+  --sidebar-footer-offset: 0px;
 
   --content-max-width: 87.5rem;     /* 1400px */
   --grid-max-width: 95%;
@@ -286,7 +287,7 @@ html {
 
 /* Main container */
 [data-md-color-scheme] .md-main {
-  display: relative;
+  position: relative;
   margin-top: calc(var(--header-height) + var(--layout-gap));
 }
 
@@ -306,8 +307,9 @@ html {
 /* Sidebars */
 [data-md-color-scheme] .md-sidebar {
   position: fixed;
-  height: calc(100vh - var(--header-height) - (var(--sidebar-gap) * 2));
+  height: auto;
   top: calc(var(--header-height) + var(--sidebar-gap));
+  bottom: calc(var(--sidebar-gap) + var(--sidebar-footer-offset));
 
   background: var(--bg-surface);
   border-radius: var(--radius-sm);
@@ -345,7 +347,7 @@ html {
 
 /* Zone scrollable réelle */
 [data-md-color-scheme] .md-content__inner {
-  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  min-height: 100%;
   padding: 1.2rem;
 
   background: var(--bg-surface);
