@@ -294,12 +294,11 @@ html {
 /* Zone centrale */
 [data-md-color-scheme] .md-main__inner {
 
-  display: flex;                  /* Aligne Sidebar - Contenu - Sidebar */
-  gap: var(--sidebar-gap);        /* Crée l'espace de 10px automatiquement */
-  max-width: var(--content-max-width);
-  margin: 0 auto;                 /* Centre tout le bloc bleu dans la page */
-  padding-top: var(--sidebar-gap);    /* Marge TOP de 10px sous le header */
-  padding-bottom: var(--sidebar-gap); /* Marge BOT de 10px au-dessus du footer */
+  display: flex;
+  gap: var(--sidebar-gap);
+  max-width: 100%;
+  margin: 0 auto;
+  padding: var(--sidebar-gap);
   align-items: flex-start;
   
   /*
@@ -325,7 +324,18 @@ html {
 
 /* Sidebars */
 [data-md-color-scheme] .md-sidebar {
-  position: fixed;
+  position: sticky !important;
+  top: calc(var(--header-height) + var(--sidebar-gap)); 
+  
+  height: calc(100vh - var(--header-height) - (var(--sidebar-gap) * 2)) !important;
+  
+  flex-shrink: 0;                /* Ne s'écrase pas */
+  background: var(--bg-surface);
+  border-radius: var(--radius-sm);
+  
+  overflow-y: auto;
+  
+  /*position: fixed;
   height: auto;
   top: calc(var(--header-height) + var(--sidebar-gap));
   bottom: calc(var(--sidebar-gap) + var(--sidebar-footer-offset));
@@ -337,18 +347,16 @@ html {
   overflow: hidden;
   transition: 
         bottom 200ms ease,
-        transform 333ms cubic-bezier(0, 0, 0, 1);
+        transform 333ms cubic-bezier(0, 0, 0, 1);*/
 }
 
 /* Sidebar gauche */
 [data-md-color-scheme] .md-sidebar--primary {
-  left: var(--sidebar-gap);
   width: var(--sidebar-width-primary);
 }
 
 /* Sidebar droite */
 [data-md-color-scheme] .md-sidebar--secondary {
-  right: var(--sidebar-gap);
   width: var(--sidebar-width-secondary);
 }
 
@@ -358,7 +366,11 @@ html {
 
 /* Zone de contenu centrale */
 [data-md-color-scheme] .md-content {
-  min-height: calc(100vh - var(--header-height) - var(--sidebar-gap));
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  
+  /*min-height: calc(100vh - var(--header-height) - var(--sidebar-gap));*/
 
   outline: 2px dashed rgba(0, 255, 0, 0.8); /* Vert (Debug) */
   outline-offset: -2px;
@@ -366,10 +378,12 @@ html {
 
 /* Zone scrollable réelle */
 [data-md-color-scheme] .md-content__inner {
-  flex: 1;
-  min-width: 0;
-  padding: 1.2rem;
+  width: 100%;
   margin: 0;
+  /* flex: 1;
+  min-width: 0;
+  margin: 0;*/
+  padding: 1.2rem;
 
   background: var(--bg-surface);
   border-radius: var(--radius-sm);
