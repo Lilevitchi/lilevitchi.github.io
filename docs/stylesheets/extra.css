@@ -334,13 +334,13 @@ html {
    BURGER MENU — SYNCHRONISATION AVEC SIDEBAR
    ============================================================ */
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 901px) {
   .md-header__button[for="__drawer"] {
     display: none !important;
   }
   
 /* Quand la sidebar primary est cachée */
-@media (max-width: 899px) {
+@media (max-width: 900px) {
 
 .md-header__button[for="__drawer"] {
     display: block !important; /* Affiche le burger */
