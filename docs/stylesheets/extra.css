@@ -112,10 +112,6 @@ html {
 
   border-bottom-left-radius: var(--radius-md);
   border-bottom-right-radius: var(--radius-md);
-
-  outline: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
-  border: 1px solid transparent;
 }
 
 [data-md-color-scheme] .md-header * {
@@ -188,7 +184,6 @@ html {
   width: 100%;
   height: 100%;
   background: transparent;
-  box-shadow: none;
 }
 
 /* Liste des onglets */
@@ -288,19 +283,21 @@ html {
 /* Zone scrollable réelle */
 [data-md-color-scheme] .md-content__inner {
   background: transparent;
-  box-shadow: none;
   margin: 0;
-  padding: var(--sidebar-gap) !important;
+  padding: var(--sidebar-gap);
   
   outline: 2px dashed rgba(255, 255, 0, 0.8); /* Jaune (Debug) */
   outline-offset: -2px;
+}
+
+[data-md-color-scheme] .md-content__inner > .md-typeset {
+  margin: 0;
 }
 
 [data-md-color-scheme] .custom-card {
     background-color: var(--bg-surface);
     border-radius: var(--radius-md);
     margin-bottom: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.05);
     width: 100%;
 }
@@ -330,7 +327,6 @@ html {
   background: var(--bg-surface);
   border-radius: var(--radius-sm);
   outline: 1px solid rgba(0,0,0,0.2);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 
   transform: none !important;
   overflow: hidden;
@@ -441,8 +437,6 @@ html {
 
   max-width: 720px;
   margin: 2rem auto;
-    
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
 /* Image du bot */
@@ -489,7 +483,6 @@ html {
 /* Hover Ko-fi */
 .kofi-button:hover {
   background-color: var(--dark-1);
-  box-shadow: 0 0 10px var(--accent-glow);
 }
 
 /* ============================================================
