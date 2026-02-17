@@ -336,10 +336,6 @@ html {
   width: var(--sidebar-width-secondary);
 }
 
-[data-md-color-scheme] .md-sidebar__inner {
-  padding: var(--sidebar-gap);
-}
-
 /* ==============================
    7. CONTENU CENTRAL
    ==============================*/
@@ -355,6 +351,8 @@ html {
 /* Zone scrollable réelle */
 [data-md-color-scheme] .md-content__inner {
   min-height: 100%;
+  min-width: 100%;
+  padding: 1.2rem;
 
   background: var(--bg-surface);
   border-radius: var(--radius-sm);
