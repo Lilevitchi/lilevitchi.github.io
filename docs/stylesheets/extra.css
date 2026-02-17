@@ -18,7 +18,7 @@
 
   /* Layout */
   --header-height: 72px;
-  --footer-height: 32px;
+  --footer-height: 30px;
   --progress-height: 75px;
 
   --sidebar-width-primary: 216px;
@@ -378,6 +378,10 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+[data-md-color-scheme] .md-footer__inner {
+  background: transparent;
 }
 
 /*
