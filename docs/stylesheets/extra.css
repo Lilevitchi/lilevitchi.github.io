@@ -367,6 +367,12 @@ html {
   outline-offset: -2px;
 }
 
+[data-md-color-scheme] .md-content__inner > .md-typeset {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 [data-md-color-scheme] .custom-card {
     background-color: var(--bg-surface);
     border-radius: var(--radius-md);
