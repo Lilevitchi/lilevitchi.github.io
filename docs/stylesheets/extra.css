@@ -329,21 +329,18 @@ html {
   margin: 0;
   padding: 0;
 
-  background: transparent !important;
-  box-shadow: none !important;
+  background: transparent;
+  box-shadow: none;
 
   outline: 2px dashed rgba(255, 255, 0, 0.8); /* Jaune (Debug) */
   outline-offset: -2px;
 }
 
-[data-md-color-scheme] .md-content__inner .md-typeset {
-  flex: 1;
-  max-width: 100%;
+[data-md-color-scheme] .md-typeset {
+  max-width: none;
   margin: 0;
   padding: 0;
-}
-
-[data-md-color-scheme] .md-typeset {
+  
   outline: 2px dashed rgba(255, 0, 0, 0.8); /* Rouge (Debug) */
   outline-offset: -2px;
 }
