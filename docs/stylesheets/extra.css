@@ -870,7 +870,6 @@ body:has(.game-grid) .md-main__inner {
 
 /* @media screen and (min-width: 45.01em) { */
     .hub-wrapper {
-        position: fixed;
         top: 0;
         left: 0;
         width: 100vw;
