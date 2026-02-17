@@ -43,19 +43,19 @@
   --font-h2-size: 16px;
   --font-h3-size: 12px;
 
-  /* ---------- Effects ---------- */
+  /* Effects */
   --blur-soft: blur(5px);
   --blur-strong: blur(6px);
 
-  /* ---------- Cursor ---------- */
+  /* Cursor */
   --cursor-default: url('../assets/curseur.png') 7 0, pointer;
   --cursor-click: url('../assets/curseur-clic.png') 7 0, pointer;
 
-  /* ---------- Tabs / Navigation ---------- */
+  /* Tabs / Navigation */
   --tab-bg-hover: rgba(255, 255, 255, 0.08);
   --tab-bg-active: rgba(255, 87, 34, 0.12);
 
-  /* ---------- Spacing ---------- */
+  /* Spacing */
   --space-xs: 0.36rem;  /* ~6px */
   --space-sm: 0.54rem;  /* ~9px */
   --space-md: 0.9rem;   /* ~14px */
@@ -262,7 +262,6 @@ html {
 
 /* Main container */
 [data-md-color-scheme] .md-main {
-  /*position: relative;*/
   margin-top: var(--header-height);
   min-height: calc(100vh - var(--header-height));
 }
@@ -280,14 +279,9 @@ html {
 
 /* Zone de contenu centrale */
 [data-md-color-scheme] .md-content {
- /*position: relative; */
-  
   margin-left: calc(var(--sidebar-width-primary) + var(--sidebar-gap));
   margin-right: calc(var(--sidebar-width-secondary) + var(--sidebar-gap));
-
-  /*height: 100%; */
   padding: 0;
-
   min-width: 0;
 }
 
@@ -295,9 +289,10 @@ html {
 [data-md-color-scheme] .md-content__inner {
   background: transparent;
   box-shadow: none;
-
   margin: 0;
   padding: var(--sidebar-gap) !important;
+      outline: 2px dashed rgba(255, 255, 0, 0.8); /* Jaune (Debug) */
+    outline-offset: -2px;
 }
 
 [data-md-color-scheme] .custom-card {
@@ -321,18 +316,14 @@ html {
 /* Sidebars */
 [data-md-color-scheme] .md-sidebar {
   position: fixed;
-
-  top: calc(
-    var(--header-height)
-    + var(--header-visual-offset)
-    + var(--header-shadow-offset)
-  );
+  
+  top: 10px;
+  
   bottom: var(--sidebar-footer-offset);
 
   height: calc(
   100vh
   - var(--header-height)
-  - var(--header-visual-offset)
   - var(--sidebar-footer-offset)
   ) !important;
 
@@ -342,9 +333,9 @@ html {
   background: var(--bg-surface);
   border-radius: var(--radius-sm);
   outline: 1px solid rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 
   transform: none !important;
-
   overflow: hidden;
   z-index: var(--z-sidebar);
 
@@ -452,7 +443,7 @@ html {
   border-radius: var(--radius-xs);
 
   max-width: 720px;
-  margin: 2rem auto;     /* Le 'auto' centre le bloc horizontalement */
+  margin: 2rem auto;
     
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
