@@ -1,18 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
   const footer = document.querySelector(".md-footer");
-  const sidebars = document.querySelectorAll(".md-sidebar");
+  if (!footer) return;
 
-  if (!footer || !sidebars.length) return;
+  const root = document.documentElement;
+  const baseOffset = 10;
 
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      const offset = entry.isIntersecting ? footer.offsetHeight + 10 : 10;
-      sidebars.forEach(sb => {
-        sb.style.bottom = offset + "px";
-      });
-    },
-    { threshold: 0 }
-  );
+  const update = () => {
+    const rect = footer.getBoundingClientRect();
+    const vh = window.innerHeight;
 
-  observer.observe(footer);
+    if (rect.top < vh) {
+      root.style.setProperty(
+        "--sidebar-footer-offset",
+        rect.height + baseOffset + "px"
+      );
+    } else {
+      root.style.setProperty(
+        "--sidebar-footer-offset",
+        baseOffset + "px"
+      );
+    }
+  };
+
+  update();
+  window.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", update);
 });
