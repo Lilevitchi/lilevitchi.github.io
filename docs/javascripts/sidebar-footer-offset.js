@@ -1,28 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
   const footer = document.querySelector(".md-footer");
-  if (!footer) return;
-
   const root = document.documentElement;
-  const baseOffset = 10;
+  const baseOffset = 10; // Marge de 10px souhaitée
 
   const update = () => {
-    const rect = footer.getBoundingClientRect();
     const vh = window.innerHeight;
+    let offsetValue = baseOffset;
 
-    if (rect.top < vh) {
-      root.style.setProperty(
-        "--sidebar-footer-offset",
-        rect.height + baseOffset + "px"
-      );
-    } else {
-      root.style.setProperty(
-        "--sidebar-footer-offset",
-        baseOffset + "px"
-      );
+    if (footer) {
+      const rect = footer.getBoundingClientRect();
+      // Si le haut du footer entre dans l'écran
+      if (rect.top < vh) {
+        const visibleFooterHeight = vh - rect.top;
+        offsetValue = visibleFooterHeight + baseOffset;
+      }
     }
+    root.style.setProperty("--sidebar-footer-offset", offsetValue + "px");
   };
 
-  update();
   window.addEventListener("scroll", update, { passive: true });
   window.addEventListener("resize", update);
+  update(); // Exécution immédiate au chargement
 });
