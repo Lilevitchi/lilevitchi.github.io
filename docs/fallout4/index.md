@@ -5,15 +5,12 @@ hide:
   - footer
 ---
 
-<div class="hub-wrapper">
-    <div class="hub-bg" style="background-image: url('../assets/fo4.jpg');"></div>
-
-   <div class="hub-content">
-        <img src="../assets/lile-bot-fo4.png" class="hub-bot">
-
-   <h1 class="hub-title">Bienvenue dans le Commonwealth Moddé</h1>
-
-  <div class="hub-buttons-gap">
+<div class="hub-main-container">
+    <img src="../assets/lile-bot-fo4.png" class="hub-bot">
+    
+  <div class="hub-content">
+        <h1 class="hub-title">Bienvenue dans le Commonwealth</h1>
+        <div class="hub-buttons-gap">
             <a href="guide-ecrit/" class="btn-hub-large btn-orange">
                 <i class="fas fa-book"></i> Guide Écrit
             </a>
