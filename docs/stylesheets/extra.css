@@ -20,11 +20,14 @@
   --header-height: 72px;
   --footer-height: 30px;
 
+  /* Sidebar sizing*/
   --sidebar-width-primary: 216px;
   --sidebar-width-secondary: 226px;
   --sidebar-gap: 10px;
-  --sidebar-footer-offset: 10px;
+  --sidebar-footer-offset: 0px;
   --header-visual-offset: 10px;
+
+  /* Content sizing */
   --content-max-width: 87.5rem;     /* 1400px */
   --grid-max-width: 95%;
 
@@ -81,24 +84,25 @@ html {
   font-size: 16px;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
 [data-md-color-scheme] body {
   margin: 0;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  
   background-color: var(--bg-page);
   color: #fff;
   font-family: var(--font-main);
   font-size: var(--font-base-size);
   font-weight: 400;
-  min-height: 100svh;
-
-  /* AJOUTEZ CES LIGNES */
-  display: flex;
-  flex-direction: column;
 }
 
+/* Scrollbars */
 * {
   scrollbar-width: thin;
   scrollbar-color: rgba(255,255,255,0.5) transparent;
@@ -113,8 +117,8 @@ html, body {
   position: fixed;
   top: 0;
   inset-inline: 0;
-
   height: var(--header-height);
+  
   background: var(--bg-surface);
   z-index: var(--z-header);
 
@@ -144,9 +148,10 @@ html, body {
 /* Logo */
 [data-md-color-scheme] .md-logo img {
   height: 60px;
-  width: auto;
-  display: block;
   transition: transform 187ms ease;
+  
+  /*width: auto;
+  display: block;*/
 }
 
 /* Logo Hover */
@@ -163,10 +168,11 @@ html, body {
 
 /* Texte du titre */
 [data-md-color-scheme] .md-header__title .md-ellipsis {
-  font-family: Arial, Helvetica, sans-serif;
   color: var(--accent);
   font-size: var(--font-h1-size);
   font-weight: 400;
+
+  /*font-family: Arial, Helvetica, sans-serif;*/
 }
 
 /* ============================================================
@@ -186,12 +192,14 @@ html, body {
 
 /* Barre des tabs */
 [data-md-color-scheme] .md-tabs {
-  position: sticky;
   display: flex;
   justify-content: center;
-  width: 100%;
   height: 100%;
   background: transparent;
+
+  /*width: 100%;
+  position: sticky;
+  justify-content: center;*/
 }
 
 /* Liste des onglets */
@@ -199,9 +207,10 @@ html, body {
   display: flex;
   align-items: center;
   height: 100%;
-  gap: 0;
   padding: 0;
   margin: 0;
+
+  /*gap: 0;*/
 }
 
 /* Item = Source de l'espace */
@@ -216,16 +225,18 @@ html, body {
   color: #fff;
   padding: 0.4rem 0.8rem;
   font-size: var(--font-h3-size);
-  opacity: 1;
   border-bottom: 4px solid transparent;
   transition: var(--transition);
+
+  /*opacity: 1;*/
 }
 
 /* Onglet — survol (hover) */
 [data-md-color-scheme] .md-tabs__link:hover {
   color: var(--accent);
-  opacity: 1;
   background-color: var(--tab-bg-hover);
+
+  /*opacity: 1;*/
 }
 
 /* Onglet — état actif */
@@ -233,16 +244,18 @@ html, body {
 .md-tabs__item--active
 .md-tabs__link {
   color: var(--accent);
-  opacity: 1;
   background-color: var(--tab-bg-active);
   border-bottom-color: var(--accent);
+
+  /*opacity: 1;*/
 }
 
 /* Texte long */
 .md-tabs__link::before {
   content: attr(data-full);
-  white-space: nowrap;
-  display: inline-block;
+  
+  /*white-space: nowrap;
+  display: inline-block;*/
 }
 
 /* Texte court */
@@ -266,22 +279,21 @@ html, body {
 /* Main container */
 [data-md-color-scheme] .md-main {
   margin-top: var(--header-height);
-  /*min-height: 100%;
-  
-  margin-top: var(--header-height);
-  min-height: calc(100vh - var(--header-height));*/
-
-  /* MODIFIEZ OU AJOUTEZ CECI */
-  flex: 1 0 auto; /* Force le contenu à s'étendre et pousser le footer */
+  flex: 1 0 auto;
   display: flex;
   flex-direction: column;
+  
+  /*min-height: 100%;
+  margin-top: var(--header-height);
+  min-height: calc(100vh - var(--header-height));*/
 }
 
 /* Zone centrale */
 [data-md-color-scheme] .md-main__inner {
-  display: block;
   max-width: none;
   margin: 0;
+
+  /*display: block;*/
 }
 
 /* ============================================================
@@ -290,9 +302,6 @@ html, body {
 
 /* Zone de contenu centrale */
 [data-md-color-scheme] .md-content {
-  margin-left: calc(var(--sidebar-width-primary) + var(--sidebar-gap));
-  margin-right: calc(var(--sidebar-width-secondary) + var(--sidebar-gap));
-  padding: 0;
   min-width: 0;
 }
 
@@ -314,7 +323,8 @@ html, body {
     border-radius: var(--radius-md);
     margin-bottom: 8px;
     border: 1px solid rgba(255, 255, 255, 0.05);
-    width: 100%;
+  
+    /*width: 100%;*/
 }
 
 [data-md-color-scheme] .floating-title {
@@ -328,26 +338,20 @@ html, body {
 
 /* Sidebars */
 [data-md-color-scheme] .md-sidebar {
-  position: fixed;
+  position: sticky;
   
   top: calc(
     var(--header-height)
     + var(--header-visual-offset)
-  ) !important;
+  );
+
+  height: auto;
+  max-height: calc(100vh - var(--header-height) - var(--header-visual-offset));
   
-  bottom: 10px;
-
-  height: calc(100vh - var(--header-height) - var(--sidebar-footer-offset) - var(--header-visual-offset)) !important;
-
-  /*height: auto;*/
-  display: flex;
-  flex-direction: column;
-
   background: var(--bg-surface);
   border-radius: var(--radius-sm);
   outline: 1px solid rgba(0,0,0,0.2);
-
-  transform: none !important;
+  
   overflow: hidden;
   z-index: var(--z-sidebar);
 
@@ -366,13 +370,12 @@ html, body {
 [data-md-color-scheme] .md-sidebar--secondary {
   right: var(--sidebar-gap);
   width: var(--sidebar-width-secondary);
-  display: block !important;
 }
 
+/*
 [data-md-color-scheme] .md-sidebar__scrollwrap {
   flex: 1;
   min-height: 0;
-  height: 100% !important;
 }
 
 [data-md-color-scheme] .md-sidebar__inner {
@@ -380,17 +383,15 @@ html, body {
   overflow-y: auto;
 }
 
-/* Never allow double scroll */
 [data-md-color-scheme] .md-main,
 [data-md-color-scheme] .md-content,
 [data-md-color-scheme] .md-main__inner {
   overflow: visible;
 }
 
-/* Sidebars must never scroll independently */
 [data-md-color-scheme] .md-sidebar {
   overscroll-behavior: none;
-}
+}*/
 
 /* ============================================================
    7. TYPOGRAPHIE & CONTENU
@@ -403,12 +404,13 @@ html, body {
   font-weight: 700;
 }
 
-[data-md-color-scheme] .md-typeset p {
+
+/*[data-md-color-scheme] .md-typeset p {
   text-align: left;
   max-width: 100%;
   opacity: 1;
   color: var(--white);
-}
+}*/
 
 [data-md-color-scheme] .md-typeset a:not(.kofi-button) {
   color: #fff;
@@ -511,15 +513,13 @@ html, body {
 [data-md-color-scheme] .md-footer {
   height: var(--footer-height);
   background: var(--bg-surface);
-
   border-top: 1px solid rgba(255,255,255,0.1);
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  /* AJOUTEZ CECI POUR PLUS DE SÉCURITÉ */
-  flex-shrink: 0; /* Empêche le footer de s'écraser */
+  flex-shrink: 0;
   margin-top: auto;
 }
 
