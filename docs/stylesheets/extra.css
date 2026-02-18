@@ -82,6 +82,7 @@ html {
 }
 
 html, body {
+  height: auto;
   min-height: 100vh;
   margin: 0;
   overflow-x: hidden;
@@ -101,6 +102,10 @@ html, body {
 * {
   scrollbar-width: thin;
   scrollbar-color: rgba(255,255,255,0.5) transparent;
+}
+
+.md-container, .md-main, .md-main__inner {
+    overflow: visible !important;
 }
 
 /* ============================================================
@@ -295,6 +300,8 @@ html, body {
    5. CONTENU CENTRAL
    ============================================================*/
 
+.md-content__inner::before { display: none; }
+
 /* Zone de contenu centrale */
 [data-md-color-scheme] .md-content {
   position: fixed;
@@ -308,7 +315,6 @@ html, body {
   background: transparent;
   z-index: 1;
   pointer-events: none;
-  box-sizing: border-box;
   
   border: 2px dashed red;/* Rouge (Debug) */
 
@@ -321,10 +327,9 @@ html, body {
   max-width: none;
   margin: 0;
   padding: 0; /* Les cartes collent au jaune */
-  
-  box-sizing: border-box;
-  background: transparent;
 
+  background: transparent;
+  pointer-events: none;
   border: 2px dashed yellow;/* Jaune (Debug) */
 }
 
@@ -364,6 +369,7 @@ html, body {
   outline: 1px solid rgba(0,0,0,0.2);
   z-index: var(--z-sidebar);
   width: auto;
+  height: auto;
   overflow-y: auto; /* Scroll interne si nécessaire */
   transition: 
       bottom 200ms ease,
@@ -380,6 +386,11 @@ html, body {
 [data-md-color-scheme] .md-sidebar--secondary {
   right: var(--sidebar-gap);
   width: var(--sidebar-width-secondary);
+}
+
+.md-sidebar__scrollwrap {
+    margin: 0 !important;
+    height: 100%;
 }
 
 /*
