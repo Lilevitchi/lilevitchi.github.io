@@ -288,8 +288,10 @@ html, body {
   width: 100% !important;
   max-width: none !important;
   margin: 0 !important;
-  padding: 0 !important;
+  padding: 0 var(--sidebar-gap) !important;
   height: 100% !important;
+
+  gap: var(--sidebar-gap);
 
   /*display: block;
   max-width: none;
@@ -307,8 +309,7 @@ html, body {
   height: 100%;
   overflow-y: auto;
   
-  margin-left: calc(var(--sidebar-width-primary) + var(--sidebar-gap)) !important;
-  margin-right: calc(var(--sidebar-width-secondary) + var(--sidebar-gap)) !important;
+  margin: 0 !important;
 
   border: 2px dashed red;/* Rouge (Debug) */
 }
@@ -349,6 +350,9 @@ html, body {
   outline: 1px solid rgba(0,0,0,0.2);
   overflow-y: auto;
   z-index: var(--z-sidebar);
+
+  left: 0 !important;
+  right: 0 !important;
   
   transition:
     bottom 200ms ease,
@@ -357,13 +361,13 @@ html, body {
 
 /* Sidebar gauche */
 [data-md-color-scheme] .md-sidebar--primary {
-  left: var(--sidebar-gap);
+  /*left: var(--sidebar-gap);*/
   width: var(--sidebar-width-primary);
 }
 
 /* Sidebar droite */
 [data-md-color-scheme] .md-sidebar--secondary {
-  right: var(--sidebar-gap);
+  /*right: var(--sidebar-gap);*/
   width: var(--sidebar-width-secondary);
 }
 
