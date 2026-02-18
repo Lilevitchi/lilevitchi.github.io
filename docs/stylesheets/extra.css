@@ -291,9 +291,9 @@ html, body {
   padding: 0 var(--sidebar-gap) !important;
   height: 100% !important;
 
-  gap: var(--sidebar-gap);
+  /*gap: var(--sidebar-gap);
 
-  /*display: block;
+  display: block;
   max-width: none;
   margin: 0;*/
 }
