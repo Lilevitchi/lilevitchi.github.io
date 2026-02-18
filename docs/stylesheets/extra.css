@@ -94,7 +94,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  : hidden;
+  overflow: hidden;
   
   background-color: var(--bg-page);
   color: #fff;
@@ -281,7 +281,7 @@ body {
 [data-md-color-scheme] .md-main {
   margin-top: var(--header-height);
   flex: 1;
-  : hidden;
+  overflow: hidden;
   display: flex;
   
   /*min-height: 100%;
@@ -304,7 +304,7 @@ body {
 /* Zone de contenu centrale */
 [data-md-color-scheme] .md-content {
   min-width: 0;
-  -y: auto;
+  overflow-y: auto;
   height: calc(100vh - var(--header-height) - var(--footer-height));
   
   /*margin-left: calc(var(--sidebar-width-primary) + var(--sidebar-gap));
@@ -355,7 +355,7 @@ body {
   border-radius: var(--radius-sm);
   outline: 1px solid rgba(0,0,0,0.2);
   
-  overflow-y: auto; 
+  overflow; 
   z-index: var(--z-sidebar);
 
   transition:
@@ -383,7 +383,7 @@ body {
 
 [data-md-color-scheme] .md-sidebar__inner {
   height: calc(100% - var(--sidebar-footer-offset));
-  overflow-y: auto;
+  overflow;
 }
 
 [data-md-color-scheme] .md-main,
@@ -846,7 +846,7 @@ body:has(.hub-wrapper) .md-header__topic:last-child {
 /*
 [data-md-color-scheme] .md-sidebar__inner {
     height: 100%;
-    overflow-y: auto;
+    overflow;
     scrollbar-width: none; /* Firefox 
 }
 
