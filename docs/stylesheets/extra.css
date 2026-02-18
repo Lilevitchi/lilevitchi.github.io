@@ -313,14 +313,23 @@ html, body {
   padding: var(--sidebar-gap);
 
   border: 2px dashed red;/* Rouge (Debug) */
+  box-sizing: border-box;
 }
 
 /* Zone scrollable réelle */
 [data-md-color-scheme] .md-content__inner {
   background: transparent;
-  padding-top: var(--sidebar-gap) !important;
+
+  max-width: none !important; 
+  width: 100% !important;
+  margin: 0 !important;
+
+  padding: 20px !important;
+  
+  /*padding-top: var(--sidebar-gap) !important;*/
   
   border: 2px dashed yellow;/* Jaune (Debug) */
+  box-sizing: border-box;
 }
 
 [data-md-color-scheme] .custom-card {
