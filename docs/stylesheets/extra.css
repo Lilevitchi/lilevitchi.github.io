@@ -13,8 +13,8 @@
 
   /* Backgrounds */
   --bg-page: #1c212a;
-  --bg-surface: rgba(41, 44, 53, 0.85);
-  --bg-card: rgba(32, 32, 32, 0.9);
+  --bg-surface: rgba(41, 44, 53, 1);
+  --bg-card: rgba(32, 32, 32, 1);
 
   /* Layout */
   --header-height: 72px;
@@ -307,8 +307,8 @@ html, body {
   position: sticky;
   top: var(--header-height);
   
-  margin-left: calc(var(--sidebar-width-primary) + (var(--sidebar-gap) * 2));
-  margin-right: calc(var(--sidebar-width-secondary) + (var(--sidebar-gap) * 2));
+  margin-left: calc(var(--sidebar-width-primary));
+  margin-right: calc(var(--sidebar-width-secondary));
   
   padding: 10px; /* crée le cadre jaune */
   
