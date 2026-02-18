@@ -322,7 +322,6 @@ html, body {
 
 /* Zone scrollable réelle */
 [data-md-color-scheme] .md-content__inner {
-  height: 100%;
   width: 100%;
   max-width: none;
   margin: 0;
