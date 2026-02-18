@@ -275,6 +275,7 @@ html, body {
 /* Main container */
 [data-md-color-scheme] .md-main {
   margin-top: var(--header-height);
+  min-height: calc(100vh - var(--header-height));
   
   /*min-height: 100%;
   margin-top: var(--header-height);
@@ -304,19 +305,19 @@ html, body {
 
 /* Zone de contenu centrale */
 [data-md-color-scheme] .md-content {
-  position: fixed;
-  left: calc(var(--sidebar-width-primary) + (var(--sidebar-gap) * 2));
-  right: calc(var(--sidebar-width-secondary) + (var(--sidebar-gap) * 2));
+  position: sticky;
   top: var(--header-height);
-  bottom: calc(var(--sidebar-footer-offset) - 10px);
-  margin: 0; 
-  padding: var(--sidebar-gap);
-
-  background: transparent;
-  z-index: 1;
-  pointer-events: none;
   
-  border: 2px dashed red;/* Rouge (Debug) */
+  margin-left: calc(var(--sidebar-width-primary) + (var(--sidebar-gap) * 2));
+  margin-right: calc(var(--sidebar-width-secondary) + (var(--sidebar-gap) * 2));
+  
+  padding: 10px; /* crée le cadre jaune */
+  
+  min-height: calc(100vh - var(--header-height));
+  
+  box-sizing: border-box;
+
+  border: 2px dashed red; /* DEBUG */
 
 }
 
@@ -326,10 +327,11 @@ html, body {
   width: 100%;
   max-width: none;
   margin: 0;
-  padding: 0; /* Les cartes collent au jaune */
-
+  padding: 0;
+  
+  box-sizing: border-box;
   background: transparent;
-  pointer-events: none;
+
   border: 2px dashed yellow;/* Jaune (Debug) */
 }
 
@@ -361,19 +363,18 @@ html, body {
 /* Sidebars */
 [data-md-color-scheme] .md-sidebar {
   position: fixed;
-  top: calc(var(--header-height) + var(--sidebar-gap)); /* 10px sous le header */
+
+  top: calc(var(--header-height) + 10px);
   bottom: var(--sidebar-footer-offset);
-  
+
   background: var(--bg-surface);
   border-radius: var(--radius-md);
   outline: 1px solid rgba(0,0,0,0.2);
+
+  overflow-y: auto;
   z-index: var(--z-sidebar);
-  width: auto;
-  height: auto;
-  overflow-y: auto; /* Scroll interne si nécessaire */
-  transition: 
-      bottom 200ms ease,
-      transform 333ms cubic-bezier(0, 0, 0, 1);;
+
+  transition: bottom 200ms ease;
 }
 
 /* Sidebar gauche */
@@ -386,11 +387,6 @@ html, body {
 [data-md-color-scheme] .md-sidebar--secondary {
   right: var(--sidebar-gap);
   width: var(--sidebar-width-secondary);
-}
-
-.md-sidebar__scrollwrap {
-    margin: 0 !important;
-    height: 100%;
 }
 
 /*
@@ -522,7 +518,6 @@ html, body {
    ============================================================*/
 
 [data-md-color-scheme] .md-footer {
-  height: var(--footer-height);
   background: var(--bg-surface);
   border-top: 1px solid rgba(255,255,255,0.1);
   display: flex;
