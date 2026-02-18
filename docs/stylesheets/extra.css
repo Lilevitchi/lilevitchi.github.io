@@ -310,7 +310,7 @@ html, body {
   overflow-y: auto;
   
   margin: 0 !important; 
-  padding: 0 !important;
+  padding: var(--sidebar-gap);
 
   border: 2px dashed red;/* Rouge (Debug) */
 }
